@@ -1,0 +1,31 @@
+[
+	{
+		"model": "MenuItem",
+		"id": "main",
+		"item_name": "main",
+		"caption": "Главное меню",
+		"order_num": 1,
+		"is_active": "True"
+	},
+	{
+		"model": "MenuItem",
+		"id": "supply",
+		"item_name": "supply",
+		"caption": "Снабжение",
+		"style": "supply",
+		"order_num": 4,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "supplyorder",
+		"item_name": "supplyorder",
+		"caption": "Заказы на поставку",
+		"style": "supplyorder",
+		"action": "supplyorder",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "supply"
+	}
+]

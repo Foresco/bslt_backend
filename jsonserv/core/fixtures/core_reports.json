@@ -1,0 +1,13 @@
+[{
+	"model": "core.report",
+	"pk": "rightsmatrix",
+	"fields": {
+		"report_name": "rightsmatrix",
+		"title": "Матрица прав доступа",
+		"description": "Таблица с перечнем доступных каждому пользователю прав и групп, от которых они получены",
+		"only_format": "xls",
+		"app": "core"
+	}
+},
+]
+						

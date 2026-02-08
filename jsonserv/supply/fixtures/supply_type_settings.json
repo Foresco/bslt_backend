@@ -1,0 +1,9 @@
+[{
+	"model": "core.typesetting",
+	"pk": "7",
+	"fields": {
+		"type_key": "person",
+		"dashboard": "staff",
+		"page_header": ""
+	}
+}]

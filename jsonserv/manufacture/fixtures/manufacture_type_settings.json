@@ -1,0 +1,36 @@
+[{
+	"model": "core.typesetting",
+	"pk": "9",
+	"fields": {
+		"type_key": "prodorderdash",
+		"dashboard": "prodorderdash",
+		"page_header": "Заказы в работе"
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "14",
+	"fields": {
+		"type_key": "workertasks",
+		"dashboard": "workertasks",
+		"page_header": "Задания пользователя"
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "15",
+	"fields": {
+		"type_key": "workershifts",
+		"dashboard": "workershifts",
+		"page_header": "Табели"
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "17",
+	"fields": {
+		"type_key": "prodordercontract",
+		"dashboard": "prodordercontract",
+		"page_header": ""
+	}
+}]

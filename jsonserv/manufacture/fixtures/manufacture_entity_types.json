@@ -1,0 +1,11 @@
+[{
+	"model": "core.entitytype",
+	"pk": "prodorder",
+	"fields": {
+		"type_name": "Производственный заказ",
+		"div_name": "Производственные заказы",
+		"doc_key": false,
+		"table_name": "prodorder"
+	}
+}
+]

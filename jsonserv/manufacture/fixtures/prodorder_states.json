@@ -1,0 +1,47 @@
+[
+  {
+    "model": "manufacture.ProdOrderState",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Зарегистрирован",
+      "is_default": true    
+    }
+  },
+  {
+    "model": "manufacture.ProdOrderState",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "В производстве",
+      "is_default": false   
+    }
+  },
+  {
+    "model": "manufacture.ProdOrderState",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Готов",
+      "is_default": false
+    }
+  },
+  {
+    "model": "manufacture.ProdOrderState",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Отгружен",
+      "is_default": false
+    }
+  },
+  {
+    "model": "manufacture.ProdOrderState",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Исправление брака",
+      "is_default": false
+    }
+  }
+]

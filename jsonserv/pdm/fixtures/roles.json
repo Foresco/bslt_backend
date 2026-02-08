@@ -1,0 +1,56 @@
+[
+  {
+    "model": "pdm.Role",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Разработал",
+      "is_default": true
+    }
+  },
+  {
+    "model": "pdm.Role",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Проверил",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.Role",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Нормоконтроль",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.Role",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Утвердил",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.Role",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Технологический контроль",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.Role",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "Составил",
+      "is_default": false
+    }
+  }
+]

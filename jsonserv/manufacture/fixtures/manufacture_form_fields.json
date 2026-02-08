@@ -1,0 +1,240 @@
+[
+	{
+		"model": "core.FormField",
+		"pk": 171,
+		"fields": {
+			"form_name": "ordermaker",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Заказчик",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 172,
+		"fields": {
+			"form_name": "ordermaker",
+			"field_name": "group",
+			"order_num": 2,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 173,
+		"fields": {
+			"form_name": "ordermaker",
+			"field_name": "description",
+			"order_num": 3,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 195,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Номер заказа",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 196,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "order_maker",
+			"order_num": 2,
+			"caption": "Заказчик",
+			"max_size": null,
+			"list_keys": "{\"is_buyer\": \"True\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 197,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "group",
+			"order_num": 3,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 198,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "description",
+			"order_num": 4,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 199,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "order_date",
+			"order_num": 5,
+			"caption": "Дата",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 200,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "enterprise",
+			"order_num": 6,
+			"caption": "Юридическое лицо",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 201,
+		"fields": {
+			"form_name": "prodorder",
+			"field_name": "state",
+			"order_num": 7,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 202,
+		"fields": {
+			"form_name": "property",
+			"field_name": "property_name",
+			"order_num": 1,
+			"caption": "Наименование свойства",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 203,
+		"fields": {
+			"form_name": "property",
+			"field_name": "property_type",
+			"order_num": 2,
+			"caption": "Тип свойства",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 204,
+		"fields": {
+			"form_name": "property",
+			"field_name": "description",
+			"order_num": 3,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 205,
+		"fields": {
+			"form_name": "property",
+			"field_name": "group",
+			"order_num": 4,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	}
+]

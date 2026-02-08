@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="bslt">
+        <div class="container">
+            <div id="bslt-row" class="row justify-content-center align-items-center">
+                <div id="bslt-column" class="col-md-6">
+                    <div id="bslt-box" class="col-md-12">
+                        <form id="bslt-form" class="form" action="" method="post">{% csrf_token %}
+                            <h3 class="text-center text-info"> {{ caption }}</h3>
+                                  {% for formname, formfields in form.items %}
+                                      {{ formfields.non_field_errors }}
+                                        {% for field in formfields %}
+                                          <div class="form-group">
+                                            {{ field }}{{ field.errors }}
+                                          </div>
+                                        {% endfor %}
+                                      {% endfor %}
+                            <div class="text-center">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Войти">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

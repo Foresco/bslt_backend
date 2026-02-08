@@ -1,0 +1,182 @@
+[
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "value_code": "1",
+      "list_value": "Введение конструктивных улучшений и усовершенствований",
+      "is_default": true
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "value_code": "2",
+      "list_value": "Введение технологических улучшений и усовершенствований",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "value_code": "3",
+      "list_value": "Введение улучшений и усовершенствований в результате стандартизации и унификациие",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "value_code": "4",
+      "list_value": "Внедрение и изменение стандартов и технических условий",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "value_code": "5",
+      "list_value": "По результатам испытаний",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "value_code": "6",
+      "list_value": "Отработка документов с изменением литеры",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "value_code": "7",
+      "list_value": "Устранение ошибок",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 8,
+    "fields": {
+      "order_num": 8,
+      "value_code": "8",
+      "list_value": "Улучшение качества",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 9,
+    "fields": {
+      "order_num": 9,
+      "value_code": "9",
+      "list_value": "Требования заказчика",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 10,
+    "fields": {
+      "order_num": 10,
+      "value_code": "10",
+      "list_value": "Улучшение схемы",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 11,
+    "fields": {
+      "order_num": 11,
+      "value_code": "11",
+      "list_value": "Улучшение электрического монтажа",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 12,
+    "fields": {
+      "order_num": 12,
+      "value_code": "12",
+      "list_value": "Изменение средств технологического оснащения",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 13,
+    "fields": {
+      "order_num": 13,
+      "value_code": "13",
+      "list_value": "Изменение условий труда",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 14,
+    "fields": {
+      "order_num": 14,
+      "value_code": "14",
+      "list_value": "Введение новых технологических процессов (операций)",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 15,
+    "fields": {
+      "order_num": 15,
+      "value_code": "15",
+      "list_value": "Замена исходной заготовки",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 16,
+    "fields": {
+      "order_num": 16,
+      "value_code": "16",
+      "list_value": "Изменение норм расхода материалов",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 17,
+    "fields": {
+      "order_num": 17,
+      "value_code": "17",
+      "list_value": "Конструкторский приказ",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeReason",
+    "pk": 18,
+    "fields": {
+      "order_num": 18,
+      "value_code": "18",
+      "list_value": "Выпуск нового изделия",
+      "is_default": false
+    }
+  }
+]

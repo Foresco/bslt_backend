@@ -1,0 +1,29 @@
+[
+  {
+    "model": "staff.PersonCategory",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Сотрудник",
+      "is_default": true
+    }
+  },
+  {
+    "model": "staff.PersonCategory",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Разработчик",
+      "is_default": false
+    }
+  },
+  {
+    "model": "staff.PersonCategory",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Рабочий",
+      "is_default": false
+    }
+  }
+]

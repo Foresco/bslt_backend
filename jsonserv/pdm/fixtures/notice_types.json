@@ -1,0 +1,52 @@
+[
+  {
+    "model": "pdm.NoticeType",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "value_code": "ИИ",
+      "list_value": "Извещение об изменениях",
+      "is_default": true
+    }
+  },
+  {
+    "model": "pdm.NoticeType",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "value_code": "ДИ",
+      "list_value": "Дополнительное извещение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeType",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "value_code": "ПИ",
+      "list_value": "Предварительное извещение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeType",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "value_code": "ДПИ",
+      "list_value": "Дополнительное предварительное извещение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.NoticeType",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "value_code": "ПР",
+      "list_value": "Предложение об изменении",
+      "is_default": false
+    }
+  }
+]

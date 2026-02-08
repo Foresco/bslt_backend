@@ -1,0 +1,580 @@
+[
+	{
+		"model": "core.FormField",
+		"pk": 29,
+		"fields": {
+			"form_name": "classification",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 30,
+		"fields": {
+			"form_name": "classification",
+			"field_name": "group",
+			"order_num": 2,
+			"caption": "Родительская группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 31,
+		"fields": {
+			"form_name": "classification",
+			"field_name": "group_code",
+			"order_num": 3,
+			"caption": "Код группы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 32,
+		"fields": {
+			"form_name": "classification",
+			"field_name": "order_num",
+			"order_num": 4,
+			"caption": "Порядок сортировки",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 33,
+		"fields": {
+			"form_name": "classification",
+			"field_name": "description",
+			"order_num": 5,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 133,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "essence",
+			"order_num": 1,
+			"caption": "Измеряемая сущность",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 134,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "unit_name",
+			"order_num": 2,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 135,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "short_name",
+			"order_num": 3,
+			"caption": "Кратко",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 136,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "unit_code",
+			"order_num": 4,
+			"caption": "Код",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 137,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "numerator",
+			"order_num": 5,
+			"caption": "Числитель",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 138,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "denominator",
+			"order_num": 6,
+			"caption": "Знаменитель",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 139,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "separator_char",
+			"order_num": 7,
+			"caption": "Разделитель",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 140,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "base",
+			"order_num": 8,
+			"caption": "Базовая единица",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 141,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "ratio",
+			"order_num": 9,
+			"caption": "Коэффициент",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 142,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "order_num",
+			"order_num": 10,
+			"caption": "Порядок сортировки",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 143,
+		"fields": {
+			"form_name": "measureunit",
+			"field_name": "measure_system",
+			"order_num": 11,
+			"caption": "Система измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 186,
+		"fields": {
+			"form_name": "place",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 187,
+		"fields": {
+			"form_name": "place",
+			"field_name": "place_type",
+			"order_num": 2,
+			"caption": "Тип",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 188,
+		"fields": {
+			"form_name": "place",
+			"field_name": "place_code",
+			"order_num": 3,
+			"caption": "Код",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 189,
+		"fields": {
+			"form_name": "place",
+			"field_name": "short_name",
+			"order_num": 4,
+			"caption": "Кратко",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 190,
+		"fields": {
+			"form_name": "place",
+			"field_name": "parent",
+			"order_num": 5,
+			"caption": "Родительское подразделение",
+			"max_size": null,
+			"list_keys": "{\"type_key\": \"place\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 191,
+		"fields": {
+			"form_name": "place",
+			"field_name": "description",
+			"order_num": 6,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 192,
+		"fields": {
+			"form_name": "place",
+			"field_name": "is_point",
+			"order_num": 7,
+			"caption": "Участвует в производстве",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 193,
+		"fields": {
+			"form_name": "place",
+			"field_name": "is_buyer",
+			"order_num": 8,
+			"caption": "Покупает (заказывает)",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 194,
+		"fields": {
+			"form_name": "place",
+			"field_name": "is_supplier",
+			"order_num": 9,
+			"caption": "Продает (поставляет)",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 238,
+		"fields": {
+			"form_name": "systemuser",
+			"field_name": "username",
+			"order_num": 1,
+			"caption": "Логин",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 239,
+		"fields": {
+			"form_name": "systemuser",
+			"field_name": "first_name",
+			"order_num": 2,
+			"caption": "Имя",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 240,
+		"fields": {
+			"form_name": "systemuser",
+			"field_name": "last_name",
+			"order_num": 3,
+			"caption": "Фамилия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 267,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "user",
+			"order_num": 1,
+			"caption": "Логин",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 268,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "user_name",
+			"order_num": 2,
+			"caption": "Фамилия Имя Отчество",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 269,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "taskable",
+			"order_num": 3,
+			"caption": "Получает задания",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 270,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "dismissed",
+			"order_num": 4,
+			"caption": "Уволен",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 271,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "dashboard",
+			"order_num": 5,
+			"caption": "Страница по умолчанию",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 272,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "password_expire",
+			"order_num": 6,
+			"caption": "Требуется смена пароля",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	}
+]

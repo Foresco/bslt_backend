@@ -1,0 +1,467 @@
+[
+	{
+		"model": "Essence",
+		"id": "Безразмерные",
+		"essence_name": "Безразмерные"
+	},
+	{
+		"model": "Essence",
+		"id": "Масса",
+		"essence_name": "Масса"
+	},
+	{
+		"model": "Essence",
+		"id": "Длина",
+		"essence_name": "Длина"
+	},
+	{
+		"model": "Essence",
+		"id": "Площадь",
+		"essence_name": "Площадь"
+	},
+	{
+		"model": "Essence",
+		"id": "Объем",
+		"essence_name": "Объем"
+	},
+	{
+		"model": "Essence",
+		"id": "Цена",
+		"essence_name": "Цена"
+	},
+	{
+		"model": "Essence",
+		"id": "Время",
+		"essence_name": "Время"
+	},
+	{
+		"model": "Essence",
+		"id": "Погонные",
+		"essence_name": "Погонные"
+	},
+	{
+		"model": "Essence",
+		"id": "Удельные величины",
+		"essence_name": "Удельные величины"
+	},
+	{
+		"model": "Essence",
+		"id": "Доли и проценты",
+		"essence_name": "Доли и проценты"
+	},
+	{
+		"model": "Essence",
+		"id": "Оплата",
+		"essence_name": "Оплата"
+	},
+	{
+		"model": "Essence",
+		"id": "Частота",
+		"essence_name": "Частота"
+	},
+	{
+		"model": "Essence",
+		"id": "Угловые величины",
+		"essence_name": "Угловые величины"
+	},
+	{
+		"model": "MeasureSystem",
+		"id": "Метрическая",
+		"list_value": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Штука",
+		"essence": "Безразмерные",
+		"unit_name": "Штука",
+		"short_name": "шт.",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Килограмм",
+		"essence": "Масса",
+		"unit_name": "Килограмм",
+		"short_name": "кг",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Метр",
+		"essence": "Длина",
+		"unit_name": "Метр",
+		"short_name": "м",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Квадратный метр",
+		"essence": "Площадь",
+		"unit_name": "Квадратный метр",
+		"short_name": "кв.м",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Кубический метр",
+		"essence": "Объем",
+		"unit_name": "Кубический метр",
+		"short_name": "куб.м",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Рубль",
+		"essence": "Цена",
+		"unit_name": "Рубль",
+		"short_name": "руб.",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Грамм",
+		"essence": "Масса",
+		"unit_name": "Грамм",
+		"short_name": "г",
+		"base": "Килограмм",
+		"ratio": 0.001,
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Миллиметр",
+		"essence": "Длина",
+		"unit_name": "Миллиметр",
+		"short_name": "мм",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Звено",
+		"essence": "Безразмерные",
+		"unit_name": "Звено",
+		"short_name": "зв.",
+		"order_num": 3,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Минута",
+		"essence": "Время",
+		"unit_name": "Минута",
+		"short_name": "мин.",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Час",
+		"essence": "Время",
+		"unit_name": "Час",
+		"short_name": "ч",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Килограмм на метр",
+		"essence": "Погонные",
+		"unit_name": "Килограмм на метр",
+		"short_name": "кг/м",
+		"numerator": "Килограмм",
+		"denominator": "Метр",
+		"separator_char": "/",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Звеньев на метр",
+		"essence": "Погонные",
+		"unit_name": "Звеньев на метр",
+		"short_name": "зв./м",
+		"numerator": "Звено",
+		"denominator": "Метр",
+		"separator_char": "/",
+		"order_num": 3,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Килограмм на кубический метр",
+		"essence": "Удельные величины",
+		"unit_name": "Килограмм на кубический метр",
+		"short_name": "кг/куб.м",
+		"numerator": "Килограмм",
+		"denominator": "Кубический метр",
+		"separator_char": "/",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Килограмм на штуку",
+		"essence": "Удельные величины",
+		"unit_name": "Килограмм на штуку",
+		"short_name": "кг/шт.",
+		"numerator": "Килограмм",
+		"denominator": "Штука",
+		"separator_char": "/",
+		"order_num": 6,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Штук в килограмме",
+		"essence": "Удельные величины",
+		"unit_name": "Штук в килограмме",
+		"short_name": "шт./кг",
+		"numerator": "Штука",
+		"denominator": "Килограмм",
+		"separator_char": "/",
+		"order_num": 8,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Грамм на метр",
+		"essence": "Погонные",
+		"unit_name": "Грамм на метр",
+		"short_name": "г/м",
+		"numerator": "Грамм",
+		"denominator": "Метр",
+		"separator_char": "/",
+		"order_num": 4,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Грамм на кубический метр",
+		"essence": "Удельные величины",
+		"unit_name": "Грамм на кубический метр",
+		"short_name": "г/куб.м",
+		"numerator": "Грамм",
+		"denominator": "Кубический метр",
+		"separator_char": "/",
+		"order_num": 5,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Грамм на штуку",
+		"essence": "Удельные величины",
+		"unit_name": "Грамм на штуку",
+		"short_name": "г/шт.",
+		"numerator": "Грамм",
+		"denominator": "Штука",
+		"separator_char": "/",
+		"order_num": 3,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Погонный метр",
+		"essence": "Погонные",
+		"unit_name": "Погонный метр",
+		"short_name": "пг.м",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Проценты",
+		"essence": "Доли и проценты",
+		"unit_name": "Проценты",
+		"short_name": "%",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Массовая доля",
+		"essence": "Доли и проценты",
+		"unit_name": "Массовая доля",
+		"short_name": "мд",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Объемная доля",
+		"essence": "Доли и проценты",
+		"unit_name": "Объемная доля",
+		"short_name": "од",
+		"order_num": 3,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Дециметр",
+		"essence": "Длина",
+		"unit_name": "Дециметр",
+		"short_name": "дм",
+		"base": "Метр",
+		"ratio": 0.1,
+		"order_num": 4,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Кубический дециметр",
+		"essence": "Объем",
+		"unit_name": "Кубический дециметр",
+		"short_name": "куб.дм",
+		"base": "Кубический метр",
+		"ratio": 0.001,
+		"order_num": 3,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Килограмм на кубический дециметр",
+		"essence": "Удельные величины",
+		"unit_name": "Килограмм на кубический дециметр",
+		"short_name": "кг/куб.дм",
+		"numerator": "Килограмм",
+		"denominator": "Кубический дециметр",
+		"separator_char": "/",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Кубический сантиметр",
+		"essence": "Объем",
+		"unit_name": "Кубический сантиметр",
+		"short_name": "куб.см",
+		"base": "Кубический метр",
+		"ratio": 0.000001,
+		"order_num": 4,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Рублей за час",
+		"essence": "Оплата",
+		"unit_name": "Рублей за час",
+		"short_name": "руб./ч",
+		"numerator": "Рубль",
+		"denominator": "Час",
+		"separator_char": "/",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Рулон",
+		"essence": "Безразмерные",
+		"unit_name": "Рулон",
+		"short_name": "рул.",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Герц",
+		"essence": "Частота",
+		"unit_name": "Герц",
+		"short_name": "Гц",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Метров на звено",
+		"essence": "Погонные",
+		"unit_name": "Метров на звено",
+		"short_name": "м/зв.",
+		"numerator": "Метр",
+		"denominator": "Звено",
+		"separator_char": "/",
+		"order_num": 5,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Литр",
+		"essence": "Объем",
+		"unit_name": "Литр",
+		"short_name": "л",
+		"base": "Кубический метр",
+		"ratio": 0.001,
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Микрометр",
+		"essence": "Длина",
+		"unit_name": "Микрометр",
+		"short_name": "мкм",
+		"base": "Метр",
+		"ratio": 0.000001,
+		"order_num": 5,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Грамм на кубический сантиметр",
+		"essence": "Удельные величины",
+		"unit_name": "Грамм на кубический сантиметр",
+		"short_name": "г/куб.см",
+		"numerator": "Грамм",
+		"denominator": "Кубический сантиметр",
+		"separator_char": "/",
+		"order_num": 4,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Метров на штуку",
+		"essence": "Удельные величины",
+		"unit_name": "Метров на штуку",
+		"short_name": "м/шт.",
+		"numerator": "Метр",
+		"denominator": "Штука",
+		"separator_char": "/",
+		"order_num": 7,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Сантиметр",
+		"essence": "Длина",
+		"unit_name": "Сантиметр",
+		"short_name": "см",
+		"base": "Метр",
+		"ratio": 0.001,
+		"order_num": 3,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Доллар",
+		"essence": "Цена",
+		"unit_name": "Доллар",
+		"short_name": "долл.",
+		"order_num": 2,
+		"measure_system": "Метрическая"
+	},
+	{
+		"model": "MeasureUnit",
+		"id": "Градус",
+		"essence": "Угловые величины",
+		"unit_name": "Градус",
+		"short_name": "град.",
+		"order_num": 1,
+		"measure_system": "Метрическая"
+	}
+]

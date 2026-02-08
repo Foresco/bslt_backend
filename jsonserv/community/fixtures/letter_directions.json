@@ -1,0 +1,29 @@
+[
+  {
+    "model": "community.LetterDirection",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Входящее",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterDirection",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Исходящее",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterDirection",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Общее",
+      "is_default": true
+    }
+  }
+]

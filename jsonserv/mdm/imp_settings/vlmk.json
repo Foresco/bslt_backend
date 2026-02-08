@@ -1,0 +1,13 @@
+{
+  "source_file": "ВЛМК_часть1.xlsx",
+  "sheet_name": "Лист1",
+  "fields": {
+    "Наименование": "code",
+    "ВерсияДанных": "external_key"
+  },
+  "exclude": ["ЭтоГруппа"],
+  "filter": {
+    "ЭтоГруппа": "Да"
+  },
+  "update_found": "False"
+}

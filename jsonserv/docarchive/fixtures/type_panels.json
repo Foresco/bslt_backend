@@ -1,0 +1,457 @@
+[
+	{
+		"model": "Panel",
+		"id": "arcdocdeliveries",
+		"panel_name": "arcdocdeliveries"
+	},
+	{
+		"model": "Panel",
+		"id": "arcdocumentobjects",
+		"panel_name": "arcdocumentobjects"
+	},
+	{
+		"model": "Panel",
+		"id": "arcdocumentslist",
+		"panel_name": "arcdocumentslist"
+	},
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "designroles",
+		"panel_name": "designroles"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "historylog",
+		"panel_name": "historylog"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfiles",
+		"panel_name": "objectfiles"
+	},
+	{
+		"model": "Panel",
+		"id": "objecttasks",
+		"panel_name": "objecttasks"
+	},
+	{
+		"model": "Panel",
+		"id": "outsidelinks",
+		"panel_name": "outsidelinks"
+	},
+	{
+		"model": "Panel",
+		"id": "propertiesview",
+		"panel_name": "propertiesview"
+	},
+	{
+		"model": "Panel",
+		"id": "propertyvalues",
+		"panel_name": "propertyvalues"
+	},
+	{
+		"model": "Panel",
+		"id": "codeprefixeslist",
+		"panel_name": "codeprefixeslist"
+	},
+	{
+		"model": "Panel",
+		"id": "deliverieslist",
+		"panel_name": "deliverieslist"
+	},
+	{
+		"model": "Panel",
+		"id": "deliveryarcdocs",
+		"panel_name": "deliveryarcdocs"
+	},
+	{
+		"model": "Panel",
+		"id": "docversionobjects",
+		"panel_name": "docversionobjects"
+	},
+	{
+		"model": "Panel",
+		"id": "filedocumentslist",
+		"panel_name": "filedocumentslist"
+	},
+	{
+		"model": "Panel",
+		"id": "fileuploadcreate",
+		"panel_name": "fileuploadcreate"
+	},
+	{
+		"model": "Panel",
+		"id": "fileuploadslist",
+		"panel_name": "fileuploadslist"
+	},
+	{
+		"model": "Panel",
+		"id": "uploadarcdocs",
+		"panel_name": "uploadarcdocs"
+	},
+	{
+		"model": "Panel",
+		"id": "incidentslist",
+		"panel_name": "incidentslist"
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentarcdocdeliveries",
+		"panel": "arcdocdeliveries",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentarcdocumentobjects",
+		"panel": "arcdocumentobjects",
+		"type_key": "arcdocument",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentarcdocumentslist",
+		"panel": "arcdocumentslist",
+		"type_key": "arcdocument",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentcreate",
+		"panel": "create",
+		"type_key": "arcdocument",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_arcdocument",
+		"edit_right": "change_arcdocument"
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentdesignroles",
+		"panel": "designroles",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentedit",
+		"panel": "edit",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_arcdocument",
+		"edit_right": "change_arcdocument"
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentfilters",
+		"panel": "filters",
+		"type_key": "arcdocument",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumenthistorylog",
+		"panel": "historylog",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_arcdocument",
+		"edit_right": "change_arcdocument"
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentobjecttasks",
+		"panel": "objecttasks",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentoutsidelinks",
+		"panel": "outsidelinks",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "arcdocument",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "arcdocumentpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "arcdocument",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "codeprefixcodeprefixeslist",
+		"panel": "codeprefixeslist",
+		"type_key": "codeprefix",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "codeprefixcreate",
+		"panel": "create",
+		"type_key": "codeprefix",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_codeprefix",
+		"edit_right": "change_codeprefix"
+	},
+	{
+		"model": "TypePanel",
+		"id": "codeprefixfilters",
+		"panel": "filters",
+		"type_key": "codeprefix",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "deliverycreate",
+		"panel": "create",
+		"type_key": "delivery",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_delivery",
+		"edit_right": "change_delivery"
+	},
+	{
+		"model": "TypePanel",
+		"id": "deliverydeliverieslist",
+		"panel": "deliverieslist",
+		"type_key": "delivery",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "deliverydeliveryarcdocs",
+		"panel": "deliveryarcdocs",
+		"type_key": "delivery",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "deliveryedit",
+		"panel": "edit",
+		"type_key": "delivery",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_delivery",
+		"edit_right": "change_delivery"
+	},
+	{
+		"model": "TypePanel",
+		"id": "deliveryfilters",
+		"panel": "filters",
+		"type_key": "delivery",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "filter_fields =['date', 'place']"
+	},
+	{
+		"model": "TypePanel",
+		"id": "filedocumentdocversionobjects",
+		"panel": "docversionobjects",
+		"type_key": "filedocument",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "filedocumentfiledocumentslist",
+		"panel": "filedocumentslist",
+		"type_key": "filedocument",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "filedocumentfilters",
+		"panel": "filters",
+		"type_key": "filedocument",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "fileuploadedit",
+		"panel": "edit",
+		"type_key": "fileupload",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_fileupload",
+		"edit_right": "change_fileupload"
+	},
+	{
+		"model": "TypePanel",
+		"id": "fileuploadfileuploadcreate",
+		"panel": "fileuploadcreate",
+		"type_key": "fileupload",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "fileuploadfileuploadslist",
+		"panel": "fileuploadslist",
+		"type_key": "fileupload",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "fileuploadfilters",
+		"panel": "filters",
+		"type_key": "fileupload",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "fileuploaduploadarcdocs",
+		"panel": "uploadarcdocs",
+		"type_key": "fileupload",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "incidentcreate",
+		"panel": "create",
+		"type_key": "incident",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_incident",
+		"edit_right": "change_incident"
+	},
+	{
+		"model": "TypePanel",
+		"id": "incidentedit",
+		"panel": "edit",
+		"type_key": "incident",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_incident",
+		"edit_right": "change_incident"
+	},
+	{
+		"model": "TypePanel",
+		"id": "incidentfilters",
+		"panel": "filters",
+		"type_key": "incident",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "filter_fields = ['filter_date', 'filter_parent']"
+	},
+	{
+		"model": "TypePanel",
+		"id": "incidenthistorylog",
+		"panel": "historylog",
+		"type_key": "incident",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "incidentincidentslist",
+		"panel": "incidentslist",
+		"type_key": "incident",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "incidentobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "incident",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_arcdocument",
+		"codename": "change_arcdocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_arcdocument",
+		"codename": "view_arcdocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_codeprefix",
+		"codename": "change_codeprefix"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_delivery",
+		"codename": "change_delivery"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_delivery",
+		"codename": "view_delivery"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_fileupload",
+		"codename": "view_fileupload"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_incident",
+		"codename": "change_incident"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_incident",
+		"codename": "view_incident"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_fileupload",
+		"codename": "change_fileupload"
+	}
+]

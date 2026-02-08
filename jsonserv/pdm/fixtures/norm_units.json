@@ -1,0 +1,16 @@
+[
+  {
+    "model": "pdm.NormUnit",
+    "pk": 1,
+    "fields": {
+      "multiplicator": 1   
+    }
+  },
+  {
+    "model": "pdm.NormUnit",
+    "pk": 2,
+    "fields": {
+      "multiplicator": 1000
+    }
+  }
+]

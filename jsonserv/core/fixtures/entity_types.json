@@ -1,0 +1,20 @@
+[{
+	"model": "core.entitytype",
+	"pk": "classification",
+	"fields": {
+		"type_name": "Классификационная группа",
+		"div_name": "Классификационные группы",
+		"doc_key": false,
+		"table_name": "classification"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "place",
+	"fields": {
+		"type_name": "Производственное подразделение",
+		"div_name": "Производственные подразделения",
+		"doc_key": false,
+		"table_name": "place"
+	}
+}]

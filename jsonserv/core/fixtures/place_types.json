@@ -1,0 +1,65 @@
+[
+  {
+    "model": "core.PlaceType",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Цех",
+      "is_default": true
+    }
+  },
+  {
+    "model": "core.PlaceType",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Участок",
+      "is_default": false
+    }
+  },
+  {
+    "model": "core.PlaceType",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Склад",
+      "is_default": false
+    }
+  },
+  {
+    "model": "core.PlaceType",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Отдел",
+      "is_default": false
+    }
+  },
+  {
+    "model": "core.PlaceType",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Рабочее место",
+      "is_default": false
+    }
+  },
+  {
+    "model": "core.PlaceType",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "Внешний контрагент",
+      "is_default": false
+    }
+  },
+  {
+    "model": "core.PlaceType",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "list_value": "Кооператор",
+      "is_default": false
+    }
+  }
+]

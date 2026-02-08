@@ -1,0 +1,52 @@
+[
+  {
+    "model": "core.FormField",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "form_name": "toolclass",
+      "field_name": "class_id",
+	  "caption": "Идентификатор класса"
+    }
+  },
+  {
+    "model": "core.FormField",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "form_name": "toolclass",
+      "field_name": "class_name",
+	  "caption": "Имя класса"
+    }
+  },
+  {
+    "model": "core.FormField",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "form_name": "toolclass",
+      "field_name": "parent",
+	  "caption": "Класс родитель"
+    }
+  },
+  {
+    "model": "core.FormField",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "form_name": "toolclass",
+      "field_name": "preferred_name",
+	  "caption": "Полное имя класса"
+    }
+  },
+  {
+    "model": "core.FormField",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "form_name": "toolclass",
+      "field_name": "mapping_rule",
+	  "caption": "Правило маппинга"
+    }
+  }
+]

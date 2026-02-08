@@ -1,0 +1,65 @@
+[
+  {
+    "model": "core.PropertyType",
+    "pk": "S",
+    "fields": {
+      "description": "Строка"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "T",
+    "fields": {
+      "description": "Текст"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "B",
+    "fields": {
+      "description": "Да/Нет"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "I",
+    "fields": {
+      "description": "Целое число"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "F",
+    "fields": {
+      "description": "Число"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "D",
+    "fields": {
+      "description": "Дата"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "L",
+    "fields": {
+      "description": "Ссылка"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "R",
+    "fields": {
+      "description": "Диапазон"
+    }
+  },
+  {
+    "model": "core.PropertyType",
+    "pk": "V",
+    "fields": {
+      "description": "Значение из списка"
+    }
+  }
+]

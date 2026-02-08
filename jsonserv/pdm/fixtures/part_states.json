@@ -1,0 +1,97 @@
+[
+	{
+		"model": "SystemPermission",
+		"id": "change_state_devel",
+		"codename": "change_state_devel"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_state_devel",
+		"codename": "view_state_devel"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_state_tested",
+		"codename": "change_state_tested"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_state_tested",
+		"codename": "view_state_tested"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_state_agreed",
+		"codename": "change_state_agreed"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_state_agreed",
+		"codename": "view_state_agreed"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_state_approved",
+		"codename": "change_state_approved"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_state_approved",
+		"codename": "view_state_approved"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_state_cancel",
+		"codename": "change_state_cancel"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_state_cancel",
+		"codename": "view_state_cancel"
+	},
+	{
+		"model": "PartState",
+		"id": 1,
+		"order_num": 1,
+		"list_value": "Разработка",
+		"is_default": true,
+		"view_right": "view_state_devel",
+		"edit_right": "change_state_devel"
+	},
+	{
+		"model": "PartState",
+		"id": 2,
+		"order_num": 2,
+		"list_value": "Проверено",
+		"is_default": false,
+		"view_right": "view_state_tested",
+		"edit_right": "change_state_tested"
+	},
+	{
+		"model": "PartState",
+		"id": 3,
+		"order_num": 3,
+		"list_value": "Согласовано",
+		"is_default": false,
+		"view_right": "view_state_agreed",
+		"edit_right": "change_state_agreed"
+	},
+	{
+		"model": "PartState",
+		"id": 4,
+		"order_num": 4,
+		"list_value": "Утверждено",
+		"is_default": false,
+		"view_right": "view_state_approved",
+		"edit_right": "change_state_approved"
+	},
+	{
+		"model": "PartState",
+		"id": 5,
+		"order_num": 5,
+		"list_value": "Аннулировано",
+		"is_default": false,
+		"view_right": "view_state_cancel",
+		"edit_right": "change_state_cancel"
+	}
+]

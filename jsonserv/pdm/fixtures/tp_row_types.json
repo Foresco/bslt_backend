@@ -1,0 +1,110 @@
+[
+  {
+    "model": "pdm.TpRowType",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Операция",
+      "is_default": true
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Переход",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Контроль",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Указания о контроле",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Режимы",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "Документация",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "list_value": "Оборудование",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 8,
+    "fields": {
+      "order_num": 8,
+      "list_value": "Материал вспомогательный",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 9,
+    "fields": {
+      "order_num": 9,
+      "list_value": "Материал конструкционный",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 10,
+    "fields": {
+      "order_num": 10,
+      "list_value": "Комплектующее",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 11,
+    "fields": {
+      "order_num": 11,
+      "list_value": "Инструмент, оснастка",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.TpRowType",
+    "pk": 12,
+    "fields": {
+      "order_num": 12,
+      "list_value": "ТПУН",
+      "is_default": false
+    }
+  }
+]

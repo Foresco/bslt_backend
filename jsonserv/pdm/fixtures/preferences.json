@@ -1,0 +1,47 @@
+[
+  {
+    "model": "pdm.PartPreference",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Неограниченно разрешен к применению",
+      "is_default": true    
+    }
+  },
+  {
+    "model": "pdm.PartPreference",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Рекомендуется к применению",
+      "is_default": false   
+    }
+  },
+  {
+    "model": "pdm.PartPreference",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Унифицированный",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.PartPreference",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Ограниченно разрешен к применению",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.PartPreference",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Не рекомендуется к применению",
+      "is_default": false
+    }
+  }
+]

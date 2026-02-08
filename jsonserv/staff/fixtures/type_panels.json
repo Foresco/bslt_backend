@@ -1,0 +1,81 @@
+[
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "personslist",
+		"panel_name": "personslist"
+	},
+	{
+		"model": "Panel",
+		"id": "personstaffposition",
+		"panel_name": "personstaffposition"
+	},
+	{
+		"model": "TypePanel",
+		"id": "personcreate",
+		"panel": "create",
+		"type_key": "person",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_person",
+		"edit_right": "change_person"
+	},
+	{
+		"model": "TypePanel",
+		"id": "personedit",
+		"panel": "edit",
+		"type_key": "person",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_person",
+		"edit_right": "change_person"
+	},
+	{
+		"model": "TypePanel",
+		"id": "personfilters",
+		"panel": "filters",
+		"type_key": "person",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "personpersonslist",
+		"panel": "personslist",
+		"type_key": "person",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "personpersonstaffposition",
+		"panel": "personstaffposition",
+		"type_key": "person",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_person",
+		"codename": "change_person"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_person",
+		"codename": "view_person"
+	}
+]

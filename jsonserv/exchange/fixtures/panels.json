@@ -1,0 +1,16 @@
+[
+	{
+		"model": "Panel",
+		"id": "outsidelinks",
+		"panel_name": "outsidelinks",
+		"area": "east",
+		"description": "Ссылки во внешней системе",
+		"check_state": "False",
+		"view_right": "view_external_id"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_external_id",
+		"codename": "view_external_id"
+	}
+]

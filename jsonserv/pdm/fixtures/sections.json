@@ -1,0 +1,18 @@
+[{
+	"model": "pdm.section",
+	"pk": 1,
+	"fields": {
+		"order_num": 1,
+		"list_value": "-",
+		"is_default": true
+	}
+},
+{
+	"model": "pdm.section",
+	"pk": 2,
+	"fields": {
+		"order_num": 2,
+		"list_value": "Устанавливают при электромонтаже",
+		"is_default": false
+	}
+}]

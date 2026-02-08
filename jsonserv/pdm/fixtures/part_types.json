@@ -1,0 +1,155 @@
+[
+  {
+    "model": "pdm.PartType",
+    "pk": "document",
+    "fields": {
+      "order_num": 1,
+      "type_name": "Документация",
+      "div_name": "Документация"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "complex",
+    "fields": {
+      "order_num": 2,
+      "type_name": "Комплекс",
+      "div_name": "Комплексы"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "assembly",
+    "fields": {
+      "order_num": 3,
+      "type_name": "Сборочная единица",
+      "div_name": "Сборочные единицы"
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "detail",
+    "fields": {
+      "order_num": 4,
+      "type_name": "Деталь",
+      "div_name": "Детали"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "standart",
+    "fields": {
+      "order_num": 5,
+      "type_name": "Стандартное изделие",
+      "div_name": "Стандартные изделия"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "other",
+    "fields": {
+      "order_num": 6,
+      "type_name": "Прочее изделие",
+      "div_name": "Прочие изделия"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "material",
+    "fields": {
+      "order_num": 7,
+      "type_name": "Материал",
+      "div_name": "Материалы"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "complect",
+    "fields": {
+      "order_num": 8,
+      "type_name": "Комплект",
+      "div_name": "Комплекты"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "sortament",
+    "fields": {
+      "order_num": 9,
+      "type_name": "Сортамент",
+      "div_name": "Сортаменты"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "exemplar",
+    "fields": {
+      "order_num": 10,
+      "type_name": "Экземпляр сортамента",
+      "div_name": "Материалы"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "rigging",
+    "fields": {
+      "order_num": 12,
+      "type_name": "Оснастка",
+      "div_name": "Оснастка"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "tool",
+    "fields": {
+      "order_num": 13,
+      "type_name": "Инструмент",
+      "div_name": "Инструмент"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "equipment",
+    "fields": {
+      "order_num": 14,
+      "type_name": "Оборудование",
+      "div_name": "Оборудование"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "tare",
+    "fields": {
+      "order_num": 15,
+      "type_name": "Тара",
+      "div_name": "Тара"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "device",
+    "fields": {
+      "order_num": 16,
+      "type_name": "Изделие",
+      "div_name": "Изделия"    
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "order",
+    "fields": {
+      "order_num": 17,
+      "type_name": "Заказ",
+      "div_name": "Заказы"
+    }
+  },
+  {
+    "model": "pdm.PartType",
+    "pk": "select",
+    "fields": {
+      "order_num": 18,
+      "type_name": "Выборка",
+      "div_name": "Выборки"
+    }
+  }
+]

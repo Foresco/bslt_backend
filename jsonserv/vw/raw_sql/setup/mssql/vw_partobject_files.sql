@@ -1,0 +1,8 @@
+CREATE VIEW vw_partobject_files AS
+SELECT
+  ev.entity_id,
+  df.id,
+  df.file_name
+FROM docarchive_entitydocumentversion ev
+INNER JOIN docarchive_digitalfile df ON (df.document_version_id = ev.document_version_id) AND (df.dlt_sess = 0)
+WHERE (ev.dlt_sess = 0) AND NOT (ev.old_version = 1);

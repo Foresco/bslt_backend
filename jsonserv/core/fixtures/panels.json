@@ -1,0 +1,375 @@
+[
+	{
+		"model": "Panel",
+		"id": "classification",
+		"panel_name": "classification",
+		"area": "west",
+		"description": "Дерево классификационных групп",
+		"check_state": "False",
+		"view_right": "view_classification",
+		"edit_right": "view_classification"
+	},
+	{
+		"model": "Panel",
+		"id": "classificationlist",
+		"panel_name": "classificationlist",
+		"area": "center",
+		"description": "Перечень классификационных групп",
+		"check_state": "False",
+		"view_right": "view_classification"
+	},
+	{
+		"model": "Panel",
+		"id": "comments",
+		"panel_name": "comments",
+		"area": "east",
+		"description": "Комментарии",
+		"check_state": "False",
+		"view_right": "view_comment",
+		"edit_right": "change_comment"
+	},
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create",
+		"area": "center",
+		"description": "Форма создания объекта",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "createuser",
+		"panel_name": "createuser",
+		"area": "center",
+		"description": "Форма создания пользователя",
+		"check_state": "False",
+		"view_right": "add_user",
+		"edit_right": "change_user"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit",
+		"area": "center",
+		"description": "Редактирование свойств объекта",
+		"check_state": "True"
+	},
+	{
+		"model": "Panel",
+		"id": "extralinks",
+		"panel_name": "extralinks",
+		"area": "center",
+		"description": "Панель ссылок на дополнительный функционал",
+		"check_state": "False",
+		"view_right": "view_typeextralink",
+		"edit_right": "change_typeextralink"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters",
+		"area": "west",
+		"description": "Фильтры списка объектов",
+		"check_state": "False",
+		"view_right": "view_entity_list"
+	},
+	{
+		"model": "Panel",
+		"id": "historylog",
+		"panel_name": "historylog",
+		"area": "east",
+		"description": "Просмотр истории редактирования",
+		"check_state": "False",
+		"view_right": "view_historylog"
+	},
+	{
+		"model": "Panel",
+		"id": "linkinto",
+		"panel_name": "linkinto",
+		"area": "east",
+		"description": "Панель Входит в (все связи с родителями)",
+		"check_state": "False",
+		"view_right": "view_link"
+	},
+	{
+		"model": "Panel",
+		"id": "measureunitslist",
+		"panel_name": "measureunitslist",
+		"area": "center",
+		"description": "Перечень единиц измерения",
+		"check_state": "False",
+		"view_right": "view_propertyunit"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlist",
+		"panel_name": "objectlist",
+		"area": "center",
+		"description": "Список объектов",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistcode",
+		"panel_name": "objectlistcode",
+		"area": "center",
+		"description": "Перечень объектов с полем Код",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistcodename",
+		"panel_name": "objectlistcodename",
+		"area": "center",
+		"description": "Перечень объектов с полем Обозначение в столбце Наименование",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistwd",
+		"panel_name": "objectlistwd",
+		"area": "center",
+		"description": "Перечень объектов с полем Документ",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "picturepanel",
+		"panel_name": "picturepanel",
+		"area": "east",
+		"description": "Панель с иллюстрацией к объекту",
+		"check_state": "False",
+		"view_right": "view_graphicfile",
+		"edit_right": "change_graphicfile"
+	},
+	{
+		"model": "Panel",
+		"id": "placelist",
+		"panel_name": "placelist",
+		"area": "center",
+		"description": "Перечень Справочник производственных подразделений",
+		"check_state": "False",
+		"view_right": "view_place"
+	},
+	{
+		"model": "Panel",
+		"id": "places",
+		"panel_name": "places",
+		"area": "east",
+		"description": "Панель добавления производственного подразделения",
+		"check_state": "False",
+		"view_right": "view_place",
+		"edit_right": "change_place"
+	},
+	{
+		"model": "Panel",
+		"id": "profilelist",
+		"panel_name": "profilelist",
+		"area": "center",
+		"description": "Перечень профилей пользователей",
+		"check_state": "False",
+		"view_right": "view_userprofile"
+	},
+	{
+		"model": "Panel",
+		"id": "properties",
+		"panel_name": "properties",
+		"area": "east",
+		"description": "Панель свойств для просмотра и редактирования, расположена справа",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "propertieslist",
+		"panel_name": "propertieslist",
+		"area": "center",
+		"description": "Перечень дополнительных свойств",
+		"check_state": "False",
+		"view_right": "view_property"
+	},
+	{
+		"model": "Panel",
+		"id": "propertiesview",
+		"panel_name": "propertiesview",
+		"area": "east",
+		"description": "Просмотр свойств объекта",
+		"check_state": "False"
+	},
+	{
+		"model": "Panel",
+		"id": "propertyvalues",
+		"panel_name": "propertyvalues",
+		"area": "east",
+		"description": "Значения дополнительных свойств",
+		"check_state": "False",
+		"view_right": "view_propertyvalue",
+		"edit_right": "change_propertyvalue"
+	},
+	{
+		"model": "Panel",
+		"id": "service",
+		"panel_name": "service",
+		"area": "east",
+		"description": "Сервисные функции объекта",
+		"check_state": "False",
+		"view_right": "change_service",
+		"edit_right": "change_service"
+	},
+	{
+		"model": "Panel",
+		"id": "soundsamelist",
+		"panel_name": "soundsamelist",
+		"area": "east",
+		"description": "Отображение похожих объектов",
+		"check_state": "False",
+		"view_right": "view_soundsame"
+	},
+	{
+		"model": "Panel",
+		"id": "useractivity",
+		"panel_name": "useractivity",
+		"area": "east",
+		"description": "Панель Активность пользователя",
+		"check_state": "False",
+		"view_right": "view_user"
+	},
+	{
+		"model": "Panel",
+		"id": "usergroup",
+		"panel_name": "usergroup",
+		"area": "east",
+		"description": "Панель Группы пользователя",
+		"check_state": "False",
+		"view_right": "view_group",
+		"edit_right": "change_group"
+	},
+	{
+		"model": "Panel",
+		"id": "userlist",
+		"panel_name": "userlist",
+		"area": "center",
+		"description": "Перечень пользователей",
+		"check_state": "False",
+		"view_right": "view_user"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_classification",
+		"codename": "view_classification"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_comment",
+		"codename": "view_comment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "add_user",
+		"codename": "add_user"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_typeextralink",
+		"codename": "view_typeextralink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_entity_list",
+		"codename": "view_entity_list"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_historylog",
+		"codename": "view_historylog"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_link",
+		"codename": "view_link"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_propertyunit",
+		"codename": "view_propertyunit"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_graphicfile",
+		"codename": "view_graphicfile"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_place",
+		"codename": "view_place"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_userprofile",
+		"codename": "view_userprofile"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_property",
+		"codename": "view_property"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_propertyvalue",
+		"codename": "view_propertyvalue"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_service",
+		"codename": "change_service"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_soundsame",
+		"codename": "view_soundsame"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_user",
+		"codename": "view_user"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_group",
+		"codename": "view_group"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_comment",
+		"codename": "change_comment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_user",
+		"codename": "change_user"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_typeextralink",
+		"codename": "change_typeextralink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_graphicfile",
+		"codename": "change_graphicfile"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_place",
+		"codename": "change_place"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_propertyvalue",
+		"codename": "change_propertyvalue"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_group",
+		"codename": "change_group"
+	}
+]

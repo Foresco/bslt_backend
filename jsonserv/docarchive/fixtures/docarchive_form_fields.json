@@ -1,0 +1,495 @@
+[
+	{
+		"model": "core.FormField",
+		"pk": 1,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "prefix",
+			"order_num": 1,
+			"caption": "Префикс",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 2,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "document_num",
+			"order_num": 2,
+			"caption": "Номенклатурный номер",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 3,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "code",
+			"order_num": 3,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 4,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "parent",
+			"order_num": 4,
+			"caption": "Стадия",
+			"max_size": null,
+			"list_keys": "{\"type_key\": \"\\\"stage\\\"\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 5,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "document_name",
+			"order_num": 5,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 6,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "reg_date",
+			"order_num": 6,
+			"caption": "Дата поступления",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 7,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "doc_type",
+			"order_num": 7,
+			"caption": "Вид документа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 8,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "formats",
+			"order_num": 8,
+			"caption": "Форматы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 9,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "list_count",
+			"order_num": 9,
+			"caption": "Количество листов",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 10,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "document_state",
+			"order_num": 10,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 11,
+		"fields": {
+			"form_name": "arcdocument",
+			"field_name": "document_place",
+			"order_num": 11,
+			"caption": "Место хранения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 34,
+		"fields": {
+			"form_name": "codeprefix",
+			"field_name": "prefix_code",
+			"order_num": 1,
+			"caption": "Префикс обозначения",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 35,
+		"fields": {
+			"form_name": "codeprefix",
+			"field_name": "project_code",
+			"order_num": 2,
+			"caption": "Обозначение проекта",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 36,
+		"fields": {
+			"form_name": "codeprefix",
+			"field_name": "description",
+			"order_num": 3,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 59,
+		"fields": {
+			"form_name": "delivery",
+			"field_name": "delivery_num",
+			"order_num": 1,
+			"caption": "Номер выдачи",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 60,
+		"fields": {
+			"form_name": "delivery",
+			"field_name": "delivery_date",
+			"order_num": 2,
+			"caption": "Дата выдачи",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 61,
+		"fields": {
+			"form_name": "delivery",
+			"field_name": "receiver",
+			"order_num": 3,
+			"caption": "Подразделение-получатель",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 62,
+		"fields": {
+			"form_name": "delivery",
+			"field_name": "comment",
+			"order_num": 4,
+			"caption": "Примечание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 104,
+		"fields": {
+			"form_name": "fileupload",
+			"field_name": "file_name",
+			"order_num": 1,
+			"caption": "Имя файла",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 105,
+		"fields": {
+			"form_name": "fileupload",
+			"field_name": "upload_date",
+			"order_num": 2,
+			"caption": "Дата загрузки",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 106,
+		"fields": {
+			"form_name": "fileupload",
+			"field_name": "crtd_user",
+			"order_num": 3,
+			"caption": "Пользователь",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 107,
+		"fields": {
+			"form_name": "incident",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Регистрационный номер",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 108,
+		"fields": {
+			"form_name": "incident",
+			"field_name": "incident_date",
+			"order_num": 2,
+			"caption": "Дата",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 109,
+		"fields": {
+			"form_name": "incident",
+			"field_name": "description",
+			"order_num": 3,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 110,
+		"fields": {
+			"form_name": "incident",
+			"field_name": "parent",
+			"order_num": 4,
+			"caption": "Проект",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 111,
+		"fields": {
+			"form_name": "incident",
+			"field_name": "plant_number",
+			"order_num": 5,
+			"caption": "Заводской номер изделия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 111,
+		"fields": {
+			"form_name": "documenttype",
+			"field_name": "list_value",
+			"order_num": 1,
+			"caption": "Значение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 111,
+		"fields": {
+			"form_name": "documenttype",
+			"field_name": "value_code",
+			"order_num": 2,
+			"caption": "Код",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 111,
+		"fields": {
+			"form_name": "documenttype",
+			"field_name": "order_num",
+			"order_num": 3,
+			"caption": "Порядок в списке",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	}
+]

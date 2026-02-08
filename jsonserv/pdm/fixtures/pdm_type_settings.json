@@ -1,0 +1,9 @@
+[{
+	"model": "core.typesetting",
+	"pk": "8",
+	"fields": {
+		"type_key": "processtree",
+		"dashboard": "processtree",
+		"page_header": "Технология изготовления"
+	}
+}]

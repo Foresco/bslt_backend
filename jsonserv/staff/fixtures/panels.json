@@ -1,0 +1,42 @@
+[
+	{
+		"model": "Panel",
+		"id": "personslist",
+		"panel_name": "personslist",
+		"area": "center",
+		"description": "Список сотрудников предприятия",
+		"check_state": "False",
+		"view_right": "view_person",
+		"edit_right": "change_person"
+	},
+	{
+		"model": "Panel",
+		"id": "personstaffposition",
+		"panel_name": "personstaffposition",
+		"area": "east",
+		"description": "Места работы сотрудника",
+		"check_state": "False",
+		"view_right": "view_personstaffposition",
+		"edit_right": "change_personstaffposition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_person",
+		"codename": "view_person"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_personstaffposition",
+		"codename": "view_personstaffposition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_person",
+		"codename": "change_person"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_personstaffposition",
+		"codename": "change_personstaffposition"
+	}
+]

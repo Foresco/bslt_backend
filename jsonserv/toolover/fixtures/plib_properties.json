@@ -1,0 +1,4772 @@
+[
+	{
+		"model": "Property",
+		"id": "Adaptor clamp",
+		"property_name": "Adaptor clamp"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED04F3300A",
+		"code": "71CED04F3300A",
+		"core_property": "Adaptor clamp",
+		"symbol_key": "adc",
+		"property_name": "Adaptor clamp",
+		"property_name_rus": "Крепление адаптера",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Runout axial adjustment",
+		"property_name": "Runout axial adjustment"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0845C77193",
+		"code": "71D0845C77193",
+		"core_property": "Runout axial adjustment",
+		"symbol_key": "adjar",
+		"property_name": "Runout axial adjustment",
+		"property_name_rus": "Осевая регулировка биения",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Adjustability",
+		"property_name": "Adjustability"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBA9E78025",
+		"code": "71EBBA9E78025",
+		"core_property": "Adjustability",
+		"symbol_key": "adjby",
+		"property_name": "Adjustability",
+		"property_name_rus": "Возможность регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Adjustment datum",
+		"property_name": "Adjustment datum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE66AA8A3",
+		"code": "71EBBE66AA8A3",
+		"core_property": "Adjustment datum",
+		"symbol_key": "adjdm",
+		"property_name": "Adjustment datum",
+		"property_name_rus": "Исходное положение регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Adjustment direction",
+		"property_name": "Adjustment direction"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE6A5BF09",
+		"code": "71EBBE6A5BF09",
+		"core_property": "Adjustment direction",
+		"symbol_key": "adjdr",
+		"property_name": "Adjustment direction",
+		"property_name_rus": "Направление регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Lower adjustment deviation",
+		"property_name": "Lower adjustment deviation"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE67E4BD6",
+		"code": "71EBBE67E4BD6",
+		"core_property": "Lower adjustment deviation",
+		"symbol_key": "adjdvl",
+		"property_name": "Adjustment deviation lower",
+		"property_name_rus": "Нижнее отклонение регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Upper adjustment deviation",
+		"property_name": "Upper adjustment deviation"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE682E490",
+		"code": "71EBBE682E490",
+		"core_property": "Upper adjustment deviation",
+		"symbol_key": "adjdvu",
+		"property_name": "Adjustment deviation upper",
+		"property_name_rus": "Верхнее отклонение регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Adjustment increment",
+		"property_name": "Adjustment increment"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE7266DA2",
+		"code": "71EBBE7266DA2",
+		"core_property": "Adjustment increment",
+		"symbol_key": "adjin",
+		"property_name": "Adjustment increment",
+		"property_name_rus": "Дискретность регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum adjustment limit",
+		"property_name": "Minimum adjustment limit"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE668A8F3",
+		"code": "71EBBE668A8F3",
+		"core_property": "Minimum adjustment limit",
+		"symbol_key": "adjln",
+		"property_name": "Adjustment limit minimum",
+		"property_name_rus": "Min предел регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum adjustment limit",
+		"property_name": "Maximum adjustment limit"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE664BCBD",
+		"code": "71EBBE664BCBD",
+		"core_property": "Maximum adjustment limit",
+		"symbol_key": "adjlx",
+		"property_name": "Adjustment limit maximum",
+		"property_name_rus": "Max предел регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Adjustment range",
+		"property_name": "Adjustment range"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE72A6287",
+		"code": "71EBBE72A6287",
+		"core_property": "Adjustment range",
+		"symbol_key": "adjrg",
+		"property_name": "Adjustment range",
+		"property_name_rus": "Диапазон регулировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Runout radial adjustment",
+		"property_name": "Runout radial adjustment"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0846298D19",
+		"code": "71D0846298D19",
+		"core_property": "Runout radial adjustment",
+		"symbol_key": "adjrr",
+		"property_name": "Runout radial adjustment",
+		"property_name_rus": "Радиальная регулировка биения",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Radial clearance angle",
+		"property_name": "Radial clearance angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC83B73825",
+		"code": "71EAC83B73825",
+		"core_property": "Radial clearance angle",
+		"symbol_key": "alf",
+		"property_name": "Clearance angle radial",
+		"property_name_rus": "Задний угол радиальный",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Normal clearance angle",
+		"property_name": "Normal clearance angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E5CD0DAE",
+		"code": "71ED6E5CD0DAE",
+		"core_property": "Normal clearance angle",
+		"symbol_key": "aln",
+		"property_name": "Clearance angle normal",
+		"property_name_rus": "Задний угол нормальный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Orthogonal clearance angle",
+		"property_name": "Orthogonal clearance angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D08418C3B4D",
+		"code": "71D08418C3B4D",
+		"core_property": "Orthogonal clearance angle",
+		"symbol_key": "alo",
+		"property_name": "Clearance angle orthogonal",
+		"property_name_rus": "Задний угол ортогональный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Axial clearance angle",
+		"property_name": "Axial clearance angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC83CD450B",
+		"code": "71EAC83CD450B",
+		"core_property": "Axial clearance angle",
+		"symbol_key": "alp",
+		"property_name": "Clearance angle axial",
+		"property_name_rus": "Задний угол осевой",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Clearance angle major",
+		"property_name": "Clearance angle major"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD70308D3E3",
+		"code": "71DD70308D3E3",
+		"core_property": "Clearance angle major",
+		"symbol_key": "an",
+		"property_name": "Clearance angle major",
+		"property_name_rus": "Задний угол главный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minor clearance angle",
+		"property_name": "Minor clearance angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD7030E0A00",
+		"code": "71DD7030E0A00",
+		"core_property": "Minor clearance angle",
+		"symbol_key": "ann",
+		"property_name": "Clearance angle minor",
+		"property_name_rus": "Задний угол вспомогательный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Depth of cut maximum",
+		"property_name": "Depth of cut maximum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D07576C0558",
+		"code": "71D07576C0558",
+		"core_property": "Depth of cut maximum",
+		"symbol_key": "apmx",
+		"property_name": "Depth of cut maximum",
+		"property_name_rus": "Max глубина резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Wiper edge clearance angle",
+		"property_name": "Wiper edge clearance angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD7031A98E9",
+		"code": "71DD7031A98E9",
+		"core_property": "Wiper edge clearance angle",
+		"symbol_key": "as",
+		"property_name": "Clearance angle wiper edge",
+		"property_name_rus": "Задний угол кромки wiper",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Adjusting screw protrusion",
+		"property_name": "Adjusting screw protrusion"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0F0EFDB6",
+		"code": "71EAC0F0EFDB6",
+		"core_property": "Adjusting screw protrusion",
+		"symbol_key": "asp",
+		"property_name": "Adjusting screw protrusion",
+		"property_name_rus": "Выступ регулировочного винта",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Adaptor tool clamp",
+		"property_name": "Adaptor tool clamp"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED04F920EC",
+		"code": "71CED04F920EC",
+		"core_property": "Adaptor tool clamp",
+		"symbol_key": "atc",
+		"property_name": "Adaptor tool clamp",
+		"property_name_rus": "Зажим оправки инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum plunge depth",
+		"property_name": "Maximum plunge depth"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D08099F1DDC",
+		"code": "71D08099F1DDC",
+		"core_property": "Maximum plunge depth",
+		"symbol_key": "az",
+		"property_name": "Plunge depth maximum",
+		"property_name_rus": "Max глубина врезания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shank width",
+		"property_name": "Shank width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298751FCF",
+		"code": "71CF298751FCF",
+		"core_property": "Shank width",
+		"symbol_key": "b",
+		"property_name": "Shank width",
+		"property_name_rus": "Ширина хвостовика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Balanced by design",
+		"property_name": "Balanced by design"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0CAB861F",
+		"code": "71EAC0CAB861F",
+		"core_property": "Balanced by design",
+		"symbol_key": "bbd",
+		"property_name": "Balanced by design",
+		"property_name_rus": "Сбалансирован конструктивно",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body clearance depth",
+		"property_name": "Body clearance depth"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC81F88336",
+		"code": "71EAC81F88336",
+		"core_property": "Body clearance depth",
+		"symbol_key": "bcdp",
+		"property_name": "Body clearance depth",
+		"property_name_rus": "Глубина зазора корпуса",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Corner chamfer length",
+		"property_name": "Corner chamfer length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C895C25B",
+		"code": "71DD6C895C25B",
+		"core_property": "Corner chamfer length",
+		"symbol_key": "bch",
+		"property_name": "Corner chamfer length",
+		"property_name_rus": "Длина фаски при вершине",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body diameter",
+		"property_name": "Body diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6A9AF7D1D",
+		"code": "71ED6A9AF7D1D",
+		"core_property": "Body diameter",
+		"symbol_key": "bd",
+		"property_name": "Body diameter",
+		"property_name_rus": "Диаметр корпуса",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body diameter maximum",
+		"property_name": "Body diameter maximum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D08462F8185",
+		"code": "71D08462F8185",
+		"core_property": "Body diameter maximum",
+		"symbol_key": "bdx",
+		"property_name": "Body diameter maximum",
+		"property_name_rus": "Max диаметр корпуса",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Bolt hole circle count",
+		"property_name": "Bolt hole circle count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E58E5A62",
+		"code": "71ED6E58E5A62",
+		"core_property": "Bolt hole circle count",
+		"symbol_key": "bhcc",
+		"property_name": "Bolt hole circle count",
+		"property_name_rus": "Число окружностей центров отверстий под болты",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body half taper angle",
+		"property_name": "Body half taper angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC472BD116",
+		"code": "71EAC472BD116",
+		"core_property": "Body half taper angle",
+		"symbol_key": "bhta",
+		"property_name": "Body half taper angle",
+		"property_name_rus": "Половина угла конусности",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Balance quality code",
+		"property_name": "Balance quality code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF151EA5CF1",
+		"code": "71DF151EA5CF1",
+		"core_property": "Balance quality code",
+		"symbol_key": "blq",
+		"property_name": "Balance quality code",
+		"property_name_rus": "Код качества балансировки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Blade reinforcement radius",
+		"property_name": "Blade reinforcement radius"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2992DBC44",
+		"code": "71CF2992DBC44",
+		"core_property": "Blade reinforcement radius",
+		"symbol_key": "blrad",
+		"property_name": "Blade reinforcement radius",
+		"property_name_rus": "Радиус усиления резцовой головки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body material code",
+		"property_name": "Body material code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1523224D8",
+		"code": "71DF1523224D8",
+		"core_property": "Body material code",
+		"symbol_key": "bmc",
+		"property_name": "Body material code",
+		"property_name_rus": "Материал корпуса",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Face land width",
+		"property_name": "Face land width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C9394F40",
+		"code": "71DD6C9394F40",
+		"core_property": "Face land width",
+		"symbol_key": "bn",
+		"property_name": "Face land width",
+		"property_name_rus": "Ширина передней фаски",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Wiper edge length",
+		"property_name": "Wiper edge length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA249F88",
+		"code": "71CE7AA249F88",
+		"core_property": "Wiper edge length",
+		"symbol_key": "bs",
+		"property_name": "Wiper edge length",
+		"property_name_rus": "Длина кромки wiper",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Wiper edge radius",
+		"property_name": "Wiper edge radius"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA2E50BE",
+		"code": "71CE7AA2E50BE",
+		"core_property": "Wiper edge radius",
+		"symbol_key": "bsr",
+		"property_name": "Wiper edge radius",
+		"property_name_rus": "Радиус кромки wiper",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Burr type code",
+		"property_name": "Burr type code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1523869EE",
+		"code": "71DF1523869EE",
+		"core_property": "Burr type code",
+		"symbol_key": "btc",
+		"property_name": "Burr type code",
+		"property_name_rus": "Тип заусенца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body taper end length",
+		"property_name": "Body taper end length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EADEA2BF8DF",
+		"code": "71EADEA2BF8DF",
+		"core_property": "Body taper end length",
+		"symbol_key": "btel",
+		"property_name": "Body taper end length",
+		"property_name_rus": "Длина конической части корпуса",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert body width",
+		"property_name": "Insert body width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9751A90",
+		"code": "71CE7A9751A90",
+		"core_property": "Insert body width",
+		"symbol_key": "bw",
+		"property_name": "Insert body width",
+		"property_name_rus": "Ширина пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cartridge size code",
+		"property_name": "Cartridge size code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1523EE184",
+		"code": "71DF1523EE184",
+		"core_property": "Cartridge size code",
+		"symbol_key": "casc",
+		"property_name": "Cartridge size code",
+		"property_name_rus": "Размер резцовой вставки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Chip breaker face count",
+		"property_name": "Chip breaker face count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A85CC4F9",
+		"code": "71CE7A85CC4F9",
+		"core_property": "Chip breaker face count",
+		"symbol_key": "cb",
+		"property_name": "Chip breaker face count",
+		"property_name_rus": "Число граней стружколома",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection bore depth",
+		"property_name": "Connection bore depth"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC48CAD407",
+		"code": "71EAC48CAD407",
+		"core_property": "Connection bore depth",
+		"symbol_key": "cbdp",
+		"property_name": "Connection bore depth",
+		"property_name_rus": "Глубина соединительного отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Chip breaker manufacturer s designation",
+		"property_name": "Chip breaker manufacturer s designation"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A86A4264",
+		"code": "71CE7A86A4264",
+		"core_property": "Chip breaker manufacturer s designation",
+		"symbol_key": "cbmd",
+		"property_name": "Chip breaker manufacturers designation",
+		"property_name_rus": "Обозначение стружколома",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Chip breaker property",
+		"property_name": "Chip breaker property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED0217FA18",
+		"code": "71CED0217FA18",
+		"core_property": "Chip breaker property",
+		"symbol_key": "cbp",
+		"property_name": "Chip breaker property",
+		"property_name_rus": "Характеристика стружколома",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Machine side connection code",
+		"property_name": "Machine side connection code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D102AE3B252",
+		"code": "71D102AE3B252",
+		"core_property": "Machine side connection code",
+		"symbol_key": "ccms",
+		"property_name": "Connection code machine side",
+		"property_name_rus": "Соединение со стороны станка",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Workpiece side connection count",
+		"property_name": "Workpiece side connection count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EDD2C17746F",
+		"code": "71EDD2C17746F",
+		"core_property": "Workpiece side connection count",
+		"symbol_key": "cconws",
+		"property_name": "Connection count workpiece side",
+		"property_name_rus": "Число соединений со стороны заготовки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Workpiece side connection code",
+		"property_name": "Workpiece side connection code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D102AE8A5A9",
+		"code": "71D102AE8A5A9",
+		"core_property": "Workpiece side connection code",
+		"symbol_key": "ccws",
+		"property_name": "Connection code workpiece side",
+		"property_name_rus": "Соединение со стороны детали",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert cutting diameter",
+		"property_name": "Insert cutting diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF30F02C968",
+		"code": "71CF30F02C968",
+		"core_property": "Insert cutting diameter",
+		"symbol_key": "cdi",
+		"property_name": "Insert cutting diameter",
+		"property_name_rus": "Диаметр резания пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting diameter size code",
+		"property_name": "Cutting diameter size code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1527D828C",
+		"code": "71DF1527D828C",
+		"core_property": "Cutting diameter size code",
+		"symbol_key": "cdsc",
+		"property_name": "Cutting diameter size code",
+		"property_name_rus": "Код диаметра резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting depth maximum",
+		"property_name": "Cutting depth maximum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBD5A66A",
+		"code": "71CEAEBD5A66A",
+		"core_property": "Cutting depth maximum",
+		"symbol_key": "cdx",
+		"property_name": "Cutting depth maximum",
+		"property_name_rus": "Max глубина резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Chisel edge angle",
+		"property_name": "Chisel edge angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC82B2A50E",
+		"code": "71EAC82B2A50E",
+		"core_property": "Chisel edge angle",
+		"symbol_key": "cea",
+		"property_name": "Chisel edge angle",
+		"property_name_rus": "Угол наклона поперечной кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tool cutting edge angle type code",
+		"property_name": "Tool cutting edge angle type code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078F6E9893",
+		"code": "71D078F6E9893",
+		"core_property": "Tool cutting edge angle type code",
+		"symbol_key": "ceatc",
+		"property_name": "Tool cutting edge angle type code",
+		"property_name_rus": "Тип угла режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting edge condition code",
+		"property_name": "Cutting edge condition code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C90953D8",
+		"code": "71DD6C90953D8",
+		"core_property": "Cutting edge condition code",
+		"symbol_key": "cecc",
+		"property_name": "Cutting edge condition code",
+		"property_name_rus": "Состояние режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant entry center line distance",
+		"property_name": "Coolant entry center line distance"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF22CF58",
+		"code": "71EBDBF22CF58",
+		"core_property": "Coolant entry center line distance",
+		"symbol_key": "cecid",
+		"property_name": "Coolant entry centre line distance",
+		"property_name_rus": "Расстояние до осевой линии подвода сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting edge curvature",
+		"property_name": "Cutting edge curvature"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C950E7CC",
+		"code": "71DD6C950E7CC",
+		"core_property": "Cutting edge curvature",
+		"symbol_key": "cecv",
+		"property_name": "Cutting edge curvature",
+		"property_name_rus": "Кривизна режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting edge count",
+		"property_name": "Cutting edge count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAE9B489F4",
+		"code": "71CEAE9B489F4",
+		"core_property": "Cutting edge count",
+		"symbol_key": "cedc",
+		"property_name": "Cutting edge count",
+		"property_name_rus": "Число режущих кромок",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant entry inclination angle",
+		"property_name": "Coolant entry inclination angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF2CEE6A",
+		"code": "71EBDBF2CEE6A",
+		"core_property": "Coolant entry inclination angle",
+		"symbol_key": "ceia",
+		"property_name": "Coolant entry inclination angle",
+		"property_name_rus": "Угол наклона подвода сож",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting edge identity",
+		"property_name": "Cutting edge identity"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C8B86265",
+		"code": "71DD6C8B86265",
+		"core_property": "Cutting edge identity",
+		"symbol_key": "ceid",
+		"property_name": "Cutting edge identity",
+		"property_name_rus": "Обозначение режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Chisel edge length",
+		"property_name": "Chisel edge length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC82ADE5EA",
+		"code": "71EAC82ADE5EA",
+		"core_property": "Chisel edge length",
+		"symbol_key": "cel",
+		"property_name": "Chisel edge length",
+		"property_name_rus": "Длина кромки резца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant entry rotation angle",
+		"property_name": "Coolant entry rotation angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF289BB9",
+		"code": "71EBDBF289BB9",
+		"core_property": "Coolant entry rotation angle",
+		"symbol_key": "cera",
+		"property_name": "Coolant entry rotation angle",
+		"property_name_rus": "Угол поворота подвода сож",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Corner chamfer width",
+		"property_name": "Corner chamfer width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C89A120F",
+		"code": "71DD6C89A120F",
+		"core_property": "Corner chamfer width",
+		"symbol_key": "chw",
+		"property_name": "Corner chamfer width",
+		"property_name_rus": "Ширина угловой фаски",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting item count",
+		"property_name": "Cutting item count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF8C52B8926",
+		"code": "71DF8C52B8926",
+		"core_property": "Cutting item count",
+		"symbol_key": "cict",
+		"property_name": "Cutting item count",
+		"property_name_rus": "Число режущих элементов",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting length at minimum bore diameter",
+		"property_name": "Cutting length at minimum bore diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF299287FD3",
+		"code": "71CF299287FD3",
+		"core_property": "Cutting length at minimum bore diameter",
+		"symbol_key": "clmbd",
+		"property_name": "Cutting length at minimum bore diameter",
+		"property_name_rus": "Длина резания при минимальном диаметре отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Corner count",
+		"property_name": "Corner count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAE9B67E4C",
+		"code": "71CEAE9B67E4C",
+		"core_property": "Corner count",
+		"symbol_key": "cnc",
+		"property_name": "Corner count",
+		"property_name_rus": "Число углов",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant entry diameter",
+		"property_name": "Coolant entry diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2985AA87C",
+		"code": "71CF2985AA87C",
+		"core_property": "Coolant entry diameter",
+		"symbol_key": "cnd",
+		"property_name": "Coolant entry diameter",
+		"property_name_rus": "Диаметр отверстия для сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Corner identity",
+		"property_name": "Corner identity"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C8802580",
+		"code": "71DD6C8802580",
+		"core_property": "Corner identity",
+		"symbol_key": "cnid",
+		"property_name": "Corner identity",
+		"property_name_rus": "Обозначение угла",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant entry style code",
+		"property_name": "Coolant entry style code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2985DCED3",
+		"code": "71CF2985DCED3",
+		"core_property": "Coolant entry style code",
+		"symbol_key": "cnsc",
+		"property_name": "Coolant entry style code",
+		"property_name_rus": "Тип подвода сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant entry thread size",
+		"property_name": "Coolant entry thread size"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D07558CEF8A",
+		"code": "71D07558CEF8A",
+		"core_property": "Coolant entry thread size",
+		"symbol_key": "cnt",
+		"property_name": "Coolant entry thread size",
+		"property_name_rus": "Размер резьбы отверстия для сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant pressure",
+		"property_name": "Coolant pressure"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC478A4164",
+		"code": "71EAC478A4164",
+		"core_property": "Coolant pressure",
+		"symbol_key": "cp",
+		"property_name": "Coolant pressure",
+		"property_name_rus": "Давление сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting pitch differential",
+		"property_name": "Cutting pitch differential"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF152D8CF7D",
+		"code": "71DF152D8CF7D",
+		"core_property": "Cutting pitch differential",
+		"symbol_key": "cpdf",
+		"property_name": "Cutting pitch differential",
+		"property_name_rus": "Разность шага режущих кромок",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting pitch density",
+		"property_name": "Cutting pitch density"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF15283219C",
+		"code": "71DF15283219C",
+		"core_property": "Cutting pitch density",
+		"symbol_key": "cpdn",
+		"property_name": "Cutting pitch density",
+		"property_name_rus": "Плотность шага режущих кромок",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection retention knob thread size",
+		"property_name": "Connection retention knob thread size"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298A76B66",
+		"code": "71CF298A76B66",
+		"core_property": "Connection retention knob thread size",
+		"symbol_key": "crks",
+		"property_name": "Connection retention knob thread size",
+		"property_name_rus": "Размер резьбы центрального болта",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant radial entry thread size",
+		"property_name": "Coolant radial entry thread size"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298963036",
+		"code": "71CF298963036",
+		"core_property": "Coolant radial entry thread size",
+		"symbol_key": "crnt",
+		"property_name": "Coolant radial entry thread size",
+		"property_name_rus": "Размер резьбы радиального подвода сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant ring seat width",
+		"property_name": "Coolant ring seat width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298EB6D72",
+		"code": "71CF298EB6D72",
+		"core_property": "Coolant ring seat width",
+		"symbol_key": "crw",
+		"property_name": "Coolant ring seat width",
+		"property_name_rus": "Ширина опорной поверхности кольца сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant supply property",
+		"property_name": "Coolant supply property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBB342CC751",
+		"code": "71EBB342CC751",
+		"core_property": "Coolant supply property",
+		"symbol_key": "csp",
+		"property_name": "Coolant supply property",
+		"property_name_rus": "Вид подачи сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coating property",
+		"property_name": "Coating property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD703B84298",
+		"code": "71DD703B84298",
+		"core_property": "Coating property",
+		"symbol_key": "ctp",
+		"property_name": "Coating property",
+		"property_name_rus": "Характеристика покрытия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting point translation x-direction",
+		"property_name": "Cutting point translation x-direction"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FD1E2EDD973",
+		"code": "71FD1E2EDD973",
+		"core_property": "Cutting point translation x-direction",
+		"symbol_key": "ctx",
+		"property_name": "Cutting point translation x-direction",
+		"property_name_rus": "Сдвиг вершины в направлении x",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting point translation y-direction",
+		"property_name": "Cutting point translation y-direction"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FD1E2F66B38",
+		"code": "71FD1E2F66B38",
+		"core_property": "Cutting point translation y-direction",
+		"symbol_key": "cty",
+		"property_name": "Cutting point translation y-direction",
+		"property_name_rus": "Сдвиг вершины в направлении y",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection unit basis",
+		"property_name": "Connection unit basis"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E16D5978",
+		"code": "71ED6E16D5978",
+		"core_property": "Connection unit basis",
+		"symbol_key": "cub",
+		"property_name": "Connection unit basis",
+		"property_name_rus": "Основание соединительного блока",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Work piece parting diameter maximum",
+		"property_name": "Work piece parting diameter maximum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0757C787B8",
+		"code": "71D0757C787B8",
+		"core_property": "Work piece parting diameter maximum",
+		"symbol_key": "cutdia",
+		"property_name": "Work piece parting diameter maximum",
+		"property_name_rus": "Max диаметр отрезки заготовки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting width",
+		"property_name": "Cutting width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBE2B825",
+		"code": "71CEAEBE2B825",
+		"core_property": "Cutting width",
+		"symbol_key": "cw",
+		"property_name": "Cutting width",
+		"property_name_rus": "Ширина резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum cutting width",
+		"property_name": "Minimum cutting width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0756A28B42",
+		"code": "71D0756A28B42",
+		"core_property": "Minimum cutting width",
+		"symbol_key": "cwn",
+		"property_name": "Cutting width minimum",
+		"property_name_rus": "Min ширина резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum cutting width",
+		"property_name": "Maximum cutting width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D07569F8BC3",
+		"code": "71D07569F8BC3",
+		"core_property": "Maximum cutting width",
+		"symbol_key": "cwx",
+		"property_name": "Cutting width maximum",
+		"property_name_rus": "Max ширина резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant exit diameter",
+		"property_name": "Coolant exit diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298AA8D1F",
+		"code": "71CF298AA8D1F",
+		"core_property": "Coolant exit diameter",
+		"symbol_key": "cxd",
+		"property_name": "Coolant exit diameter",
+		"property_name_rus": "Диаметр выходного отверстия сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant exit style code",
+		"property_name": "Coolant exit style code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2985FC5FC",
+		"code": "71CF2985FC5FC",
+		"core_property": "Coolant exit style code",
+		"symbol_key": "cxsc",
+		"property_name": "Coolant exit style code",
+		"property_name_rus": "Тип отвода сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Coolant exit thread size",
+		"property_name": "Coolant exit thread size"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D075633189D",
+		"code": "71D075633189D",
+		"core_property": "Coolant exit thread size",
+		"symbol_key": "cxt",
+		"property_name": "Coolant exit thread size",
+		"property_name_rus": "Размер резьбы выходного отверстия сож",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection size code",
+		"property_name": "Connection size code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FC193318002",
+		"code": "71FC193318002",
+		"core_property": "Connection size code",
+		"symbol_key": "czc",
+		"property_name": "Connection size code",
+		"property_name_rus": "Размер соединения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Fixing hole diameter",
+		"property_name": "Fixing hole diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A968C8FE",
+		"code": "71CE7A968C8FE",
+		"core_property": "Fixing hole diameter",
+		"symbol_key": "d1",
+		"property_name": "Fixing hole diameter",
+		"property_name_rus": "Диаметр отверстия под винт",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Diameter access hole",
+		"property_name": "Diameter access hole"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBB2F865924",
+		"code": "71EBB2F865924",
+		"core_property": "Diameter access hole",
+		"symbol_key": "dah",
+		"property_name": "Diameter access hole",
+		"property_name_rus": "Диаметр отверстия под головку винта",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum axial groove outside diameter",
+		"property_name": "Minimum axial groove outside diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF299354332",
+		"code": "71CF299354332",
+		"core_property": "Minimum axial groove outside diameter",
+		"symbol_key": "daxn",
+		"property_name": "Axial groove outside diameter minimum",
+		"property_name_rus": "Min наружный диаметр торцевой канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum axial groove outside diameter",
+		"property_name": "Maximum axial groove outside diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D07543FD182",
+		"code": "71D07543FD182",
+		"core_property": "Maximum axial groove outside diameter",
+		"symbol_key": "daxx",
+		"property_name": "Axial groove outside diameter maximum",
+		"property_name_rus": "Max наружный диаметр торцевой канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Diameter bolt circle",
+		"property_name": "Diameter bolt circle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0DECE78F",
+		"code": "71EAC0DECE78F",
+		"core_property": "Diameter bolt circle",
+		"symbol_key": "dbc",
+		"property_name": "Diameter bolt circle",
+		"property_name_rus": "Диаметр окружности болтов",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Drill back taper",
+		"property_name": "Drill back taper"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC81AD9AE1",
+		"code": "71EAC81AD9AE1",
+		"core_property": "Drill back taper",
+		"symbol_key": "dbt",
+		"property_name": "Drill back taper",
+		"property_name_rus": "Обратная конусность сверла",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting diameter",
+		"property_name": "Cutting diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D084653E57F",
+		"code": "71D084653E57F",
+		"core_property": "Cutting diameter",
+		"symbol_key": "dc",
+		"property_name": "Cutting diameter",
+		"property_name_rus": "Диаметр резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection bore diameter",
+		"property_name": "Connection bore diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E01D92C41E8",
+		"code": "71E01D92C41E8",
+		"core_property": "Connection bore diameter",
+		"symbol_key": "dcb",
+		"property_name": "Connection bore diameter",
+		"property_name_rus": "Диаметр отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection bore diameter minimum",
+		"property_name": "Connection bore diameter minimum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF49F96C",
+		"code": "71EBDBF49F96C",
+		"core_property": "Connection bore diameter minimum",
+		"symbol_key": "dcbn",
+		"property_name": "Connection bore diameter minimum",
+		"property_name_rus": "Min диаметр отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection bore diameter maximum",
+		"property_name": "Connection bore diameter maximum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF4D0F49",
+		"code": "71EBDBF4D0F49",
+		"core_property": "Connection bore diameter maximum",
+		"symbol_key": "dcbx",
+		"property_name": "Connection bore diameter maximum",
+		"property_name_rus": "Max диаметр отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Design configuration style code",
+		"property_name": "Design configuration style code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2993DC583",
+		"code": "71CF2993DC583",
+		"core_property": "Design configuration style code",
+		"symbol_key": "dcc",
+		"property_name": "Design configuration style code",
+		"property_name_rus": "Тип компоновки конструкции",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting diameter internal",
+		"property_name": "Cutting diameter internal"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0846545C4E",
+		"code": "71D0846545C4E",
+		"core_property": "Cutting diameter internal",
+		"symbol_key": "dcin",
+		"property_name": "Cutting diameter internal",
+		"property_name_rus": "Внутренний диаметр резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum cutting diameter internal",
+		"property_name": "Minimum cutting diameter internal"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D084655A2F7",
+		"code": "71D084655A2F7",
+		"core_property": "Minimum cutting diameter internal",
+		"symbol_key": "dcinn",
+		"property_name": "Cutting diameter internal minimum",
+		"property_name_rus": "Min внутренний диаметр резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum cutting diameter internal",
+		"property_name": "Maximum cutting diameter internal"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0846570977",
+		"code": "71D0846570977",
+		"core_property": "Maximum cutting diameter internal",
+		"symbol_key": "dcinx",
+		"property_name": "Cutting diameter internal maximum",
+		"property_name_rus": "Max внутренний диаметр резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum cutting diameter",
+		"property_name": "Minimum cutting diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0846556288",
+		"code": "71D0846556288",
+		"core_property": "Minimum cutting diameter",
+		"symbol_key": "dcn",
+		"property_name": "Cutting diameter minimum",
+		"property_name_rus": "Min диаметр резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Connection diameter",
+		"property_name": "Connection diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF5060E6",
+		"code": "71EBDBF5060E6",
+		"core_property": "Connection diameter",
+		"symbol_key": "dcon",
+		"property_name": "Connection diameter",
+		"property_name_rus": "Диаметр соединения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Data chip provision",
+		"property_name": "Data chip provision"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29869CA0F",
+		"code": "71CF29869CA0F",
+		"core_property": "Data chip provision",
+		"symbol_key": "dcp",
+		"property_name": "Data chip provision",
+		"property_name_rus": "Обеспечение чипа данных",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Contact surface diameter machine side",
+		"property_name": "Contact surface diameter machine side"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D087D97FCE3",
+		"code": "71D087D97FCE3",
+		"core_property": "Contact surface diameter machine side",
+		"symbol_key": "dcsfms",
+		"property_name": "Contact surface diameter machine side",
+		"property_name_rus": "Диаметр контактной поверхности со стороны станка",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Workpiece side contact surface diameter",
+		"property_name": "Workpiece side contact surface diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0DD5D650",
+		"code": "71EAC0DD5D650",
+		"core_property": "Workpiece side contact surface diameter",
+		"symbol_key": "dcsfws",
+		"property_name": "Contact surface diameter workpiece side",
+		"property_name_rus": "Диаметр контактной поверхности со стороны заготовки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum cutting diameter",
+		"property_name": "Maximum cutting diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D084656CE32",
+		"code": "71D084656CE32",
+		"core_property": "Maximum cutting diameter",
+		"symbol_key": "dcx",
+		"property_name": "Cutting diameter maximum",
+		"property_name_rus": "Max диаметр резания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flange diameter",
+		"property_name": "Flange diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC61D8A1771",
+		"code": "71EC61D8A1771",
+		"core_property": "Flange diameter",
+		"symbol_key": "df",
+		"property_name": "Flange diameter",
+		"property_name_rus": "Диаметр фланца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Internal flange diameter",
+		"property_name": "Internal flange diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC61D7F2071",
+		"code": "71EC61D7F2071",
+		"core_property": "Internal flange diameter",
+		"symbol_key": "dfin",
+		"property_name": "Flange diameter internal",
+		"property_name_rus": "Внутренний диаметр фланца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Gauge diameter",
+		"property_name": "Gauge diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1E1074AB",
+		"code": "71EBC1E1074AB",
+		"core_property": "Gauge diameter",
+		"symbol_key": "dg",
+		"property_name": "Gauge diameter",
+		"property_name_rus": "Диаметр калибра",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Drop head design",
+		"property_name": "Drop head design"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC49F75413",
+		"code": "71EAC49F75413",
+		"core_property": "Drop head design",
+		"symbol_key": "dhd",
+		"property_name": "Drop head design",
+		"property_name_rus": "Конструкция с опущенной головкой",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Hub diameter",
+		"property_name": "Hub diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D087D3B17B0",
+		"code": "71D087D3B17B0",
+		"core_property": "Hub diameter",
+		"symbol_key": "dhub",
+		"property_name": "Hub diameter",
+		"property_name_rus": "Диаметр червячной фрезы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Diameter inner",
+		"property_name": "Diameter inner"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAD51836C93",
+		"code": "71FAD51836C93",
+		"core_property": "Diameter inner",
+		"symbol_key": "dinn",
+		"property_name": "Diameter inner",
+		"property_name_rus": "Диаметр внутренний",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Outer diameter",
+		"property_name": "Outer diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAD51880679",
+		"code": "71FAD51880679",
+		"core_property": "Outer diameter",
+		"symbol_key": "diout",
+		"property_name": "Diameter outer",
+		"property_name_rus": "Диаметр наружный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum tool changer interference diameter",
+		"property_name": "Maximum tool changer interference diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298A3A99A",
+		"code": "71CF298A3A99A",
+		"core_property": "Maximum tool changer interference diameter",
+		"symbol_key": "dix",
+		"property_name": "Tool changer interference diameter maximum",
+		"property_name_rus": "Максимальный диаметр для устройства замены инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Driving key type",
+		"property_name": "Driving key type"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC5E1ECC776",
+		"code": "71EC5E1ECC776",
+		"core_property": "Driving key type",
+		"symbol_key": "dkty",
+		"property_name": "Driving key type",
+		"property_name_rus": "Тип приводной шпонки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum bore diameter",
+		"property_name": "Minimum bore diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D07543367C5",
+		"code": "71D07543367C5",
+		"core_property": "Minimum bore diameter",
+		"symbol_key": "dmin",
+		"property_name": "Minimum bore diameter",
+		"property_name_rus": "Min диаметр отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shank diameter",
+		"property_name": "Shank diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29862B277",
+		"code": "71CF29862B277",
+		"core_property": "Shank diameter",
+		"symbol_key": "dmm",
+		"property_name": "Shank diameter",
+		"property_name_rus": "Диаметр хвостовика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Neck diameter",
+		"property_name": "Neck diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC48EC5DE0",
+		"code": "71EAC48EC5DE0",
+		"core_property": "Neck diameter",
+		"symbol_key": "dn",
+		"property_name": "Neck diameter",
+		"property_name_rus": "Диаметр шейки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Damping property",
+		"property_name": "Damping property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED03D70452",
+		"code": "71CED03D70452",
+		"core_property": "Damping property",
+		"symbol_key": "dpc",
+		"property_name": "Damping property",
+		"property_name_rus": "Демпфирующие свойства",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Drive angle",
+		"property_name": "Drive angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D08096F930C",
+		"code": "71D08096F930C",
+		"core_property": "Drive angle",
+		"symbol_key": "drva",
+		"property_name": "Drive angle",
+		"property_name_rus": "Угол привода",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Drive count",
+		"property_name": "Drive count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E0306423B2A",
+		"code": "71E0306423B2A",
+		"core_property": "Drive count",
+		"symbol_key": "drvct",
+		"property_name": "Drive count",
+		"property_name_rus": "Число приводов",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Drive size",
+		"property_name": "Drive size"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E03063ABD6E",
+		"code": "71E03063ABD6E",
+		"core_property": "Drive size",
+		"symbol_key": "drvs",
+		"property_name": "Drive size",
+		"property_name_rus": "Размер привода",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert included angle",
+		"property_name": "Insert included angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A96BC122",
+		"code": "71CE7A96BC122",
+		"core_property": "Insert included angle",
+		"symbol_key": "epsr",
+		"property_name": "Insert included angle",
+		"property_name_rus": "Угол при вершине пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flute design code",
+		"property_name": "Flute design code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFEC645BD",
+		"code": "71DCCFEC645BD",
+		"core_property": "Flute design code",
+		"symbol_key": "fdc",
+		"property_name": "Flute design code",
+		"property_name_rus": "Конструкция стружечной канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flute helix angle",
+		"property_name": "Flute helix angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFEC20115",
+		"code": "71DCCFEC20115",
+		"core_property": "Flute helix angle",
+		"symbol_key": "fha",
+		"property_name": "Flute helix angle",
+		"property_name_rus": "Угол подъема стружечной канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flute helix hand",
+		"property_name": "Flute helix hand"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFF654756",
+		"code": "71DCCFF654756",
+		"core_property": "Flute helix hand",
+		"symbol_key": "fhh",
+		"property_name": "Flute helix hand",
+		"property_name_rus": "Направление винтовой стружечной канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flute helix pitch",
+		"property_name": "Flute helix pitch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFF6A1A13",
+		"code": "71DCCFF6A1A13",
+		"core_property": "Flute helix pitch",
+		"symbol_key": "fhp",
+		"property_name": "Flute helix pitch",
+		"property_name_rus": "Шаг винтовой канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flange height",
+		"property_name": "Flange height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EEF5384E141",
+		"code": "71EEF5384E141",
+		"core_property": "Flange height",
+		"symbol_key": "flgh",
+		"property_name": "Flange height",
+		"property_name_rus": "Высота фланца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flange location",
+		"property_name": "Flange location"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71F90EA1ED67E",
+		"code": "71F90EA1ED67E",
+		"core_property": "Flange location",
+		"symbol_key": "flgl",
+		"property_name": "Flange location",
+		"property_name_rus": "Положение фланца",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Flange thickness",
+		"property_name": "Flange thickness"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EEF53809764",
+		"code": "71EEF53809764",
+		"core_property": "Flange thickness",
+		"symbol_key": "flgt",
+		"property_name": "Flange thickness",
+		"property_name_rus": "Толщина фланца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flange width",
+		"property_name": "Flange width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EEF5387E914",
+		"code": "71EEF5387E914",
+		"core_property": "Flange width",
+		"symbol_key": "flgw",
+		"property_name": "Flange width",
+		"property_name_rus": "Ширина фланца",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flank identity",
+		"property_name": "Flank identity"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD70158265C",
+		"code": "71DD70158265C",
+		"core_property": "Flank identity",
+		"symbol_key": "flid",
+		"property_name": "Flank identity",
+		"property_name_rus": "Обозначение задней поверхности",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Face land size code",
+		"property_name": "Face land size code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C9371B86",
+		"code": "71DD6C9371B86",
+		"core_property": "Face land size code",
+		"symbol_key": "flsc",
+		"property_name": "Face land size code",
+		"property_name_rus": "Размера торцевой фаски",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Fluted land width",
+		"property_name": "Fluted land width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC8210DF36",
+		"code": "71EAC8210DF36",
+		"core_property": "Fluted land width",
+		"symbol_key": "flw",
+		"property_name": "Fluted land width",
+		"property_name_rus": "Ширина направляющей ленточки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Form type",
+		"property_name": "Form type"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBE32903BD",
+		"code": "71EBBE32903BD",
+		"core_property": "Form type",
+		"symbol_key": "fmt",
+		"property_name": "Form type",
+		"property_name_rus": "Форма",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Fixing hole property",
+		"property_name": "Fixing hole property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1C829BC044",
+		"code": "71D1C829BC044",
+		"core_property": "Fixing hole property",
+		"symbol_key": "fxhlp",
+		"property_name": "Fixing hole property",
+		"property_name_rus": "Наличие отверстия для крепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Radial rake angle",
+		"property_name": "Radial rake angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2998A1609",
+		"code": "71CF2998A1609",
+		"core_property": "Radial rake angle",
+		"symbol_key": "gamf",
+		"property_name": "Rake angle radial",
+		"property_name_rus": "Главный передний угол радиальный",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Normal rake angle",
+		"property_name": "Normal rake angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2998EBD46",
+		"code": "71CF2998EBD46",
+		"core_property": "Normal rake angle",
+		"symbol_key": "gamn",
+		"property_name": "Rake angle normal",
+		"property_name_rus": "Главный передний угол нормальный",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Orthogonal rake angle",
+		"property_name": "Orthogonal rake angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0808F8F719",
+		"code": "71D0808F8F719",
+		"core_property": "Orthogonal rake angle",
+		"symbol_key": "gamo",
+		"property_name": "Rake angle orthogonal",
+		"property_name_rus": "Главный передний угол ортогональный",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Axial rake angle",
+		"property_name": "Axial rake angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29990C41F",
+		"code": "71CF29990C41F",
+		"core_property": "Axial rake angle",
+		"symbol_key": "gamp",
+		"property_name": "Rake angle axial",
+		"property_name_rus": "Главный передний угол осевой",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Insert rake angle",
+		"property_name": "Insert rake angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9EDACA1",
+		"code": "71CE7A9EDACA1",
+		"core_property": "Insert rake angle",
+		"symbol_key": "gan",
+		"property_name": "Insert rake angle",
+		"property_name_rus": "Главный передний угол пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Face land angle",
+		"property_name": "Face land angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C9332D2C",
+		"code": "71DD6C9332D2C",
+		"core_property": "Face land angle",
+		"symbol_key": "gb",
+		"property_name": "Face land angle",
+		"property_name_rus": "Угол торцевой режущей кромки сверла",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Groove depth minimum bore diameter",
+		"property_name": "Groove depth minimum bore diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298FB10E4",
+		"code": "71CF298FB10E4",
+		"core_property": "Groove depth minimum bore diameter",
+		"symbol_key": "gdmb",
+		"property_name": "Groove depth minimum bore diameter",
+		"property_name_rus": "Глубина канавки, минимальный диаметр отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Guide element property",
+		"property_name": "Guide element property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EE070696F08",
+		"code": "71EE070696F08",
+		"core_property": "Guide element property",
+		"symbol_key": "gep",
+		"property_name": "Guide element property",
+		"property_name_rus": "Наличие направляющего элемента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Guide pilot diameter",
+		"property_name": "Guide pilot diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6A7A6E6A2",
+		"code": "71ED6A7A6E6A2",
+		"core_property": "Guide pilot diameter",
+		"symbol_key": "gpd",
+		"property_name": "Guide pilot diameter",
+		"property_name_rus": "Диаметр направляющей",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shank height",
+		"property_name": "Shank height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29883E014",
+		"code": "71CF29883E014",
+		"core_property": "Shank height",
+		"symbol_key": "h",
+		"property_name": "Shank height",
+		"property_name_rus": "Высота хвостовика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Theoretical thread height",
+		"property_name": "Theoretical thread height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF5BE5BCEBE",
+		"code": "71DF5BE5BCEBE",
+		"core_property": "Theoretical thread height",
+		"symbol_key": "ha",
+		"property_name": "Thread height theoretical",
+		"property_name_rus": "Теоретическая высота резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Hand",
+		"property_name": "Hand"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29872F0AB",
+		"code": "71CF29872F0AB",
+		"core_property": "Hand",
+		"symbol_key": "hand",
+		"property_name": "Hand",
+		"property_name_rus": "Направление",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread height difference",
+		"property_name": "Thread height difference"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF5BE617131",
+		"code": "71DF5BE617131",
+		"core_property": "Thread height difference",
+		"symbol_key": "hb",
+		"property_name": "Thread height difference",
+		"property_name_rus": "Разность высоты резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Head bottom offset height",
+		"property_name": "Head bottom offset height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298F073D3",
+		"code": "71CF298F073D3",
+		"core_property": "Head bottom offset height",
+		"symbol_key": "hbh",
+		"property_name": "Head bottom offset height",
+		"property_name_rus": "Основание головки, высота смещения",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Head back offset length",
+		"property_name": "Head back offset length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D075730A82B",
+		"code": "71D075730A82B",
+		"core_property": "Head back offset length",
+		"symbol_key": "hbkl",
+		"property_name": "Head back offset length",
+		"property_name_rus": "Тыл головки, длина смещения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Head back offset width",
+		"property_name": "Head back offset width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D075731F172",
+		"code": "71D075731F172",
+		"core_property": "Head back offset width",
+		"symbol_key": "hbkw",
+		"property_name": "Head back offset width",
+		"property_name_rus": "Тыл головки, ширина смещения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Head bottom offset length",
+		"property_name": "Head bottom offset length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298F4E487",
+		"code": "71CF298F4E487",
+		"core_property": "Head bottom offset length",
+		"symbol_key": "hbl",
+		"property_name": "Head bottom offset length",
+		"property_name_rus": "Основание головки, длина смещения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Hub property",
+		"property_name": "Hub property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF5C078FF46",
+		"code": "71DF5C078FF46",
+		"core_property": "Hub property",
+		"symbol_key": "hbp",
+		"property_name": "Hub property",
+		"property_name_rus": "Наличие втулки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread height actual",
+		"property_name": "Thread height actual"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF5BE65F86F",
+		"code": "71DF5BE65F86F",
+		"core_property": "Thread height actual",
+		"symbol_key": "hc",
+		"property_name": "Thread height actual",
+		"property_name_rus": "Высота профиля резьбы фактическая",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Head diameter",
+		"property_name": "Head diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E03062EC034",
+		"code": "71E03062EC034",
+		"core_property": "Head diameter",
+		"symbol_key": "hdd",
+		"property_name": "Head diameter",
+		"property_name_rus": "Диаметр головки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Functional height",
+		"property_name": "Functional height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29994E737",
+		"code": "71CF29994E737",
+		"core_property": "Functional height",
+		"symbol_key": "hf",
+		"property_name": "Functional height",
+		"property_name_rus": "Функциональная высота",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Body height",
+		"property_name": "Body height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBB332C60EB",
+		"code": "71EBB332C60EB",
+		"core_property": "Body height",
+		"symbol_key": "htb",
+		"property_name": "Body height",
+		"property_name_rus": "Высота корпуса",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Height",
+		"property_name": "Height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC61D8F250D",
+		"code": "71EC61D8F250D",
+		"core_property": "Height",
+		"symbol_key": "hth",
+		"property_name": "Height",
+		"property_name_rus": "Высота",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Inscribed circle diameter",
+		"property_name": "Inscribed circle diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A96D9F7D",
+		"code": "71CE7A96D9F7D",
+		"core_property": "Inscribed circle diameter",
+		"symbol_key": "ic",
+		"property_name": "Inscribed circle diameter",
+		"property_name_rus": "Диаметр вписанной окружности",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Interupted edge property",
+		"property_name": "Interupted edge property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD701175021",
+		"code": "71DD701175021",
+		"core_property": "Interupted edge property",
+		"symbol_key": "iep",
+		"property_name": "Interupted edge property",
+		"property_name_rus": "Наличие прерывистой кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert mounting style code",
+		"property_name": "Insert mounting style code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A97711B8",
+		"code": "71CE7A97711B8",
+		"core_property": "Insert mounting style code",
+		"symbol_key": "ifs",
+		"property_name": "Insert mounting style code",
+		"property_name_rus": "Тип установки пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert interface code",
+		"property_name": "Insert interface code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9936610",
+		"code": "71CE7A9936610",
+		"core_property": "Insert interface code",
+		"symbol_key": "iic",
+		"property_name": "Insert interface code",
+		"property_name_rus": "Интерфейс пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Inscribed circle property",
+		"property_name": "Inscribed circle property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1C82A5036D",
+		"code": "71D1C82A5036D",
+		"core_property": "Inscribed circle property",
+		"symbol_key": "inclp",
+		"property_name": "Inscribed circle property",
+		"property_name_rus": "Наличие вписанной окружности",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert diameter",
+		"property_name": "Insert diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D20799C721A",
+		"code": "71D20799C721A",
+		"core_property": "Insert diameter",
+		"symbol_key": "insd",
+		"property_name": "Insert diameter",
+		"property_name_rus": "Диаметр пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert length",
+		"property_name": "Insert length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9DFA23A",
+		"code": "71CE7A9DFA23A",
+		"core_property": "Insert length",
+		"symbol_key": "insl",
+		"property_name": "Insert length",
+		"property_name_rus": "Длина пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Kappa (z-axis rot)",
+		"property_name": "Kappa (z-axis rot)"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E4A7EFBA",
+		"code": "71ED6E4A7EFBA",
+		"core_property": "Kappa (z-axis rot)",
+		"symbol_key": "kap",
+		"property_name": "Kappa",
+		"property_name_rus": "Каппа (вращение вокруг оси z)",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tool cutting edge angle",
+		"property_name": "Tool cutting edge angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078F683C9B",
+		"code": "71D078F683C9B",
+		"core_property": "Tool cutting edge angle",
+		"symbol_key": "kapr",
+		"property_name": "Tool cutting edge angle",
+		"property_name_rus": "Главный угол в плане",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Corner chamfer",
+		"property_name": "Corner chamfer"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C88F9210",
+		"code": "71DD6C88F9210",
+		"core_property": "Corner chamfer",
+		"symbol_key": "kch",
+		"property_name": "Corner chamfer angle",
+		"property_name_rus": "Фаска при вершине",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Major cutting edge angle",
+		"property_name": "Major cutting edge angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA02C1CC",
+		"code": "71CE7AA02C1CC",
+		"core_property": "Major cutting edge angle",
+		"symbol_key": "krins",
+		"property_name": "Cutting edge angle major",
+		"property_name_rus": "Угол режущей кромки главный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Keyway width",
+		"property_name": "Keyway width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0841ADC9E0",
+		"code": "71D0841ADC9E0",
+		"core_property": "Keyway width",
+		"symbol_key": "kww",
+		"property_name": "Keyway width",
+		"property_name_rus": "Ширина шпоночного паза",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Keyway property",
+		"property_name": "Keyway property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF5C0761888",
+		"code": "71DF5C0761888",
+		"core_property": "Keyway property",
+		"symbol_key": "kyp",
+		"property_name": "Keyway property",
+		"property_name_rus": "Наличие шпоночного паза",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting edge length",
+		"property_name": "Cutting edge length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C95DA49B",
+		"code": "71DD6C95DA49B",
+		"core_property": "Cutting edge length",
+		"symbol_key": "l",
+		"property_name": "Cutting edge length",
+		"property_name_rus": "Длина режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Actuation method",
+		"property_name": "Actuation method"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBA9BCB5F2",
+		"code": "71EBBA9BCB5F2",
+		"core_property": "Actuation method",
+		"symbol_key": "lam",
+		"property_name": "Actuation method",
+		"property_name_rus": "Метод включения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Inclination angle",
+		"property_name": "Inclination angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D075754F8A3",
+		"code": "71D075754F8A3",
+		"core_property": "Inclination angle",
+		"symbol_key": "lams",
+		"property_name": "Inclination angle",
+		"property_name_rus": "Угол наклона",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Body length",
+		"property_name": "Body length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6AA478A3D",
+		"code": "71ED6AA478A3D",
+		"core_property": "Body length",
+		"symbol_key": "lb",
+		"property_name": "Body length",
+		"property_name_rus": "Длина корпуса",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Chip breaker width",
+		"property_name": "Chip breaker width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A870948A",
+		"code": "71CE7A870948A",
+		"core_property": "Chip breaker width",
+		"symbol_key": "lbb",
+		"property_name": "Chip breaker width",
+		"property_name_rus": "Ширина стружколома",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum body length",
+		"property_name": "Maximum body length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD3B16750B",
+		"code": "71DCD3B16750B",
+		"core_property": "Maximum body length",
+		"symbol_key": "lbx",
+		"property_name": "Body length maximum",
+		"property_name_rus": "Max длина корпуса",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Interlocking capabilty",
+		"property_name": "Interlocking capabilty"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1526AC952",
+		"code": "71DF1526AC952",
+		"core_property": "Interlocking capabilty",
+		"symbol_key": "lcb",
+		"property_name": "Interlocking capabilty",
+		"property_name_rus": "Возможность соединения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Chip flute length",
+		"property_name": "Chip flute length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC27DEF53",
+		"code": "71DCCC27DEF53",
+		"core_property": "Chip flute length",
+		"symbol_key": "lcf",
+		"property_name": "Length chip flute",
+		"property_name_rus": "Длина стружечной канавки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting edge effective length",
+		"property_name": "Cutting edge effective length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C958C615",
+		"code": "71DD6C958C615",
+		"core_property": "Cutting edge effective length",
+		"symbol_key": "le",
+		"property_name": "Cutting edge effective length",
+		"property_name_rus": "Эффективная длина режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Functional length",
+		"property_name": "Functional length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD39338974",
+		"code": "71DCD39338974",
+		"core_property": "Functional length",
+		"symbol_key": "lf",
+		"property_name": "Functional length",
+		"property_name_rus": "Функциональная длина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "A dimension on lf",
+		"property_name": "A dimension on lf"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D0793ECEF9A",
+		"code": "71D0793ECEF9A",
+		"core_property": "A dimension on lf",
+		"symbol_key": "lfa",
+		"property_name": "A dimension on lf",
+		"property_name_rus": "Размер на lf",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum functional length",
+		"property_name": "Minimum functional length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1EB8456A",
+		"code": "71EBC1EB8456A",
+		"core_property": "Minimum functional length",
+		"symbol_key": "lfn",
+		"property_name": "Functional length minimum",
+		"property_name_rus": "Min функциональная длина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Secondary functional length",
+		"property_name": "Secondary functional length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078F5BEDBE",
+		"code": "71D078F5BEDBE",
+		"core_property": "Secondary functional length",
+		"symbol_key": "lfs",
+		"property_name": "Functional length secondary",
+		"property_name_rus": "Функциональная длина вспомогательная",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Head length",
+		"property_name": "Head length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D07574A61E8",
+		"code": "71D07574A61E8",
+		"core_property": "Head length",
+		"symbol_key": "lh",
+		"property_name": "Head length",
+		"property_name_rus": "Длина головки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum tool changer interference length",
+		"property_name": "Minimum tool changer interference length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2989AF0E0",
+		"code": "71CF2989AF0E0",
+		"core_property": "Minimum tool changer interference length",
+		"symbol_key": "lin",
+		"property_name": "Tool changer interference length minimum",
+		"property_name_rus": "Минимальная длина устройства замены инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Actuation force",
+		"property_name": "Actuation force"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBA9B56D06",
+		"code": "71EBBA9B56D06",
+		"core_property": "Actuation force",
+		"symbol_key": "lmaf",
+		"property_name": "Actuation force",
+		"property_name_rus": "Усилие включения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Neck length",
+		"property_name": "Neck length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1E026769",
+		"code": "71EBC1E026769",
+		"core_property": "Neck length",
+		"symbol_key": "ln",
+		"property_name": "Neck length",
+		"property_name_rus": "Длина шейки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Protruding length",
+		"property_name": "Protruding length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD394BB20E",
+		"code": "71DCD394BB20E",
+		"core_property": "Protruding length",
+		"symbol_key": "lpr",
+		"property_name": "Protruding length",
+		"property_name_rus": "Программируемая  длина",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Shank length",
+		"property_name": "Shank length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298870946",
+		"code": "71CF298870946",
+		"core_property": "Shank length",
+		"symbol_key": "ls",
+		"property_name": "Shank length",
+		"property_name_rus": "Длина хвостовика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Clamping length",
+		"property_name": "Clamping length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBAF896BE9A",
+		"code": "71EBAF896BE9A",
+		"core_property": "Clamping length",
+		"symbol_key": "lsc",
+		"property_name": "Clamping length",
+		"property_name_rus": "Длина закрепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum clamping length",
+		"property_name": "Minimum clamping length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBB339ED2BD",
+		"code": "71EBB339ED2BD",
+		"core_property": "Minimum clamping length",
+		"symbol_key": "lscn",
+		"property_name": "Clamping length minimum",
+		"property_name_rus": "Min длина закрепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum clamping length",
+		"property_name": "Maximum clamping length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E54B15C4",
+		"code": "71ED6E54B15C4",
+		"core_property": "Maximum clamping length",
+		"symbol_key": "lscx",
+		"property_name": "Clamping length maximum",
+		"property_name_rus": "Max длина закрепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Length",
+		"property_name": "Length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC61D6B66E6",
+		"code": "71EC61D6B66E6",
+		"core_property": "Length",
+		"symbol_key": "lth",
+		"property_name": "Length",
+		"property_name_rus": "Длина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Usable length",
+		"property_name": "Usable length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBB33490FDA",
+		"code": "71EBB33490FDA",
+		"core_property": "Usable length",
+		"symbol_key": "lu",
+		"property_name": "Usable length",
+		"property_name_rus": "Рабочая длина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum usable length",
+		"property_name": "Maximum usable length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2992BDBCC",
+		"code": "71CF2992BDBCC",
+		"core_property": "Maximum usable length",
+		"symbol_key": "lux",
+		"property_name": "Usable length maximum",
+		"property_name_rus": "Max рабочая длина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "M-dimension",
+		"property_name": "M-dimension"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA0972DB",
+		"code": "71CE7AA0972DB",
+		"core_property": "M-dimension",
+		"symbol_key": "m",
+		"property_name": "M-dimension",
+		"property_name_rus": "Размер m",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "M2-dimension",
+		"property_name": "M2-dimension"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA05C819",
+		"code": "71CE7AA05C819",
+		"core_property": "M2-dimension",
+		"symbol_key": "m2",
+		"property_name": "M2-dimension",
+		"property_name_rus": "Размер m2",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Mounting hole angle",
+		"property_name": "Mounting hole angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0F064E2D",
+		"code": "71EAC0F064E2D",
+		"core_property": "Mounting hole angle",
+		"symbol_key": "mha",
+		"property_name": "Mounting hole angle",
+		"property_name_rus": "Угол монтажного отверстия",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Mounting hole distance",
+		"property_name": "Mounting hole distance"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0E9FA4CD",
+		"code": "71EAC0E9FA4CD",
+		"core_property": "Mounting hole distance",
+		"symbol_key": "mhd",
+		"property_name": "Mounting hole distance",
+		"property_name_rus": "Присоединительные размеры",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Mounting hole distance 2",
+		"property_name": "Mounting hole distance 2"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0EF68BB7",
+		"code": "71EAC0EF68BB7",
+		"core_property": "Mounting hole distance 2",
+		"symbol_key": "mhd2",
+		"property_name": "Mounting hole distance 2",
+		"property_name_rus": "Присоединительные размеры 2",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Mounting hole height",
+		"property_name": "Mounting hole height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC0EFA1BF3",
+		"code": "71EAC0EFA1BF3",
+		"core_property": "Mounting hole height",
+		"symbol_key": "mhh",
+		"property_name": "Mounting hole height",
+		"property_name_rus": "Высота монтажного отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Master insert identification",
+		"property_name": "Master insert identification"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298FDE0EF",
+		"code": "71CF298FDE0EF",
+		"core_property": "Master insert identification",
+		"symbol_key": "miid",
+		"property_name": "Master insert identification",
+		"property_name_rus": "Эталонная пластина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Clamping type code",
+		"property_name": "Clamping type code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF298EEB4F5",
+		"code": "71CF298EEB4F5",
+		"core_property": "Clamping type code",
+		"symbol_key": "mtp",
+		"property_name": "Clamping type code",
+		"property_name_rus": "Код типа закрепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Margin width",
+		"property_name": "Margin width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC828C8308",
+		"code": "71EAC828C8308",
+		"core_property": "Margin width",
+		"symbol_key": "mw",
+		"property_name": "Margin width",
+		"property_name_rus": "Ширина ленточки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum clamping force",
+		"property_name": "Maximum clamping force"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED05149532",
+		"code": "71CED05149532",
+		"core_property": "Maximum clamping force",
+		"symbol_key": "mxc",
+		"property_name": "Clamping force maximum",
+		"property_name_rus": "Max усилие закрепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Cutting end count",
+		"property_name": "Cutting end count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD00CBBC2A",
+		"code": "71DCD00CBBC2A",
+		"core_property": "Cutting end count",
+		"symbol_key": "nce",
+		"property_name": "Cutting end count",
+		"property_name_rus": "Число режущих лезвий",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Flute count",
+		"property_name": "Flute count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFEBB883E",
+		"code": "71DCCFEBB883E",
+		"core_property": "Flute count",
+		"symbol_key": "nof",
+		"property_name": "Flute count",
+		"property_name_rus": "Число стружечных канавок",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert index count",
+		"property_name": "Insert index count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA1998FF",
+		"code": "71CE7AA1998FF",
+		"core_property": "Insert index count",
+		"symbol_key": "noi",
+		"property_name": "Insert index count",
+		"property_name_rus": "Число индексаций пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Step count",
+		"property_name": "Step count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC3BD1B96",
+		"code": "71DCCC3BD1B96",
+		"core_property": "Step count",
+		"symbol_key": "nos",
+		"property_name": "Step count",
+		"property_name_rus": "Число ступеней",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tooth count",
+		"property_name": "Tooth count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBF8A68E",
+		"code": "71CEAEBF8A68E",
+		"core_property": "Tooth count",
+		"symbol_key": "nt",
+		"property_name": "Tooth count",
+		"property_name_rus": "Число зубьев",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Overall height",
+		"property_name": "Overall height"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078EB73E87",
+		"code": "71D078EB73E87",
+		"core_property": "Overall height",
+		"symbol_key": "oah",
+		"property_name": "Overall height",
+		"property_name_rus": "Общая высота",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Overall length",
+		"property_name": "Overall length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078EB7C086",
+		"code": "71D078EB7C086",
+		"core_property": "Overall length",
+		"symbol_key": "oal",
+		"property_name": "Overall length",
+		"property_name_rus": "Общая длина",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum overall length",
+		"property_name": "Minimum overall length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1E8857BE",
+		"code": "71EBC1E8857BE",
+		"core_property": "Minimum overall length",
+		"symbol_key": "oaln",
+		"property_name": "Overall length minimum",
+		"property_name_rus": "Min общая длина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Overall width",
+		"property_name": "Overall width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF299257986",
+		"code": "71CF299257986",
+		"core_property": "Overall width",
+		"symbol_key": "oaw",
+		"property_name": "Overall width",
+		"property_name_rus": "Общая ширина",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Left hand profile angle",
+		"property_name": "Left hand profile angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBEAB020",
+		"code": "71CEAEBEAB020",
+		"core_property": "Left hand profile angle",
+		"symbol_key": "pal",
+		"property_name": "Profile angle left hand",
+		"property_name_rus": "Угол профиля левосторонний",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Right hand profile angle",
+		"property_name": "Right hand profile angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBED837E",
+		"code": "71CEAEBED837E",
+		"core_property": "Right hand profile angle",
+		"symbol_key": "par",
+		"property_name": "Profile angle right hand",
+		"property_name_rus": "Угол профиля правосторонний",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Pilot drill protrusion",
+		"property_name": "Pilot drill protrusion"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC49030828",
+		"code": "71EAC49030828",
+		"core_property": "Pilot drill protrusion",
+		"symbol_key": "pdp",
+		"property_name": "Pilot drill protrusion",
+		"property_name_rus": "Вылет пилотного сверла",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Profile distance ex",
+		"property_name": "Profile distance ex"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBFEF1B4",
+		"code": "71CEAEBFEF1B4",
+		"core_property": "Profile distance ex",
+		"symbol_key": "pdx",
+		"property_name": "Profile distance ex",
+		"property_name_rus": "Длина профиля ex",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Profile distance ey",
+		"property_name": "Profile distance ey"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEC0139BB",
+		"code": "71CEAEC0139BB",
+		"core_property": "Profile distance ey",
+		"symbol_key": "pdy",
+		"property_name": "Profile distance ey",
+		"property_name_rus": "Длина профиля ey",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Profile style code",
+		"property_name": "Profile style code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBDE5798",
+		"code": "71CEAEBDE5798",
+		"core_property": "Profile style code",
+		"symbol_key": "pfs",
+		"property_name": "Profile style code",
+		"property_name_rus": "Тип профиля",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Premachined hole diameter",
+		"property_name": "Premachined hole diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC5A4FD18",
+		"code": "71DCCC5A4FD18",
+		"core_property": "Premachined hole diameter",
+		"symbol_key": "phd",
+		"property_name": "Premachined hole diameter",
+		"property_name_rus": "Диаметр предварительно обработанного отверстия",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Phi (x-axis rot)",
+		"property_name": "Phi (x-axis rot)"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E4AE850B",
+		"code": "71ED6E4AE850B",
+		"core_property": "Phi (x-axis rot)",
+		"symbol_key": "phi",
+		"property_name": "Phi",
+		"property_name_rus": "Phi (вращение по оси x)",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Point length",
+		"property_name": "Point length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFD064042",
+		"code": "71DCCFD064042",
+		"core_property": "Point length",
+		"symbol_key": "pl",
+		"property_name": "Point length",
+		"property_name_rus": "Длина режущей части",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Plug chamfer diameter",
+		"property_name": "Plug chamfer diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1EA293DC",
+		"code": "71EBC1EA293DC",
+		"core_property": "Plug chamfer diameter",
+		"symbol_key": "plcd",
+		"property_name": "Plug chamfer diameter",
+		"property_name_rus": "Диаметр фаски метчика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Plug style",
+		"property_name": "Plug style"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E02C679DC6D",
+		"code": "71E02C679DC6D",
+		"core_property": "Plug style",
+		"symbol_key": "plg",
+		"property_name": "Plug style",
+		"property_name_rus": "Тип метчика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Profile included angle",
+		"property_name": "Profile included angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBF0C234",
+		"code": "71CEAEBF0C234",
+		"core_property": "Profile included angle",
+		"symbol_key": "pna",
+		"property_name": "Profile included angle",
+		"property_name_rus": "Профиль входного угла",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Pin end shape",
+		"property_name": "Pin end shape"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC5E54A9B4F",
+		"code": "71EC5E54A9B4F",
+		"core_property": "Pin end shape",
+		"symbol_key": "pnes",
+		"property_name": "Pin end shape",
+		"property_name_rus": "Форма конца штифта",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Pin fixing method",
+		"property_name": "Pin fixing method"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAD53253A1B",
+		"code": "71FAD53253A1B",
+		"core_property": "Pin fixing method",
+		"symbol_key": "pnfx",
+		"property_name": "Pin fixing method",
+		"property_name_rus": "Метод фиксации штифта",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Pilot protruding length",
+		"property_name": "Pilot protruding length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFD24119E",
+		"code": "71DCCFD24119E",
+		"core_property": "Pilot protruding length",
+		"symbol_key": "ppl",
+		"property_name": "Pilot protruding length",
+		"property_name_rus": "Вылет направляющей части",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Profile radius",
+		"property_name": "Profile radius"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E019EBAE1B1",
+		"code": "71E019EBAE1B1",
+		"core_property": "Profile radius",
+		"symbol_key": "prfrad",
+		"property_name": "Profile radius",
+		"property_name_rus": "Радиус профиля",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Profile specification",
+		"property_name": "Profile specification"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF8C5D91804",
+		"code": "71DF8C5D91804",
+		"core_property": "Profile specification",
+		"symbol_key": "prspc",
+		"property_name": "Profile specification",
+		"property_name_rus": "Характеристика профиля",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tool lead angle",
+		"property_name": "Tool lead angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078F77616B",
+		"code": "71D078F77616B",
+		"core_property": "Tool lead angle",
+		"symbol_key": "psir",
+		"property_name": "Tool lead angle",
+		"property_name_rus": "Главный угол в плане (дюйм.)",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Insert lead angle",
+		"property_name": "Insert lead angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF30F9DFE37",
+		"code": "71CF30F9DFE37",
+		"core_property": "Insert lead angle",
+		"symbol_key": "psirins",
+		"property_name": "Insert lead angle",
+		"property_name_rus": "Угол наклона пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Major left hand cutting edge angle",
+		"property_name": "Major left hand cutting edge angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA3440B4",
+		"code": "71CE7AA3440B4",
+		"core_property": "Major left hand cutting edge angle",
+		"symbol_key": "psirl",
+		"property_name": "Cutting edge angle major left hand",
+		"property_name_rus": "Левый угол наклона режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Major right hand cutting edge angle",
+		"property_name": "Major right hand cutting edge angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA78C2F0",
+		"code": "71CE7AA78C2F0",
+		"core_property": "Major right hand cutting edge angle",
+		"symbol_key": "psirr",
+		"property_name": "Cutting edge angle major right hand",
+		"property_name_rus": "Правый угол наклона режущей кромки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Qualified tool code",
+		"property_name": "Qualified tool code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078ED2C21E",
+		"code": "71D078ED2C21E",
+		"core_property": "Qualified tool code",
+		"symbol_key": "qtc",
+		"property_name": "Qualified tool code",
+		"property_name_rus": "Код прецизионного инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Relief angle",
+		"property_name": "Relief angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD9D00193A7",
+		"code": "71DD9D00193A7",
+		"core_property": "Relief angle",
+		"symbol_key": "ra",
+		"property_name": "Relief angle",
+		"property_name_rus": "Задний угол",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Left hand relief angle",
+		"property_name": "Left hand relief angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7E6520B87",
+		"code": "71CE7E6520B87",
+		"core_property": "Left hand relief angle",
+		"symbol_key": "ral",
+		"property_name": "Relief angle left hand",
+		"property_name_rus": "Задний угол, левое исп.",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Right hand relief angle",
+		"property_name": "Right hand relief angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7E6569AB5",
+		"code": "71CE7E6569AB5",
+		"core_property": "Right hand relief angle",
+		"symbol_key": "rar",
+		"property_name": "Relief angle right hand",
+		"property_name_rus": "Задний угол, правое исполнение",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Rounded corner property",
+		"property_name": "Rounded corner property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD7011A3D86",
+		"code": "71DD7011A3D86",
+		"core_property": "Rounded corner property",
+		"symbol_key": "rcp",
+		"property_name": "Rounded corner property",
+		"property_name_rus": "Округление вершины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Corner radius",
+		"property_name": "Corner radius"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DD6C8ACA503",
+		"code": "71DD6C8ACA503",
+		"core_property": "Corner radius",
+		"symbol_key": "re",
+		"property_name": "Corner radius",
+		"property_name_rus": "Радиус при вершине",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Rho (y-axis rot)",
+		"property_name": "Rho (y-axis rot)"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E4B254E5",
+		"code": "71ED6E4B254E5",
+		"core_property": "Rho (y-axis rot)",
+		"symbol_key": "rho",
+		"property_name": "Rho",
+		"property_name_rus": "Rho (вращение вокруг оси y)",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Row identifier",
+		"property_name": "Row identifier"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED04867743",
+		"code": "71CED04867743",
+		"core_property": "Row identifier",
+		"symbol_key": "rid",
+		"property_name": "Row identifier",
+		"property_name_rus": "Идентификатор ряда",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum ramping angle",
+		"property_name": "Maximum ramping angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1538632D9",
+		"code": "71DF1538632D9",
+		"core_property": "Maximum ramping angle",
+		"symbol_key": "rmpx",
+		"property_name": "Ramping angle maximum",
+		"property_name_rus": "Max угол врезания",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Runout axial",
+		"property_name": "Runout axial"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6A70807F7",
+		"code": "71ED6A70807F7",
+		"core_property": "Runout axial",
+		"symbol_key": "rna",
+		"property_name": "Runout axial",
+		"property_name_rus": "Осевое биение",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Runout radial",
+		"property_name": "Runout radial"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF8C660035E",
+		"code": "71DF8C660035E",
+		"core_property": "Runout radial",
+		"symbol_key": "rnr",
+		"property_name": "Runout radial",
+		"property_name_rus": "Биение радиальное",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Rotational speed maximum",
+		"property_name": "Rotational speed maximum"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF153A691F2",
+		"code": "71DF153A691F2",
+		"core_property": "Rotational speed maximum",
+		"symbol_key": "rpmx",
+		"property_name": "Rotational speed maximum",
+		"property_name_rus": "Max частота вращения",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Insert thickness",
+		"property_name": "Insert thickness"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9F5308C",
+		"code": "71CE7A9F5308C",
+		"core_property": "Insert thickness",
+		"symbol_key": "s",
+		"property_name": "Insert thickness",
+		"property_name_rus": "Толщина пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert shape code",
+		"property_name": "Insert shape code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9F0C79F",
+		"code": "71CE7A9F0C79F",
+		"core_property": "Insert shape code",
+		"symbol_key": "sc",
+		"property_name": "Insert shape code",
+		"property_name_rus": "Форма пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Section style",
+		"property_name": "Section style"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC65A21E9D4",
+		"code": "71EC65A21E9D4",
+		"core_property": "Section style",
+		"symbol_key": "scty",
+		"property_name": "Section style",
+		"property_name_rus": "Тип сечения",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Step distance",
+		"property_name": "Step distance"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC47221E0",
+		"code": "71DCCC47221E0",
+		"core_property": "Step distance",
+		"symbol_key": "sd",
+		"property_name": "Step distance",
+		"property_name_rus": "Расстояние ступеньки",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Step diameter length",
+		"property_name": "Step diameter length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC3DFA23A",
+		"code": "71DCCC3DFA23A",
+		"core_property": "Step diameter length",
+		"symbol_key": "sdl",
+		"property_name": "Step diameter length",
+		"property_name_rus": "Длина ступени",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shaft diameter",
+		"property_name": "Shaft diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAD52B8F653",
+		"code": "71FAD52B8F653",
+		"core_property": "Shaft diameter",
+		"symbol_key": "sfdm",
+		"property_name": "Shaft diameter",
+		"property_name_rus": "Диаметр вала",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shaft length",
+		"property_name": "Shaft length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAD52C3FC9E",
+		"code": "71FAD52C3FC9E",
+		"core_property": "Shaft length",
+		"symbol_key": "sftl",
+		"property_name": "Shaft length",
+		"property_name_rus": "Длина вала",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shim inclination angle",
+		"property_name": "Shim inclination angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAE074D2EBD",
+		"code": "71FAE074D2EBD",
+		"core_property": "Shim inclination angle",
+		"symbol_key": "shian",
+		"property_name": "Shim inclination angle",
+		"property_name_rus": "Угол наклона опорной пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Side",
+		"property_name": "Side"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBDBF130AE6",
+		"code": "71EBDBF130AE6",
+		"core_property": "Side",
+		"symbol_key": "side",
+		"property_name": "Side",
+		"property_name_rus": "Сторона",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Point angle",
+		"property_name": "Point angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC4FEF366",
+		"code": "71DCCC4FEF366",
+		"core_property": "Point angle",
+		"symbol_key": "sig",
+		"property_name": "Point angle",
+		"property_name_rus": "Угол при вершине",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Spring coefficient",
+		"property_name": "Spring coefficient"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FAE06BBB597",
+		"code": "71FAE06BBB597",
+		"core_property": "Spring coefficient",
+		"symbol_key": "spcf",
+		"property_name": "Spring coefficient",
+		"property_name_rus": "Пружинный коэффициент",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum stock removal",
+		"property_name": "Minimum stock removal"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1EBC839F",
+		"code": "71EBC1EBC839F",
+		"core_property": "Minimum stock removal",
+		"symbol_key": "srn",
+		"property_name": "Stock removal minimum",
+		"property_name_rus": "Min припуск",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Recommended stock removal",
+		"property_name": "Recommended stock removal"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1EC3E8B6",
+		"code": "71EBC1EC3E8B6",
+		"core_property": "Recommended stock removal",
+		"symbol_key": "srr",
+		"property_name": "Stock removal recommended",
+		"property_name_rus": "Рекомендуемый припуск",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum stock removal",
+		"property_name": "Maximum stock removal"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBC1EC0BB22",
+		"code": "71EBC1EC0BB22",
+		"core_property": "Maximum stock removal",
+		"symbol_key": "srx",
+		"property_name": "Stock removal maximum",
+		"property_name_rus": "Max припуск",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert seat size code",
+		"property_name": "Insert seat size code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEBF2A69F",
+		"code": "71CEAEBF2A69F",
+		"core_property": "Insert seat size code",
+		"symbol_key": "ssc",
+		"property_name": "Insert seat size code",
+		"property_name_rus": "Размер гнезда под пластину",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Step included angle",
+		"property_name": "Step included angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF151D6E547",
+		"code": "71DF151D6E547",
+		"core_property": "Step included angle",
+		"symbol_key": "sta",
+		"property_name": "Step included angle",
+		"property_name_rus": "Ступенька, входной угол",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Shank cross section shape code",
+		"property_name": "Shank cross section shape code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF2988A5874",
+		"code": "71CF2988A5874",
+		"core_property": "Shank cross section shape code",
+		"symbol_key": "sx",
+		"property_name": "Shank cross section shape code",
+		"property_name_rus": "Форма поперечного сечения хвостовика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Taper angle",
+		"property_name": "Taper angle"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC4A2B6544",
+		"code": "71EAC4A2B6544",
+		"core_property": "Taper angle",
+		"symbol_key": "ta",
+		"property_name": "Taper angle",
+		"property_name_rus": "Угол метчика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tolerance class insert",
+		"property_name": "Tolerance class insert"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA215888",
+		"code": "71CE7AA215888",
+		"core_property": "Tolerance class insert",
+		"symbol_key": "tc",
+		"property_name": "Tolerance class insert",
+		"property_name_rus": "Класс точности пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tipped cutting edge code",
+		"property_name": "Tipped cutting edge code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7AA1E3D75",
+		"code": "71CE7AA1E3D75",
+		"core_property": "Tipped cutting edge code",
+		"symbol_key": "tce",
+		"property_name": "Tipped cutting edge code",
+		"property_name_rus": "Тип режущей кромки с вставкой",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread tolerance class",
+		"property_name": "Thread tolerance class"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF153FA5F85",
+		"code": "71DF153FA5F85",
+		"core_property": "Thread tolerance class",
+		"symbol_key": "tctr",
+		"property_name": "Thread tolerance class",
+		"property_name_rus": "Класс точности резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread diameter",
+		"property_name": "Thread diameter"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E02C5C2EED3",
+		"code": "71E02C5C2EED3",
+		"core_property": "Thread diameter",
+		"symbol_key": "td",
+		"property_name": "Thread diameter",
+		"property_name_rus": "Диаметр резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread diameter size",
+		"property_name": "Thread diameter size"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBAA3BCA70",
+		"code": "71EBBAA3BCA70",
+		"core_property": "Thread diameter size",
+		"symbol_key": "tdz",
+		"property_name": "Thread diameter size",
+		"property_name_rus": "Размер резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Taper gradient",
+		"property_name": "Taper gradient"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEC02FEBD",
+		"code": "71CEAEC02FEBD",
+		"core_property": "Taper gradient",
+		"symbol_key": "tg",
+		"property_name": "Taper gradient",
+		"property_name_rus": "Градиент конусности",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread hand",
+		"property_name": "Thread hand"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71E033FCBB61C",
+		"code": "71E033FCBB61C",
+		"core_property": "Thread hand",
+		"symbol_key": "thdh",
+		"property_name": "Thread hand",
+		"property_name_rus": "Направление резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread form type",
+		"property_name": "Thread form type"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A69F60053",
+		"code": "71D1A69F60053",
+		"core_property": "Thread form type",
+		"symbol_key": "thft",
+		"property_name": "Thread form type",
+		"property_name_rus": "Профиль резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tool handling",
+		"property_name": "Tool handling"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EF07D86AFD8",
+		"code": "71EF07D86AFD8",
+		"core_property": "Tool handling",
+		"symbol_key": "thld",
+		"property_name": "Tool handling",
+		"property_name_rus": "Эксплуатация инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread length",
+		"property_name": "Thread length"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FC209CD4A91",
+		"code": "71FC209CD4A91",
+		"core_property": "Thread length",
+		"symbol_key": "thlgth",
+		"property_name": "Thread length",
+		"property_name_rus": "Длина резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tool holder shape code",
+		"property_name": "Tool holder shape code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078FD4E7BE",
+		"code": "71D078FD4E7BE",
+		"core_property": "Tool holder shape code",
+		"symbol_key": "thsc",
+		"property_name": "Tool holder shape code",
+		"property_name_rus": "Форма держателя инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread starts",
+		"property_name": "Thread starts"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71FC06ABEA7D3",
+		"code": "71FC06ABEA7D3",
+		"core_property": "Thread starts",
+		"symbol_key": "thsts",
+		"property_name": "Thread starts",
+		"property_name_rus": "Заходы резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Hub thickness",
+		"property_name": "Hub thickness"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D087D3F5E07",
+		"code": "71D087D3F5E07",
+		"core_property": "Hub thickness",
+		"symbol_key": "thub",
+		"property_name": "Hub thickness",
+		"property_name_rus": "Ширина червячной фрезы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tangentially mounted insert",
+		"property_name": "Tangentially mounted insert"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC496E7425",
+		"code": "71EAC496E7425",
+		"core_property": "Tangentially mounted insert",
+		"symbol_key": "tmins",
+		"property_name": "Tangentially mounted insert",
+		"property_name_rus": "Тангенциально установленная пластина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread pitch",
+		"property_name": "Thread pitch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEC08D4B0",
+		"code": "71CEAEC08D4B0",
+		"core_property": "Thread pitch",
+		"symbol_key": "tp",
+		"property_name": "Thread pitch",
+		"property_name_rus": "Шаг резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tapered",
+		"property_name": "Tapered"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EC659C9B3CE",
+		"code": "71EC659C9B3CE",
+		"core_property": "Tapered",
+		"symbol_key": "tpd",
+		"property_name": "Tapered",
+		"property_name_rus": "Конический",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Threads per inch",
+		"property_name": "Threads per inch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A6AAC8707",
+		"code": "71D1A6AAC8707",
+		"core_property": "Threads per inch",
+		"symbol_key": "tpi",
+		"property_name": "Threads per inch",
+		"property_name_rus": "Ниток на дюйм",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum threads per inch",
+		"property_name": "Minimum threads per inch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A6AB6FB19",
+		"code": "71D1A6AB6FB19",
+		"core_property": "Minimum threads per inch",
+		"symbol_key": "tpin",
+		"property_name": "Threads per inch minimum",
+		"property_name_rus": "Ниток на дюйм минимум",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum threads per inch",
+		"property_name": "Maximum threads per inch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A6AB8F739",
+		"code": "71D1A6AB8F739",
+		"core_property": "Maximum threads per inch",
+		"symbol_key": "tpix",
+		"property_name": "Threads per inch maximum",
+		"property_name_rus": "Ниток на дюйм максимум",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Minimum thread pitch",
+		"property_name": "Minimum thread pitch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A6A247E1F",
+		"code": "71D1A6A247E1F",
+		"core_property": "Minimum thread pitch",
+		"symbol_key": "tpn",
+		"property_name": "Thread pitch minimum",
+		"property_name_rus": "Шаг резьбы минимальный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread profile type",
+		"property_name": "Thread profile type"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CEAEC114603",
+		"code": "71CEAEC114603",
+		"core_property": "Thread profile type",
+		"symbol_key": "tpt",
+		"property_name": "Thread profile type",
+		"property_name_rus": "Профиль резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Maximum thread pitch",
+		"property_name": "Maximum thread pitch"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A6A283836",
+		"code": "71D1A6A283836",
+		"core_property": "Maximum thread pitch",
+		"symbol_key": "tpx",
+		"property_name": "Thread pitch maximum",
+		"property_name_rus": "Шаг резьбы максимальный",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Torque",
+		"property_name": "Torque"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF153B14F02",
+		"code": "71DF153B14F02",
+		"core_property": "Torque",
+		"symbol_key": "tq",
+		"property_name": "Torque",
+		"property_name_rus": "Крутящий момент",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tool style code",
+		"property_name": "Tool style code"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D078FBF6C68",
+		"code": "71D078FBF6C68",
+		"core_property": "Tool style code",
+		"symbol_key": "tsyc",
+		"property_name": "Tool style code",
+		"property_name_rus": "Тип инструмента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Thread type",
+		"property_name": "Thread type"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D1A6A16E6ED",
+		"code": "71D1A6A16E6ED",
+		"core_property": "Thread type",
+		"symbol_key": "ttp",
+		"property_name": "Thread type",
+		"property_name_rus": "Тип резьбы",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Tap type identifier",
+		"property_name": "Tap type identifier"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF153B4ABCD",
+		"code": "71DF153B4ABCD",
+		"core_property": "Tap type identifier",
+		"symbol_key": "ttpid",
+		"property_name": "Tap type identifier",
+		"property_name_rus": "Идентификатор типа метчика",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Usable length diameter ratio",
+		"property_name": "Usable length diameter ratio"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCC62CD9EE",
+		"code": "71DCCC62CD9EE",
+		"core_property": "Usable length diameter ratio",
+		"symbol_key": "uldr",
+		"property_name": "Usable length diameter ratio",
+		"property_name_rus": "Отношение рабочей длины к диаметру",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Unit system",
+		"property_name": "Unit system"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBBA9ED6C0A",
+		"code": "71EBBA9ED6C0A",
+		"core_property": "Unit system",
+		"symbol_key": "ust",
+		"property_name": "Unit system",
+		"property_name_rus": "Система единиц",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert width",
+		"property_name": "Insert width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CE7A9FB11C3",
+		"code": "71CE7A9FB11C3",
+		"core_property": "Insert width",
+		"symbol_key": "w1",
+		"property_name": "Insert width",
+		"property_name_rus": "Ширина пластины",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Body width",
+		"property_name": "Body width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBB33230236",
+		"code": "71EBB33230236",
+		"core_property": "Body width",
+		"symbol_key": "wb",
+		"property_name": "Body width",
+		"property_name_rus": "Ширина корпуса",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Web thickness",
+		"property_name": "Web thickness"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC82313165",
+		"code": "71EAC82313165",
+		"core_property": "Web thickness",
+		"symbol_key": "wbthk",
+		"property_name": "Web thickness",
+		"property_name_rus": "Толщина перемычки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Web taper",
+		"property_name": "Web taper"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EAC823D95A7",
+		"code": "71EAC823D95A7",
+		"core_property": "Web taper",
+		"symbol_key": "wbtp",
+		"property_name": "Web taper",
+		"property_name_rus": "Конусность перемычки",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Wiper edge property",
+		"property_name": "Wiper edge property"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED022114EC",
+		"code": "71CED022114EC",
+		"core_property": "Wiper edge property",
+		"symbol_key": "wep",
+		"property_name": "Wiper edge property",
+		"property_name_rus": "Наличие кромки wiper",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Functional width",
+		"property_name": "Functional width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF29984CDA7",
+		"code": "71CF29984CDA7",
+		"core_property": "Functional width",
+		"symbol_key": "wf",
+		"property_name": "Functional width",
+		"property_name_rus": "Функциональная ширина",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Functional width 2",
+		"property_name": "Functional width 2"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71D193F495583",
+		"code": "71D193F495583",
+		"core_property": "Functional width 2",
+		"symbol_key": "wf2",
+		"property_name": "Functional width 2",
+		"property_name_rus": "Функциональная ширина 2",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "A dimension on wf",
+		"property_name": "A dimension on wf"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF299431CAC",
+		"code": "71CF299431CAC",
+		"core_property": "A dimension on wf",
+		"symbol_key": "wfa",
+		"property_name": "A dimension on wf",
+		"property_name_rus": "Размер на wf",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Secondary functional width",
+		"property_name": "Secondary functional width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CF299874B1E",
+		"code": "71CF299874B1E",
+		"core_property": "Secondary functional width",
+		"symbol_key": "wfs",
+		"property_name": "Functional width secondary",
+		"property_name_rus": "Функциональная ширина вспомогательная",
+		"version": "002"
+	},
+	{
+		"model": "Property",
+		"id": "Clamping width",
+		"property_name": "Clamping width"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71EBAF85006BD",
+		"code": "71EBAF85006BD",
+		"core_property": "Clamping width",
+		"symbol_key": "wsc",
+		"property_name": "Clamping width",
+		"property_name_rus": "Ширина закрепления",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Weight of item",
+		"property_name": "Weight of item"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71CED03C97AAB",
+		"code": "71CED03C97AAB",
+		"core_property": "Weight of item",
+		"symbol_key": "wt",
+		"property_name": "Weight of item",
+		"property_name_rus": "Масса элемента",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Xyw-plane distance",
+		"property_name": "Xyw-plane distance"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E4F42626",
+		"code": "71ED6E4F42626",
+		"core_property": "Xyw-plane distance",
+		"symbol_key": "xywd",
+		"property_name": "Xyw plane distance",
+		"property_name_rus": "Плоскость xyw, расстояние",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Xzw-plane distance",
+		"property_name": "Xzw-plane distance"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E4F7A8CF",
+		"code": "71ED6E4F7A8CF",
+		"core_property": "Xzw-plane distance",
+		"symbol_key": "xzwd",
+		"property_name": "Xzw plane distance",
+		"property_name_rus": "Плоскость xzw, расстояние",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Yzw-plane distance",
+		"property_name": "Yzw-plane distance"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71ED6E4FA83F6",
+		"code": "71ED6E4FA83F6",
+		"core_property": "Yzw-plane distance",
+		"symbol_key": "yzwd",
+		"property_name": "Yzw plane distance",
+		"property_name_rus": "Плоскость yzw, расстояние",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Insert adjustable count",
+		"property_name": "Insert adjustable count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF1538E7378",
+		"code": "71DF1538E7378",
+		"core_property": "Insert adjustable count",
+		"symbol_key": "zadj",
+		"property_name": "Insert adjustable count",
+		"property_name_rus": "Число регулируемых пластин",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Face effective cutt edge count",
+		"property_name": "Face effective cutt edge count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD00239812",
+		"code": "71DCD00239812",
+		"core_property": "Face effective cutt edge count",
+		"symbol_key": "zeff",
+		"property_name": "Face effective cutting edge count",
+		"property_name_rus": "Число эффективных торцевых реж. кромок",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Peripheral effective cutting edge count",
+		"property_name": "Peripheral effective cutting edge count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCCFF75E485",
+		"code": "71DCCFF75E485",
+		"core_property": "Peripheral effective cutting edge count",
+		"symbol_key": "zefp",
+		"property_name": "Peripheral effective cutting edge count",
+		"property_name_rus": "Число эффективных периферийных реж. кромок",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Center mounted insert count",
+		"property_name": "Center mounted insert count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD0033973E",
+		"code": "71DCD0033973E",
+		"core_property": "Center mounted insert count",
+		"symbol_key": "znc",
+		"property_name": "Cutting edge centre count",
+		"property_name_rus": "Число центральных пластин",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Face mounted insert count",
+		"property_name": "Face mounted insert count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD0029BBE7",
+		"code": "71DCD0029BBE7",
+		"core_property": "Face mounted insert count",
+		"symbol_key": "znf",
+		"property_name": "Face mounted insert count",
+		"property_name_rus": "Число торцевых пластин",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Periph mounted insert count",
+		"property_name": "Periph mounted insert count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DCD00054F65",
+		"code": "71DCD00054F65",
+		"core_property": "Periph mounted insert count",
+		"symbol_key": "znp",
+		"property_name": "Peripheral mounted insert count",
+		"property_name_rus": "Число периферийных пластин",
+		"version": "001"
+	},
+	{
+		"model": "Property",
+		"id": "Taper thread count",
+		"property_name": "Taper thread count"
+	},
+	{
+		"model": "PlibProperty",
+		"id": "71DF154901E44",
+		"code": "71DF154901E44",
+		"core_property": "Taper thread count",
+		"symbol_key": "ztt",
+		"property_name": "Taper thread count",
+		"property_name_rus": "Число ниток конической резьбы",
+		"version": "001"
+	}
+]

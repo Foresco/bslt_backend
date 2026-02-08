@@ -1,0 +1,30 @@
+[
+		{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters",
+		"area": "west",
+		"description": "Фильтры списка объектов",
+		"check_state": "False",
+		"view_right": "view_entity_list"
+	},
+	{
+		"model": "Panel",
+		"id": "rawrowslist",
+		"panel_name": "rawrowslist",
+		"area": "center",
+		"description": "Список сырых строк для выверки",
+		"check_state": "False",
+		"view_right": "view_rawrow"
+	},
+	{
+		"model": "Panel",
+		"id": "rawrowpropvalues",
+		"panel_name": "rawrowpropvalues",
+		"area": "east",
+		"description": "Значения свойств сырой строки",
+		"check_state": "False",
+		"view_right": "view_rawrow",
+		"edit_right": "change_rawrow"
+	}
+]

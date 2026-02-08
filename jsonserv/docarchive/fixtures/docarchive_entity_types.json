@@ -1,0 +1,31 @@
+[{
+	"model": "core.entitytype",
+	"pk": "arcdocument",
+	"fields": {
+		"type_name": "Архивный документ",
+		"div_name": "Архивные документы",
+		"doc_key": false,
+		"table_name": "arcdocument"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "stage",
+	"fields": {
+		"type_name": "Стадия проекта",
+		"div_name": "Стадии проектов",
+		"doc_key": false,
+		"table_name": "stage"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "incident",
+	"fields": {
+		"type_name": "Инцидент",
+		"div_name": "Инциденты",
+		"doc_key": false,
+		"table_name": "incident"
+	}
+}
+]

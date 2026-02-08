@@ -1,0 +1,20 @@
+[
+  	{
+		"model": "core.Panel",
+		"pk": 10,
+		"fields": {
+			"panel_name": "prodordertree",
+			"area": "center",
+			"description": "Дерево производственного заказа"
+		}
+	},
+	{
+		"model": "core.Panel",
+		"pk": 11,
+		"fields": {
+			"panel_name": "prodorderposassign",
+			"area": "east",
+			"description": "Назначение позиций состава исполнителям"
+		}
+	}
+]

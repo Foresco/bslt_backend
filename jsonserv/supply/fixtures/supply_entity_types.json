@@ -1,0 +1,10 @@
+[{
+	"model": "core.entitytype",
+	"pk": "supplyorder",
+	"fields": {
+		"type_name": "Заказ на поставку",
+		"div_name": "Заказы на поставку",
+		"doc_key": false,
+		"table_name": "supplyorder"
+	}
+}]

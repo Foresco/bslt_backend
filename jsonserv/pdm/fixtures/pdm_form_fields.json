@@ -1,0 +1,2892 @@
+[
+	{
+		"model": "core.FormField",
+		"pk": 12,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"assembly\", \"value\": \"Сборочная единица\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 13,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 14,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "title",
+			"order_num": 3,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 15,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "parent",
+			"order_num": 4,
+			"caption": "Стадия",
+			"max_size": null,
+			"list_keys": "{\"type_key\": \"\\\"stage\\\"\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 16,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 17,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "litera",
+			"order_num": 6,
+			"caption": "Литера",
+			"max_size": 13,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 18,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "unit",
+			"order_num": 7,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 19,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "weight",
+			"order_num": 8,
+			"caption": "Масса",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 20,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "weight_unit",
+			"order_num": 9,
+			"caption": "Единица измерения массы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 15, \"value\": \"кг/шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 21,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "formats",
+			"order_num": 10,
+			"caption": "Форматы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 22,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "state",
+			"order_num": 11,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 23,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "source",
+			"order_num": 12,
+			"caption": "Источник поступления",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": 2,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 24,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "is_top",
+			"order_num": 13,
+			"caption": "Признак готового изделия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 25,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "description",
+			"order_num": 14,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 26,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "entity_label",
+			"order_num": 15,
+			"caption": "Метка",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 27,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "origin",
+			"order_num": 16,
+			"caption": "Исходная сборочная единица",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 28,
+		"fields": {
+			"form_name": "assembly",
+			"field_name": "prod_order",
+			"order_num": 17,
+			"caption": "Заказ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 37,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"complect\", \"value\": \"Комплект\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 38,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 39,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 40,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 41,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 42,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "unit",
+			"order_num": 6,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 43,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "weight",
+			"order_num": 7,
+			"caption": "Масса",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 44,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "weight_unit",
+			"order_num": 8,
+			"caption": "Единица измерения массы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 15, \"value\": \"кг/шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 45,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "state",
+			"order_num": 9,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 46,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "is_top",
+			"order_num": 10,
+			"caption": "Признак готового изделия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 47,
+		"fields": {
+			"form_name": "complect",
+			"field_name": "description",
+			"order_num": 11,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 48,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"complex\", \"value\": \"Комплекс\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 49,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 50,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 51,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 52,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 53,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "unit",
+			"order_num": 6,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 54,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "weight",
+			"order_num": 7,
+			"caption": "Масса",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 55,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "weight_unit",
+			"order_num": 8,
+			"caption": "Единица измерения массы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 15, \"value\": \"кг/шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 56,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "state",
+			"order_num": 9,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 57,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "is_top",
+			"order_num": 10,
+			"caption": "Признак готового изделия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 58,
+		"fields": {
+			"form_name": "complex",
+			"field_name": "description",
+			"order_num": 11,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 63,
+		"fields": {
+			"form_name": "designer",
+			"field_name": "designer",
+			"order_num": 1,
+			"caption": "Разработчик",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 64,
+		"fields": {
+			"form_name": "designer",
+			"field_name": "designer_profile",
+			"order_num": 2,
+			"caption": "Профиль разработчика",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 65,
+		"fields": {
+			"form_name": "designer",
+			"field_name": "selectable",
+			"order_num": 3,
+			"caption": "Можно указывать в новых ролях",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 66,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": \"detail\", \"value\": \"Деталь\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 67,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 68,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "title",
+			"order_num": 3,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 69,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "parent",
+			"order_num": 4,
+			"caption": "Стадия",
+			"max_size": null,
+			"list_keys": "{\"type_key\": \"\\\"stage\\\"\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 70,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификацонная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 71,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "litera",
+			"order_num": 6,
+			"caption": "Литера",
+			"max_size": 13,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 72,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "unit",
+			"order_num": 7,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 73,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "design_mater",
+			"order_num": 8,
+			"caption": "Конструкторский материал",
+			"max_size": null,
+			"list_keys": "{\"part_type__in\": \"[\\\"exemplar\\\", \\\"material\\\"]\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 74,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "weight",
+			"order_num": 9,
+			"caption": "Масса",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 75,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "weight_unit",
+			"order_num": 10,
+			"caption": "Единица измерения массы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 15, \"value\": \"кг/шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 76,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "formats",
+			"order_num": 11,
+			"caption": "Форматы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 77,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "state",
+			"order_num": 12,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 78,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "source",
+			"order_num": 13,
+			"caption": "Источник поступления",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": 2,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 79,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "is_top",
+			"order_num": 14,
+			"caption": "Признак готового изделия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 80,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "surface",
+			"order_num": 15,
+			"caption": "Габариты и обработка",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 81,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "description",
+			"order_num": 16,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 82,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "entity_label",
+			"order_num": 17,
+			"caption": "Метка",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 83,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "origin",
+			"order_num": 18,
+			"caption": "Исходная деталь",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 84,
+		"fields": {
+			"form_name": "detail",
+			"field_name": "prod_order",
+			"order_num": 19,
+			"caption": "Заказ",
+			"max_size": null,
+			"list_keys": "false",
+			"required": true,
+			"read_only": true,
+			"default_value": "true",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 85,
+		"fields": {
+			"form_name": "device",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"device\", \"value\": \"Прибор\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 86,
+		"fields": {
+			"form_name": "device",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 87,
+		"fields": {
+			"form_name": "device",
+			"field_name": "title",
+			"order_num": 3,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 88,
+		"fields": {
+			"form_name": "document",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"document\", \"value\": \"Документация\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 89,
+		"fields": {
+			"form_name": "document",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 90,
+		"fields": {
+			"form_name": "document",
+			"field_name": "title",
+			"order_num": 3,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 91,
+		"fields": {
+			"form_name": "document",
+			"field_name": "parent",
+			"order_num": 4,
+			"caption": "Стадия",
+			"max_size": null,
+			"list_keys": "{\"type_key\": \"\\\"stage\\\"\"}",
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 92,
+		"fields": {
+			"form_name": "document",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 93,
+		"fields": {
+			"form_name": "document",
+			"field_name": "litera",
+			"order_num": 6,
+			"caption": "Литера",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 94,
+		"fields": {
+			"form_name": "document",
+			"field_name": "formats",
+			"order_num": 7,
+			"caption": "Форматы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": true,
+			"default_value": null,
+			"hide_in_create": true,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 95,
+		"fields": {
+			"form_name": "document",
+			"field_name": "state",
+			"order_num": 8,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 96,
+		"fields": {
+			"form_name": "document",
+			"field_name": "description",
+			"order_num": 9,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 97,
+		"fields": {
+			"form_name": "document",
+			"field_name": "entity_label",
+			"order_num": 10,
+			"caption": "Метка",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 98,
+		"fields": {
+			"form_name": "exemplar",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"exemplar\", \"value\": \"Экземпляр сортамента\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 99,
+		"fields": {
+			"form_name": "exemplar",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 100,
+		"fields": {
+			"form_name": "exemplar",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 101,
+		"fields": {
+			"form_name": "exemplar",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 102,
+		"fields": {
+			"form_name": "exemplar",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 103,
+		"fields": {
+			"form_name": "exemplar",
+			"field_name": "description",
+			"order_num": 6,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 122,
+		"fields": {
+			"form_name": "material",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"material\", \"value\": \"Материал\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 123,
+		"fields": {
+			"form_name": "material",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 124,
+		"fields": {
+			"form_name": "material",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 125,
+		"fields": {
+			"form_name": "material",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 126,
+		"fields": {
+			"form_name": "material",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификацонная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 127,
+		"fields": {
+			"form_name": "material",
+			"field_name": "weight",
+			"order_num": 6,
+			"caption": "Плотность",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 128,
+		"fields": {
+			"form_name": "material",
+			"field_name": "weight_unit",
+			"order_num": 7,
+			"caption": "Единица измерения плотности",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 129,
+		"fields": {
+			"form_name": "material",
+			"field_name": "abbr",
+			"order_num": 8,
+			"caption": "Кратко",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 130,
+		"fields": {
+			"form_name": "material",
+			"field_name": "description",
+			"order_num": 9,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 131,
+		"fields": {
+			"form_name": "material",
+			"field_name": "unit",
+			"order_num": 10,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 132,
+		"fields": {
+			"form_name": "material",
+			"field_name": "nom_code",
+			"order_num": 11,
+			"caption": "Код материала",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 144,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Номер извещения",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 145,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "notice_type",
+			"order_num": 2,
+			"caption": "Тип извещения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 146,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "notice_date",
+			"order_num": 3,
+			"caption": "Дата выпуска",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 147,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "valid_date",
+			"order_num": 4,
+			"caption": "Срок действия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 148,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "description",
+			"order_num": 5,
+			"caption": "Содержание изменений",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 149,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "reason",
+			"order_num": 6,
+			"caption": "Причина",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 150,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "reserve",
+			"order_num": 7,
+			"caption": "Задел",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 151,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "deadline",
+			"order_num": 8,
+			"caption": "Срок изменения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 152,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "urgently",
+			"order_num": 9,
+			"caption": "Срочно",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 153,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "directions",
+			"order_num": 10,
+			"caption": "Указание о внедрении",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 154,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "usages",
+			"order_num": 11,
+			"caption": "Применяемость",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 155,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "attachment",
+			"order_num": 12,
+			"caption": "Приложение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 156,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "state",
+			"order_num": 13,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 157,
+		"fields": {
+			"form_name": "notice",
+			"field_name": "approve_date",
+			"order_num": 14,
+			"caption": "Дата утверждения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 158,
+		"fields": {
+			"form_name": "operation",
+			"field_name": "operation_name",
+			"order_num": 1,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 159,
+		"fields": {
+			"form_name": "operation",
+			"field_name": "full_name",
+			"order_num": 2,
+			"caption": "Наиименование полное",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 160,
+		"fields": {
+			"form_name": "operation",
+			"field_name": "operation_code",
+			"order_num": 3,
+			"caption": "Код операции",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 161,
+		"fields": {
+			"form_name": "operation",
+			"field_name": "group",
+			"order_num": 4,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 162,
+		"fields": {
+			"form_name": "operation",
+			"field_name": "description",
+			"order_num": 6,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 163,
+		"fields": {
+			"form_name": "order",
+			"field_name": "code",
+			"order_num": 1,
+			"caption": "Заводской номер",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 164,
+		"fields": {
+			"form_name": "order",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"order\", \"value\": \"Заказ\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 165,
+		"fields": {
+			"form_name": "order",
+			"field_name": "title",
+			"order_num": 2,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 166,
+		"fields": {
+			"form_name": "order",
+			"field_name": "group",
+			"order_num": 3,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 167,
+		"fields": {
+			"form_name": "order",
+			"field_name": "abbr",
+			"order_num": 4,
+			"caption": "Кратко",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 168,
+		"fields": {
+			"form_name": "order",
+			"field_name": "unit",
+			"order_num": 5,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 169,
+		"fields": {
+			"form_name": "order",
+			"field_name": "state",
+			"order_num": 6,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 170,
+		"fields": {
+			"form_name": "order",
+			"field_name": "description",
+			"order_num": 7,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 174,
+		"fields": {
+			"form_name": "other",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"other\", \"value\": \"Прочее изделие\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 175,
+		"fields": {
+			"form_name": "other",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 176,
+		"fields": {
+			"form_name": "other",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 177,
+		"fields": {
+			"form_name": "other",
+			"field_name": "group",
+			"order_num": 4,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 178,
+		"fields": {
+			"form_name": "other",
+			"field_name": "unit",
+			"order_num": 5,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 179,
+		"fields": {
+			"form_name": "other",
+			"field_name": "weight",
+			"order_num": 6,
+			"caption": "Масса",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 180,
+		"fields": {
+			"form_name": "other",
+			"field_name": "weight_unit",
+			"order_num": 7,
+			"caption": "Единица измерения массы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 15, \"value\": \"кг/шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 181,
+		"fields": {
+			"form_name": "other",
+			"field_name": "is_top",
+			"order_num": 8,
+			"caption": "Признак готового изделия",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 182,
+		"fields": {
+			"form_name": "other",
+			"field_name": "state",
+			"order_num": 9,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 183,
+		"fields": {
+			"form_name": "other",
+			"field_name": "description",
+			"order_num": 10,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 206,
+		"fields": {
+			"form_name": "role",
+			"field_name": "list_value",
+			"order_num": 1,
+			"caption": "Роль",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 207,
+		"fields": {
+			"form_name": "role",
+			"field_name": "order_num",
+			"order_num": 2,
+			"caption": "Порядок следования в списке",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 208,
+		"fields": {
+			"form_name": "route",
+			"field_name": "route_name",
+			"order_num": 1,
+			"caption": "Наименование маршрута",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 209,
+		"fields": {
+			"form_name": "routepoint",
+			"field_name": "order_num",
+			"order_num": 1,
+			"caption": "Порядок следования",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 210,
+		"fields": {
+			"form_name": "routepoint",
+			"field_name": "place",
+			"order_num": 2,
+			"caption": "Производственное подразделение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 211,
+		"fields": {
+			"form_name": "routepoint",
+			"field_name": "comment",
+			"order_num": 3,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 212,
+		"fields": {
+			"form_name": "select",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": "true",
+			"required": false,
+			"read_only": false,
+			"default_value": "false",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 213,
+		"fields": {
+			"form_name": "select",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": "false",
+			"required": false,
+			"read_only": false,
+			"default_value": "false",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 214,
+		"fields": {
+			"form_name": "select",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": "false",
+			"required": false,
+			"read_only": false,
+			"default_value": "false",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 215,
+		"fields": {
+			"form_name": "select",
+			"field_name": "description",
+			"order_num": 11,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": "false",
+			"required": false,
+			"read_only": false,
+			"default_value": "false",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 216,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": "{\"pk\": \"sortament\", \"value\": \"Сортамент\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 217,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 218,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 219,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 220,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификацонная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 221,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "abbr",
+			"order_num": 6,
+			"caption": "Кратко",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 222,
+		"fields": {
+			"form_name": "sortament",
+			"field_name": "description",
+			"order_num": 7,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 223,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": \"standart\", \"value\": \"Стандартное изделие\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 224,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 225,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "parent",
+			"order_num": 3,
+			"caption": "Регламентирующий документ",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 226,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "title",
+			"order_num": 4,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 227,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "group",
+			"order_num": 5,
+			"caption": "Классификационная группа",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 228,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "unit",
+			"order_num": 6,
+			"caption": "Единица измерения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 1, \"value\": \"шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 229,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "weight",
+			"order_num": 7,
+			"caption": "Масса",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 230,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "weight_unit",
+			"order_num": 8,
+			"caption": "Единица измерения массы",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": "{\"pk\": 15, \"value\": \"кг/шт.\"}",
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 231,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "state",
+			"order_num": 9,
+			"caption": "Состояние",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 232,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "source",
+			"order_num": 10,
+			"caption": "Источник поступления",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": 3,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 233,
+		"fields": {
+			"form_name": "standart",
+			"field_name": "description",
+			"order_num": 11,
+			"caption": "Описание",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 253,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "row_type",
+			"order_num": 1,
+			"caption": "Тип строки",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 254,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "child",
+			"order_num": 2,
+			"caption": "Ресурс",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 255,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "quantity",
+			"order_num": 4,
+			"caption": "Норма расхода",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 256,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "net_weight",
+			"order_num": 5,
+			"caption": "Чистый вес",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 257,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "black_weight",
+			"order_num": 6,
+			"caption": "Черный вес",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 258,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "k_zap",
+			"order_num": 7,
+			"caption": "Коэффициент запуска",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 259,
+		"fields": {
+			"form_name": "tpresource",
+			"field_name": "notice",
+			"order_num": 8,
+			"caption": "Извещение об изменениях",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 260,
+		"fields": {
+			"form_name": "tprow",
+			"field_name": "order_num",
+			"order_num": 1,
+			"caption": "Порядок следования",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 261,
+		"fields": {
+			"form_name": "tprow",
+			"field_name": "row_num",
+			"order_num": 2,
+			"caption": "Номер операции",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 262,
+		"fields": {
+			"form_name": "tprow",
+			"field_name": "operation",
+			"order_num": 3,
+			"caption": "Операция",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 263,
+		"fields": {
+			"form_name": "tpun",
+			"field_name": "part_type",
+			"order_num": 1,
+			"caption": "Раздел спецификации",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 264,
+		"fields": {
+			"form_name": "tpun",
+			"field_name": "code",
+			"order_num": 2,
+			"caption": "Обозначение",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 265,
+		"fields": {
+			"form_name": "tpun",
+			"field_name": "title",
+			"order_num": 3,
+			"caption": "Наименование",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 266,
+		"fields": {
+			"form_name": "tpun",
+			"field_name": "source",
+			"order_num": 4,
+			"caption": "Источник постулпения",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	}
+]

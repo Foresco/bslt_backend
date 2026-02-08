@@ -1,0 +1,72 @@
+[
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "",
+      "value_class": "redfile",
+      "is_default": true
+    }
+  },
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Конструкторский документ",
+      "value_class": "file",
+      "is_default": false
+    }
+  },
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Технологический документ",
+      "value_class": "file",
+      "is_default": false
+    }
+  },
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Монтажный документ",
+      "value_class": "file",
+      "is_default": false
+    }
+  },
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Письмо",
+      "value_class": "file",
+      "is_default": false
+    }
+  },
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "Служебная записка",
+      "value_class": "file",
+      "is_default": false
+    }
+  },
+  {
+    "model": "docarchive.DocumentType",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "list_value": "Прочее",
+      "value_class": "file",
+      "is_default": false
+    }
+  }
+]

@@ -1,0 +1,55 @@
+[{
+	"style": "",
+	"item_name": "main",
+	"id": "main",
+	"action": "",
+	"caption": "Главное меню",
+	"order_num": 1,
+	"app": "core",
+	"parent": "",
+	"model": "MenuItem"
+},
+{
+	"style": "reference",
+	"item_name": "reference",
+	"id": "reference",
+	"action": "",
+	"caption": "Справочники",
+	"order_num": 3,
+	"app": "core",
+	"parent": "main",
+	"model": "MenuItem"
+},
+{
+	"style": "tool",
+	"item_name": "tool",
+	"id": "tool",
+	"action": "tool",
+	"caption": "Инструмент",
+	"order_num": 8,
+	"app": "toolover",
+	"parent": "reference",
+	"model": "MenuItem"
+},
+{
+	"style": "gtc",
+	"item_name": "gtc",
+	"id": "gtc",
+	"action": "",
+	"caption": "GTC",
+	"order_num": 9,
+	"app": "toolover",
+	"parent": "reference",
+	"model": "MenuItem"
+},
+{
+	"style": "toolclass",
+	"item_name": "toolclass",
+	"id": "toolclass",
+	"action": "toolclass",
+	"caption": "Классы инструмента",
+	"order_num": 1,
+	"app": "toolover",
+	"parent": "gtc",
+	"model": "MenuItem"
+}]

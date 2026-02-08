@@ -1,0 +1,22 @@
+[{
+	"style": "",
+	"item_name": "main",
+	"id": "main",
+	"action": "",
+	"caption": "Главное меню",
+	"order_num": 1,
+	"app": "core",
+	"parent": "",
+	"model": "MenuItem"
+},
+{
+	"style": "manage",
+	"item_name": "manage",
+	"id": "manage",
+	"action": "",
+	"caption": "Управление",
+	"order_num": 4,
+	"app": "pdm",
+	"parent": "main",
+	"model": "MenuItem"
+}]

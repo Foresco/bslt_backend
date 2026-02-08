@@ -1,0 +1,238 @@
+[
+	{
+		"model": "Panel",
+		"id": "arcdocdeliveries",
+		"panel_name": "arcdocdeliveries",
+		"area": "east",
+		"description": "Выдачи архивного документа",
+		"check_state": "False",
+		"view_right": "view_deliveryarcdoc",
+		"edit_right": "change_deliveryarcdoc"
+	},
+	{
+		"model": "Panel",
+		"id": "arcdocumentobjects",
+		"panel_name": "arcdocumentobjects",
+		"area": "east",
+		"description": "Объекты, связанные с архивным документом",
+		"check_state": "False",
+		"view_right": "view_arcdocumentobject",
+		"edit_right": "change_arcdocumentobject"
+	},
+	{
+		"model": "Panel",
+		"id": "arcdocumentslist",
+		"panel_name": "arcdocumentslist",
+		"area": "center",
+		"description": "Перечень архивных документов",
+		"check_state": "False",
+		"view_right": "view_arcdocument"
+	},
+	{
+		"model": "Panel",
+		"id": "codeprefixeslist",
+		"panel_name": "codeprefixeslist",
+		"area": "center",
+		"description": "Перечень префиксов кодов",
+		"check_state": "False",
+		"view_right": "view_codeprefix",
+		"edit_right": "change_codeprefix"
+	},
+	{
+		"model": "Panel",
+		"id": "deliverieslist",
+		"panel_name": "deliverieslist",
+		"area": "center",
+		"description": "Перечень выдач архивных документов",
+		"check_state": "False",
+		"view_right": "view_delivery"
+	},
+	{
+		"model": "Panel",
+		"id": "deliveryarcdocs",
+		"panel_name": "deliveryarcdocs",
+		"area": "east",
+		"description": "Перечень архивных документов в выдаче",
+		"check_state": "False",
+		"view_right": "view_deliveryarcdoc",
+		"edit_right": "change_deliveryarcdoc"
+	},
+	{
+		"model": "Panel",
+		"id": "docversionobjects",
+		"panel_name": "docversionobjects",
+		"area": "east",
+		"description": "Панель Объекты версии файла",
+		"check_state": "False",
+		"view_right": "view_entitydocumentversion",
+		"edit_right": "change_entitydocumentversion"
+	},
+	{
+		"model": "Panel",
+		"id": "filedocumentslist",
+		"panel_name": "filedocumentslist",
+		"area": "center",
+		"description": "Перечень всех файловых документов архива",
+		"check_state": "False",
+		"view_right": "view_filedocument"
+	},
+	{
+		"model": "Panel",
+		"id": "fileuploadcreate",
+		"panel_name": "fileuploadcreate",
+		"area": "center",
+		"description": "Форма загрузки файлов из таблицы",
+		"check_state": "False",
+		"view_right": "change_fileupload",
+		"edit_right": "change_fileupload"
+	},
+	{
+		"model": "Panel",
+		"id": "fileuploadslist",
+		"panel_name": "fileuploadslist",
+		"area": "center",
+		"description": "Перечень загрузок файлов",
+		"check_state": "False",
+		"view_right": "view_fileupload",
+		"edit_right": "change_fileupload"
+	},
+	{
+		"model": "Panel",
+		"id": "incidentslist",
+		"panel_name": "incidentslist",
+		"area": "center",
+		"description": "Перечень инцидентов",
+		"check_state": "False",
+		"view_right": "view_incident",
+		"edit_right": "change_incident"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfiles",
+		"panel_name": "objectfiles",
+		"area": "east",
+		"description": "Панель Файлы объекта",
+		"check_state": "True",
+		"view_right": "view_filedocument",
+		"edit_right": "change_filedocument"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfilessimple",
+		"panel_name": "objectfilessimple",
+		"area": "east",
+		"description": "Панель Файлы объекта с ограниченным набором полей",
+		"check_state": "False",
+		"view_right": "view_filedocument",
+		"edit_right": "change_filedocument"
+	},
+	{
+		"model": "Panel",
+		"id": "uploadarcdocs",
+		"panel_name": "uploadarcdocs",
+		"area": "east",
+		"description": "Список архивных документов в загрузке",
+		"check_state": "False",
+		"view_right": "view_uploadarcdoc"
+	},
+	{
+		"model": "Panel",
+		"id": "docversionproperties",
+		"panel_name": "docversionproperties",
+		"area": "east",
+		"description": "Панель Свойства версии документа",
+		"check_state": "False",
+		"view_right": "view_filedocument",
+		"edit_right": "change_filedocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_deliveryarcdoc",
+		"codename": "view_deliveryarcdoc"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_arcdocumentobject",
+		"codename": "view_arcdocumentobject"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_arcdocument",
+		"codename": "view_arcdocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_codeprefix",
+		"codename": "view_codeprefix"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_delivery",
+		"codename": "view_delivery"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_documentversiondatetype",
+		"codename": "view_documentversiondatetype"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_filedocument",
+		"codename": "view_filedocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_fileupload",
+		"codename": "change_fileupload"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_fileupload",
+		"codename": "view_fileupload"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_incident",
+		"codename": "view_incident"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_uploadarcdoc",
+		"codename": "view_uploadarcdoc"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_deliveryarcdoc",
+		"codename": "change_deliveryarcdoc"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_arcdocumentobject",
+		"codename": "change_arcdocumentobject"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_codeprefix",
+		"codename": "change_codeprefix"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_incident",
+		"codename": "change_incident"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_filedocument",
+		"codename": "change_filedocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_entitydocumentversion",
+		"codename": "view_entitydocumentversion"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_entitydocumentversion",
+		"codename": "change_entitydocumentversion"
+	}
+]

@@ -1,0 +1,41 @@
+[
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "rawrowslist",
+		"panel_name": "rawrowslist"
+	},
+	{
+		"model": "Panel",
+		"id": "rawrowpropvalues",
+		"panel_name": "rawrowpropvalues"
+	},
+	{
+		"model": "TypePanel",
+		"id": "rawrowfilters",
+		"panel": "filters",
+		"type_key": "rawrow",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "rawrowrawrowslist",
+		"panel": "rawrowslist",
+		"type_key": "rawrow",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "rawrowrawrowpropvalues",
+		"panel": "rawrowpropvalues",
+		"type_key": "rawrow",
+		"in_list": true,
+		"in_single": false
+	}
+]

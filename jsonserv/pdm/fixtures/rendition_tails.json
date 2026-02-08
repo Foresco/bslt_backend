@@ -1,0 +1,182 @@
+[
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "01",
+      "is_default": true
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "02",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "03",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "04",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "05",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "06",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "list_value": "07",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 8,
+    "fields": {
+      "order_num": 8,
+      "list_value": "08",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 9,
+    "fields": {
+      "order_num": 9,
+      "list_value": "09",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 10,
+    "fields": {
+      "order_num": 10,
+      "list_value": "10",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 11,
+    "fields": {
+      "order_num": 11,
+      "list_value": "11",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 12,
+    "fields": {
+      "order_num": 12,
+      "list_value": "12",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 13,
+    "fields": {
+      "order_num": 13,
+      "list_value": "13",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 14,
+    "fields": {
+      "order_num": 14,
+      "list_value": "14",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 15,
+    "fields": {
+      "order_num": 15,
+      "list_value": "15",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 16,
+    "fields": {
+      "order_num": 16,
+      "list_value": "16",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 17,
+    "fields": {
+      "order_num": 17,
+      "list_value": "17",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 18,
+    "fields": {
+      "order_num": 18,
+      "list_value": "18",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 19,
+    "fields": {
+      "order_num": 19,
+      "list_value": "19",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RenditionTail",
+    "pk": 20,
+    "fields": {
+      "order_num": 20,
+      "list_value": "20",
+      "is_default": false
+    }
+  }
+]

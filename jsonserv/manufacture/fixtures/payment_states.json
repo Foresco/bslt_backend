@@ -1,0 +1,32 @@
+[
+  {
+    "model": "manufacture.PaymentState",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Не оплачен",
+      "is_default": true,
+      "value_class": "state_no"
+    }
+  },
+  {
+    "model": "manufacture.PaymentState",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Частично",
+      "is_default": false,
+      "value_class": "state_ordered"
+    }
+  },
+  {
+    "model": "manufacture.PaymentState",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Оплачен",
+      "is_default": false,
+      "value_class": "state_yes"
+    }
+  }
+]

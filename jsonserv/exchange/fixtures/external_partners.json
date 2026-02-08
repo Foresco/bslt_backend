@@ -1,0 +1,9 @@
+[
+  {
+    "model": "exchange.ExternalPartner",
+    "pk": 1,
+    "fields": {
+      "partner_name": "Базальта. Версия 1"
+    }
+  }
+]

@@ -1,0 +1,52 @@
+### **externallibraryreference** Ссылки на внешние библиотеки
+Связка свойств и внешних библиотек, их определяющих.
+*property Ссыока на свойство
+*external_id Идентификатор библиотеки
+*library_type Тип библиотеки
+*description Описание
+### **gtcpackage** Загруженные GTC-пакеты
+Свойства всех загруженных в базу данных GTC-пакетов:
+*gtc_package_id Уникальный идентификатор пакета
+*supported_gtc_generic_versions"Supported GTC generic versions
+*vendor_hierarchy_version Vendor hierarchy version
+*vendor_name Vendor name. Вендор, предоставивший пакет
+*vendor_acronym Vendor acronym. Краткое обозначение вендора
+*gtc_package_creation_date GTC package creation_date. Дата создания GTC-пакета
+*logo ссылка на файл логотипа
+*download_security Download security
+*vendor_system_version Vendor System version
+*short_description Short description. Краткое описание
+### **gtcproperty** GTC-свойства
+Свойство из GTC-пакета
+### **gtcpropertyclass** Варианты значения Класс GTC свойства
+Список возможных значений
+### **languagevalue** Значения свойств на разных языках
+### **maingtcpropertyclass** Варианты значения признака Основной класс свойства
+Список значений
+### **plibclass** PLIB Класс инструмента
+Данные можно взять из файла Repository\ReferenceData\Plib\PlibClasses.xml
+У некоторых классов есть ссылки на PLIB свойства
+### **plibproperty** PLIB свойство инструмента
+Свойства инструмента, зарегистрированные в PLIB библиотеках
+Можно взять из файла Repository\ReferenceData\Plib\PlibProperties.xml
+### **specificclass** Класс из SPECIFIC_ITEM_CLASSIFICATION Не нашел!!!
+Список значений
+### **specificclassification** Классификация классов инструмента по SPECIFIC_ITEM_CLASSIFICATION
+### **toolclass** Классы инструмента
+Название классов на других языках можно взять из файла Repository\ReferenceData\GtcClasses\GtcClasses-Descriptions.xml
+Описания классов на других языках можно взять из файла Repository\ReferenceData\GtcClasses\GtcClasses-Captions.xml
+Простые иконки для классов можно найти в каталоге Repository\ReferenceData\GtcClassIcons\
+### **toolobject** Справочник инструмента
+### **toolpreference** Варианты значений предпочтительности инструмента
+Список значений
+### **toolproduct** Продукция поставщиков
+Описание инструмента, поставляемого поставщиками
+### **toolpropsfile** Файл со свойствами экземпляра инструмента (*.p21)
+### **toolsource** Варианты значений источников поступления инструмента
+Список значений
+### **toolstaff** Состав составного инструмента
+### **toolstate** Варианты значений состояний инструмента
+Список значений
+### **translateproperty** Свойства для перевода на разные языки
+### **vendorplibclass** PLIB класс вендора
+### **vendorplibproperty** Связь свойств с библиотекой вендора

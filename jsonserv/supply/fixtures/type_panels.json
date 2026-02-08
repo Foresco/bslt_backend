@@ -1,0 +1,100 @@
+[
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfilessimple",
+		"panel_name": "objectfilessimple"
+	},
+	{
+		"model": "Panel",
+		"id": "orderprodposlist",
+		"panel_name": "orderprodposlist"
+	},
+	{
+		"model": "Panel",
+		"id": "supplyorderslist",
+		"panel_name": "supplyorderslist"
+	},
+	{
+		"model": "TypePanel",
+		"id": "supplyordercreate",
+		"panel": "create",
+		"type_key": "supplyorder",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_supplyorderstaff",
+		"edit_right": "change_supplyorderstaff"
+	},
+	{
+		"model": "TypePanel",
+		"id": "supplyorderedit",
+		"panel": "edit",
+		"type_key": "supplyorder",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_supplyorder",
+		"edit_right": "change_supplyorder"
+	},
+	{
+		"model": "TypePanel",
+		"id": "supplyorderfilters",
+		"panel": "filters",
+		"type_key": "supplyorder",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "filter_fields=['supplier'];"
+	},
+	{
+		"model": "TypePanel",
+		"id": "supplyorderobjectfilessimple",
+		"panel": "objectfilessimple",
+		"type_key": "supplyorder",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "supplyorderorderprodposlist",
+		"panel": "orderprodposlist",
+		"type_key": "supplyorder",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "supplyordersupplyorderslist",
+		"panel": "supplyorderslist",
+		"type_key": "supplyorder",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_supplyorderstaff",
+		"codename": "change_supplyorderstaff"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_supplyorder",
+		"codename": "view_supplyorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_supplyorder",
+		"codename": "change_supplyorder"
+	}
+]

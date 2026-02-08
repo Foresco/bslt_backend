@@ -1,0 +1,265 @@
+[
+	{
+		"model": "Panel",
+		"id": "orderprodposlist",
+		"panel_name": "orderprodposlist",
+		"area": "east",
+		"description": "Перечень производственных позиций в заказе на поставку",
+		"check_state": "false",
+		"view_right": "view_orderprodposition",
+		"edit_right": "change_orderprodposition"
+	},
+	{
+		"model": "Panel",
+		"id": "positioninworklist",
+		"panel_name": "positioninworklist",
+		"area": "center",
+		"description": "Перечень позиций заказов в работе",
+		"check_state": "false",
+		"view_right": "view_prodorderlink",
+		"edit_right": "change_prodorderlink"
+	},
+	{
+		"model": "Panel",
+		"id": "positionsoperationslist",
+		"panel_name": "positionsoperationslist",
+		"area": "center",
+		"description": "Пооперационный перечень позиций производственных заказов",
+		"check_state": "false",
+		"view_right": "view_tprow"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderinworklist",
+		"panel_name": "prodorderinworklist",
+		"area": "center",
+		"description": "Перечень производственных заказов в работе",
+		"check_state": "false",
+		"view_right": "view_prodorder"
+	},
+	{
+		"model": "Panel",
+		"id": "prodordermaterlist",
+		"panel_name": "prodordermaterlist",
+		"area": "center",
+		"description": "Перечень материалов в производственных заказах",
+		"check_state": "false",
+		"view_right": "view_designmater"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposassign",
+		"panel_name": "prodorderposassign",
+		"area": "east",
+		"description": "Назначение позиций состава исполнителям",
+		"check_state": "false",
+		"view_right": "view_prodorderlinkworker",
+		"edit_right": "change_prodorderlinkworker"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposition",
+		"panel_name": "prodorderposition",
+		"area": "east",
+		"description": "Свойство позиции производственного заказа",
+		"check_state": "false",
+		"view_right": "view_prodorderlink",
+		"edit_right": "change_prodorderlink"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposoperations",
+		"panel_name": "prodorderposoperations",
+		"area": "east",
+		"description": "Список операций позиции из заказа",
+		"check_state": "false",
+		"view_right": "view_route",
+		"edit_right": "change_route"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposreports",
+		"panel_name": "prodorderposreports",
+		"area": "east",
+		"description": "Список отчетов по операциям позиции из заказа",
+		"check_state": "false",
+		"view_right": "view_workerreportconsist"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposshipments",
+		"panel_name": "prodorderposshipments",
+		"area": "east",
+		"description": "Список отгрузок позиции из заказа",
+		"check_state": "false",
+		"view_right": "view_shipment",
+		"edit_right": "change_shipment"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderpostprow",
+		"panel_name": "prodorderpostprow",
+		"area": "east",
+		"description": "Свойства операции у позиции производственного заказа",
+		"check_state": "false",
+		"view_right": "view_prodorderlinktprow",
+		"edit_right": "change_prodorderlinktprow"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderslist",
+		"panel_name": "prodorderslist",
+		"area": "center",
+		"description": "Перечень заказов на производство",
+		"check_state": "false",
+		"view_right": "view_prodorder",
+		"edit_right": "change_prodorder"
+	},
+	{
+		"model": "Panel",
+		"id": "prodordertree",
+		"panel_name": "prodordertree",
+		"area": "center",
+		"description": "Дерево состава производственного заказа",
+		"check_state": "false",
+		"view_right": "view_prodorderlink",
+		"edit_right": "change_prodorderlink"
+	},
+	{
+		"model": "Panel",
+		"id": "supplyprices",
+		"panel_name": "supplyprices",
+		"area": "east",
+		"description": "Панель с ценами поставки или продажи",
+		"check_state": "false",
+		"view_right": "view_price",
+		"edit_right": "change_price"
+	},
+	{
+		"model": "Panel",
+		"id": "workershiftfilters",
+		"panel_name": "workershiftfilters",
+		"area": "west",
+		"description": "Фильтры рабочих смен работников",
+		"check_state": "false",
+		"view_right": "view_workershift"
+	},
+	{
+		"model": "Panel",
+		"id": "workershiftlist",
+		"panel_name": "workershiftlist",
+		"area": "center",
+		"description": "Перечень рабочих смен работников",
+		"check_state": "false",
+		"view_right": "view_workershift"
+	},
+	{
+		"model": "Panel",
+		"id": "workertasklist",
+		"panel_name": "workertasklist",
+		"area": "center",
+		"description": "Перечень производственных заданий пользователя",
+		"check_state": "false",
+		"view_right": "view_prodorderlinkworker"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_orderprodposition",
+		"codename": "view_orderprodposition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_prodorderlink",
+		"codename": "view_prodorderlink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_tprow",
+		"codename": "view_tprow"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_prodorder",
+		"codename": "view_prodorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_designmater",
+		"codename": "view_designmater"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_prodorderlinkworker",
+		"codename": "view_prodorderlinkworker"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_route",
+		"codename": "view_route"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_workerreportconsist",
+		"codename": "view_workerreportconsist"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_shipment",
+		"codename": "view_shipment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_prodorderlinktprow",
+		"codename": "view_prodorderlinktprow"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_price",
+		"codename": "view_price"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_workershift",
+		"codename": "view_workershift"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_orderprodposition",
+		"codename": "change_orderprodposition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_prodorderlink",
+		"codename": "change_prodorderlink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_prodorderlinkworker",
+		"codename": "change_prodorderlinkworker"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_route",
+		"codename": "change_route"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_shipment",
+		"codename": "change_shipment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_prodorderlinktprow",
+		"codename": "change_prodorderlinktprow"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_prodorder",
+		"codename": "change_prodorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_price",
+		"codename": "change_price"
+	}
+]

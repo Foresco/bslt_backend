@@ -1,0 +1,118 @@
+[
+	{
+		"model": "Panel",
+		"id": "letterfilters",
+		"panel_name": "letterfilters",
+		"area": "west",
+		"description": "Панель полей фильтрации писем",
+		"check_state": "False",
+		"view_right": "view_letter"
+	},
+	{
+		"model": "Panel",
+		"id": "letterslist",
+		"panel_name": "letterslist",
+		"area": "center",
+		"description": "Перечень писем",
+		"check_state": "False",
+		"view_right": "view_letter"
+	},
+	{
+		"model": "Panel",
+		"id": "objecttasks",
+		"panel_name": "objecttasks",
+		"area": "east",
+		"description": "Задания объекта",
+		"check_state": "False",
+		"view_right": "view_taskrefer",
+		"edit_right": "change_taskrefer"
+	},
+	{
+		"model": "Panel",
+		"id": "taskfilters",
+		"panel_name": "taskfilters",
+		"area": "west",
+		"description": "Панель полей фильтрации заданий",
+		"check_state": "False",
+		"view_right": "view_task"
+	},
+	{
+		"model": "Panel",
+		"id": "tasklist",
+		"panel_name": "tasklist",
+		"area": "center",
+		"description": "Перечень задач пользователей",
+		"check_state": "False",
+		"view_right": "view_task"
+	},
+	{
+		"model": "Panel",
+		"id": "taskrefer",
+		"panel_name": "taskrefer",
+		"area": "east",
+		"description": "Объекты, которых касается задание",
+		"check_state": "False",
+		"view_right": "view_taskrefer",
+		"edit_right": "change_taskrefer"
+	},
+	{
+		"model": "Panel",
+		"id": "taskuser",
+		"panel_name": "taskuser",
+		"area": "east",
+		"description": "Пользователи, получившие задание",
+		"check_state": "False",
+		"view_right": "view_taskuser",
+		"edit_right": "change_taskuser"
+	},
+	{
+		"model": "Panel",
+		"id": "comments",
+		"panel_name": "comments",
+		"area": "east",
+		"description": "Комментарии",
+		"check_state": "False",
+		"view_right": "view_comment",
+		"edit_right": "change_comment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_letter",
+		"codename": "view_letter"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_taskrefer",
+		"codename": "view_taskrefer"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_task",
+		"codename": "view_task"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_taskuser",
+		"codename": "view_taskuser"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_taskrefer",
+		"codename": "change_taskrefer"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_taskuser",
+		"codename": "change_taskuser"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_comment",
+		"codename": "view_comment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_comment",
+		"codename": "change_comment"
+	}
+]

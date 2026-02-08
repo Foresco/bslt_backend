@@ -1,0 +1,29 @@
+[
+  {
+    "model": "manufacture.OrderLinkTpRowState",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Не требуется",
+      "is_default": true    
+    }
+  },
+  {
+    "model": "manufacture.OrderLinkTpRowState",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Нет",
+      "is_default": false   
+    }
+  },
+  {
+    "model": "manufacture.OrderLinkTpRowState",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Есть",
+      "is_default": false
+    }
+  }
+]

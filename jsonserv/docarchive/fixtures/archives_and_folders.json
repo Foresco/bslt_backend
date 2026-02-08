@@ -1,0 +1,18 @@
+[{
+	"model": "docarchive.filearchive",
+	"pk": 1,
+	"fields": {
+		"archive_name": "Основной архив",
+		"core_directory": "D:/",
+		"description": "Архив по умолчанию"
+	}
+},
+{
+	"model": "docarchive.folder",
+	"pk": 1,
+	"fields": {
+		"archive": 1,
+		"folder_name": "00000001"
+	}
+}
+]

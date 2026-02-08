@@ -1,0 +1,54 @@
+[{
+	"model": "core.typesetting",
+	"pk": "1",
+	"fields": {
+		"type_key": "arcdocument",
+		"dashboard": "archive",
+		"page_header": ""
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "2",
+	"fields": {
+		"type_key": "codeprefix",
+		"dashboard": "archive",
+		"page_header": ""
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "3",
+	"fields": {
+		"type_key": "delivery",
+		"dashboard": "archive",
+		"page_header": ""
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "4",
+	"fields": {
+		"type_key": "fileupload",
+		"dashboard": "archive",
+		"page_header": ""
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "5",
+	"fields": {
+		"type_key": "incident",
+		"dashboard": "archive",
+		"page_header": ""
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "18",
+	"fields": {
+		"type_key": "filedocument",
+		"dashboard": "archive",
+		"page_header": "Файловые документы"
+	}
+}]

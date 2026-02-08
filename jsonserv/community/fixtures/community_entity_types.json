@@ -1,0 +1,20 @@
+[{
+	"model": "core.entitytype",
+	"pk": "task",
+	"fields": {
+		"type_name": "Задача",
+		"div_name": "Задачи",
+		"doc_key": false,
+		"table_name": "task"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "letter",
+	"fields": {
+		"type_name": "Письмо",
+		"div_name": "Письма",
+		"doc_key": false,
+		"table_name": "letter"
+	}
+}]

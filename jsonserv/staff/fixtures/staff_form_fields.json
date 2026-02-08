@@ -1,0 +1,36 @@
+[
+	{
+		"model": "core.FormField",
+		"pk": 168,
+		"fields": {
+			"form_name": "person",
+			"field_name": "person",
+			"order_num": 1,
+			"caption": "Сотрудник (Ф.И.О.)",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 169,
+		"fields": {
+			"form_name": "person",
+			"field_name": "person_profile",
+			"order_num": 2,
+			"caption": "Профиль пользователя",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	}
+]

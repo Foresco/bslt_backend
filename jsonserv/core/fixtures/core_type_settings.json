@@ -1,0 +1,18 @@
+[{
+	"model": "core.typesetting",
+	"pk": "11",
+	"fields": {
+		"type_key": "systemuser",
+		"dashboard": "user",
+		"page_header": "Пользователи"
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "13",
+	"fields": {
+		"type_key": "userprofile",
+		"dashboard": "user",
+		"page_header": "Профили пользователей"
+	}
+}]

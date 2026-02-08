@@ -1,0 +1,41 @@
+{% load static %}
+{% get_static_prefix as STATIC_URL %}
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=icon href="{% static "/icons/favicon.ico" %}">
+    <title>{{ title }}</title>
+    <link rel=icon href="{% static "/icons/favicon.ico" %}">
+    {% for link in links %}
+        <link href="{{ STATIC_URL }}{{ link.href }}" rel="{{ link.rel }}" {% if link.las %} as="{{ link.las }}" {% endif %}>
+    {% endfor %}
+	<script type="text/javascript">
+	    panels = {{ params.panels|safe }};
+	    epanels = {{ params.epanels|safe }};
+	    {% if object_id %} object_id = {{ object_id }}; {% endif %}
+		{% for line in params.unique_js %}
+			{{ line }}
+		{% endfor %}
+		{% if session %}
+            username = "{{ session.username }}";
+            session_datetime = "{{ session.session_datetime }}";
+            user_session_id = {{ session.user_session_id }};
+            home = "{{ session.home }}";
+        {% endif %}
+	</script>
+</head>
+<body>
+  <noscript>
+    <strong>Нам жаль, но платформа Базальта не может отобразить содержимое, если в вашем браузере не разрешен запуск JavaScript.
+      Пожалуйста, разрешите запуск JavaScript, чтобы продолжить.</strong>
+  </noscript>
+  <div id=app></div>
+  {% for script in scripts %}
+    <script src="{{ STATIC_URL }}{{ script }}" type="text/javascript"></script>
+  {% endfor %}
+</body>
+</html>

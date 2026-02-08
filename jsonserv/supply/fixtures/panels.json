@@ -1,0 +1,56 @@
+[
+	{
+		"model": "Panel",
+		"id": "matersupplies",
+		"panel_name": "matersupplies",
+		"area": "east",
+		"description": "Панель со списком заказов материалов при производстве",
+		"check_state": "False",
+		"view_right": "view_supplyorderstaff"
+	},
+	{
+		"model": "Panel",
+		"id": "supplymaterslist",
+		"panel_name": "supplymaterslist",
+		"area": "center",
+		"description": "Перечень заказанных материалов из заказов",
+		"check_state": "False",
+		"view_right": "view_orderprodposition",
+		"edit_right": "change_orderprodposition"
+	},
+	{
+		"model": "Panel",
+		"id": "supplyorderslist",
+		"panel_name": "supplyorderslist",
+		"area": "center",
+		"description": "Перечень заказов на поставку материалов и комплектующих",
+		"check_state": "False",
+		"view_right": "view_supplyorder",
+		"edit_right": "change_supplyorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_supplyorderstaff",
+		"codename": "view_supplyorderstaff"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_orderprodposition",
+		"codename": "view_orderprodposition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_supplyorder",
+		"codename": "view_supplyorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_orderprodposition",
+		"codename": "change_orderprodposition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_supplyorder",
+		"codename": "change_supplyorder"
+	}
+]

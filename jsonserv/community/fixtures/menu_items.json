@@ -1,0 +1,52 @@
+[
+	{
+		"model": "MenuItem",
+		"id": "main",
+		"item_name": "main",
+		"caption": "Главное меню",
+		"order_num": 1,
+		"is_active": "True"
+	},
+	{
+		"model": "MenuItem",
+		"id": "reference",
+		"item_name": "reference",
+		"caption": "Справочники",
+		"style": "reference",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "manage",
+		"item_name": "manage",
+		"caption": "Управление",
+		"style": "manage",
+		"order_num": 5,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "task",
+		"item_name": "task",
+		"caption": "Задания",
+		"style": "task",
+		"action": "task",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "manage"
+	},
+	{
+		"model": "MenuItem",
+		"id": "letter",
+		"item_name": "letter",
+		"caption": "Письма",
+		"style": "letter",
+		"action": "letter",
+		"order_num": 2,
+		"is_active": "True",
+		"parent": "manage"
+	}
+]

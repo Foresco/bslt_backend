@@ -1,0 +1,205 @@
+[
+  {
+    "model": "core.Essence",
+    "pk": 1,
+    "fields": {
+      "essence_name": "Безразмерные"   
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 2,
+    "fields": {
+      "essence_name": "Масса"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 3,
+    "fields": {
+      "essence_name": "Длина"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 4,
+    "fields": {
+      "essence_name": "Площадь"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 5,
+    "fields": {
+      "essence_name": "Объем"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 6,
+    "fields": {
+      "essence_name": "Цена"   
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 7,
+    "fields": {
+      "essence_name": "Время"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 8,
+    "fields": {
+      "essence_name": "Удельные"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 9,
+    "fields": {
+      "essence_name": "Погонные"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 10,
+    "fields": {
+      "essence_name": "Доли и проценты"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 11,
+    "fields": {
+      "essence_name": "Скорость"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 12,
+    "fields": {
+      "essence_name": "Температура"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 13,
+    "fields": {
+      "essence_name": "Давление"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 14,
+    "fields": {
+      "essence_name": "Мощность"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 15,
+    "fields": {
+      "essence_name": "Сила"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 16,
+    "fields": {
+      "essence_name": "Момент силы"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 17,
+    "fields": {
+      "essence_name": "Электрическое напряжение"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 18,
+    "fields": {
+      "essence_name": "Сила тока"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 19,
+    "fields": {
+      "essence_name": "Сопротивление"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 20,
+    "fields": {
+      "essence_name": "Энергия, работа"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 21,
+    "fields": {
+      "essence_name": "Твердость по Бринеллю"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 22,
+    "fields": {
+      "essence_name": "Твердость по Виккерсу"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 23,
+    "fields": {
+      "essence_name": "Твердость по Роквеллу"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 24,
+    "fields": {
+      "essence_name": "Твердость по Роквеллу (шкала А)"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 25,
+    "fields": {
+      "essence_name": "Твердость по Шору"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 26,
+    "fields": {
+      "essence_name": "Вязкость динамическая"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 27,
+    "fields": {
+      "essence_name": "Вязкость кинематическая"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 28,
+    "fields": {
+      "essence_name": "Частота"
+    }
+  },
+  {
+    "model": "core.Essence",
+    "pk": 29,
+    "fields": {
+      "essence_name": "Нормирование"
+    }
+  }
+]

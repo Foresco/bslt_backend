@@ -1,0 +1,18 @@
+[{
+	"model": "core.typesetting",
+	"pk": "6",
+	"fields": {
+		"type_key": "letter",
+		"dashboard": "community",
+		"page_header": ""
+	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "12",
+	"fields": {
+		"type_key": "task",
+		"dashboard": "community",
+		"page_header": "Задания"
+	}
+}]

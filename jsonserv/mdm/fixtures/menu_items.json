@@ -1,0 +1,31 @@
+[
+	{
+		"model": "MenuItem",
+		"id": "main",
+		"item_name": "main",
+		"caption": "Главное меню",
+		"order_num": 1,
+		"is_active": "True"
+	},
+	{
+		"model": "MenuItem",
+		"id": "mdm",
+		"item_name": "mdm",
+		"caption": "MDM",
+		"style": "mdm",
+		"order_num": 5,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "rawrow",
+		"item_name": "rawrow",
+		"caption": "Исходные данные",
+		"style": "rawrow",
+		"action": "rawrow",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "mdm"
+	}
+]

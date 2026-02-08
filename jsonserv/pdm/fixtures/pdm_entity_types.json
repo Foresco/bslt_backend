@@ -1,0 +1,30 @@
+[{
+	"model": "core.entitytype",
+	"pk": "partobject",
+	"fields": {
+		"type_name": "Объект конструкции",
+		"div_name": "Объекты конструкции",
+		"doc_key": false,
+		"table_name": "partobjects"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "notice",
+	"fields": {
+		"type_name": "Извещение об изменениях",
+		"div_name": "Извещения об изменениях",
+		"doc_key": false,
+		"table_name": "notice"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "stage",
+	"fields": {
+		"type_name": "Стадия",
+		"div_name": "Стадии",
+		"doc_key": false,
+		"table_name": "stage"
+	}
+}]

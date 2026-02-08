@@ -1,0 +1,47 @@
+[
+  {
+    "model": "pdm.RouteState",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Разработка",
+      "is_default": true    
+    }
+  },
+  {
+    "model": "pdm.RouteState",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Проверено",
+      "is_default": false   
+    }
+  },
+  {
+    "model": "pdm.RouteState",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Согласовано",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RouteState",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Утверждено",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.RouteState",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Аннулировано",
+      "is_default": false
+    }
+  }
+]

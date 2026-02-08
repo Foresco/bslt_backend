@@ -1,0 +1,445 @@
+[
+	{
+		"model": "Panel",
+		"id": "classification",
+		"panel_name": "classification"
+	},
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfilessimple",
+		"panel_name": "objectfilessimple"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlist",
+		"panel_name": "objectlist"
+	},
+	{
+		"model": "Panel",
+		"id": "picturepanel",
+		"panel_name": "picturepanel"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposassign",
+		"panel_name": "prodorderposassign"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderslist",
+		"panel_name": "prodorderslist"
+	},
+	{
+		"model": "Panel",
+		"id": "prodordertree",
+		"panel_name": "prodordertree"
+	},
+	{
+		"model": "Panel",
+		"id": "propertiesview",
+		"panel_name": "propertiesview"
+	},
+	{
+		"model": "Panel",
+		"id": "objectcomments",
+		"panel_name": "objectcomments"
+	},
+	{
+		"model": "Panel",
+		"id": "positioninworklist",
+		"panel_name": "positioninworklist"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderinworklist",
+		"panel_name": "prodorderinworklist"
+	},
+	{
+		"model": "Panel",
+		"id": "prodordermaterlist",
+		"panel_name": "prodordermaterlist"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposition",
+		"panel_name": "prodorderposition"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposoperations",
+		"panel_name": "prodorderposoperations"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposreports",
+		"panel_name": "prodorderposreports"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderposshipments",
+		"panel_name": "prodorderposshipments"
+	},
+	{
+		"model": "Panel",
+		"id": "properties",
+		"panel_name": "properties"
+	},
+	{
+		"model": "Panel",
+		"id": "supplymaterslist",
+		"panel_name": "supplymaterslist"
+	},
+	{
+		"model": "Panel",
+		"id": "workershiftfilters",
+		"panel_name": "workershiftfilters"
+	},
+	{
+		"model": "Panel",
+		"id": "workershiftlist",
+		"panel_name": "workershiftlist"
+	},
+	{
+		"model": "Panel",
+		"id": "historylog",
+		"panel_name": "historylog"
+	},
+	{
+		"model": "Panel",
+		"id": "positionsoperationslist",
+		"panel_name": "positionsoperationslist"
+	},
+	{
+		"model": "Panel",
+		"id": "prodorderpostprow",
+		"panel_name": "prodorderpostprow"
+	},
+	{
+		"model": "Panel",
+		"id": "workertasklist",
+		"panel_name": "workertasklist"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderclassification",
+		"panel": "classification",
+		"type_key": "prodorder",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodordercreate",
+		"panel": "create",
+		"type_key": "prodorder",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_prodorder",
+		"edit_right": "change_prodorder"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderedit",
+		"panel": "edit",
+		"type_key": "prodorder",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_prodorder",
+		"edit_right": "change_prodorder"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderfilters",
+		"panel": "filters",
+		"type_key": "prodorder",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderobjectfilessimple",
+		"panel": "objectfilessimple",
+		"type_key": "prodorder",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderobjectlist",
+		"panel": "objectlist",
+		"type_key": "prodorder",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_prodorder"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderpicturepanel",
+		"panel": "picturepanel",
+		"type_key": "prodorder",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderprodorderposassign",
+		"panel": "prodorderposassign",
+		"type_key": "prodorder",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderprodorderslist",
+		"panel": "prodorderslist",
+		"type_key": "prodorder",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_prodorder"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderprodordertree",
+		"panel": "prodordertree",
+		"type_key": "prodorder",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "prodorder",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashfilters",
+		"panel": "filters",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true,
+		"start_params": "filter_fields = ['date', 'ordermaker', 'place', 'operation', 'orderstate', 'material', 'not_supplied']"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashobjectcomments",
+		"panel": "objectcomments",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashpicturepanel",
+		"panel": "picturepanel",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashpositioninworklist",
+		"panel": "positioninworklist",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashprodorderinworklist",
+		"panel": "prodorderinworklist",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashprodordermaterlist",
+		"panel": "prodordermaterlist",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashprodorderposition",
+		"panel": "prodorderposition",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashprodorderposoperations",
+		"panel": "prodorderposoperations",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashprodorderposreports",
+		"panel": "prodorderposreports",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashprodorderposshipments",
+		"panel": "prodorderposshipments",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashproperties",
+		"panel": "properties",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_prodorder",
+		"edit_right": "change_prodorder"
+	},
+	{
+		"model": "TypePanel",
+		"id": "prodorderdashsupplymaterslist",
+		"panel": "supplymaterslist",
+		"type_key": "prodorderdash",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workershiftspicturepanel",
+		"panel": "picturepanel",
+		"type_key": "workershifts",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workershiftsprodorderposreports",
+		"panel": "prodorderposreports",
+		"type_key": "workershifts",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workershiftsworkershiftfilters",
+		"panel": "workershiftfilters",
+		"type_key": "workershifts",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workershiftsworkershiftlist",
+		"panel": "workershiftlist",
+		"type_key": "workershifts",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertasksfilters",
+		"panel": "filters",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true,
+		"start_params": "filter_fields = ['operation', 'material']"
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertaskshistorylog",
+		"panel": "historylog",
+		"type_key": "workertasks",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertasksobjectfilessimple",
+		"panel": "objectfilessimple",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertaskspicturepanel",
+		"panel": "picturepanel",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertaskspositionsoperationslist",
+		"panel": "positionsoperationslist",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertasksprodorderposshipments",
+		"panel": "prodorderposshipments",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertasksprodorderpostprow",
+		"panel": "prodorderpostprow",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertaskspropertiesview",
+		"panel": "propertiesview",
+		"type_key": "workertasks",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "workertasksworkertasklist",
+		"panel": "workertasklist",
+		"type_key": "workertasks",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_prodorder",
+		"codename": "change_prodorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_prodorder",
+		"codename": "view_prodorder"
+	}
+]

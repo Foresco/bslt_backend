@@ -1,0 +1,130 @@
+[
+	{
+		"model": "MenuItem",
+		"id": "main",
+		"item_name": "main",
+		"caption": "Главное меню",
+		"order_num": 1,
+		"is_active": "True"
+	},
+	{
+		"model": "MenuItem",
+		"id": "reference",
+		"item_name": "reference",
+		"caption": "Справочники",
+		"style": "reference",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "role",
+		"item_name": "role",
+		"caption": "Роли",
+		"style": "role",
+		"action": "role",
+		"order_num": 13,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "designer",
+		"item_name": "designer",
+		"caption": "Разработчики",
+		"style": "designer",
+		"action": "designer",
+		"order_num": 14,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "archive",
+		"item_name": "archive",
+		"caption": "Архив",
+		"style": "archive",
+		"order_num": 4,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "archdocument",
+		"item_name": "archdocument",
+		"caption": "Архивные документы",
+		"style": "archdocument",
+		"action": "arcdocument",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "archive"
+	},
+	{
+		"model": "MenuItem",
+		"id": "incident",
+		"item_name": "incident",
+		"caption": "Инциденты",
+		"style": "incident",
+		"action": "incident",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "archive"
+	},
+	{
+		"model": "MenuItem",
+		"id": "delivery",
+		"item_name": "delivery",
+		"caption": "Выдачи",
+		"style": "delivery",
+		"action": "delivery",
+		"order_num": 4,
+		"is_active": "True",
+		"parent": "archive",
+		"item_right": "view_delivery"
+	},
+	{
+		"model": "MenuItem",
+		"id": "codeprefix",
+		"item_name": "codeprefix",
+		"caption": "Префиксы",
+		"style": "prefix",
+		"action": "codeprefix",
+		"order_num": 5,
+		"is_active": "True",
+		"parent": "archive",
+		"item_right": "view_codeprefix"
+	},
+	{
+		"model": "MenuItem",
+		"id": "fileupload",
+		"item_name": "fileupload",
+		"caption": "Загрузки",
+		"style": "upload",
+		"action": "fileupload",
+		"order_num": 6,
+		"is_active": "True",
+		"parent": "archive"
+	},
+	{
+		"model": "MenuItem",
+		"id": "filedocument",
+		"item_name": "filedocument",
+		"caption": "Файлы",
+		"style": "file",
+		"action": "filedocument",
+		"order_num": 7,
+		"is_active": "True",
+		"parent": "archive"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_delivery",
+		"codename": "view_delivery"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_codeprefix",
+		"codename": "view_codeprefix"
+	}
+]

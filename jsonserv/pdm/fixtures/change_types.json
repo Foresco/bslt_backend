@@ -1,0 +1,65 @@
+[
+  {
+    "model": "pdm.ChangeType",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "",
+      "is_default": true
+    }
+  },
+  {
+    "model": "pdm.ChangeType",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "нов.",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.ChangeType",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "ЗД",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.ChangeType",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Зам",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.ChangeType",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "ЗЛ",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.ChangeType",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "АД",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.ChangeType",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "list_value": "ВД",
+      "is_default": false
+    }
+  }
+]

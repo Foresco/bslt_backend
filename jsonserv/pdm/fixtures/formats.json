@@ -1,0 +1,186 @@
+[
+	{
+		"model": "pdm.PartFormat",
+		"pk": 1,
+		"fields": {
+			"list_value": "A0",
+			"order_num": 1
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 2,
+		"fields": {
+			"list_value": "A1",
+			"order_num": 2
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 3,
+		"fields": {
+			"list_value": "A2",
+			"order_num": 3
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 4,
+		"fields": {
+			"list_value": "A3",
+			"order_num": 4
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 5,
+		"fields": {
+			"list_value": "A4",
+			"order_num": 5
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 6,
+		"fields": {
+			"list_value": "БЧ",
+			"order_num": 6
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 7,
+		"fields": {
+			"list_value": "A1x2",
+			"order_num": 7
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 8,
+		"fields": {
+			"list_value": "A1x3",
+			"order_num": 8
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 9,
+		"fields": {
+			"list_value": "A1x4",
+			"order_num": 9
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 10,
+		"fields": {
+			"list_value": "A1x5",
+			"order_num": 10
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 11,
+		"fields": {
+			"list_value": "A1x6",
+			"order_num": 11
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 12,
+		"fields": {
+			"list_value": "A1x7",
+			"order_num": 12
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 13,
+		"fields": {
+			"list_value": "A1x8",
+			"order_num": 13
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 14,
+		"fields": {
+			"list_value": "A1x9",
+			"order_num": 14
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 15,
+		"fields": {
+			"list_value": "A2x3",
+			"order_num": 15
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 16,
+		"fields": {
+			"list_value": "A2x4",
+			"order_num": 16
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 17,
+		"fields": {
+			"list_value": "A2x5",
+			"order_num": 17
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 18,
+		"fields": {
+			"list_value": "A3x3",
+			"order_num": 18
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 19,
+		"fields": {
+			"list_value": "A3x4",
+			"order_num": 19
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 20,
+		"fields": {
+			"list_value": "A4x3",
+			"order_num": 20
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 21,
+		"fields": {
+			"list_value": "A4x4",
+			"order_num": 21
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 22,
+		"fields": {
+			"list_value": "A4x5",
+			"order_num": 22
+		}
+	},
+	{
+		"model": "pdm.PartFormat",
+		"pk": 23,
+		"fields": {
+			"list_value": "A4x7",
+			"order_num": 23
+		}
+	}
+]

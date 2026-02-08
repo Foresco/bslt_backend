@@ -1,0 +1,45 @@
+[{
+	"model": "pdm.partlitera",
+	"pk": 1,
+	"fields": {
+		"order_num": 1,
+		"list_value": "",
+		"is_default": true
+	}
+},
+{
+	"model": "pdm.partlitera",
+	"pk": 2,
+	"fields": {
+		"order_num": 2,
+		"list_value": "-",
+		"is_default": false
+	}
+},
+{
+	"model": "pdm.partlitera",
+	"pk": 3,
+	"fields": {
+		"order_num": 3,
+		"list_value": "\u0410",
+		"is_default": false
+	}
+},
+{
+	"model": "pdm.partlitera",
+	"pk": 4,
+	"fields": {
+		"order_num": 4,
+		"list_value": "\u041e",
+		"is_default": false
+	}
+},
+{
+	"model": "pdm.partlitera",
+	"pk": 5,
+	"fields": {
+		"order_num": 5,
+		"list_value": "\u041e1",
+		"is_default": false
+	}
+}]

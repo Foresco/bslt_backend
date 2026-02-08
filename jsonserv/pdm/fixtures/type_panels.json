@@ -1,0 +1,1915 @@
+[
+	{
+		"model": "Panel",
+		"id": "classification",
+		"panel_name": "classification"
+	},
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "designroles",
+		"panel_name": "designroles"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "historylog",
+		"panel_name": "historylog"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfiles",
+		"panel_name": "objectfiles"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfilessimple",
+		"panel_name": "objectfilessimple"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlist",
+		"panel_name": "objectlist"
+	},
+	{
+		"model": "Panel",
+		"id": "objectnotices",
+		"panel_name": "objectnotices"
+	},
+	{
+		"model": "Panel",
+		"id": "propertiesview",
+		"panel_name": "propertiesview"
+	},
+	{
+		"model": "Panel",
+		"id": "propertyvalues",
+		"panel_name": "propertyvalues"
+	},
+	{
+		"model": "Panel",
+		"id": "renditions",
+		"panel_name": "renditions"
+	},
+	{
+		"model": "Panel",
+		"id": "service",
+		"panel_name": "service"
+	},
+	{
+		"model": "Panel",
+		"id": "staff",
+		"panel_name": "staff"
+	},
+	{
+		"model": "Panel",
+		"id": "staffcompare",
+		"panel_name": "staffcompare"
+	},
+	{
+		"model": "Panel",
+		"id": "staffinto",
+		"panel_name": "staffinto"
+	},
+	{
+		"model": "Panel",
+		"id": "stafftree",
+		"panel_name": "stafftree"
+	},
+	{
+		"model": "Panel",
+		"id": "designerlist",
+		"panel_name": "designerlist"
+	},
+	{
+		"model": "Panel",
+		"id": "designmater",
+		"panel_name": "designmater"
+	},
+	{
+		"model": "Panel",
+		"id": "extralinks",
+		"panel_name": "extralinks"
+	},
+	{
+		"model": "Panel",
+		"id": "matersupplies",
+		"panel_name": "matersupplies"
+	},
+	{
+		"model": "Panel",
+		"id": "operations",
+		"panel_name": "operations"
+	},
+	{
+		"model": "Panel",
+		"id": "picturepanel",
+		"panel_name": "picturepanel"
+	},
+	{
+		"model": "Panel",
+		"id": "places",
+		"panel_name": "places"
+	},
+	{
+		"model": "Panel",
+		"id": "processtree",
+		"panel_name": "processtree"
+	},
+	{
+		"model": "Panel",
+		"id": "outsidelinks",
+		"panel_name": "outsidelinks"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistwd",
+		"panel_name": "objectlistwd"
+	},
+	{
+		"model": "Panel",
+		"id": "typesizemater",
+		"panel_name": "typesizemater"
+	},
+	{
+		"model": "Panel",
+		"id": "typesizesort",
+		"panel_name": "typesizesort"
+	},
+	{
+		"model": "Panel",
+		"id": "exemplarslist",
+		"panel_name": "exemplarslist"
+	},
+	{
+		"model": "Panel",
+		"id": "linkinto",
+		"panel_name": "linkinto"
+	},
+	{
+		"model": "Panel",
+		"id": "noticefileversions",
+		"panel_name": "noticefileversions"
+	},
+	{
+		"model": "Panel",
+		"id": "noticelinks",
+		"panel_name": "noticelinks"
+	},
+	{
+		"model": "Panel",
+		"id": "noticelist",
+		"panel_name": "noticelist"
+	},
+	{
+		"model": "Panel",
+		"id": "noticerecipients",
+		"panel_name": "noticerecipients"
+	},
+	{
+		"model": "Panel",
+		"id": "operationlist",
+		"panel_name": "operationlist"
+	},
+	{
+		"model": "Panel",
+		"id": "roleslist",
+		"panel_name": "roleslist"
+	},
+	{
+		"model": "Panel",
+		"id": "supplyprices",
+		"panel_name": "supplyprices"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyclassification",
+		"panel": "classification",
+		"type_key": "assembly",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id = 136;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblycreate",
+		"panel": "create",
+		"type_key": "assembly",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_assembly",
+		"edit_right": "change_assembly"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblydesignroles",
+		"panel": "designroles",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyedit",
+		"panel": "edit",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true,
+		"start_params": "show_staff_through = true;",
+		"view_right": "view_assembly",
+		"edit_right": "change_assembly"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyfilters",
+		"panel": "filters",
+		"type_key": "assembly",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyhistorylog",
+		"panel": "historylog",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyobjectfilessimple",
+		"panel": "objectfilessimple",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyobjectlist",
+		"panel": "objectlist",
+		"type_key": "assembly",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_assembly"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyobjectnotices",
+		"panel": "objectnotices",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblypropertiesview",
+		"panel": "propertiesview",
+		"type_key": "assembly",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_assembly"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblypropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_assembly",
+		"edit_right": "change_assembly"
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyrenditions",
+		"panel": "renditions",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblyservice",
+		"panel": "service",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblystaff",
+		"panel": "staff",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblystaffcompare",
+		"panel": "staffcompare",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblystaffinto",
+		"panel": "staffinto",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "assemblystafftree",
+		"panel": "stafftree",
+		"type_key": "assembly",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectclassification",
+		"panel": "classification",
+		"type_key": "complect",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectcreate",
+		"panel": "create",
+		"type_key": "complect",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_complect",
+		"edit_right": "change_complect"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectdesignroles",
+		"panel": "designroles",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectedit",
+		"panel": "edit",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "change_complect",
+		"edit_right": "change_complect"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectfilters",
+		"panel": "filters",
+		"type_key": "complect",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "complecthistorylog",
+		"panel": "historylog",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectobjectlist",
+		"panel": "objectlist",
+		"type_key": "complect",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_complect"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectobjectnotices",
+		"panel": "objectnotices",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectrenditions",
+		"panel": "renditions",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectstaff",
+		"panel": "staff",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectstaffinto",
+		"panel": "staffinto",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complectstafftree",
+		"panel": "stafftree",
+		"type_key": "complect",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexclassification",
+		"panel": "classification",
+		"type_key": "complex",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id = 179;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexcreate",
+		"panel": "create",
+		"type_key": "complex",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_complex",
+		"edit_right": "change_complex"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexedit",
+		"panel": "edit",
+		"type_key": "complex",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "change_complex",
+		"edit_right": "change_complex"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexfilters",
+		"panel": "filters",
+		"type_key": "complex",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexhistorylog",
+		"panel": "historylog",
+		"type_key": "complex",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexobjectlist",
+		"panel": "objectlist",
+		"type_key": "complex",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_complex"
+	},
+	{
+		"model": "TypePanel",
+		"id": "complexpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "complex",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "designercreate",
+		"panel": "create",
+		"type_key": "designer",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_designer",
+		"edit_right": "change_designer"
+	},
+	{
+		"model": "TypePanel",
+		"id": "designerdesignerlist",
+		"panel": "designerlist",
+		"type_key": "designer",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_designer"
+	},
+	{
+		"model": "TypePanel",
+		"id": "designeredit",
+		"panel": "edit",
+		"type_key": "designer",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_designer",
+		"edit_right": "change_designer"
+	},
+	{
+		"model": "TypePanel",
+		"id": "designerfilters",
+		"panel": "filters",
+		"type_key": "designer",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailclassification",
+		"panel": "classification",
+		"type_key": "detail",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id = 139;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailcreate",
+		"panel": "create",
+		"type_key": "detail",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_detail",
+		"edit_right": "change_detail"
+	},
+	{
+		"model": "TypePanel",
+		"id": "detaildesignmater",
+		"panel": "designmater",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detaildesignroles",
+		"panel": "designroles",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailedit",
+		"panel": "edit",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_detail",
+		"edit_right": "change_detail"
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailextralinks",
+		"panel": "extralinks",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailfilters",
+		"panel": "filters",
+		"type_key": "detail",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailhistorylog",
+		"panel": "historylog",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailmatersupplies",
+		"panel": "matersupplies",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailobjectfilessimple",
+		"panel": "objectfilessimple",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailobjectlist",
+		"panel": "objectlist",
+		"type_key": "detail",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_detail"
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailobjectnotices",
+		"panel": "objectnotices",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailoperations",
+		"panel": "operations",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailpicturepanel",
+		"panel": "picturepanel",
+		"type_key": "detail",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailplaces",
+		"panel": "places",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailprocesstree",
+		"panel": "processtree",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "detail",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_detail"
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailrenditions",
+		"panel": "renditions",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailservice",
+		"panel": "service",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "detailstaffinto",
+		"panel": "staffinto",
+		"type_key": "detail",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "deviceclassification",
+		"panel": "classification",
+		"type_key": "device",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "devicecreate",
+		"panel": "create",
+		"type_key": "device",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_device",
+		"edit_right": "change_device"
+	},
+	{
+		"model": "TypePanel",
+		"id": "deviceedit",
+		"panel": "edit",
+		"type_key": "device",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_device",
+		"edit_right": "change_device"
+	},
+	{
+		"model": "TypePanel",
+		"id": "devicefilters",
+		"panel": "filters",
+		"type_key": "device",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "devicehistorylog",
+		"panel": "historylog",
+		"type_key": "device",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "deviceobjectlist",
+		"panel": "objectlist",
+		"type_key": "device",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_device"
+	},
+	{
+		"model": "TypePanel",
+		"id": "deviceoutsidelinks",
+		"panel": "outsidelinks",
+		"type_key": "device",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "devicestaff",
+		"panel": "staff",
+		"type_key": "device",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_partlink",
+		"edit_right": "change_partlink"
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentclassification",
+		"panel": "classification",
+		"type_key": "document",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id=55;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentcreate",
+		"panel": "create",
+		"type_key": "document",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_document",
+		"edit_right": "change_document"
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentdesignroles",
+		"panel": "designroles",
+		"type_key": "document",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentedit",
+		"panel": "edit",
+		"type_key": "document",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_document",
+		"edit_right": "change_document"
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentfilters",
+		"panel": "filters",
+		"type_key": "document",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "documenthistorylog",
+		"panel": "historylog",
+		"type_key": "document",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "document",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentobjectlist",
+		"panel": "objectlist",
+		"type_key": "document",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_document"
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentobjectnotices",
+		"panel": "objectnotices",
+		"type_key": "document",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "document",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_document"
+	},
+	{
+		"model": "TypePanel",
+		"id": "documentstaffinto",
+		"panel": "staffinto",
+		"type_key": "document",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "equipmentclassification",
+		"panel": "classification",
+		"type_key": "equipment",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "equipmentcreate",
+		"panel": "create",
+		"type_key": "equipment",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_equipment",
+		"edit_right": "change_equipment"
+	},
+	{
+		"model": "TypePanel",
+		"id": "equipmentedit",
+		"panel": "edit",
+		"type_key": "equipment",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_equipment",
+		"edit_right": "change_equipment"
+	},
+	{
+		"model": "TypePanel",
+		"id": "equipmentfilters",
+		"panel": "filters",
+		"type_key": "equipment",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "equipmenthistorylog",
+		"panel": "historylog",
+		"type_key": "equipment",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplarcreate",
+		"panel": "create",
+		"type_key": "exemplar",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_exemplar",
+		"edit_right": "change_exemplar"
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplaredit",
+		"panel": "edit",
+		"type_key": "exemplar",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_exemplar",
+		"edit_right": "change_exemplar"
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplarfilters",
+		"panel": "filters",
+		"type_key": "exemplar",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplarobjectlistwd",
+		"panel": "objectlistwd",
+		"type_key": "exemplar",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_exemplar"
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplarpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "exemplar",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplarservice",
+		"panel": "service",
+		"type_key": "exemplar",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplarstaffinto",
+		"panel": "staffinto",
+		"type_key": "exemplar",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplartypesizemater",
+		"panel": "typesizemater",
+		"type_key": "exemplar",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "exemplartypesizesort",
+		"panel": "typesizesort",
+		"type_key": "exemplar",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialclassification",
+		"panel": "classification",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id = 52;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialcreate",
+		"panel": "create",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_material",
+		"edit_right": "change_material"
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialedit",
+		"panel": "edit",
+		"type_key": "material",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_material",
+		"edit_right": "change_material"
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialexemplarslist",
+		"panel": "exemplarslist",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialfilters",
+		"panel": "filters",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialhistorylog",
+		"panel": "historylog",
+		"type_key": "material",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "materiallinkinto",
+		"panel": "linkinto",
+		"type_key": "material",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialobjectlistwd",
+		"panel": "objectlistwd",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_material"
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_material"
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "material",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_material",
+		"edit_right": "change_material"
+	},
+	{
+		"model": "TypePanel",
+		"id": "materialstaffinto",
+		"panel": "staffinto",
+		"type_key": "material",
+		"in_list": true,
+		"in_single": true,
+		"view_right": "view_partlink"
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticecreate",
+		"panel": "create",
+		"type_key": "notice",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_notice",
+		"edit_right": "change_notice"
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticedesignroles",
+		"panel": "designroles",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticeedit",
+		"panel": "edit",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_notice",
+		"edit_right": "change_notice"
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticeextralinks",
+		"panel": "extralinks",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticefilters",
+		"panel": "filters",
+		"type_key": "notice",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "filter_fields = ['filter_date']"
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticehistorylog",
+		"panel": "historylog",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticenoticefileversions",
+		"panel": "noticefileversions",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticenoticelinks",
+		"panel": "noticelinks",
+		"type_key": "notice",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticenoticelist",
+		"panel": "noticelist",
+		"type_key": "notice",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticenoticerecipients",
+		"panel": "noticerecipients",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "noticeobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "notice",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "operationclassification",
+		"panel": "classification",
+		"type_key": "operation",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "operationcreate",
+		"panel": "create",
+		"type_key": "operation",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_operation",
+		"edit_right": "change_operation"
+	},
+	{
+		"model": "TypePanel",
+		"id": "operationedit",
+		"panel": "edit",
+		"type_key": "operation",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_operation",
+		"edit_right": "change_operation"
+	},
+	{
+		"model": "TypePanel",
+		"id": "operationfilters",
+		"panel": "filters",
+		"type_key": "operation",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "operationoperationlist",
+		"panel": "operationlist",
+		"type_key": "operation",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderclassification",
+		"panel": "classification",
+		"type_key": "order",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id=136;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "ordercreate",
+		"panel": "create",
+		"type_key": "order",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_order",
+		"edit_right": "change_order"
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderedit",
+		"panel": "edit",
+		"type_key": "order",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_order",
+		"edit_right": "change_order"
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderfilters",
+		"panel": "filters",
+		"type_key": "order",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderobjectlist",
+		"panel": "objectlist",
+		"type_key": "order",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_order"
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "order",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_order"
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "order",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderstaff",
+		"panel": "staff",
+		"type_key": "order",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "orderstafftree",
+		"panel": "stafftree",
+		"type_key": "order",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherclassification",
+		"panel": "classification",
+		"type_key": "other",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id = 1;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "othercreate",
+		"panel": "create",
+		"type_key": "other",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_other",
+		"edit_right": "change_other"
+	},
+	{
+		"model": "TypePanel",
+		"id": "otheredit",
+		"panel": "edit",
+		"type_key": "other",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_other",
+		"edit_right": "change_other"
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherfilters",
+		"panel": "filters",
+		"type_key": "other",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherhistorylog",
+		"panel": "historylog",
+		"type_key": "other",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "other",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherobjectlist",
+		"panel": "objectlist",
+		"type_key": "other",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_other"
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "other",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_other"
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherpropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "other",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "otherstaffinto",
+		"panel": "staffinto",
+		"type_key": "other",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "processtreeedit",
+		"panel": "edit",
+		"type_key": "processtree",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "riggingclassification",
+		"panel": "classification",
+		"type_key": "rigging",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "riggingcreate",
+		"panel": "create",
+		"type_key": "rigging",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_rigging",
+		"edit_right": "change_rigging"
+	},
+	{
+		"model": "TypePanel",
+		"id": "riggingedit",
+		"panel": "edit",
+		"type_key": "rigging",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_rigging",
+		"edit_right": "change_rigging"
+	},
+	{
+		"model": "TypePanel",
+		"id": "rolecreate",
+		"panel": "create",
+		"type_key": "role",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_role",
+		"edit_right": "change_role"
+	},
+	{
+		"model": "TypePanel",
+		"id": "roleedit",
+		"panel": "edit",
+		"type_key": "role",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_role",
+		"edit_right": "change_role"
+	},
+	{
+		"model": "TypePanel",
+		"id": "rolefilters",
+		"panel": "filters",
+		"type_key": "role",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "roleroleslist",
+		"panel": "roleslist",
+		"type_key": "role",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "selectfilters",
+		"panel": "filters",
+		"type_key": "select",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "selectobjectlist",
+		"panel": "objectlist",
+		"type_key": "select",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_select",
+		"edit_right": "change_select"
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentclassification",
+		"panel": "classification",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": false,
+		"start_params": "root_classification_id = 317;"
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentcreate",
+		"panel": "create",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_sortament",
+		"edit_right": "change_sortament"
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentedit",
+		"panel": "edit",
+		"type_key": "sortament",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_sortament",
+		"edit_right": "change_sortament"
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentexemplarslist",
+		"panel": "exemplarslist",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentfilters",
+		"panel": "filters",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentobjectlist",
+		"panel": "objectlist",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentobjectlistwd",
+		"panel": "objectlistwd",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_sortament"
+	},
+	{
+		"model": "TypePanel",
+		"id": "sortamentpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "sortament",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartclassification",
+		"panel": "classification",
+		"type_key": "standart",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartcreate",
+		"panel": "create",
+		"type_key": "standart",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_standart",
+		"edit_right": "change_standart"
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartedit",
+		"panel": "edit",
+		"type_key": "standart",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_standart",
+		"edit_right": "change_standart"
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartfilters",
+		"panel": "filters",
+		"type_key": "standart",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartobjectlist",
+		"panel": "objectlist",
+		"type_key": "standart",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_standart"
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartpropertiesview",
+		"panel": "propertiesview",
+		"type_key": "standart",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_standart"
+	},
+	{
+		"model": "TypePanel",
+		"id": "standartsupplyprices",
+		"panel": "supplyprices",
+		"type_key": "standart",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "tpunedit",
+		"panel": "edit",
+		"type_key": "tpun",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_tpun",
+		"edit_right": "change_tpun"
+	},
+	{
+		"model": "TypePanel",
+		"id": "tpunfilters",
+		"panel": "filters",
+		"type_key": "tpun",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "tpunobjectlist",
+		"panel": "objectlist",
+		"type_key": "tpun",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "view_tpun"
+	},
+	{
+		"model": "TypePanel",
+		"id": "tpunstaff",
+		"panel": "staff",
+		"type_key": "tpun",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_partlink",
+		"edit_right": "change_partlink"
+	},
+	{
+		"model": "TypePanel",
+		"id": "tpunstaffinto",
+		"panel": "staffinto",
+		"type_key": "tpun",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_assembly",
+		"codename": "change_assembly"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_assembly",
+		"codename": "view_assembly"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_complect",
+		"codename": "change_complect"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_complect",
+		"codename": "view_complect"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_complex",
+		"codename": "change_complex"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_complex",
+		"codename": "view_complex"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_designer",
+		"codename": "change_designer"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_designer",
+		"codename": "view_designer"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_detail",
+		"codename": "change_detail"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_detail",
+		"codename": "view_detail"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_device",
+		"codename": "change_device"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_device",
+		"codename": "view_device"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_partlink",
+		"codename": "view_partlink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_document",
+		"codename": "change_document"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_document",
+		"codename": "view_document"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_equipment",
+		"codename": "change_equipment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_equipment",
+		"codename": "view_equipment"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_exemplar",
+		"codename": "change_exemplar"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_exemplar",
+		"codename": "view_exemplar"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_material",
+		"codename": "change_material"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_material",
+		"codename": "view_material"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_notice",
+		"codename": "change_notice"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_notice",
+		"codename": "view_notice"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_operation",
+		"codename": "change_operation"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_operation",
+		"codename": "view_operation"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_order",
+		"codename": "change_order"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_order",
+		"codename": "view_order"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_other",
+		"codename": "change_other"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_other",
+		"codename": "view_other"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_rigging",
+		"codename": "change_rigging"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_rigging",
+		"codename": "view_rigging"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_role",
+		"codename": "change_role"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_role",
+		"codename": "view_role"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_select",
+		"codename": "view_select"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_sortament",
+		"codename": "change_sortament"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_sortament",
+		"codename": "view_sortament"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_standart",
+		"codename": "change_standart"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_standart",
+		"codename": "view_standart"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_tpun",
+		"codename": "view_tpun"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_partlink",
+		"codename": "change_partlink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_select",
+		"codename": "change_select"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_tpun",
+		"codename": "change_tpun"
+	}
+]

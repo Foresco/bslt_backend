@@ -1,0 +1,222 @@
+[
+	{
+		"model": "MenuItem",
+		"id": "main",
+		"item_name": "main",
+		"caption": "Главное меню",
+		"order_num": 1,
+		"is_active": "True"
+	},
+	{
+		"model": "MenuItem",
+		"id": "reference",
+		"item_name": "reference",
+		"caption": "Справочники",
+		"style": "reference",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "place",
+		"item_name": "place",
+		"caption": "Подразделения, контрагенты",
+		"style": "place",
+		"action": "place",
+		"order_num": 5,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "staff",
+		"item_name": "staff",
+		"caption": "Работа с составом",
+		"style": "staff",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "assembly",
+		"item_name": "assembly",
+		"caption": "Сборочные единицы",
+		"style": "assembly",
+		"action": "partobject/assembly",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "staff"
+	},
+	{
+		"model": "MenuItem",
+		"id": "detail",
+		"item_name": "detail",
+		"caption": "Детали",
+		"style": "detail",
+		"action": "partobject/detail",
+		"order_num": 4,
+		"is_active": "True",
+		"parent": "staff"
+	},
+	{
+		"model": "MenuItem",
+		"id": "subassembly",
+		"item_name": "subassembly",
+		"caption": "Подсборки",
+		"style": "subassembly",
+		"action": "partobject/subassembly",
+		"order_num": 8,
+		"is_active": "True",
+		"parent": "staff"
+	},
+	{
+		"model": "MenuItem",
+		"id": "equipment",
+		"item_name": "equipment",
+		"caption": "Оборудование",
+		"style": "equipment",
+		"action": "partobject/equipment",
+		"order_num": 6,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "rigging",
+		"item_name": "rigging",
+		"caption": "Оснастка",
+		"style": "rigging",
+		"action": "partobject/rigging",
+		"order_num": 7,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "sortament",
+		"item_name": "sortament",
+		"caption": "Сортаменты",
+		"style": "sortament",
+		"action": "partobject/sortament",
+		"order_num": 12,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "exemplar",
+		"item_name": "exemplar",
+		"caption": "Экземпляры сортаментов",
+		"style": "exemplar",
+		"action": "partobject/exemplar",
+		"order_num": 10,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "material",
+		"item_name": "material",
+		"caption": "Материалы",
+		"style": "material",
+		"action": "partobject/material",
+		"order_num": 15,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "production",
+		"item_name": "production",
+		"caption": "Производство",
+		"style": "production",
+		"order_num": 2,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "prodorder",
+		"item_name": "prodorder",
+		"caption": "Производственные заказы",
+		"style": "prodorder",
+		"action": "prodorder",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "production"
+	},
+	{
+		"model": "MenuItem",
+		"id": "prodorderdash",
+		"item_name": "prodorderdash",
+		"caption": "Заказы в работе",
+		"style": "prodorderlist",
+		"action": "arm/prodorderdash",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "production",
+		"item_right": "view_prodorder"
+	},
+	{
+		"model": "MenuItem",
+		"id": "person",
+		"item_name": "person",
+		"caption": "Сотрудники",
+		"style": "person",
+		"action": "person",
+		"order_num": 4,
+		"is_active": "True",
+		"parent": "manage"
+	},
+	{
+		"model": "MenuItem",
+		"id": "workertaskreport",
+		"item_name": "workertaskreport",
+		"caption": "Отчет по исполнителям",
+		"style": "report",
+		"action": "report/workertaskreport",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "report"
+	},
+	{
+		"model": "MenuItem",
+		"id": "workertasks",
+		"item_name": "workertasks",
+		"caption": "Задания исполнителю",
+		"style": "task",
+		"action": "arm/workertasks",
+		"order_num": 6,
+		"is_active": "True",
+		"parent": "production"
+	},
+	{
+		"model": "MenuItem",
+		"id": "workershifts",
+		"item_name": "workershifts",
+		"caption": "Табели",
+		"style": "time",
+		"action": "arm/workershifts",
+		"order_num": 4,
+		"is_active": "True",
+		"parent": "production"
+	},
+	{
+		"model": "MenuItem",
+		"id": "ordermaker",
+		"item_name": "ordermaker",
+		"caption": "Заказчики",
+		"style": "ordermaker",
+		"action": "ordermaker",
+		"order_num": 2,
+		"is_active": "True",
+		"parent": "production"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_prodorder",
+		"codename": "view_prodorder"
+	}
+]

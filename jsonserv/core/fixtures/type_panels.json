@@ -1,0 +1,470 @@
+[
+	{
+		"model": "Panel",
+		"id": "classification",
+		"panel_name": "classification"
+	},
+	{
+		"model": "Panel",
+		"id": "classificationlist",
+		"panel_name": "classificationlist"
+	},
+	{
+		"model": "Panel",
+		"id": "comments",
+		"panel_name": "comments"
+	},
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "createuser",
+		"panel_name": "createuser"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "extralinks",
+		"panel_name": "extralinks"
+	},
+	{
+		"model": "Panel",
+		"id": "filters",
+		"panel_name": "filters"
+	},
+	{
+		"model": "Panel",
+		"id": "historylog",
+		"panel_name": "historylog"
+	},
+	{
+		"model": "Panel",
+		"id": "linkinto",
+		"panel_name": "linkinto"
+	},
+	{
+		"model": "Panel",
+		"id": "measureunitslist",
+		"panel_name": "measureunitslist"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlist",
+		"panel_name": "objectlist"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistcode",
+		"panel_name": "objectlistcode"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistcodename",
+		"panel_name": "objectlistcodename"
+	},
+	{
+		"model": "Panel",
+		"id": "objectlistwd",
+		"panel_name": "objectlistwd"
+	},
+	{
+		"model": "Panel",
+		"id": "picturepanel",
+		"panel_name": "picturepanel"
+	},
+	{
+		"model": "Panel",
+		"id": "placelist",
+		"panel_name": "placelist"
+	},
+	{
+		"model": "Panel",
+		"id": "places",
+		"panel_name": "places"
+	},
+	{
+		"model": "Panel",
+		"id": "profilelist",
+		"panel_name": "profilelist"
+	},
+	{
+		"model": "Panel",
+		"id": "properties",
+		"panel_name": "properties"
+	},
+	{
+		"model": "Panel",
+		"id": "propertieslist",
+		"panel_name": "propertieslist"
+	},
+	{
+		"model": "Panel",
+		"id": "propertiesview",
+		"panel_name": "propertiesview"
+	},
+	{
+		"model": "Panel",
+		"id": "propertyvalues",
+		"panel_name": "propertyvalues"
+	},
+	{
+		"model": "Panel",
+		"id": "service",
+		"panel_name": "service"
+	},
+	{
+		"model": "Panel",
+		"id": "soundsamelist",
+		"panel_name": "soundsamelist"
+	},
+	{
+		"model": "Panel",
+		"id": "useractivity",
+		"panel_name": "useractivity"
+	},
+	{
+		"model": "Panel",
+		"id": "usergroup",
+		"panel_name": "usergroup"
+	},
+	{
+		"model": "Panel",
+		"id": "userlist",
+		"panel_name": "userlist"
+	},
+	{
+		"model": "TypePanel",
+		"id": "classificationclassification",
+		"panel": "classification",
+		"type_key": "classification",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "classificationclassificationlist",
+		"panel": "classificationlist",
+		"type_key": "classification",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "classificationcreate",
+		"panel": "create",
+		"type_key": "classification",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_classification",
+		"edit_right": "change_classification"
+	},
+	{
+		"model": "TypePanel",
+		"id": "classificationedit",
+		"panel": "edit",
+		"type_key": "classification",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_classification",
+		"edit_right": "change_classification"
+	},
+	{
+		"model": "TypePanel",
+		"id": "classificationfilters",
+		"panel": "filters",
+		"type_key": "classification",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "classificationhistorylog",
+		"panel": "historylog",
+		"type_key": "classification",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "measureunitedit",
+		"panel": "edit",
+		"type_key": "measureunit",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_measureunit",
+		"edit_right": "change_measureunit"
+	},
+	{
+		"model": "TypePanel",
+		"id": "measureunitfilters",
+		"panel": "filters",
+		"type_key": "measureunit",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "measureunithistorylog",
+		"panel": "historylog",
+		"type_key": "measureunit",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "measureunitmeasureunitslist",
+		"panel": "measureunitslist",
+		"type_key": "measureunit",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "placecreate",
+		"panel": "create",
+		"type_key": "place",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_place",
+		"edit_right": "change_place"
+	},
+	{
+		"model": "TypePanel",
+		"id": "placeedit",
+		"panel": "edit",
+		"type_key": "place",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_place",
+		"edit_right": "change_place"
+	},
+	{
+		"model": "TypePanel",
+		"id": "placefilters",
+		"panel": "filters",
+		"type_key": "place",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "placehistorylog",
+		"panel": "historylog",
+		"type_key": "place",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "placeplacelist",
+		"panel": "placelist",
+		"type_key": "place",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "placepropertyvalues",
+		"panel": "propertyvalues",
+		"type_key": "place",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "propertycreate",
+		"panel": "create",
+		"type_key": "property",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_property",
+		"edit_right": "change_property"
+	},
+	{
+		"model": "TypePanel",
+		"id": "propertyedit",
+		"panel": "edit",
+		"type_key": "property",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_property",
+		"edit_right": "change_property"
+	},
+	{
+		"model": "TypePanel",
+		"id": "propertyfilters",
+		"panel": "filters",
+		"type_key": "property",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "propertypropertieslist",
+		"panel": "propertieslist",
+		"type_key": "property",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "systemusercreateuser",
+		"panel": "createuser",
+		"type_key": "systemuser",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "systemuseredit",
+		"panel": "edit",
+		"type_key": "systemuser",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_user",
+		"edit_right": "change_user"
+	},
+	{
+		"model": "TypePanel",
+		"id": "systemuserfilters",
+		"panel": "filters",
+		"type_key": "systemuser",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "systemuseruseractivity",
+		"panel": "useractivity",
+		"type_key": "systemuser",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "systemuserusergroup",
+		"panel": "usergroup",
+		"type_key": "systemuser",
+		"in_list": true,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "systemuseruserlist",
+		"panel": "userlist",
+		"type_key": "systemuser",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "userprofilecreate",
+		"panel": "create",
+		"type_key": "userprofile",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_userprofile",
+		"edit_right": "change_userprofile"
+	},
+	{
+		"model": "TypePanel",
+		"id": "userprofileedit",
+		"panel": "edit",
+		"type_key": "userprofile",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_userprofile",
+		"edit_right": "change_userprofile"
+	},
+	{
+		"model": "TypePanel",
+		"id": "userprofilefilters",
+		"panel": "filters",
+		"type_key": "userprofile",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "userprofilehistorylog",
+		"panel": "historylog",
+		"type_key": "userprofile",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "userprofileprofilelist",
+		"panel": "profilelist",
+		"type_key": "userprofile",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_classification",
+		"codename": "change_classification"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_classification",
+		"codename": "view_classification"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_measureunit",
+		"codename": "view_measureunit"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_place",
+		"codename": "change_place"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_place",
+		"codename": "view_place"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_property",
+		"codename": "change_property"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_property",
+		"codename": "view_property"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_user",
+		"codename": "view_user"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_userprofile",
+		"codename": "change_userprofile"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_userprofile",
+		"codename": "view_userprofile"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_measureunit",
+		"codename": "change_measureunit"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_user",
+		"codename": "change_user"
+	}
+]

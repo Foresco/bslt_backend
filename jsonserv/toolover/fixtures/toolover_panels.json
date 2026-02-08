@@ -1,0 +1,12 @@
+[
+	{
+		"model": "core.panel",
+		"pk": 1,
+		"fields": {
+			"panel_name": "toolclasses",
+			"template": "toolclasses.html",
+			"position": "L",
+			"default_order_num": 1
+		}
+	}
+]

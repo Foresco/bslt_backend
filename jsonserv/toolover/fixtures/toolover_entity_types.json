@@ -1,0 +1,30 @@
+[{
+	"model": "core.entitytype",
+	"pk": "toolobject",
+	"fields": {
+		"type_name": "Инструмент",
+		"div_name": "Инструменты",
+		"doc_key": false,
+		"table_name": "tool_object"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "toolproduct",
+	"fields": {
+		"type_name": "Продукция Инструмент",
+		"div_name": "Продукция Инструмент",
+		"doc_key": false,
+		"table_name": "tool_product"
+	}
+},
+{
+	"model": "core.entitytype",
+	"pk": "toolclass",
+	"fields": {
+		"type_name": "Класс инструмента",
+		"div_name": "Классы инструмента",
+		"doc_key": false,
+		"table_name": "tool_class"
+	}
+}]

@@ -1,0 +1,171 @@
+[
+	{
+		"model": "Panel",
+		"id": "create",
+		"panel_name": "create"
+	},
+	{
+		"model": "Panel",
+		"id": "edit",
+		"panel_name": "edit"
+	},
+	{
+		"model": "Panel",
+		"id": "historylog",
+		"panel_name": "historylog"
+	},
+	{
+		"model": "Panel",
+		"id": "letterfilters",
+		"panel_name": "letterfilters"
+	},
+	{
+		"model": "Panel",
+		"id": "letterslist",
+		"panel_name": "letterslist"
+	},
+	{
+		"model": "Panel",
+		"id": "objectfiles",
+		"panel_name": "objectfiles"
+	},
+	{
+		"model": "Panel",
+		"id": "taskfilters",
+		"panel_name": "taskfilters"
+	},
+	{
+		"model": "Panel",
+		"id": "tasklist",
+		"panel_name": "tasklist"
+	},
+	{
+		"model": "Panel",
+		"id": "taskuser",
+		"panel_name": "taskuser"
+	},
+	{
+		"model": "TypePanel",
+		"id": "lettercreate",
+		"panel": "create",
+		"type_key": "letter",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_letter",
+		"edit_right": "change_letter"
+	},
+	{
+		"model": "TypePanel",
+		"id": "letteredit",
+		"panel": "edit",
+		"type_key": "letter",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_letter",
+		"edit_right": "change_letter"
+	},
+	{
+		"model": "TypePanel",
+		"id": "letterhistorylog",
+		"panel": "historylog",
+		"type_key": "letter",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "letterletterfilters",
+		"panel": "letterfilters",
+		"type_key": "letter",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "letterletterslist",
+		"panel": "letterslist",
+		"type_key": "letter",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "letterobjectfiles",
+		"panel": "objectfiles",
+		"type_key": "letter",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "taskcreate",
+		"panel": "create",
+		"type_key": "task",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_task",
+		"edit_right": "change_task"
+	},
+	{
+		"model": "TypePanel",
+		"id": "taskedit",
+		"panel": "edit",
+		"type_key": "task",
+		"in_list": false,
+		"in_single": true,
+		"view_right": "view_task",
+		"edit_right": "change_task"
+	},
+	{
+		"model": "TypePanel",
+		"id": "taskhistorylog",
+		"panel": "historylog",
+		"type_key": "task",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
+		"id": "tasktaskfilters",
+		"panel": "taskfilters",
+		"type_key": "task",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "tasktasklist",
+		"panel": "tasklist",
+		"type_key": "task",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "tasktaskuser",
+		"panel": "taskuser",
+		"type_key": "task",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_letter",
+		"codename": "change_letter"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_letter",
+		"codename": "view_letter"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_task",
+		"codename": "change_task"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_task",
+		"codename": "view_task"
+	}
+]

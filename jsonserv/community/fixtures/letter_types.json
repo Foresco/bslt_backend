@@ -1,0 +1,182 @@
+[
+  {
+    "model": "community.LetterType",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Карта разрешения",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Служебная записка",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Письмо",
+      "is_default": true
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Извещение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 5,
+    "fields": {
+      "order_num": 5,
+      "list_value": "Приказ",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 6,
+    "fields": {
+      "order_num": 6,
+      "list_value": "Акт",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 7,
+    "fields": {
+      "order_num": 7,
+      "list_value": "ДЗ",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 8,
+    "fields": {
+      "order_num": 8,
+      "list_value": "Дополнительное соглашение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 9,
+    "fields": {
+      "order_num": 9,
+      "list_value": "Карта замеров",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 10,
+    "fields": {
+      "order_num": 10,
+      "list_value": "Нормы",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 11,
+    "fields": {
+      "order_num": 11,
+      "list_value": "Объяснительная записка",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 12,
+    "fields": {
+      "order_num": 12,
+      "list_value": "Отчет",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 13,
+    "fields": {
+      "order_num": 13,
+      "list_value": "Предъявительская записка",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 14,
+    "fields": {
+      "order_num": 14,
+      "list_value": "Приложение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 15,
+    "fields": {
+      "order_num": 15,
+      "list_value": "Протокол",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 16,
+    "fields": {
+      "order_num": 16,
+      "list_value": "Разрешение на отступление",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 17,
+    "fields": {
+      "order_num": 17,
+      "list_value": "Рапорт",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 18,
+    "fields": {
+      "order_num": 18,
+      "list_value": "Распоряжение",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 19,
+    "fields": {
+      "order_num": 19,
+      "list_value": "Сертификат",
+      "is_default": false
+    }
+  },
+  {
+    "model": "community.LetterType",
+    "pk": 20,
+    "fields": {
+      "order_num": 20,
+      "list_value": "Таблица измерений",
+      "is_default": false
+    }
+  }
+]

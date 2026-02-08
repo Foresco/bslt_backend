@@ -1,0 +1,319 @@
+[
+	{
+		"model": "Panel",
+		"id": "designerlist",
+		"panel_name": "designerlist",
+		"area": "center",
+		"description": "Список разработчиков",
+		"check_state": "False",
+		"view_right": "view_designer",
+		"edit_right": "change_designer"
+	},
+	{
+		"model": "Panel",
+		"id": "designmater",
+		"panel_name": "designmater",
+		"area": "east",
+		"description": "Конструкторский материал",
+		"check_state": "True",
+		"view_right": "view_designmater",
+		"edit_right": "change_designmater"
+	},
+	{
+		"model": "Panel",
+		"id": "designroles",
+		"panel_name": "designroles",
+		"area": "east",
+		"description": "Роли разработчиков",
+		"check_state": "True",
+		"view_right": "view_designrole",
+		"edit_right": "change_designrole"
+	},
+	{
+		"model": "Panel",
+		"id": "exemplarslist",
+		"panel_name": "exemplarslist",
+		"area": "east",
+		"description": "Панель Экземпляры сортамента",
+		"check_state": "False",
+		"view_right": "view_typesizemater"
+	},
+	{
+		"model": "Panel",
+		"id": "noticefileversions",
+		"panel_name": "noticefileversions",
+		"area": "east",
+		"description": "Версии файлов по извещению",
+		"check_state": "False",
+		"view_right": "view_filedocument"
+	},
+	{
+		"model": "Panel",
+		"id": "noticelinks",
+		"panel_name": "noticelinks",
+		"area": "east",
+		"description": "Перечень объектов, которых касается извещение",
+		"check_state": "True",
+		"view_right": "view_noticelink",
+		"edit_right": "change_noticelink"
+	},
+	{
+		"model": "Panel",
+		"id": "noticelist",
+		"panel_name": "noticelist",
+		"area": "center",
+		"description": "Список извещений об изменениях",
+		"check_state": "False",
+		"view_right": "view_notice"
+	},
+	{
+		"model": "Panel",
+		"id": "noticerecipients",
+		"panel_name": "noticerecipients",
+		"area": "east",
+		"description": "Панель Разослать для извещения об изменениях",
+		"check_state": "True",
+		"view_right": "view_noticerecipient",
+		"edit_right": "change_noticerecipient"
+	},
+	{
+		"model": "Panel",
+		"id": "objectnotices",
+		"panel_name": "objectnotices",
+		"area": "east",
+		"description": "Список извещений объекта",
+		"check_state": "True",
+		"view_right": "view_noticelink",
+		"edit_right": "change_noticelink"
+	},
+	{
+		"model": "Panel",
+		"id": "operationlist",
+		"panel_name": "operationlist",
+		"area": "center",
+		"description": "Перечень Справочник технологических операций",
+		"check_state": "False",
+		"view_right": "view_operation"
+	},
+	{
+		"model": "Panel",
+		"id": "operations",
+		"panel_name": "operations",
+		"area": "east",
+		"description": "Панель добавления операции",
+		"check_state": "False",
+		"view_right": "view_operation",
+		"edit_right": "change_operation"
+	},
+	{
+		"model": "Panel",
+		"id": "processtree",
+		"panel_name": "processtree",
+		"area": "center",
+		"description": "Дерево технологического процесса",
+		"check_state": "False",
+		"view_right": "view_route",
+		"edit_right": "change_route"
+	},
+	{
+		"model": "Panel",
+		"id": "renditions",
+		"panel_name": "renditions",
+		"area": "east",
+		"description": "Исполнения объекта",
+		"check_state": "False",
+		"view_right": "view_rendition",
+		"edit_right": "change_rendition"
+	},
+	{
+		"model": "Panel",
+		"id": "roleslist",
+		"panel_name": "roleslist",
+		"area": "center",
+		"description": "Список возможных ролей разработчиков",
+		"check_state": "False",
+		"view_right": "view_role"
+	},
+	{
+		"model": "Panel",
+		"id": "staff",
+		"panel_name": "staff",
+		"area": "center",
+		"description": "Панель Состав",
+		"check_state": "True",
+		"view_right": "view_partlink",
+		"edit_right": "change_partlink"
+	},
+	{
+		"model": "Panel",
+		"id": "staffcompare",
+		"panel_name": "staffcompare",
+		"area": "center",
+		"description": "Панель Сравнения составов",
+		"check_state": "False",
+		"view_right": "view_partlink"
+	},
+	{
+		"model": "Panel",
+		"id": "staffinto",
+		"panel_name": "staffinto",
+		"area": "east",
+		"description": "Панель Входит в",
+		"check_state": "False",
+		"view_right": "view_partlink"
+	},
+	{
+		"model": "Panel",
+		"id": "stafftree",
+		"panel_name": "stafftree",
+		"area": "center",
+		"description": "Дерево состава объекта",
+		"check_state": "False",
+		"view_right": "view_partlink"
+	},
+	{
+		"model": "Panel",
+		"id": "typesizemater",
+		"panel_name": "typesizemater",
+		"area": "east",
+		"description": "Материал экземпляра сортамента",
+		"check_state": "True",
+		"view_right": "view_typesizemater",
+		"edit_right": "change_typesizemater"
+	},
+	{
+		"model": "Panel",
+		"id": "typesizesort",
+		"panel_name": "typesizesort",
+		"area": "east",
+		"description": "Дополнительные свойства экземпляра сортамента",
+		"check_state": "True",
+		"view_right": "view_typesizesort",
+		"edit_right": "change_typesizesort"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_designer",
+		"codename": "view_designer"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_designmater",
+		"codename": "view_designmater"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_designrole",
+		"codename": "view_designrole"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_typesizemater",
+		"codename": "view_typesizemater"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_filedocument",
+		"codename": "view_filedocument"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_noticelink",
+		"codename": "view_noticelink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_notice",
+		"codename": "view_notice"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_noticerecipient",
+		"codename": "view_noticerecipient"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_operation",
+		"codename": "view_operation"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_route",
+		"codename": "view_route"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_rendition",
+		"codename": "view_rendition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_role",
+		"codename": "view_role"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_partlink",
+		"codename": "view_partlink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_typesizesort",
+		"codename": "view_typesizesort"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_designer",
+		"codename": "change_designer"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_designmater",
+		"codename": "change_designmater"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_designrole",
+		"codename": "change_designrole"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_noticelink",
+		"codename": "change_noticelink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_noticerecipient",
+		"codename": "change_noticerecipient"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_operation",
+		"codename": "change_operation"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_route",
+		"codename": "change_route"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_rendition",
+		"codename": "change_rendition"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_partlink",
+		"codename": "change_partlink"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_typesizemater",
+		"codename": "change_typesizemater"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_typesizesort",
+		"codename": "change_typesizesort"
+	}
+]

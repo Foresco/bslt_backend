@@ -1,0 +1,204 @@
+[
+	{
+		"model": "MenuItem",
+		"id": "main",
+		"item_name": "main",
+		"caption": "Главное меню",
+		"order_num": 1,
+		"is_active": "True"
+	},
+	{
+		"model": "MenuItem",
+		"id": "reference",
+		"item_name": "reference",
+		"caption": "Справочники",
+		"style": "reference",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "report",
+		"item_name": "report",
+		"caption": "Отчеты",
+		"style": "report",
+		"order_num": 6,
+		"is_active": "True",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "settings",
+		"item_name": "settings",
+		"caption": "Настройки",
+		"style": "settings",
+		"order_num": 7,
+		"is_active": "True",
+		"parent": "main",
+		"item_right": "view_mi_settings"
+	},
+	{
+		"model": "MenuItem",
+		"id": "service",
+		"item_name": "service",
+		"caption": "Сервис",
+		"style": "service",
+		"order_num": 8,
+		"is_active": "False",
+		"parent": "main"
+	},
+	{
+		"model": "MenuItem",
+		"id": "place",
+		"item_name": "place",
+		"caption": "Подразделения, контрагенты",
+		"style": "place",
+		"action": "place",
+		"order_num": 5,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "classification",
+		"item_name": "classification",
+		"caption": "Классификационные группы",
+		"style": "classification",
+		"action": "classification",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "property",
+		"item_name": "property",
+		"caption": "Дополнительные свойства",
+		"style": "property",
+		"action": "property",
+		"order_num": 12,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "MenuItem",
+		"id": "about",
+		"item_name": "about",
+		"caption": "О системе",
+		"style": "about",
+		"action": "about",
+		"order_num": 6,
+		"is_active": "False",
+		"parent": "settings"
+	},
+	{
+		"model": "MenuItem",
+		"id": "processing",
+		"item_name": "processing",
+		"caption": "Обработки",
+		"style": "processing",
+		"order_num": 1,
+		"is_active": "False",
+		"parent": "service"
+	},
+	{
+		"model": "MenuItem",
+		"id": "export",
+		"item_name": "export",
+		"caption": "Экспорт",
+		"style": "export",
+		"order_num": 2,
+		"is_active": "False",
+		"parent": "service"
+	},
+	{
+		"model": "MenuItem",
+		"id": "import",
+		"item_name": "import",
+		"caption": "Импорт",
+		"style": "import",
+		"order_num": 3,
+		"is_active": "False",
+		"parent": "service"
+	},
+	{
+		"model": "MenuItem",
+		"id": "systemuser",
+		"item_name": "systemuser",
+		"caption": "Пользователи",
+		"style": "user",
+		"action": "systemuser",
+		"order_num": 1,
+		"is_active": "True",
+		"parent": "settings"
+	},
+	{
+		"model": "MenuItem",
+		"id": "totalreport",
+		"item_name": "totalreport",
+		"caption": "Сводные",
+		"style": "reportgroup",
+		"order_num": 1,
+		"is_active": "False",
+		"parent": "report"
+	},
+	{
+		"model": "MenuItem",
+		"id": "report_others",
+		"item_name": "report_others",
+		"caption": "Прочие",
+		"style": "reportgroup",
+		"order_num": 5,
+		"is_active": "False",
+		"parent": "report"
+	},
+	{
+		"model": "MenuItem",
+		"id": "userprofile",
+		"item_name": "userprofile",
+		"caption": "Профили пользователей",
+		"style": "userprofile",
+		"action": "userprofile",
+		"order_num": 2,
+		"is_active": "True",
+		"parent": "settings"
+	},
+	{
+		"model": "MenuItem",
+		"id": "report_total",
+		"item_name": "report_total",
+		"caption": "Сводные",
+		"style": "reportgroup",
+		"order_num": 1,
+		"is_active": "False",
+		"parent": "report"
+	},
+	{
+		"model": "MenuItem",
+		"id": "rightsmatrix",
+		"item_name": "rightsmatrix",
+		"caption": "Матрица прав пользователей",
+		"style": "user",
+		"order_num": 6,
+		"action": "report/rightsmatrix",
+		"is_active": "False",
+		"parent": "report"
+	},
+	{
+		"model": "MenuItem",
+		"id": "measureunit",
+		"item_name": "measureunit",
+		"caption": "Единицы измерения",
+		"style": "unit",
+		"action": "measureunit",
+		"order_num": 12,
+		"is_active": "True",
+		"parent": "reference"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_mi_settings",
+		"codename": "view_mi_settings"
+	}
+]

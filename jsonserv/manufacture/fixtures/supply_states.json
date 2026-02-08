@@ -1,0 +1,32 @@
+[
+  {
+    "model": "manufacture.SupplyState",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Нет",
+      "is_default": true,
+      "value_class": "state_no"
+    }
+  },
+  {
+    "model": "manufacture.SupplyState",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Заказан",
+      "is_default": false,
+      "value_class": "state_ordered"
+    }
+  },
+  {
+    "model": "manufacture.SupplyState",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Есть",
+      "is_default": false,
+      "value_class": "state_yes"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "model": "pdm.PartSource",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Не определен",
+      "is_default": true    
+    }
+  },
+  {
+    "model": "pdm.PartSource",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Самостоятельное изготовление",
+      "is_default": false   
+    }
+  },
+  {
+    "model": "pdm.PartSource",
+    "pk": 3,
+    "fields": {
+      "order_num": 3,
+      "list_value": "Покупка",
+      "is_default": false
+    }
+  },
+  {
+    "model": "pdm.PartSource",
+    "pk": 4,
+    "fields": {
+      "order_num": 4,
+      "list_value": "Кооперация",
+      "is_default": false
+    }
+  }
+]

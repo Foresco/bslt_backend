@@ -1,0 +1,20 @@
+[
+  {
+    "model": "manufacture.WorkShift",
+    "pk": 1,
+    "fields": {
+      "order_num": 1,
+      "list_value": "Первая смена",
+      "is_default": true    
+    }
+  },
+  {
+    "model": "manufacture.WorkShift",
+    "pk": 2,
+    "fields": {
+      "order_num": 2,
+      "list_value": "Вторая смена",
+      "is_default": false   
+    }
+  }
+]

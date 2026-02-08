@@ -1,0 +1,9 @@
+[{
+	"model": "core.typesetting",
+	"pk": "16",
+	"fields": {
+		"type_key": "rawrow",
+		"dashboard": "mdm",
+		"page_header": ""
+	}
+}]
