@@ -3,6 +3,7 @@ from jsonserv.pdm import views, viewsets
 
 
 urlpatterns = [
+    path('rest/clearorder/', views.clearorderparts, name='clearorderparts'), # Удаление состава заказа
     path('rest/createsameroute/<int:pk>/', views.create_same_route, name='createsameroute'),  # Создание подобного маршрута
     path('rest/curdesingner/', views.get_curdesingner, name='curdesingner'),
     path('rest/intotop/<int:pk>', views.get_into_top, name='intotop'),

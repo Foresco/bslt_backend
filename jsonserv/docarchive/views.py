@@ -12,7 +12,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 
 import logging
-
+from jsonserv.core.models import ActionLog
 from jsonserv.core.fileutils import (get_temp_file_path, handle_uploaded_file, delete_file,
                                      compute_check_sum, http_unload_file, get_mime_type)
 from jsonserv.core.views import check_access
@@ -29,6 +29,7 @@ from jsonserv.docarchive.serializers import (DocumentsList, FileDocumentSerializ
 from jsonserv.docarchive.accessory.fileuploadprepare import FileUploadImport
 from jsonserv.rest.views import JSONResponse
 from jsonserv.docarchive.file_prepare import prepare_file_for_unload, prepare_file_for_store
+from jsonserv.docarchive.pdfutils import insert_text_to_pdf
 
 logger = logging.getLogger('basalta')
 
@@ -154,6 +155,8 @@ def get_file(request, **kwargs):
     id = kwargs.get("id", None)
     if id:
         file = DigitalFile.objects.get(pk=id)
+        # Запись факта обращения в лог
+        ActionLog.log_action('D', f'file/{id}/', request.session)
         if file:
             if os.path.exists(file.file_path):
                 file_path, file_name, data_format = prepare_file_for_unload(request, file)
@@ -179,6 +182,10 @@ class GetDocArchiveFile(View):
         if not request.user.has_perm('docarchive.view_digitalfile'):
             # Проверка наличия права Электронный файл. Просмотр
             return HttpResponse('Недостаточно прав для получения файлов')
+        if getattr(request.user, 'userprofile', None):  # Если у пользователя есть профиль
+            if request.user.userprofile.check_download_limit():
+                # Проверка достижения лимита на скачивание
+                return HttpResponse('Исчерпан лимит количеств скачивания файлов')
         # Вызываем универсальную функцию
         return get_file(request, **kwargs)
 
@@ -521,3 +528,34 @@ class NoticeLinkDocView(ListAPIView):
     filterset_fields = (
         'notice',
     )
+
+@api_view(['GET', ])
+def watermark_get(request, id):
+    """Скачивание файла с меткой"""
+    # вставляем переданную метку
+    if id:
+        file = DigitalFile.objects.get(pk=id)
+        # Запись факта обращения в лог
+        ActionLog.log_action('D', f'file/{id}/', request.session)
+        if file:
+            if os.path.exists(file.file_path):
+                # Вставка метки в файл
+                file_path = insert_text_to_pdf(file.file_path, 'text', 'x', 'y', red=True, new_file_name='')
+                # file_path, file_name, data_format = prepare_file_for_unload(request, file)
+                return http_unload_file(file_path, file_name, data_format)
+            else:
+                message = f'Указанный файл {file.file_path} не найден в архиве'
+        else:
+            message = 'Не удалось найти файл в базе данных'
+    else:
+        message = 'Не указан идентификатор файла'
+    return HttpResponse(message)
+
+    # Запускаем типовой метод формирования файла отчета
+    report = report_module.ReportClass(request)
+    file_path = report.prepare_report_file()
+    file_name = os.path.basename(file_path)
+    content_type = get_mime_type(file_name)
+    if os.path.getsize(file_path) > 10000000:  # Выгружаем другим способом
+        return http_unload_big_file(file_path, file_name, content_type)
+    return http_unload_file(file_path, file_name, content_type)

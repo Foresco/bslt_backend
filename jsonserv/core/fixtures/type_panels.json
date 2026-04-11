@@ -140,6 +140,16 @@
 		"panel_name": "userlist"
 	},
 	{
+		"model": "Panel",
+		"id": "downloadcheckgroupslist",
+		"panel_name": "downloadcheckgroupslist"
+	},
+	{
+		"model": "Panel",
+		"id": "userlog",
+		"panel_name": "userlog"
+	},
+	{
 		"model": "TypePanel",
 		"id": "classificationclassification",
 		"panel": "classification",
@@ -365,6 +375,14 @@
 	},
 	{
 		"model": "TypePanel",
+		"id": "systemuseruserlog",
+		"panel": "userlog",
+		"type_key": "systemuser",
+		"in_list": false,
+		"in_single": true
+	},
+	{
+		"model": "TypePanel",
 		"id": "userprofilecreate",
 		"panel": "create",
 		"type_key": "userprofile",
@@ -406,6 +424,34 @@
 		"type_key": "userprofile",
 		"in_list": true,
 		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "downloadcheckgroupdownloadcheckgroupslist",
+		"panel": "downloadcheckgroupslist",
+		"type_key": "downloadcheckgroup",
+		"in_list": true,
+		"in_single": false
+	},
+	{
+		"model": "TypePanel",
+		"id": "downloadcheckgroupcreate",
+		"panel": "create",
+		"type_key": "downloadcheckgroup",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_userprofile",
+		"edit_right": "change_userprofile"
+	},
+	{
+		"model": "TypePanel",
+		"id": "downloadcheckgroupedit",
+		"panel": "edit",
+		"type_key": "downloadcheckgroup",
+		"in_list": true,
+		"in_single": false,
+		"view_right": "change_userprofile",
+		"edit_right": "change_userprofile"
 	},
 	{
 		"model": "SystemPermission",

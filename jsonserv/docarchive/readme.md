@@ -30,3 +30,11 @@ python manage.py import_json 1 0 docarchive/fixtures/panels.json
 ```cmd
 python manage.py import_json 1 0 docarchive/fixtures/type_panels.json
 ```
+
+## Единицы измерения
+```cmd
+python manage.py import_json 1 0 docarchive/fixtures/measure_units.json
+```
+
+После импорта информации об архиве необходимо настроить адрес расположения файловго архива в модуле администрирования
+Управление архивом документации › Файловые архивы

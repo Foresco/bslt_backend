@@ -2,8 +2,8 @@ import json
 from rest_framework import serializers
 # Классы, подлежащие сериализации
 from django.contrib.auth.models import User, Group
-from .models import (Enterprise, EntityType, Entity, Essence, Link, Place, Classification, 
-                     MeasureUnit, GraphicFile, DownloadCheckGroup,
+from .models import (Enterprise, Entity, Essence, Link, Place, Classification,
+                     MeasureUnit, GraphicFile, DownloadCheckGroup, ActionLog,
                      UserSession, UserProfile, PropertyType, Property, PropertyValue)
 from jsonserv.core.models_dispatcher import ModelsDispatcher
 
@@ -75,11 +75,7 @@ class EntityChildObjectSerializer(serializers.JSONField):
         # Наполняем словарь данными
         data_dict['pk'] = value.id
         data_dict['value'] = item.get_description()
-        # Сериализуем
-        serializer = EntityRefSerializer(data=data_dict)
-        if serializer.is_valid(): # Так надо
-            return serializer.data
-        return None #  На всякий случай
+        return data_dict
 
 
 class EnterpriseRefSerializer(serializers.ModelSerializer):
@@ -125,7 +121,20 @@ class ClassificationSerializerDetailed(serializers.ModelSerializer):
             'description',
             'group_code',
             'order_num',
-            'group')
+            'group'
+            )
+
+
+class DownloadCheckGroupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DownloadCheckGroup
+        fields = (
+            'pk',
+            'group_name',
+            'download_limit_day',
+            'download_limit_month',
+            'download_limit_year'
+            )
 
 
 class ClassificationTreeSerializer(serializers.ModelSerializer):
@@ -487,14 +496,24 @@ class UserGroupListSerializer(serializers.ModelSerializer):
         )
 
 
-# class UserGroupSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Group
-#         fields = (
-#             'pk',
-#             'user',
-#             'group'
-#         )
+class ActionLogSerializer(serializers.ModelSerializer):
+    action_datetime = serializers.DateTimeField(format="%d.%m.%Y %H:%M:%S", required=False, read_only=True)
+    action_type = serializers.SerializerMethodField()
+
+    @staticmethod
+    def get_action_type(obj):
+        # Показывать названия действий
+        action_dict = dict(ActionLog.ACTIONTYPECHOICES)
+        return action_dict.get(obj.action_type, 'unknown')
+
+    class Meta:
+        model = ActionLog
+        fields = (
+            'pk',
+            'action_datetime',
+            'action_type',
+            'action_link'
+        )
 
 
 class UserSessionSerializer(serializers.ModelSerializer):
@@ -525,4 +544,17 @@ class HistorySerializerList(serializers.Serializer):
     username = serializers.CharField(source='edt_sess__user__username')
     session_datetime = serializers.DateTimeField(source='edt_sess__session_datetime',
                                                  format="%d.%m.%Y %H:%M:%S", read_only=True)
-    changes = serializers.JSONField()  # ChangesPreapre()
+    changes = serializers.JSONField()
+
+
+class UserActionLogSerializer(serializers.ModelSerializer):
+    """Сериализатор записей лога действий пользователя"""
+
+    class Meta:
+        model = Classification
+        fields = (
+            'pk',
+            'action_link',
+            'action_type',
+            'action_datetime'
+        )

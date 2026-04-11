@@ -263,3 +263,32 @@ def update_order_part(request, pk):
 
     return Response({"message": f"Свойства объекта в заказе совпадают с исходным"},
                     status=status.HTTP_201_CREATED)
+
+
+@ api_view(['POST', ])
+def clearorderparts(request):
+    """Очистка состава заказа
+    с удалением всех входящих в него экземпляров"""
+    # Получение переданных параметров
+    # Идентификатор родителя в составе которого меняют позиции
+    parent_id = request.data["parent"]
+    user_session_id = request.session.get('user_session_id', 1)
+
+    # Получение списка входящих объектов
+    sql_file = get_sql_file_path('pdm', 'all_linked_through.sql')
+    rows = execute_sql_from_file(sql_file, dict(parent_id=parent_id, quantity=1, link_classes='partlink'))
+    ids = list(map(lambda x: x[0], rows))  # Список входящих идентификаторов
+    # print(ids)
+    ids.remove(int(parent_id))  # Удаляем родителя (он не обрабатывается)
+    cnt = 0  # Счетчик
+    # return Response({"message": f"Удалено {cnt} объектов"}, status=status.HTTP_201_CREATED)
+    if ids:
+        # Находим только объекты, относящиеся к данному заказу
+        objs = PartObject.objects.filter(pk__in=ids).filter(prod_order_id=parent_id)
+        for s in objs: # Перебираем входящие
+            # Удаление найденных объектов
+            s.dlt_sess = user_session_id
+            s.delete_force()
+            cnt += 1
+
+    return Response({"message": f"Удалено объектов {cnt}"}, status=status.HTTP_201_CREATED)

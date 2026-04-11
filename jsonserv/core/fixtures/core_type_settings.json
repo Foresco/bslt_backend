@@ -15,4 +15,12 @@
 		"dashboard": "user",
 		"page_header": "Профили пользователей"
 	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "14",
+	"fields": {
+		"type_key": "downloadcheckgroup",
+		"dashboard": "user"
+	}
 }]

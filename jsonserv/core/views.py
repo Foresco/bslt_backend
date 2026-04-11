@@ -9,6 +9,7 @@ from django.views.decorators.cache import cache_page
 from django.contrib.auth.models import Group
 from django.db.models import JSONField, F, Value
 from django.db.models.fields.related import ForeignKey
+from django.db.models.functions import JSONObject
 
 
 # Инструментарий фильтрации
@@ -23,10 +24,10 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from jsonserv.core.models import (Classification, Entity, EntityType, HistoryLog, Link, List, CodedList, MenuItem,
-                                  FormField, GraphicFile, UserSession, TypePanel, TypeExtraLink,
+                                  FormField, GraphicFile, UserSession, TypePanel, TypeExtraLink, ActionLog,
                                   TypeSetting, Report, UserProfile, UserSettings, check_access, children)
 from jsonserv.core.serializers import (ClassificationTreeSerializer, EntitySerializer, ExtraLinkSerializer,
-                                       HistorySerializerList,
+                                       HistorySerializerList, UserActionLogSerializer, ActionLogSerializer,
                                        LinkedSerializerList, ReportParamSerializer,
                                        UserGroupListSerializer, UserSessionSerializer)
 
@@ -115,6 +116,8 @@ class ApplicationView(TemplateView):
         user_session = UserSession.objects.get(pk=user_session_id)
         # Текущий пользователь может использоваться для получения прав
         self.user = self.request.user
+        # Логирование действий пользователя
+        ActionLog.log_action('C', self.request.path, self.request.session)
         dashboard = UserProfile.get_user_dashboard(self.user)
         return dict(username=user_session.user_profile_user_name, session_datetime=user_session.session_datetime,
                     user_session_id=user_session_id, home=dashboard)
@@ -623,26 +626,24 @@ class HistoryList(ListAPIView):
                  'edt_sess__user__username',
                  'edt_sess__session_datetime',
                  'changes'
-                 # 'table_name'
                  ).order_by(
             'edt_sess__session_datetime', 'pk'
         )
         # История файлов
-        # files_history = EntityDocumentVersion.objects.filter(
-        #     entity_id=object_id
-        # ).annotate(
-        #     pk=-1 * F('pk'),  # Чтобы точно было уникальным
-        #     edt_sess__id=F('crtd_sess_id'),
-        #     edt_sess__user__username=F('crtd_sess__user__username'),
-        #     edt_sess__session_datetime=F('crtd_sess__session_datetime'),
-        #     changes=Value(dict(file=document_version__document__doc_code), JSONField())
-        # ).values('pk',
-        #          'edt_sess__id',
-        #          'edt_sess__user__username',
-        #          'edt_sess__session_datetime',
-        #          'changes')
-        return chain(creator, history)  # Соединяем результаты запросов
-        # return chain(creator, history, files_history)  # Соединяем результаты запросов
+        files_history = EntityDocumentVersion.objects.filter(
+            entity_id=object_id
+        ).annotate(
+            pk=-1 * F('pk'),  # Чтобы точно было уникальным
+            edt_sess__id=F('crtd_sess_id'),
+            edt_sess__user__username=F('crtd_sess__user__username'),
+            edt_sess__session_datetime=F('crtd_sess__session_datetime'),
+            changes=JSONObject(title=F('document_version__document__doc_code'))
+        ).values('pk',
+                 'edt_sess__id',
+                 'edt_sess__user__username',
+                 'edt_sess__session_datetime',
+                 'changes')
+        return chain(creator, history, files_history)  # Соединяем результаты запросов
 
 
 class LinkList(ListAPIView):
@@ -731,6 +732,16 @@ class UserGroupList(ListAPIView):
     queryset = Group.objects.all().order_by('name')
     serializer_class = UserGroupListSerializer
     name = 'user-groups-list'
+
+
+class ActionLogList(ListAPIView):
+    serializer_class = ActionLogSerializer
+    name = 'action-log-list'
+
+    def get_queryset(self):
+        user_id = self.request.GET.get('user_id', 0)
+        # Фильтрация данных о действиях пользователя
+        return ActionLog.objects.filter(session__user_id=user_id)
 
 
 class UserSessionList(ListAPIView):
