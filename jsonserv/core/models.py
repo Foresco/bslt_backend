@@ -21,6 +21,13 @@ from jsonserv.core.models_dispatcher import ModelsDispatcher
 
 
 # Функции формирования уникальных текстовых ключей
+def collapse_dots(src_str):
+    """Функция замены множества точек на одну"""
+    while src_str.find('..') != -1:
+        src_str = src_str.replace('..', '.')
+    return src_str
+
+
 def fn_head_key(code, parent_code=''):
     """Ключ для уникального обозначения
     ВНИМАНИЕ! Изменение данной функции может привести к задвоениям данных!"""
@@ -28,11 +35,21 @@ def fn_head_key(code, parent_code=''):
     map2 = str.maketrans(r'АВЕЁЗКМНОOРСТУХ*№', r'ABEE3KMH00PCTYXXN')  # Заменяемые, заменяющие
     source = str(code) + parent_code  # Иногда (при импорте, например) приходит целое число в code
     result = source.translate(map1)  # Замена символов похожего смысла и удаление незначащих символов
-    while result.find('..') != -1:
-        result = result.replace('..', '.')
+    result = collapse_dots(result)
     result = result.upper()
     result = result.translate(map2)  # Замена символов похожего написания
     return result
+
+
+def fn_sorted_key(code, parent_code=''):
+    """Ключ со значением, отсортированным по значениям, разделенными пробелами"""
+    b = code.split()
+    if parent_code:
+        b.append(parent_code)
+        # b = b + parent_code.split()  # Если вдруг решим и ГОСТ дробить
+    b.sort()
+    return ' '.join(b)
+    # return collapse_dots(''.join(sorted(code)))
 
 
 def text_key(source):
@@ -800,6 +817,8 @@ class Entity(HistoryTrackingMixin):
     picture = models.ForeignKey(GraphicFile, on_delete=models.SET_DEFAULT, default=None, null=True, blank=True,
                                 related_name='icon_for_entities', verbose_name='Файл иллюстрации')
     guid = models.UUIDField(default=uuid.uuid4, editable=False)
+    sorted_key = models.CharField(max_length=400, editable=False, null=True, blank=True,
+                                  verbose_name='Уникальный отсортированный ключ', db_index=True)
     # hidden = models.BooleanField(default=False, null=False, verbose_name='Признак сокрытия объекта в списках')
 
     inheritors = InheritanceManager()  # Классы-наследники
@@ -816,18 +835,18 @@ class Entity(HistoryTrackingMixin):
         return self.entitylabel.label
 
     @staticmethod
-    def get_head_key(props):
+    def get_key_prepare(props, key_generator=fn_head_key):
         # Генерация head_code С учетом ссылки на документ У разных классов может отличаться
         # Может передаваться как словарь, так и экземпляр модели
         if type(props) is dict:
             if 'parent' in props and props['parent'] and EntityType.get_doc_key(props['type_key'].type_key):
-                return fn_head_key(props['code'], props['parent'].code)
-            return fn_head_key(props['code'])
+                return key_generator(props['code'], props['parent'].code)
+            return key_generator(props['code'])
         else:  # Экземпляр модели
             if props.parent and EntityType.get_doc_key(props.type_key.type_key):
-                return fn_head_key(props.code, props.parent.code)
+                return key_generator(props.code, props.parent.code)
             else:
-                return fn_head_key(props.code)
+                return key_generator(props.code)
 
     @classmethod
     def get_or_create_item(cls, prop_dict):
@@ -837,7 +856,7 @@ class Entity(HistoryTrackingMixin):
                 prop_dict['type_key'] = EntityType.objects.get(pk=cls.__name__.lower())
             except ObjectDoesNotExist as e:
                 raise ObjectDoesNotExist(f"Tип {cls.__name__} не зарегистрирован в EntityType") from e
-        prop_dict['head_key'] = cls.get_head_key(prop_dict)
+        prop_dict['head_key'] = cls.get_key_prepare(prop_dict, fn_head_key)
         # Проверяем по уникальному ключу в рамках типа сущности
         return cls.objects.get_or_create(head_key=prop_dict['head_key'], type_key=prop_dict['type_key'],
                                          defaults=prop_dict)
@@ -905,11 +924,11 @@ class Entity(HistoryTrackingMixin):
         if generator_path:
             # Если указан генератор обрабатываем объект до сохранения
             gitm.process_before(self)
-        self.head_key = self.get_head_key(self)  # Генерация ключа
+        self.head_key = self.get_key_prepare(self, fn_head_key)  # Генерация ключа
+        self.sorted_key = self.get_key_prepare(self, fn_sorted_key)  # Дополнительный отсортированный ключ
 
         # Проверка уникальности head_code корректная обработка ошибок Отключать здесь
-        if self.pk:
-            # Не пойму, зачем я это сделал...
+        if self.pk and 1 == 2: # Не пойму, зачем я это сделал... поэтому отключил
             # Определяем модель типа объекта
             source_model = ModelsDispatcher.get_entity_class_by_entity_name(self.type_key.pk)
             parent = source_model.objects.get(pk=self.pk)

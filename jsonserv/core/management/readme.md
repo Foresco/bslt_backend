@@ -27,7 +27,7 @@ python manage.py export_json Classification
 ```cmd
 python manage.py expire_all_sessions
 ```
-## Импрот информации из файла json
+## Импорт информации из файла json
 Импорт данных из заранее подготовленного файла json определенной структуры
 ```
 python manage.py import_json 146 0 C:\Users\nikiforov_pv\Nextcloud\Documents\cs\Проекты\Предприятия\СММ-Электро\Результаты\arc_docs.json
