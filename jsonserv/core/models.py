@@ -895,12 +895,14 @@ class Entity(HistoryTrackingMixin):
         self.edt_sess = edt_sess
         self.save()
 
-    def check_same_count(self):
+    def check_same(self):
         """Проверка наличия объекта с таким же ключом"""
         # Внимание! Сейчас уникальность контролируется внутри типа
-        if Entity.objects.filter(head_key=self.head_key, type_key=self.type_key).exclude(pk=self.pk).count():
-            return f'Ключевой атрибут [{self.head_key}] не уникален'
-        return ''
+        a = Entity.objects.filter(head_key=self.head_key, type_key=self.type_key).exclude(pk=self.pk)[0]
+        if a:
+            # Если найден такой объект
+            return 'Найден похожий объект', a.pk
+        return '', 0
 
     def check_before_delete(self):
         # Метод проверки перед удалением
@@ -927,16 +929,16 @@ class Entity(HistoryTrackingMixin):
         self.head_key = self.get_key_prepare(self, fn_head_key)  # Генерация ключа
         self.sorted_key = self.get_key_prepare(self, fn_sorted_key)  # Дополнительный отсортированный ключ
 
-        # Проверка уникальности head_code корректная обработка ошибок Отключать здесь
+        # Проверка уникальности head_code корректная обработка ошибок 
         if self.pk and 1 == 2: # Не пойму, зачем я это сделал... поэтому отключил
             # Определяем модель типа объекта
             source_model = ModelsDispatcher.get_entity_class_by_entity_name(self.type_key.pk)
             parent = source_model.objects.get(pk=self.pk)
-            msg = parent.check_same_count()  # Проверяем по модели родителя
+            msg, pk = parent.check_same()  # Проверяем по модели родителя
         else:
             # Проверка по старому варианту
-            msg = self.check_same_count()
-
+            msg, pk = self.check_same()
+        # Отключать здесь
         if msg:
             raise ValidationError(msg)
         super(Entity, self).save(*args, **kwargs)

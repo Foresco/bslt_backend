@@ -283,7 +283,7 @@ class PartObject(Entity):  # Элемент конструкции
         return ' '.join(
             filter(None, [self.code, parent_code, self.title, order_code, base_rend, '|', self.part_type.type_name]))
 
-    def check_same_count(self):
+    def check_same(self):
         """Проверка наличия объекта с таким же ключом"""
         # Присвоение уникального проверочного ключа
         self.head_key = fn_head_key(
@@ -297,14 +297,16 @@ class PartObject(Entity):  # Элемент конструкции
             filters['prod_order__isnull'] = True
 
         # Внимание! Сейчас уникальность контролируется внутри типа PartObject
-        if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
-            return f'Ключевой атрибут объекта конструкции [{self.head_key}] не уникален'
+        a = PartObject.objects.filter(**filters).exclude(pk=self.pk)[0]
+        if a:
+            return 'Найден похожий объект', a.pk
         if self.nom_code:
             del filters['head_key']
             # Дополнительно поиск в номенклатурному коду
             filters['nom_code'] = self.nom_code
-            if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
-                return f'Номенклатурный код [{self.nom_code}] не уникален'
+            a = PartObject.objects.filter(**filters).exclude(pk=self.pk)[0]
+            if a:
+                return f'Номенклатурный код [{self.nom_code}] не уникален', a.pk
         return ''
 
     def delete(self, *args, **kwargs):
