@@ -188,7 +188,7 @@ class EntityDocumentVersionSerializer(serializers.ModelSerializer):
 
 
 class EntityDocumentVersionSerializerList(serializers.ModelSerializer):
-    entity = EntityChildObjectSerializer() # EntityRefSerializer(read_only=True)
+    entity = EntityChildObjectSerializer()
 
     class Meta:
         model = EntityDocumentVersion

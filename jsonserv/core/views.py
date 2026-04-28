@@ -24,10 +24,10 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from jsonserv.core.models import (Classification, Entity, EntityType, HistoryLog, Link, List, CodedList, MenuItem,
-                                  FormField, GraphicFile, UserSession, TypePanel, TypeExtraLink,
+                                  FormField, GraphicFile, UserSession, TypePanel, TypeExtraLink, ActionLog,
                                   TypeSetting, Report, UserProfile, UserSettings, check_access, children)
 from jsonserv.core.serializers import (ClassificationTreeSerializer, EntitySerializer, ExtraLinkSerializer,
-                                       HistorySerializerList,
+                                       HistorySerializerList, UserActionLogSerializer, ActionLogSerializer,
                                        LinkedSerializerList, ReportParamSerializer,
                                        UserGroupListSerializer, UserSessionSerializer)
 
@@ -116,6 +116,8 @@ class ApplicationView(TemplateView):
         user_session = UserSession.objects.get(pk=user_session_id)
         # Текущий пользователь может использоваться для получения прав
         self.user = self.request.user
+        # Логирование действий пользователя
+        ActionLog.log_action('C', self.request.path, self.request.session)
         dashboard = UserProfile.get_user_dashboard(self.user)
         return dict(username=user_session.user_profile_user_name, session_datetime=user_session.session_datetime,
                     user_session_id=user_session_id, home=dashboard)
@@ -731,6 +733,16 @@ class UserGroupList(ListAPIView):
     queryset = Group.objects.all().order_by('name')
     serializer_class = UserGroupListSerializer
     name = 'user-groups-list'
+
+
+class ActionLogList(ListAPIView):
+    serializer_class = ActionLogSerializer
+    name = 'action-log-list'
+
+    def get_queryset(self):
+        user_id = self.request.GET.get('user_id', 0)
+        # Фильтрация данных о действиях пользователя
+        return ActionLog.objects.filter(session__user_id=user_id)
 
 
 class UserSessionList(ListAPIView):

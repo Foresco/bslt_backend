@@ -172,7 +172,7 @@ END $$ LANGUAGE plpgsql;
 CREATE OR REPLACE FUNCTION dosomething(_edt_sess integer)
  RETURNS integer
  LANGUAGE plpgsql
-AS $function$
+AS $$
 DECLARE
   a_counter INT := 0; -- Счетчик
   a_target INT; -- Идентификатор хорошего
@@ -193,94 +193,8 @@ BEGIN
   AND c.dlt_sess = 0
   ORDER BY c.code
   LOOP
-    -- Изменение вхождений
-    UPDATE core_link
-    SET child_id = a_target, edt_sess = _edt_sess
-    WHERE (child_id = a_source) AND (dlt_sess = 0)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM core_link t
-      WHERE t.parent_id = core_link.parent_id
-      AND t.child_id = a_target
-      AND t.link_class = core_link.link_class
-      AND (t.dlt_sess = 0)
-    );
-
-    -- Удаление оставшихся связей
-    UPDATE core_link
-    SET dlt_sess = _edt_sess
-    WHERE (child_id = a_source) AND (dlt_sess = 0);
-
-    -- Изменение исходников у позиций в заказах
-    UPDATE pdm_partobject SET origin_id = a_target
-    WHERE (origin_id = a_source);
-
-    -- Замена связей с документами
-    UPDATE docarchive_entitydocumentversion
-    SET entity_id = a_target, edt_sess = _edt_sess
-    WHERE (entity_id = a_source) AND (dlt_sess = 0)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM docarchive_entitydocumentversion t
-      WHERE t.document_version_id = docarchive_entitydocumentversion.document_version_id
-      AND t.entity_id = a_target
-      AND (t.dlt_sess = 0)
-    );
-
-    -- Удаление оставшихся связей с документами
-    UPDATE docarchive_entitydocumentversion
-    SET dlt_sess = _edt_sess
-    WHERE (entity_id = a_source) AND (dlt_sess = 0);
-
-   -- Замена связей со свойствами
-    UPDATE core_propertyvalue
-    SET entity_id = a_target, edt_sess = _edt_sess
-    WHERE (entity_id = a_source) AND (dlt_sess = 0)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM core_propertyvalue t
-      WHERE t.property_id = core_propertyvalue.property_id
-      AND t.entity_id = a_target
-      AND (t.dlt_sess = 0)
-    );
-
-    -- Удаление оставшихся связей со свойствами
-    UPDATE core_propertyvalue
-    SET dlt_sess = _edt_sess
-    WHERE (entity_id = a_source) AND (dlt_sess = 0);
-
-    -- Замена базовых объектов в исполнениях
-    UPDATE pdm_rendition SET parent_id = a_target, edt_sess = _edt_sess
-    WHERE (parent_id = a_source) AND (dlt_sess = 0);
-
-    -- Замена исполнений
-    UPDATE pdm_rendition SET rendition_id = a_target, edt_sess = _edt_sess
-    WHERE (rendition_id = a_source) AND (dlt_sess = 0)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM pdm_rendition WHERE (rendition_id = a_target) AND (dlt_sess = 0)
-    );
-
-    -- Замена в ролях
-    UPDATE pdm_designrole
-    SET subject_id = a_target, edt_sess = _edt_sess
-    WHERE (subject_id = a_source) AND (dlt_sess = 0)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM pdm_designrole t
-      WHERE t.role_id = pdm_designrole.role_id
-      AND t.subject_id = a_target
-      AND (t.dlt_sess = 0)
-    );
-
-    -- Замена в идентификаторах
-    UPDATE exchange_externalid SET internal_id = a_target
-    WHERE (internal_id = a_source)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM exchange_externalid WHERE (internal_id = a_target)
-    );
-
-    -- Замена в метках
-    UPDATE core_entitylabel SET entity_id = a_target
-    WHERE (entity_id = a_source)
-    AND NOT EXISTS ( -- Защита от повторов
-      SELECT 1 FROM core_entitylabel WHERE (entity_id = a_target)
-    );
+    -- Замена объекта
+    EXEC fn_replace(a_source, a_target, _edt_sess);
 
     -- Удаление связей, где объект родитель
     UPDATE core_link
@@ -299,14 +213,14 @@ BEGIN
     a_counter := a_counter + 1;
   END LOOP;
   RETURN a_counter;
-END $function$
+END $$
 ;
 
 -- Восстановление ошибочно удаленных объектов
 CREATE OR REPLACE FUNCTION dosomething(_edt_sess integer)
  RETURNS integer
  LANGUAGE plpgsql
-AS $function$
+AS $$
 DECLARE
   a_counter INT := 0; -- Счетчик
   a_target INT; -- Идентификатор хорошего
@@ -339,13 +253,13 @@ BEGIN
     a_counter := a_counter + 1;
   END LOOP;
   RETURN a_counter;
-END $function$
+END $$
 
 -- Удаление стадии ТП
 CREATE OR REPLACE FUNCTION dosomething(_edt_sess integer)
  RETURNS integer
  LANGUAGE plpgsql
-AS $function$
+AS $$
 DECLARE
   a_counter INT := 0; -- Счетчик
   a_id INT;
@@ -363,7 +277,7 @@ BEGIN
     a_counter := a_counter + 1;
   END LOOP;
   RETURN a_counter;
-END $function$
+END $$
 
 -- Замена ошибочно созданных материалов и стандартных изделий в составе заказов
 CREATE OR REPLACE FUNCTION doSomething(
@@ -420,3 +334,43 @@ BEGIN
   END LOOP;
   RETURN a_counter;
 END $$ LANGUAGE plpgsql;
+
+-- Замена и удаление объектов по таблице
+CREATE OR REPLACE FUNCTION dosomething(
+  IN _edt_sess INTEGER
+)
+RETURNS INTEGER
+LANGUAGE plpgsql
+AS $$
+DECLARE
+  a_counter INT := 0; -- Счетчик
+  a_target INT; -- Идентификатор заменяющего
+  a_source INT; -- Идентификатор заменяемого
+BEGIN
+  -- Получение всех замен
+  FOR a_target, a_source IN
+  SELECT target_id, source_id
+  FROM public.to_replace LIMIT 1
+  LOOP
+    -- Замена объекта
+    PERFORM fn_replace(a_source, a_target, _edt_sess);
+
+    -- Удаление связей, где объект родитель
+    UPDATE core_link
+    SET dlt_sess = _edt_sess
+    WHERE (parent_id = a_source) AND (dlt_sess = 0);
+
+    -- Удаление исполнений
+    UPDATE pdm_rendition SET dlt_sess = _edt_sess
+    WHERE (rendition_id = a_source) AND (dlt_sess = 0);
+
+    -- Удаление объектов
+    UPDATE core_entity
+    SET dlt_sess = _edt_sess
+    WHERE (id = a_source);
+
+    a_counter := a_counter + 1;
+  END LOOP;
+  RETURN a_counter;
+END $$
+;

@@ -43,7 +43,7 @@ class Task(Entity):
         return 1
 
     @staticmethod
-    def get_head_key(props):
+    def get_key_prepare(props):
         # Присвоение уникального проверочного ключа
         if type(props) is dict:
             return fn_head_key(f"{props['code']}.{props['task_type']}")
@@ -161,7 +161,7 @@ class Letter(Entity):
         return self.code + ' ' + str(self.reg_date)[0:4]
 
     @staticmethod
-    def get_head_key(props):
+    def get_key_prepare(props):
         # Присвоение уникального проверочного ключа
         if type(props) is dict:
             return fn_head_key(props['code'] + str(props['reg_date'])[0:4])

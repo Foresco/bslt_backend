@@ -168,7 +168,8 @@
 		"area": "center",
 		"description": "Перечень профилей пользователей",
 		"check_state": "False",
-		"view_right": "view_userprofile"
+		"view_right": "view_userprofile",
+		"edit_right": "change_userprofile"
 	},
 	{
 		"model": "Panel",
@@ -251,6 +252,25 @@
 		"description": "Перечень пользователей",
 		"check_state": "False",
 		"view_right": "view_user"
+	},
+	{
+		"model": "Panel",
+		"id": "downloadcheckgroupslist",
+		"panel_name": "downloadcheckgroupslist",
+		"area": "center",
+		"description": "Список групп контроля загрузок файлов",
+		"check_state": "False",
+		"view_right": "view_userprofile",
+		"edit_right": "change_userprofile"
+	},
+	{
+		"model": "Panel",
+		"id": "userlog",
+		"panel_name": "userlog",
+		"area": "center",
+		"description": "Лог действий пользователя",
+		"check_state": "False",
+		"view_right": "view_userprofile"
 	},
 	{
 		"model": "SystemPermission",

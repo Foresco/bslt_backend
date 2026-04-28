@@ -135,6 +135,17 @@
 	},
 	{
 		"model": "MenuItem",
+		"id": "downloadcheckgroup",
+		"item_name": "downloadcheckgroup",
+		"caption": "Группы контроля скачиваний",
+		"style": "down_groups",
+		"action": "downloadcheckgroup",
+		"order_num": 3,
+		"is_active": "True",
+		"parent": "settings"
+	},
+	{
+		"model": "MenuItem",
 		"id": "totalreport",
 		"item_name": "totalreport",
 		"caption": "Сводные",

@@ -793,15 +793,6 @@ class RoutePointSerializerList(serializers.Serializer):
     code = serializers.CharField(source='place__code')
 
 
-# class SameObjectSerializerList(serializers.ModelSerializer):
-#     class Meta:
-#         model = PartObject
-#         fields = (
-#             'pk',
-#             'code'
-#         )
-
-
 class TpRowSerializer(serializers.ModelSerializer):
     class Meta:
         model = TpRow
@@ -944,7 +935,7 @@ class TypeSizeMaterSerializer(serializers.ModelSerializer):
 
 
 class TypeSizeMaterSerializerList(serializers.ModelSerializer):
-    parent = PartObjectRefSerializer()
+    parent = EntityRefSerializer()
 
     class Meta:
         model = TypeSizeMater

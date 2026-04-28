@@ -566,13 +566,98 @@
 		"fields": {
 			"form_name": "userprofile",
 			"field_name": "password_expire",
-			"order_num": 6,
+			"order_num": 8,
 			"caption": "Требуется смена пароля",
 			"max_size": null,
 			"list_keys": null,
 			"required": false,
 			"read_only": false,
 			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 2721,
+		"fields": {
+			"form_name": "userprofile",
+			"field_name": "download_group",
+			"order_num": 7,
+			"caption": "Группа контроля скачиваний",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 273,
+		"fields": {
+			"form_name": "downloadcheckgroup",
+			"field_name": "group_name",
+			"order_num": 1,
+			"caption": "Наименование группы",
+			"max_size": null,
+			"list_keys": null,
+			"required": true,
+			"read_only": false,
+			"default_value": null,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 274,
+		"fields": {
+			"form_name": "downloadcheckgroup",
+			"field_name": "download_limit_day",
+			"order_num": 2,
+			"caption": "Лимит в день",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": 0,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 275,
+		"fields": {
+			"form_name": "downloadcheckgroup",
+			"field_name": "download_limit_month",
+			"order_num": 3,
+			"caption": "Лимит в месяц",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": 0,
+			"hide_in_create": false,
+			"target": null
+		}
+	},
+	{
+		"model": "core.FormField",
+		"pk": 276,
+		"fields": {
+			"form_name": "downloadcheckgroup",
+			"field_name": "download_limit_year",
+			"order_num": 4,
+			"caption": "Лимит в год",
+			"max_size": null,
+			"list_keys": null,
+			"required": false,
+			"read_only": false,
+			"default_value": 0,
 			"hide_in_create": false,
 			"target": null
 		}

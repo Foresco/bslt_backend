@@ -1,7 +1,7 @@
 from django.urls import path
 
 from jsonserv.docarchive.views import (DocumentTypesList, FileDocumentVersionsList, EntityDocumentsList,
-                                       FileUploadPutView, UploadFileView,
+                                       FileUploadPutView, UploadFileView, watermark_get,
                                        GetDocArchiveFile, UploadArcdocsList, NoticeLinkDocView, get_digitalfile)
 
 from jsonserv.docarchive import viewsets
@@ -14,6 +14,7 @@ urlpatterns = [
     path('rest/entitydocuments/', EntityDocumentsList.as_view(), name=EntityDocumentsList.name),
     path('rest/documenttypes/', DocumentTypesList.as_view(), name=DocumentTypesList.name),
     path('rest/filedocuments/', FileDocumentVersionsList.as_view(), name=FileUploadPutView.name),
+    path('rest/watermarkdownload/<int:id>/', watermark_get, name="get_watermark"),
     path('rest/fileuploadput/', FileUploadPutView.as_view(), name=FileUploadPutView.name),
     path('rest/noticelinkdoc/', NoticeLinkDocView.as_view(), name=NoticeLinkDocView.name),
     path('rest/uploadarcdoc/', UploadArcdocsList.as_view(), name=UploadArcdocsList.name),

@@ -298,7 +298,6 @@ class PartObject(Entity):  # Элемент конструкции
 
         # Внимание! Сейчас уникальность контролируется внутри типа PartObject
         if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
-            # print(filters)
             return f'Ключевой атрибут объекта конструкции [{self.head_key}] не уникален'
         if self.nom_code:
             del filters['head_key']
@@ -528,18 +527,18 @@ class PartObject(Entity):  # Элемент конструкции
         return rows[0]['object_id']
 
     @staticmethod
-    def get_head_key(props):
+    def get_key_prepare(props, key_generator=fn_head_key):
         # Генерация head_code С учетом ссылки на документ У разных типов может отличаться
         # Может передаваться как словарь, так и экземпляр модели
         if type(props) is dict:
             if 'parent' in props and props['parent'] and PartType.get_doc_key(props['part_type']):
-                return fn_head_key(props['code'], props['parent'].code)
-            return fn_head_key(props['code'])
+                return key_generator(props['code'], props['parent'].code)
+            return key_generator(props['code'])
         else:  # Экземпляр модели
             if props.parent and PartType.get_doc_key(props.part_type.part_type):
-                return fn_head_key(props.code, props.parent.code)
+                return key_generator(props.code, props.parent.code)
             else:
-                return fn_head_key(props.code)
+                return key_generator(props.code)
 
     class Meta:
         verbose_name = "Объект конструкции"

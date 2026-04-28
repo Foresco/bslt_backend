@@ -123,7 +123,6 @@ def delete_file(file_path):
 
 def read_txt_file(file_path):
     """Чтение текстового файла"""
-    print(file_path)
     with open(file_path, "r", encoding='utf-8') as f:
         return f.read()
 

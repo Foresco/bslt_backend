@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from jsonserv.core.service_views import(LoginView, LogoutView, change_password)
 from jsonserv.core.views import (ClassificationStaff, ClassificationTree, EntityList, SearchView, 
                                  DashboardView, HistoryList, ReportView,
-                                 extra_links_get, GraphicUploadView, LinkList, search_list, 
-                                 ReportParamsList,
+                                 extra_links_get, GraphicUploadView, LinkList, search_list,
+                                 ReportParamsList, ActionLogList,
                                  report_get, caption_get, save_user_settings,
                                  UserGroupList, UserSessionList, entity_properties_get, main_menu_get)
 
@@ -39,6 +39,7 @@ urlpatterns = [
     path('rest/search/', search_list, name='search_list'),
     path('rest/properties/<slug:type_key>/<slug:sub_type_key>/', entity_properties_get, name='properties'),
     path('rest/reportparams/<slug:report_name>/', ReportParamsList.as_view(), name=ReportParamsList.name),
+    path('rest/useractionlog/', ActionLogList.as_view(), name=ActionLogList.name),
     path('rest/user/<int:pk>/activity', UserSessionList.as_view(), name=UserSessionList.name),
     path('rest/usergroup', UserGroupList.as_view(), name=UserGroupList.name),
     path('rest/usersettings/', save_user_settings, name='usersettings'),
@@ -51,6 +52,7 @@ urlpatterns = [
 # REST-сервисы
 router_urls = {
     'rest/classification': viewsets.ClassificationViewSet,
+    'rest/downloadcheckgroup': viewsets.DownloadCheckGroupViewSet,
     'rest/measureunit': viewsets.MeasureUnitViewSet,
     'rest/place': viewsets.PlaceViewSet,
     'rest/property': viewsets.PropertyViewSet,

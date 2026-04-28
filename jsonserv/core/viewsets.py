@@ -4,10 +4,11 @@ from rest_framework import viewsets, status, filters
 
 from jsonserv.core.models import Classification, MeasureUnit, Place, Property, PropertyValue, SystemUser, UserProfile
 from jsonserv.core.serializers import (ClassificationSerializer, ClassificationSerializerDetailed,
+                                       DownloadCheckGroupSerializer,
                                        MeasureUnitSerializer, MeasureUnitSerializerDetailed, MeasureUnitSerializerList,
                                        PlaceSerializer, PlaceSerializerDetailed, PlaceSerializerList,
                                        PropertySerializer, PropertySerializerDetailed, PropertySerializerList,
-                                       PropertyValueSerializer, PropertyValueSerializerList,
+                                       PropertyValueSerializer, PropertyValueSerializerList, DownloadCheckGroup,
                                        UserSerializer, UserSerializerNoPwd, UserSerializerDetailed, UserProfileSerializer,
                                        UserProfileSerializerDetailed, UserProfileSerializerList)
 
@@ -44,7 +45,6 @@ class CommonViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         request.data['crtd_sess'] = request.session.get('user_session_id', 1)
-        # print(request.data)
         return super().create(request, *args, **kwargs)
 
     def partial_update(self, request, *args, **kwargs):
@@ -59,8 +59,6 @@ class CommonViewSet(viewsets.ModelViewSet):
         instance.dlt_sess = user_session_id  # Указание идентификатора сессии
         self.perform_destroy(instance)
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-
 
 
 class ListViewSet(viewsets.ModelViewSet):
@@ -82,6 +80,16 @@ class ClassificationViewSet(CommonViewSet):
     search_fields = (
         'code',
         'description'
+    )
+
+
+class DownloadCheckGroupViewSet(CommonViewSet):
+    queryset = DownloadCheckGroup.objects.all()
+    serializer_class = DownloadCheckGroupSerializer
+
+    # Поля поиска
+    search_fields = (
+        'group_name',
     )
 
 
