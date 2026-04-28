@@ -192,6 +192,16 @@
 		"edit_right": "change_typesizesort"
 	},
 	{
+		"model": "Panel",
+		"id": "orderpart",
+		"panel_name": "orderpart",
+		"area": "center",
+		"description": "Функциональность работы с объектами заказа",
+		"check_state": "False",
+		"view_right": "change_order",
+		"edit_right": "change_order"
+	},
+	{
 		"model": "SystemPermission",
 		"id": "view_designer",
 		"codename": "view_designer"
@@ -315,5 +325,10 @@
 		"model": "SystemPermission",
 		"id": "change_typesizesort",
 		"codename": "change_typesizesort"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "change_order",
+		"codename": "change_order"
 	}
 ]

@@ -28,6 +28,10 @@ def prepare_file_for_unload(request, file):
                 mark = f"Экземпляр {receiver}: {receive_date}"
                 # Формируем новый файл с меткой во временном каталоге
                 file_path = insert_text_to_pdf(file.file_path, mark, 240, 3)
+                # Если была указана вставка метки с датой
+                watemark_date = request.GET.get('watemark_date')
+                if watemark_date:
+                    file_path = prepare_file_for_store(file_path, watemark_date)
                 return file_path, file_name, file.data_format
     # Возвращаем словарь из трех параметров
     return file.file_path, file_name, file.data_format

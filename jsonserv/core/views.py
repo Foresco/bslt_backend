@@ -9,6 +9,7 @@ from django.views.decorators.cache import cache_page
 from django.contrib.auth.models import Group
 from django.db.models import JSONField, F, Value
 from django.db.models.fields.related import ForeignKey
+from django.db.models.functions import JSONObject
 
 
 # Инструментарий фильтрации
@@ -623,26 +624,25 @@ class HistoryList(ListAPIView):
                  'edt_sess__user__username',
                  'edt_sess__session_datetime',
                  'changes'
-                 # 'table_name'
                  ).order_by(
             'edt_sess__session_datetime', 'pk'
         )
+        # return chain(creator, history)  # Соединяем результаты запросов
         # История файлов
-        # files_history = EntityDocumentVersion.objects.filter(
-        #     entity_id=object_id
-        # ).annotate(
-        #     pk=-1 * F('pk'),  # Чтобы точно было уникальным
-        #     edt_sess__id=F('crtd_sess_id'),
-        #     edt_sess__user__username=F('crtd_sess__user__username'),
-        #     edt_sess__session_datetime=F('crtd_sess__session_datetime'),
-        #     changes=Value(dict(file=document_version__document__doc_code), JSONField())
-        # ).values('pk',
-        #          'edt_sess__id',
-        #          'edt_sess__user__username',
-        #          'edt_sess__session_datetime',
-        #          'changes')
-        return chain(creator, history)  # Соединяем результаты запросов
-        # return chain(creator, history, files_history)  # Соединяем результаты запросов
+        files_history = EntityDocumentVersion.objects.filter(
+            entity_id=object_id
+        ).annotate(
+            pk=-1 * F('pk'),  # Чтобы точно было уникальным
+            edt_sess__id=F('crtd_sess_id'),
+            edt_sess__user__username=F('crtd_sess__user__username'),
+            edt_sess__session_datetime=F('crtd_sess__session_datetime'),
+            changes=JSONObject(title=F('document_version__document__doc_code'))
+        ).values('pk',
+                 'edt_sess__id',
+                 'edt_sess__user__username',
+                 'edt_sess__session_datetime',
+                 'changes')
+        return chain(creator, history, files_history)  # Соединяем результаты запросов
 
 
 class LinkList(ListAPIView):

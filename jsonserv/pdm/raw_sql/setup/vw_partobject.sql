@@ -12,6 +12,7 @@ AS SELECT ce.id,
     po.part_type_id,
     po.title,
     po.nom_code,
+    po.source_id,
     po.prod_order_id,
     ce.dlt_sess,
     mu.short_name AS ei

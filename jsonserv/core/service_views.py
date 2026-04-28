@@ -69,7 +69,6 @@ class LoginView(FormView):
             if not session_model.user.userprofile.loginable():
                 logout(self.request)
                 return HttpResponseRedirect('/password')
-                # return HttpResponseRedirect(self.g)
             # Проверка, не истек ли у пользователя срок действия пароля
             self.request.session['force_change_password'] = session_model.user.userprofile.is_password_date_expired()
         else:

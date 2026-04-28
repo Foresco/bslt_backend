@@ -595,7 +595,7 @@ class MenuItem(models.Model):  # Пункты меню
 
     def save(self, *args, **kwargs):
         # Автоматическое отслеживание порядка следования
-        self.order_num = MenuItem._meta.get_field('order_num').get_default()  #Значение по умолчанию
+        # self.order_num = MenuItem._meta.get_field('order_num').get_default()  #Значение по умолчанию
         if not self.order_num:
             dc = MenuItem.objects.filter(parent=self.parent).aggregate(
             order_num_max=models.Max('order_num'),
