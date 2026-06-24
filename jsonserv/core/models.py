@@ -928,8 +928,9 @@ class Entity(HistoryTrackingMixin):
         self.sorted_key = self.get_key_prepare(self, fn_sorted_key)  # Дополнительный отсортированный ключ
 
         # Проверка уникальности head_code корректная обработка ошибок Отключать здесь
-        if self.pk and 1 == 2: # Не пойму, зачем я это сделал... поэтому отключил
-            # Определяем модель типа объекта
+        if self.pk:
+            # Определяем модель типа объекта т.к. она скорее всего не Entity
+            # а PartObject или что-то еще
             source_model = ModelsDispatcher.get_entity_class_by_entity_name(self.type_key.pk)
             parent = source_model.objects.get(pk=self.pk)
             msg = parent.check_same_count()  # Проверяем по модели родителя

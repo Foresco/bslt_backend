@@ -739,9 +739,21 @@ class ActionLogList(ListAPIView):
     name = 'action-log-list'
 
     def get_queryset(self):
-        user_id = self.request.GET.get('user_id', 0)
+        filter_params = dict(session__user_id=self.request.GET.get('user_id', 0))
+        action_type = self.request.GET.get('action_type', '')
+        # Тип действия
+        if action_type:
+            filter_params['action_type'] = action_type
+        # Начальная дата
+        date_from = self.request.GET.get('date_from', '')
+        if date_from:
+            filter_params['action_datetime__gte'] = date_from
+        # Конечная дата
+        date_till = self.request.GET.get('date_till', '')
+        if date_till:
+            filter_params['action_datetime__lte'] = date_till
         # Фильтрация данных о действиях пользователя
-        return ActionLog.objects.filter(session__user_id=user_id)
+        return ActionLog.objects.filter(**filter_params)
 
 
 class UserSessionList(ListAPIView):

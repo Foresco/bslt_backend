@@ -1,5 +1,5 @@
 from copy import copy
-import json
+# import json
 from django.core.exceptions import SuspiciousOperation
 from django.db import models
 from django.db.models import F, FilteredRelation, Max, Q
@@ -11,7 +11,7 @@ from jsonserv.core.fileutils import get_sql_file_path
 from jsonserv.core.dbutils import execute_sql_from_file
 from jsonserv.core.models import (List, CodedList, Entity, Link, HistoryTrackingMixin, PeriodTrackingMixin,
                                   UserProfile, MeasureUnit, Place, Classification, UserSession, Permission,
-                                  RightMixin, fn_head_key, NotDeletedObjects, check_access)
+                                  RightMixin, fn_head_key, fn_sorted_key, NotDeletedObjects, check_access)
 
 from jsonserv.pdm import signals  # Сигналы приложения
 
@@ -288,8 +288,12 @@ class PartObject(Entity):  # Элемент конструкции
         # Присвоение уникального проверочного ключа
         self.head_key = fn_head_key(
             self.code, self.parent.code if self.parent and self.part_type.doc_key else '')
-        filters = dict(head_key=self.head_key)
+        # Присвоение сортированного проверочного ключа
+        self.sorted_key = fn_sorted_key(
+            self.code, self.parent.code if self.parent and self.part_type.doc_key else '')
+        # filters['sorted_key'] = self.sorted_key
 
+        filters = dict()
         if self.prod_order:
             # Дополнительно проверяем в рамках производственного заказа
             filters['prod_order'] = self.prod_order
@@ -297,13 +301,17 @@ class PartObject(Entity):  # Элемент конструкции
             filters['prod_order__isnull'] = True
 
         # Внимание! Сейчас уникальность контролируется внутри типа PartObject
-        if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
+        if PartObject.objects.filter(Q(head_key=self.head_key) | Q(sorted_key=self.sorted_key)).filter(
+                **filters).exclude(pk=self.pk).count():
             return f'Ключевой атрибут объекта конструкции [{self.head_key}] не уникален'
         if self.nom_code:
-            del filters['head_key']
+            # Убираем предыдущие фильтры
+            # del filters['head_key']
+            # del filters['sorted_key']
             # Дополнительно поиск в номенклатурному коду
             filters['nom_code'] = self.nom_code
-            if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
+            if PartObject.objects.filter(Q(head_key=self.head_key) | Q(sorted_key=self.sorted_key)).filter(
+                    **filters).exclude(pk=self.pk).count():
                 return f'Номенклатурный код [{self.nom_code}] не уникален'
         return ''
 
@@ -433,11 +441,12 @@ class PartObject(Entity):  # Элемент конструкции
             # Получаем состав копии
             obj_staff = dict((d['child__partobject__origin_id'], d) for d in
                              PartLink.objects.filter(parent=self.pk).values('child__partobject__origin_id', 'position',
-                                                                       'quantity', 'pk'))
+                                                                            'quantity', 'pk'))
             # Получаем состав исходного объекта
             origin_staff = dict((d['child_id'], d) for d in
-                                PartLink.objects.filter(parent=self.origin_id).values('child_id', 'position', 'quantity',
-                                                                                 'pk'))
+                                PartLink.objects.filter(parent=self.origin_id).values('child_id', 'position',
+                                                                                      'quantity',
+                                                                                      'pk'))
             # Находим недостающие записи
             difference = list(set(origin_staff.keys()) - set(obj_staff.keys()))
             for r in difference:  # Добавляем то, чего нет в копии
@@ -515,7 +524,7 @@ class PartObject(Entity):  # Элемент конструкции
             if edt_count:
                 mess_txt.append(f'Добавлено извещений {edt_count}')
 
-        return mess_txt, False # Ошибок не было
+        return mess_txt, False  # Ошибок не было
 
     @staticmethod
     def create_in_order(origin_id, prod_order_id, crtd_sess_id):
@@ -589,6 +598,7 @@ class PartObject(Entity):  # Элемент конструкции
 
 class ListPartObjectsNoOrderParts(models.Manager):
     """Менеджер, возвращающий только не удаленные объекты и не объекты в заказах"""
+
     def get_queryset(self):
         return super(ListPartObjectsNoOrderParts, self).get_queryset().filter(
             dlt_sess=0,  # Не имеющие отметки об удалении
@@ -598,6 +608,7 @@ class ListPartObjectsNoOrderParts(models.Manager):
 
 class ListPartObjectsAll(models.Manager):
     """Менеджер, возвращающий только не удаленные объекты в т.ч. объекты в заказах"""
+
     def get_queryset(self):
         return super(ListPartObjectsAll, self).get_queryset().filter(
             dlt_sess=0  # Не имеющие отметки об удалении

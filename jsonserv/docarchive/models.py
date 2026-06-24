@@ -329,7 +329,8 @@ class DigitalFile(HistoryTrackingMixin):
         default_permissions = ()
         permissions = [('change_digitalfile', 'Электронный файл. Редактирование'),
                        ('view_digitalfile', 'Электронный файл. Просмотр'),
-                       ('no_watermark', 'Электронный файл. Скачать без марки')]
+                       ('no_watermark', 'Электронный файл. Скачать без марки'),
+                       ('attache_new_version', 'Электронный файл. Подключить новую версию')]
 
 
 class VersionDesignRole(HistoryTrackingMixin):

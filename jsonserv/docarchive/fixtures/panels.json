@@ -146,6 +146,15 @@
 		"edit_right": "change_filedocument"
 	},
 	{
+		"model": "Panel",
+		"id": "newversionattache",
+		"panel_name": "newversionattache",
+		"area": "center",
+		"description": "Кнопка повышения версии файла",
+		"check_state": "False",
+		"view_right": "attache_new_version"
+	},
+	{
 		"model": "SystemPermission",
 		"id": "view_deliveryarcdoc",
 		"codename": "view_deliveryarcdoc"
@@ -234,5 +243,10 @@
 		"model": "SystemPermission",
 		"id": "change_entitydocumentversion",
 		"codename": "change_entitydocumentversion"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "attache_new_version",
+		"codename": "attache_new_version"
 	}
 ]

@@ -43,12 +43,12 @@ class Task(Entity):
         return 1
 
     @staticmethod
-    def get_key_prepare(props):
+    def get_key_prepare(props, key_generator=fn_head_key):
         # Присвоение уникального проверочного ключа
         if type(props) is dict:
-            return fn_head_key(f"{props['code']}.{props['task_type']}")
+            return key_generator(f"{props['code']}.{props['task_type']}")
         else:  # Экземпляр модели
-            return fn_head_key(f"{props.code}.{props.task_type}")
+            return key_generator(f"{props.code}.{props.task_type}")
 
     @property
     def is_expired(self):
@@ -161,12 +161,12 @@ class Letter(Entity):
         return self.code + ' ' + str(self.reg_date)[0:4]
 
     @staticmethod
-    def get_key_prepare(props):
+    def get_key_prepare(props, key_generator=fn_head_key):
         # Присвоение уникального проверочного ключа
         if type(props) is dict:
-            return fn_head_key(props['code'] + str(props['reg_date'])[0:4])
+            return key_generator(props['code'] + str(props['reg_date'])[0:4])
         else:  # Экземпляр модели
-            return fn_head_key(props.code + str(props.reg_date)[0:4])
+            return key_generator(props.code + str(props.reg_date)[0:4])
 
     def get_caption(self):
         """Формирование понятной надписи для разных целей"""
