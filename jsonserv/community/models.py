@@ -62,7 +62,7 @@ class Task(Entity):
         code = f'{self.income_number} ({self.code})' if self.income_number else self.code
         return code + f' {self.task_type} '
     
-    def check_same_count(self):
+    def check_same_count(self, skip_check_same_count=False):
         """Проверка наличия задания с таким же номером"""
         if Task.objects.filter(code=self.code, task_type=self.task_type).exclude(pk=self.pk).count():
             return f'Задача с номером [{self.code}] существует'
