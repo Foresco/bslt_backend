@@ -13,6 +13,7 @@ class OrderProdPositionSerializer(serializers.ModelSerializer):
             'pk',
             'supply_order',
             'prod_order_link',
+            'billet_quantity',
             'edt_sess',
             'crtd_sess',
             'dlt_sess'
@@ -22,6 +23,7 @@ class OrderProdPositionSerializer(serializers.ModelSerializer):
 class OrderProdPositionSerializerList(serializers.Serializer):
     pk = serializers.IntegerField()
     supply_order = serializers.CharField(source='supply_order__code')
+    supply_date = serializers.DateField(source='supply_order__order_date', format="%d.%m.%Y")
     supply_id = serializers.IntegerField(source='supply_order__pk')
     prod_order_link_id = serializers.IntegerField(source='prod_order_link__pk')
     parent_id = serializers.IntegerField(source='prod_order_link__parent_id')
@@ -30,6 +32,7 @@ class OrderProdPositionSerializerList(serializers.Serializer):
     child_code = serializers.CharField(source='prod_order_link__child__code')
     child_title = serializers.CharField(source='prod_order_link__child__partobject__title')
     quantity = serializers.FloatField(source='prod_order_link__quantity')
+    billet_quantity = serializers.IntegerField()
     mater_id = serializers.IntegerField(source='prod_order_link__child__design_mater__child_id')
     mater_code = serializers.CharField(source='prod_order_link__child__design_mater__child__code')
     surface = serializers.CharField(source='prod_order_link__child__partobject__surface')

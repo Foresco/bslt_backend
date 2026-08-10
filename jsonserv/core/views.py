@@ -27,7 +27,7 @@ from jsonserv.core.models import (Classification, Entity, EntityType, HistoryLog
                                   FormField, GraphicFile, UserSession, TypePanel, TypeExtraLink, ActionLog,
                                   TypeSetting, Report, UserProfile, UserSettings, check_access, children)
 from jsonserv.core.serializers import (ClassificationTreeSerializer, EntitySerializer, ExtraLinkSerializer,
-                                       HistorySerializerList, UserActionLogSerializer, ActionLogSerializer,
+                                       HistorySerializerList, ActionLogSerializer,
                                        LinkedSerializerList, ReportParamSerializer,
                                        UserGroupListSerializer, UserSessionSerializer)
 
@@ -115,7 +115,7 @@ class ApplicationView(TemplateView):
         # TODO: Сделать нормальную обработку нулевого значения user_session_id
         user_session = UserSession.objects.get(pk=user_session_id)
         # Текущий пользователь может использоваться для получения прав
-        self.user = self.request.user
+        # self.user = self.request.user
         # Логирование действий пользователя
         ActionLog.log_action('C', self.request.path, self.request.session)
         dashboard = UserProfile.get_user_dashboard(self.user)
@@ -227,6 +227,7 @@ class ApplicationView(TemplateView):
 
     def get_context_data(self, **kwargs):
         """Главная функция, формирующая словарь context для заполнения шаблона"""
+        self.user = self.request.user  # Текущий пользователь может использоваться для получения прав
         if not self.params_read(**kwargs):  # Разбор входных параметров
             # Заполнение параметров (в дочерних классах свои варианты)
             self.fill_keys(**kwargs)

@@ -10,7 +10,7 @@ from jsonserv.supply.serializers import OrderPosMaterSuppliersList
 # Классы, подлежащие сериализации
 from jsonserv.pdm.models import Route, TpRow
 from jsonserv.manufacture.models import (ProdOrder, ProdOrderLink, ProdOrderLinkTpRow, ProdOrderLinkWorker,
-                                         Shipment, WorkerReportConsist, WorkerShift)
+                                         Shipment, WorkerReportConsist, WorkerShift, Semis)
 
 
 class ObjectOperationSerializerList(serializers.Serializer):
@@ -438,6 +438,7 @@ class ProdOrderInWorkSerializerList(serializers.Serializer):
     quantity = serializers.FloatField()  # Количество в задании
     mater_state = serializers.CharField(source='mater_state__value_class')  # Метка состояния поставки материала
     tool_state = serializers.CharField(source='tool_state__value_class')  # Метка состояния поставки инструмента
+    parent_quantity = serializers.FloatField()
     done_quantity = serializers.FloatField()
     ship_quantity = serializers.FloatField()
     oper_quantity = serializers.FloatField()
@@ -560,3 +561,28 @@ class WorkerShiftPosSerializerList(serializers.Serializer):
             return '{} {}'.format(obj['task_link__prod_order_link__child__code'],
                                   obj['task_link__prod_order_link__child__partobject__title'])
         return obj['task_link__prod_order_link__child__code']
+
+
+class SemisSerializer (serializers.ModelSerializer):
+
+    class Meta:
+        model = Semis
+        fields = (
+            'pk',
+            'route_point',
+            'quantity',
+            'party',
+            'comment',
+            'edt_sess',
+            'crtd_sess',
+            'dlt_sess'
+        )
+
+
+class SemisSerializerList(serializers.Serializer):
+    pk = serializers.IntegerField(read_only=True, source='route_points__semises__pk')
+    route_point_pk = serializers.IntegerField(source='route_points__pk')
+    place = serializers.CharField(source='route_points__place__code')
+    quantity = serializers.FloatField(source='route_points__semises__quantity')
+    party = serializers.CharField(source='route_points__semises__party')
+    

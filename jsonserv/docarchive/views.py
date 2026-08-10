@@ -158,6 +158,13 @@ def get_file(request, **kwargs):
         # Запись факта обращения в лог
         ActionLog.log_action('D', f'file/{id}/', request.session)
         if file:
+            # Проверка права доступа к типу файла
+            doc_type = file.file_doc_type
+            if file.file_doc_type:
+                # Если право не назначено - доступ разрешен
+                if not check_access(doc_type.value_right, request.session.user, True):
+                    # Права на скачивание нет
+                    return HttpResponse('У Вас нет права скачивать файлы данного типа')
             if os.path.exists(file.file_path):
                 file_path, file_name, data_format = prepare_file_for_unload(request, file)
                 return http_unload_file(file_path, file_name, data_format)

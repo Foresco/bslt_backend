@@ -6,7 +6,7 @@ from rest_framework.generics import ListAPIView
 
 from jsonserv.rest.views import get_user_profile
 from jsonserv.core.viewsets import DateEqualFilter, EqualFilter
-from jsonserv.pdm.models import Route, RoutePoint, TpRow
+from jsonserv.pdm.models import PartLink, Route, RoutePoint, TpRow
 from jsonserv.manufacture.common import ship_quantity
 
 from jsonserv.manufacture.models import (ProdOrder, ProdOrderLink, ProdOrderLinkWorker, Shipment,
@@ -23,7 +23,6 @@ shipment_count = ProdOrderLink.objects.filter(
     parent=OuterRef('pk'),
     prodorder_link_shipments__pk__isnull=False,
     prodorder_link_shipments__dlt_sess=0
-    # dlt_sess=0 # Вроде не надо? Есть в objects?
 ).order_by().annotate(
     shipment_count=Func(F('prodorder_link_shipments__pk'), function='COUNT')
 ).values('shipment_count')
@@ -291,8 +290,16 @@ class ProdOrderInWorkList(ListAPIView):
             dlt_sess=0
         ).order_by().annotate(oper_quantity=Func(F('pk'), function='COUNT')).values(
             'oper_quantity')
+        # Подсчет количества родителей
+        parent_quantity = PartLink.objects.filter(
+            child=OuterRef('child__pk'),
+            parent__partobject__part_type_id='assembly',  # Вхождение только в сборочные единицы
+            dlt_sess=0
+        ).order_by().annotate(parent_quantity=Func(F('pk'), function='COUNT')).values(
+            'parent_quantity')
         a = ProdOrderLink.objects.values(
             'pk',
+            'parent_link_id',
             'parent__code',
             'parent__pk',
             'parent__type_key',
@@ -311,9 +318,12 @@ class ProdOrderInWorkList(ListAPIView):
             'mater_state__value_class',
             'tool_state__value_class'
         ).annotate(
+            parent_quantity=Subquery(parent_quantity),
             oper_quantity=Subquery(oper_quantity),
             done_quantity=Subquery(done_quantity),
             ship_quantity=Coalesce(Subquery(ship_quantity), 0.0),
+            parent_code=Coalesce('parent_link__child__code', 'child__code'),
+            # parent_link_is_null=F('parent_link_id__isnull'),
             not_supplied=F('quantity') - F('ship_quantity'),
             min_date=Window(expression=Min('parent__prodorder__order_date'), partition_by=[F('child')]),
         )
@@ -324,11 +334,16 @@ class ProdOrderInWorkList(ListAPIView):
         # Ради изменения сортировки в дочерних классах
         parent_ordering = self.request.GET.get('ordering', 'parent__code')
         a = self.get_common_queryset()
-        return a.order_by(
+        b = a.order_by(
             'parent__prodorder__order_date',
             parent_ordering,
+            'parent_code',
+            F('parent_link_id').desc(nulls_first=True),  # Сначала с пустыми ссылками
+            # 'parent_link_id__isnull',
             'child__code'
         )
+        print(b.query)
+        return b
 
     # Поля поиска
     search_fields = (

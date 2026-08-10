@@ -5,8 +5,9 @@ from jsonserv.core.viewsets import CommonViewSet
 from jsonserv.rest.views import get_user_profile
 
 from jsonserv.core.viewsets import DateEqualFilter, EqualFilter
+from jsonserv.pdm.models import Route
 from jsonserv.manufacture.models import (ProdOrder, ProdOrderLink, ProdOrderLinkTpRow, ProdOrderLinkWorker,
-                                         Shipment, WorkerReportConsist, WorkerShift)
+                                         Shipment, WorkerReportConsist, WorkerShift, Semis)
 
 from jsonserv.manufacture.serializers import (ProdOrderSerializer,
                                               ProdOrderSerializerDetailed, ProdOrderLinkSerializer,
@@ -16,7 +17,8 @@ from jsonserv.manufacture.serializers import (ProdOrderSerializer,
                                               ProdOrderLinkWorkerSerializer,
                                               ShipmentSerializer, ShipmentSerializerList,
                                               WorkerReportConsistSerializer, WorkerReportConsistSerializerList,
-                                              WorkerShiftSerializer, WorkerShiftSerializerList)
+                                              WorkerShiftSerializer, WorkerShiftSerializerList,
+                                              SemisSerializer, SemisSerializerList)
 
 from jsonserv.manufacture.views import ship_quantity
 
@@ -160,3 +162,22 @@ class WorkerShiftViewSet(CommonViewSet):
                 'work_shift__order_num'
             )
         return WorkerShiftViewSet.queryset
+
+
+class SemisViewSet(CommonViewSet):
+    queryset = Semis.objects.all()
+    serializer_class = SemisSerializer
+    serializer_class_list = SemisSerializerList
+    paginator = None  # Отключение пагинации (выводить весь список сразу)
+
+    def get_queryset(self):
+        if self.action == 'list':
+            subject_id = self.request.query_params.get('subject', 0)
+            return Route.objects.filter(subject_id=subject_id).values(
+                'route_points__pk',
+                'route_points__semises__pk',
+                'route_points__place__code',
+                'route_points__semises__quantity',
+                'route_points__semises__party',
+            ).order_by('route_points__place__code')
+        return SemisViewSet.queryset  # Иначе по умолчанию

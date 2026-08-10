@@ -283,17 +283,17 @@ class PartObject(Entity, JsonExport):  # Элемент конструкции
         return ' '.join(
             filter(None, [self.code, parent_code, self.title, order_code, base_rend, '|', self.part_type.type_name]))
 
-    def check_same_count(self, skip_check_same_count=False):
+    def check_same_count(self, skip_check_same_count=False, src_code=None, src_parent=None):
         """Проверка наличия объекта с таким же ключом"""
         if skip_check_same_count:
             # Если установлен признак отключения проверки уникальности обозначений
             return ''
         # Присвоение уникального проверочного ключа
         self.head_key = fn_head_key(
-            self.code, self.parent.code if self.parent and self.part_type.doc_key else '')
+            src_code, src_parent.code if src_parent and self.part_type.doc_key else '')
         # Присвоение сортированного проверочного ключа
         self.sorted_key = fn_sorted_key(
-            self.code, self.parent.code if self.parent and self.part_type.doc_key else '')
+            src_code, src_parent.code if src_parent and self.part_type.doc_key else '')
 
         filters = dict()
         if self.prod_order:

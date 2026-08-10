@@ -1,6 +1,6 @@
 from django_filters import DateFilter, Filter
 from rest_framework.response import Response
-from rest_framework import viewsets, status, filters
+from rest_framework import viewsets, status
 
 from jsonserv.core.models import Classification, MeasureUnit, Place, Property, PropertyValue, SystemUser, UserProfile
 from jsonserv.core.serializers import (ClassificationSerializer, ClassificationSerializerDetailed,
@@ -166,8 +166,6 @@ class UserViewSet(viewsets.ModelViewSet):
         # Пришлось сделать, так как наследует не CommonViewSet
         if self.action == 'retrieve':
             return self.serializer_class_detailed
-        # elif self.action == 'list' and self.serializer_class_list:
-        #     return self.serializer_class_list
         elif self.action == 'partial_update':
             # При сохранении проверяем обновление пароля и используем разные сериализаторы
             if not self.request.data.get('password', ''): # Если не передан пароль

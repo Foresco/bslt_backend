@@ -2,7 +2,7 @@ from django.db import models
 from django.core.exceptions import SuspiciousOperation
 
 from jsonserv.core.models import (List, Enterprise, Entity, Link, HistoryTrackingMixin, Place, UserSession)
-from jsonserv.pdm.models import Route
+from jsonserv.pdm.models import PartLink, Route, RoutePoint
 
 
 class ProdOrderState(List):  # Состояния производственных заказов
@@ -16,6 +16,7 @@ class ProdOrderState(List):  # Состояния производственны
 
 class SpecAccountState(List):
     """Состояния специального счета"""
+
     class Meta:
         verbose_name = "Состояние специального счета"
         verbose_name_plural = "Состояния специальных счетов"
@@ -24,6 +25,7 @@ class SpecAccountState(List):
 
 class PaymentState(List):
     """Состояния оплаты"""
+
     class Meta:
         verbose_name = "Состояние оплаты"
         verbose_name_plural = "Состояния оплат"
@@ -46,16 +48,16 @@ class ProdOrder(Entity):  # Заказ на производство
     enterprise = models.ForeignKey(Enterprise, related_name='prod_orders',
                                    on_delete=models.SET_DEFAULT, default=None, blank=True, null=True,
                                    verbose_name='Предприятие, получившее заказ')
-    spec_account = models.ForeignKey(SpecAccountState, blank=True, null=True,  default=None,
+    spec_account = models.ForeignKey(SpecAccountState, blank=True, null=True, default=None,
                                      on_delete=models.SET_DEFAULT,
                                      verbose_name='Специальный счет')
     calc_date = models.DateField(blank=True, null=True, verbose_name='Дата калькуляции')
     payment_state = models.ForeignKey(PaymentState, blank=True, null=True, default=None,
-                                     on_delete=models.SET_DEFAULT,
-                                     verbose_name='Состояние оплаты')
-    milit_test = models.BooleanField(blank=True, null=True, default=False, 
+                                      on_delete=models.SET_DEFAULT,
+                                      verbose_name='Состояние оплаты')
+    milit_test = models.BooleanField(blank=True, null=True, default=False,
                                      verbose_name='Согласование с военной примекой')
-    milit_comment = models.CharField(max_length=100, blank=True, null=True, 
+    milit_comment = models.CharField(max_length=100, blank=True, null=True,
                                      verbose_name='Комментарий к согласованию с ВП')
 
     def get_caption(self):
@@ -104,6 +106,7 @@ class Shipment(HistoryTrackingMixin):
 
 class SupplyState(List):
     """Состояния снабжения"""
+
     class Meta:
         verbose_name = "Состояние снабжения"
         verbose_name_plural = "Состояния снабжения"
@@ -114,6 +117,7 @@ class SupplyState(List):
 
 class OrderLinkTpRowState(List):
     """Состояния операции в составе заказа"""
+
     class Meta:
         verbose_name = "Состояние операции в составе заказа"
         verbose_name_plural = "Состояния операций в составе заказов"
@@ -135,8 +139,10 @@ class ProdOrderLink(Link):
     billet_desc = models.TextField(blank=True, null=True, verbose_name='Описание заготовки')
     price_no_nds = models.FloatField(blank=True, null=True, verbose_name='Цена без НДС')
     design_doc = models.ForeignKey(SupplyState, blank=True, null=True, on_delete=models.SET_DEFAULT,
-                                    default=None, related_name='prodorder_links_design_doc',
-                                    verbose_name='Конструкторская документация')
+                                   default=None, related_name='prodorder_links_design_doc',
+                                   verbose_name='Конструкторская документация')
+    parent_link = models.ForeignKey(to='ProdOrderLink', related_name='child_links', blank=True, null=True, default=None,
+                                    verbose_name='Породившая связь', on_delete=models.SET_DEFAULT)
 
     def save(self, *args, **kwargs):
         # Назначение активного маршрута по-умолчанию
@@ -145,6 +151,18 @@ class ProdOrderLink(Link):
             if ro:
                 self.route = ro
         super(ProdOrderLink, self).save(*args, **kwargs)
+        # Добавление в заказ всех деталей из состава
+        if self.dlt_sess == 0 and self.edt_sess == 0:  # Если это не удаление записи и не редактирование записи
+            children = PartLink.objects.filter(parent=self.child)  # Состав добавляемой СЕ
+            for c in children:
+                # Создаем связь
+                p = ProdOrderLink(parent=self.parent, child=c.child, quantity=self.quantity * c.quantity,
+                                  parent_link=self, crtd_sess=self.crtd_sess)
+                try:
+                    # При записи возможны ошибки, например, связь уже существует
+                    p.save()
+                except SuspiciousOperation:
+                    pass  # Скорее всего была попытка повторно вставить позицию
 
     def check_before_delete(self):
         # Метод проверки перед удалением
@@ -165,7 +183,6 @@ class ProdOrderLink(Link):
             if routes:
                 return routes[0].pk
         return 0
-
 
     def __str__(self):
         return self.child.code + ' нужно изготовить по заказу ' + self.parent.code
@@ -234,6 +251,7 @@ class ProdOrderLinkTpRow(HistoryTrackingMixin):
 
 class WorkShift(List):
     """Варианты рабочих смен"""
+
     class Meta:
         verbose_name = "Рабочая смена"
         verbose_name_plural = "Рабочие смены"
@@ -274,7 +292,7 @@ class WorkerShift(HistoryTrackingMixin):
 class WorkerReportConsist(HistoryTrackingMixin):
     # Состав отчетов о выполненных работах
     task_link = models.ForeignKey(to='ProdOrderLinkWorker', related_name='worker_reports', on_delete=models.CASCADE,
-                                  blank=False, null=False,  verbose_name='Задание')
+                                  blank=False, null=False, verbose_name='Задание')
     report_date = models.DateField(blank=True, null=True, verbose_name='Дата выполнения')
     work_shift = models.ForeignKey(WorkShift, blank=True, null=True, on_delete=models.SET_NULL,
                                    verbose_name='Рабочая смена выполнения')
@@ -291,9 +309,9 @@ class WorkerReportConsist(HistoryTrackingMixin):
         if self.report_date:  # Смены рабочего создаются только при наличии даты
             session_id = UserSession.objects.get(pk=self.edt_sess) if self.edt_sess else self.crtd_sess
             worker_shift, result = WorkerShift.get_or_create_item(dict(shift_date=self.report_date,
-                                                                  worker=self.task_link.worker,
-                                                                  work_shift=self.work_shift,
-                                                                  crtd_sess=session_id))
+                                                                       worker=self.task_link.worker,
+                                                                       work_shift=self.work_shift,
+                                                                       crtd_sess=session_id))
             self.worker_shift = worker_shift
         else:
             self.worker_shift = None  # Иначе смену убираем
@@ -309,3 +327,43 @@ class WorkerReportConsist(HistoryTrackingMixin):
         default_permissions = ()
         permissions = [('change_workerreportconsist', 'Изготовленная позиция заказа. Редактирование'),
                        ('view_workerreportconsist', 'Изготовленная позиция заказа. Просмотр')]
+
+
+class Semis(HistoryTrackingMixin):
+    # Полуфабрикаты на участках
+    route_point = models.ForeignKey(RoutePoint, blank=False, null=False, on_delete=models.CASCADE, related_name='semises',
+                                   verbose_name='Элемент маршрута, к которому относится полуфабрикат')
+    quantity = models.FloatField(null=True, blank=True, default=0, verbose_name='Количество полуфабрикатов')
+    min_quantity = models.FloatField(null=True, blank=True, default=0, verbose_name='Минимальное количество полуфабрикатов')
+    cell_name = models.CharField(max_length=15, blank=True, null=True, 
+                                     verbose_name='Наименование ячейки для хранения полуфабриката')
+    party = models.CharField(max_length=30, blank=True, null=True, 
+                                         verbose_name='Наименование партии полуфабрикатов')
+    comment = models.TextField(blank=True, null=True, verbose_name='Примечание')
+
+    def __str__(self):
+            return f'{self.route_point} в количестве {self.quantity}'
+    
+    class Meta:
+        verbose_name = "Количество полуфабрикатов"
+        verbose_name_plural = "Количества полуфабрикатов"
+        default_permissions = ()
+        permissions = [('change_semis', 'Полуфабрикат. Редактирование'),
+                        ('view_semis', 'Полуфабрикат. Просмотр')]
+
+
+class SemisHistory(models.Model):
+    # История изменения полуфабрикатов
+    semis = models.ForeignKey(Semis, blank=False, null=False, on_delete=models.CASCADE,
+                              verbose_name='Элемент маршрута, к которому относится полуфабрикат')
+    delta = models.FloatField(null=False, blank=False, default=0, verbose_name='Количество изменения')
+    edt_sess = models.ForeignKey(UserSession, blank=False, null=False, on_delete=models.CASCADE,
+                                 verbose_name='Транзакция, выполнившая изменение')
+
+    def __str__(self):
+        return f'{self.route_point} в количестве {self.quantity}'
+
+    class Meta:
+        verbose_name = "Изменение количества полуфабрикатов"
+        verbose_name_plural = "Изменения количеств полуфабрикатов"
+        default_permissions = ()

@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 import logging
 
 from jsonserv.core.models import (List, StructuredList, Entity, EntityType, Link, CreateTrackingMixin,
-                                  HistoryTrackingMixin, Place, RightMixin, UserProfile)
+                                  HistoryTrackingMixin, Place, RightMixin)
 from jsonserv.pdm.models import ChangeType, Designer, Notice, Rendition, Role, Stage, PartState
 from jsonserv.core.fileutils import copy_file_to_folder, compute_check_sum
 from jsonserv.docarchive.file_prepare import prepare_file_for_store
@@ -253,6 +253,11 @@ class DigitalFile(HistoryTrackingMixin):
     def file_path(self):
         """Получение пути к файлу в хранилище"""
         return os.path.join(self.folder.folder_path, self.file_name)
+
+    @property
+    def file_doc_type(self):
+        """Получение типа документа, к которому относится файл"""
+        return self.document_version.document.doc_type
 
     def update_check_sum(self, edt_sess):
         """Обновление контрольной суммы если файл изменился"""

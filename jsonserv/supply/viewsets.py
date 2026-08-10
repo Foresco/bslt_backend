@@ -20,6 +20,7 @@ class OrderProdPositionViewSet(CommonViewSet):
             return OrderProdPosition.objects.all().values(
                 'pk',
                 'supply_order__code',
+                'supply_order__order_date',
                 'supply_order__pk',
                 'prod_order_link__pk',
                 'prod_order_link__comment',
@@ -33,10 +34,13 @@ class OrderProdPositionViewSet(CommonViewSet):
                 'prod_order_link__child__design_mater__child__code',
                 'prod_order_link__billet_desc',
                 'prod_order_link__quantity',
+                'billet_quantity',
                 'prod_order_link__mater_state__pk',
                 'prod_order_link__mater_state__value_class'
             ).order_by(
+                'supply_order__order_date',
                 'prod_order_link__parent__code',
+                'supply_order__code',
                 'prod_order_link__child__code'
             )
         return OrderProdPositionViewSet.queryset  # Иначе по умолчанию

@@ -903,7 +903,7 @@ class Entity(HistoryTrackingMixin):
         self.edt_sess = edt_sess
         self.save()
 
-    def check_same_count(self, skip_check_same_count=False):
+    def check_same_count(self, skip_check_same_count=False, src_code=None, src_parent=None):
         """Проверка наличия объекта с таким же ключом"""
         # Внимание! Сейчас уникальность контролируется внутри типа
         if Entity.objects.filter(head_key=self.head_key, type_key=self.type_key).exclude(pk=self.pk).count():
@@ -940,10 +940,11 @@ class Entity(HistoryTrackingMixin):
         if self.pk:
             # Определяем реальную модель типа объекта т.к. она скорее всего не Entity
             parent = get_real_instance_item(self)
-            msg = parent.check_same_count(skip_check_same_count)  # Проверяем по модели родителя
+            # Передаем и ключевые признаки для проверки (их текущих значений нет в parent)
+            msg = parent.check_same_count(skip_check_same_count, self.code, self.parent)  # Проверяем по модели родителя
         else:
             # Проверка по старому варианту
-            msg = self.check_same_count(skip_check_same_count)
+            msg = self.check_same_count(skip_check_same_count, self.code, self.parent)
 
         if msg:
             raise ValidationError(msg)
@@ -1092,6 +1093,7 @@ class Classification(Entity, JsonExport):  # Классификационная 
         default_permissions = ()
         permissions = [('change_classification', 'Классификационная группа. Редактирование'),
                        ('view_classification', 'Классификационная группа. Просмотр')]
+
     class BasaltaProps:
         """Подкласс для хранения специфических атрибутов для системы Базальта"""
         # Перечень экспортируемых полей
