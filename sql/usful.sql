@@ -313,12 +313,12 @@ WHERE pd.id IS NULL;
 
 -- Добавление записей в историю
 INSERT INTO core_historylog(table_name, object_id, changes, edt_sess_id)
-SELECT 'partobject', ce.id, '{"source": 3}', 11468
+SELECT 'partobject', ce.id, '{"source": 3}', 36198
 FROM core_entity ce 
 INNER JOIN pdm_partobject pp ON (pp.entity_ptr_id = ce.id)
 WHERE ce.dlt_sess = 0
-AND (pp.part_type_id IN ('standart', 'other'))
-AND (pp.source_id = 2)
+AND (pp.part_type_id IN ('standart', 'other', 'material', 'exemplar'))
+AND (pp.source_id = 1);
 
 -- Изменение источника поступления
 UPDATE pdm_partobject SET source_id = 3 WHERE entity_ptr_id IN (
@@ -326,9 +326,9 @@ SELECT ce.id
 FROM core_entity ce 
 INNER JOIN pdm_partobject pp ON (pp.entity_ptr_id = ce.id)
 WHERE ce.dlt_sess = 0
-AND (pp.part_type_id IN ('standart', 'other'))
+AND (pp.part_type_id IN ('standart', 'other', 'material', 'exemplar'))
 AND (pp.source_id = 1)
-)
+);
 
 -- Изменение редактирующей сессии
 UPDATE core_entity SET edt_sess = 11468 WHERE id IN (
@@ -667,3 +667,14 @@ INNER JOIN pdm_partobject ppo ON (ppo.entity_ptr_id = cer.id) AND (ppo.prod_orde
 WHERE ce.dlt_sess > 0
 ) a
 WHERE entity_ptr_id = a.pid
+
+-- Замена удаленных первоисточников на неудаленные
+UPDATE pdm_partobject SET origin_id = oid
+FROM (
+SELECT ce.id AS pid, fn_origin_id_get(ce.head_key) AS oid
+FROM core_entity ce
+INNER JOIN pdm_partobject pp ON (pp.entity_ptr_id = ce.id) AND (pp.prod_order_id IS NOT NULL) -- Все объекты из заказов
+INNER JOIN core_entity ceo ON (ceo.id = pp.origin_id) AND (ceo.dlt_sess > 0) -- Первоисточник удален
+WHERE (ce.dlt_sess = 0)) a
+WHERE entity_ptr_id = pid
+AND pid IS NOT NULL;

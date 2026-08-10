@@ -14,7 +14,7 @@ python manage.py loaddata sources.json preferences.json formats.json
 python manage.py loaddata change_types.json notice_reasons.json notice_types.json
 python manage.py loaddata roles.json norm_units.json route_states.json
 python manage.py loaddata tp_row_types.json pdm_form_fields.json
-python manage.py loaddata pdm_type_settings.json
+python manage.py loaddata pdm_type_settings.json literas.json
 ```
 Это:
 * Типы сущностей pdm_entity_types.json
@@ -32,6 +32,7 @@ python manage.py loaddata pdm_type_settings.json
 * Типы строк технологических процессов tp_row_types.json
 * Поля форм свойств pdm_form_fields.json
 * Настройки дашбородов типов pdm_type_settings.json
+* Литеры literas.json
 
 ## Пункты меню
 ```cmd

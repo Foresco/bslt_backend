@@ -20,7 +20,7 @@ python manage.py loaddata toolover_fields.json
 
 ## Пункты меню
 ```cmd
-python manage.py import_json 1 toolover/fixtures/menu_items.json
+python manage.py import_json 1 0 toolover/fixtures/menu_items.json
 ```
 
 
@@ -28,15 +28,15 @@ python manage.py import_json 1 toolover/fixtures/menu_items.json
 При необходимости можно добавить в базу данных демоснстрационные данные.
 Классификационные группы
 ```cmd
-python manage.py import_json 1 toolover/demodata/classifications.json
+python manage.py import_json 1 0 toolover/demodata/classifications.json
 ```
 Классы режущего инструмента
 ```cmd
-python manage.py import_json 1 toolover/fixtures/tool_classes.json
+python manage.py import_json 1 0 toolover/fixtures/tool_classes.json
 ```
 Класификационная структура Sandvik
 ```cmd
-python manage.py import_json 1 toolover/fixtures/gtc_application_properties.json
+python manage.py import_json 1 0 toolover/fixtures/gtc_application_properties.json
 ```
 
 ## Команды, доступные в приложении

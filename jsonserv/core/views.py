@@ -630,6 +630,7 @@ class HistoryList(ListAPIView):
                  ).order_by(
             'edt_sess__session_datetime', 'pk'
         )
+        # return chain(creator, history)  # Соединяем результаты запросов
         # История файлов
         files_history = EntityDocumentVersion.objects.filter(
             entity_id=object_id
