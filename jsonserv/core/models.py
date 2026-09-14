@@ -18,6 +18,7 @@ from django.conf import settings  # для обращения к настрой�
 
 from .file_uploader import FileUploader  # Перемещение файлов в архив
 from jsonserv.core.models_dispatcher import ModelsDispatcher
+from jsonserv.core.export_tools import JsonExport
 
 
 # Функции формирования уникальных текстовых ключей
@@ -121,6 +122,13 @@ def check_access(right, user, default=True):  # Возможно, нужно в�
         # Проверяем права доступа (имя права доступа формируем на основе права)
         return user.has_perm(f'{right.content_type.app_label}.{right.codename}')
     return default  # Если право доступа не указано, то доступ по умолчанию
+
+
+def get_real_instance_item(itm):
+    # Определяем модель типа объекта т.к. она скорее всего не Entity
+    # а PartObject или что-то еще
+    source_model = ModelsDispatcher.get_entity_class_by_entity_name(itm.type_key.pk)
+    return source_model.objects.get(pk=itm.pk)
 
 
 class RightMixin(models.Model):  # Миксин для администрирования прав
@@ -522,7 +530,7 @@ class GraphicFile(CreateTrackingMixin):
                        ('view_graphicfile', 'Графический файл. Просмотр')]
 
 
-class EntityType(models.Model):  # Типы сущностей
+class EntityType(models.Model, JsonExport):  # Типы сущностей
     type_key = models.CharField(max_length=50, null=False, primary_key=True, verbose_name='Имя типа',
                                 help_text='Имя типа(ключ)')
     type_name = models.CharField(max_length=50, null=False, verbose_name='Наименование типа')
@@ -895,7 +903,7 @@ class Entity(HistoryTrackingMixin):
         self.edt_sess = edt_sess
         self.save()
 
-    def check_same_count(self):
+    def check_same_count(self, skip_check_same_count=False, src_code=None, src_parent=None):
         """Проверка наличия объекта с таким же ключом"""
         # Внимание! Сейчас уникальность контролируется внутри типа
         if Entity.objects.filter(head_key=self.head_key, type_key=self.type_key).exclude(pk=self.pk).count():
@@ -908,6 +916,7 @@ class Entity(HistoryTrackingMixin):
             raise SuspiciousOperation("Удаление невозможно: у объекта есть связи")
 
     def save(self, *args, **kwargs):
+        skip_check_same_count = kwargs.pop('skip_check_same_count', False)
         if not hasattr(self, 'type_key'):  # Указание типа объекта
             # Получаем ссылку на основе имени класса экземпляра
             try:
@@ -928,14 +937,14 @@ class Entity(HistoryTrackingMixin):
         self.sorted_key = self.get_key_prepare(self, fn_sorted_key)  # Дополнительный отсортированный ключ
 
         # Проверка уникальности head_code корректная обработка ошибок Отключать здесь
-        if self.pk and 1 == 2: # Не пойму, зачем я это сделал... поэтому отключил
-            # Определяем модель типа объекта
-            source_model = ModelsDispatcher.get_entity_class_by_entity_name(self.type_key.pk)
-            parent = source_model.objects.get(pk=self.pk)
-            msg = parent.check_same_count()  # Проверяем по модели родителя
+        if self.pk:
+            # Определяем реальную модель типа объекта т.к. она скорее всего не Entity
+            parent = get_real_instance_item(self)
+            # Передаем и ключевые признаки для проверки (их текущих значений нет в parent)
+            msg = parent.check_same_count(skip_check_same_count, self.code, self.parent)  # Проверяем по модели родителя
         else:
             # Проверка по старому варианту
-            msg = self.check_same_count()
+            msg = self.check_same_count(skip_check_same_count, self.code, self.parent)
 
         if msg:
             raise ValidationError(msg)
@@ -1068,7 +1077,7 @@ class Link(HistoryTrackingMixin):
         permissions = [('view_link', 'Связи. Просмотр')]
 
 
-class Classification(Entity):  # Классификационная группа
+class Classification(Entity, JsonExport):  # Классификационная группа
     order_num = models.PositiveIntegerField(null=True, blank=True, default=1, verbose_name='Порядок при сортировке',
                                             help_text='Порядок сортировки группы в списке')
     group_code = models.CharField(max_length=15, blank=True, null=True, verbose_name='Код группы')
@@ -1084,6 +1093,7 @@ class Classification(Entity):  # Классификационная группа
         default_permissions = ()
         permissions = [('change_classification', 'Классификационная группа. Редактирование'),
                        ('view_classification', 'Классификационная группа. Просмотр')]
+
     class BasaltaProps:
         """Подкласс для хранения специфических атрибутов для системы Базальта"""
         # Перечень экспортируемых полей

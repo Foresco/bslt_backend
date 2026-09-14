@@ -43,12 +43,12 @@ class Task(Entity):
         return 1
 
     @staticmethod
-    def get_key_prepare(props):
+    def get_key_prepare(props, key_generator=fn_head_key):
         # Присвоение уникального проверочного ключа
         if type(props) is dict:
-            return fn_head_key(f"{props['code']}.{props['task_type']}")
+            return key_generator(f"{props['code']}.{props['task_type']}")
         else:  # Экземпляр модели
-            return fn_head_key(f"{props.code}.{props.task_type}")
+            return key_generator(f"{props.code}.{props.task_type}")
 
     @property
     def is_expired(self):
@@ -62,7 +62,7 @@ class Task(Entity):
         code = f'{self.income_number} ({self.code})' if self.income_number else self.code
         return code + f' {self.task_type} '
     
-    def check_same_count(self):
+    def check_same_count(self, skip_check_same_count=False, src_code=None, src_parent=None):
         """Проверка наличия задания с таким же номером"""
         if Task.objects.filter(code=self.code, task_type=self.task_type).exclude(pk=self.pk).count():
             return f'Задача с номером [{self.code}] существует'
@@ -161,12 +161,12 @@ class Letter(Entity):
         return self.code + ' ' + str(self.reg_date)[0:4]
 
     @staticmethod
-    def get_key_prepare(props):
+    def get_key_prepare(props, key_generator=fn_head_key):
         # Присвоение уникального проверочного ключа
         if type(props) is dict:
-            return fn_head_key(props['code'] + str(props['reg_date'])[0:4])
+            return key_generator(props['code'] + str(props['reg_date'])[0:4])
         else:  # Экземпляр модели
-            return fn_head_key(props.code + str(props.reg_date)[0:4])
+            return key_generator(props.code + str(props.reg_date)[0:4])
 
     def get_caption(self):
         """Формирование понятной надписи для разных целей"""

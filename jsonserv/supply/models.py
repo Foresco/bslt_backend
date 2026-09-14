@@ -97,7 +97,7 @@ class OrderProdPosition(HistoryTrackingMixin):
                                      related_name='ordered_positions', verbose_name='Заказ на поставку')
     prod_order_link = models.ForeignKey(ProdOrderLink, null=False, on_delete=models.CASCADE,
                                         related_name='in_supply_orders', verbose_name='Позиция заказа на производство')
-
+    billet_quantity = models.PositiveIntegerField(null=True, blank=True, default=1, verbose_name='Количество заготовок')
 
     class Meta:
         verbose_name = "Производственная позиция в заказе"

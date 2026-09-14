@@ -1,5 +1,4 @@
 from copy import copy
-import json
 from django.core.exceptions import SuspiciousOperation
 from django.db import models
 from django.db.models import F, FilteredRelation, Max, Q
@@ -11,7 +10,8 @@ from jsonserv.core.fileutils import get_sql_file_path
 from jsonserv.core.dbutils import execute_sql_from_file
 from jsonserv.core.models import (List, CodedList, Entity, Link, HistoryTrackingMixin, PeriodTrackingMixin,
                                   UserProfile, MeasureUnit, Place, Classification, UserSession, Permission,
-                                  RightMixin, fn_head_key, NotDeletedObjects, check_access)
+                                  RightMixin, fn_head_key, fn_sorted_key, NotDeletedObjects, check_access)
+from jsonserv.core.export_tools import JsonExport
 
 from jsonserv.pdm import signals  # Сигналы приложения
 
@@ -199,7 +199,7 @@ class Role(List):
                        ('view_role', 'Роль. Просмотр')]
 
 
-class PartObject(Entity):  # Элемент конструкции
+class PartObject(Entity, JsonExport):  # Элемент конструкции
     part_type = models.ForeignKey(
         to='PartType', on_delete=models.CASCADE, verbose_name='Тип')
     title = models.CharField(max_length=250, blank=True,
@@ -283,13 +283,19 @@ class PartObject(Entity):  # Элемент конструкции
         return ' '.join(
             filter(None, [self.code, parent_code, self.title, order_code, base_rend, '|', self.part_type.type_name]))
 
-    def check_same_count(self):
+    def check_same_count(self, skip_check_same_count=False, src_code=None, src_parent=None):
         """Проверка наличия объекта с таким же ключом"""
+        if skip_check_same_count:
+            # Если установлен признак отключения проверки уникальности обозначений
+            return ''
         # Присвоение уникального проверочного ключа
         self.head_key = fn_head_key(
-            self.code, self.parent.code if self.parent and self.part_type.doc_key else '')
-        filters = dict(head_key=self.head_key)
+            src_code, src_parent.code if src_parent and self.part_type.doc_key else '')
+        # Присвоение сортированного проверочного ключа
+        self.sorted_key = fn_sorted_key(
+            src_code, src_parent.code if src_parent and self.part_type.doc_key else '')
 
+        filters = dict()
         if self.prod_order:
             # Дополнительно проверяем в рамках производственного заказа
             filters['prod_order'] = self.prod_order
@@ -297,13 +303,14 @@ class PartObject(Entity):  # Элемент конструкции
             filters['prod_order__isnull'] = True
 
         # Внимание! Сейчас уникальность контролируется внутри типа PartObject
-        if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
+        if PartObject.objects.filter(Q(head_key=self.head_key) | Q(sorted_key=self.sorted_key)).filter(
+                **filters).exclude(pk=self.pk).count():
             return f'Ключевой атрибут объекта конструкции [{self.head_key}] не уникален'
         if self.nom_code:
-            del filters['head_key']
             # Дополнительно поиск в номенклатурному коду
             filters['nom_code'] = self.nom_code
-            if PartObject.objects.filter(**filters).exclude(pk=self.pk).count():
+            if PartObject.objects.filter(Q(head_key=self.head_key) | Q(sorted_key=self.sorted_key)).filter(
+                    **filters).exclude(pk=self.pk).count():
                 return f'Номенклатурный код [{self.nom_code}] не уникален'
         return ''
 
@@ -349,12 +356,6 @@ class PartObject(Entity):  # Элемент конструкции
             n.origin_id = self.pk
             # Убираем идентификаторы, чтобы создался новый объект
             n.pk, n.id = None, None
-            # Получение параметров создания по умолчанию
-            # init_params = PartType.get_init_params(n.part_type.part_type)
-            # if init_params:
-            #     init_params = json.loads(init_params)  # Преобразуем в словарь
-            #     for prop in init_params:
-            #         setattr(n, prop, init_params[prop])
             # Добавляем новые свойства
             n.code = code
             n.state_id = 1  # Создаем всегда в состоянии Разработка
@@ -433,11 +434,12 @@ class PartObject(Entity):  # Элемент конструкции
             # Получаем состав копии
             obj_staff = dict((d['child__partobject__origin_id'], d) for d in
                              PartLink.objects.filter(parent=self.pk).values('child__partobject__origin_id', 'position',
-                                                                       'quantity', 'pk'))
+                                                                            'quantity', 'pk'))
             # Получаем состав исходного объекта
             origin_staff = dict((d['child_id'], d) for d in
-                                PartLink.objects.filter(parent=self.origin_id).values('child_id', 'position', 'quantity',
-                                                                                 'pk'))
+                                PartLink.objects.filter(parent=self.origin_id).values('child_id', 'position',
+                                                                                      'quantity',
+                                                                                      'pk'))
             # Находим недостающие записи
             difference = list(set(origin_staff.keys()) - set(obj_staff.keys()))
             for r in difference:  # Добавляем то, чего нет в копии
@@ -515,7 +517,7 @@ class PartObject(Entity):  # Элемент конструкции
             if edt_count:
                 mess_txt.append(f'Добавлено извещений {edt_count}')
 
-        return mess_txt, False # Ошибок не было
+        return mess_txt, False  # Ошибок не было
 
     @staticmethod
     def create_in_order(origin_id, prod_order_id, crtd_sess_id):
@@ -589,6 +591,7 @@ class PartObject(Entity):  # Элемент конструкции
 
 class ListPartObjectsNoOrderParts(models.Manager):
     """Менеджер, возвращающий только не удаленные объекты и не объекты в заказах"""
+
     def get_queryset(self):
         return super(ListPartObjectsNoOrderParts, self).get_queryset().filter(
             dlt_sess=0,  # Не имеющие отметки об удалении
@@ -598,6 +601,7 @@ class ListPartObjectsNoOrderParts(models.Manager):
 
 class ListPartObjectsAll(models.Manager):
     """Менеджер, возвращающий только не удаленные объекты в т.ч. объекты в заказах"""
+
     def get_queryset(self):
         return super(ListPartObjectsAll, self).get_queryset().filter(
             dlt_sess=0  # Не имеющие отметки об удалении
@@ -854,7 +858,7 @@ class Section(List):  # Раздел спецификации
                        ('view_section', 'Раздел спецификации. Просмотр')]
 
 
-class PartLink(Link):  # Связь Входит в
+class PartLink(Link, JsonExport):  # Связь Входит в
     draft_zone = models.CharField(
         max_length=5, null=True, blank=True, verbose_name='Зона')
     position = models.PositiveIntegerField(
@@ -1102,7 +1106,7 @@ class Rendition(HistoryTrackingMixin):  # Исполнения
     def save(self, *args, **kwargs):
         """При создании исполнения ему нужно копировать 
         ссылки на все файлы базового исполнения
-        роли розработчиков от базового исполнения"""
+        роли разработчиков от базового исполнения"""
         signals.copy_file_links_signal.send(
             sender='rendition', parent=self.parent, child=self.rendition)
         signals.copy_design_roles_signal.send(

@@ -1,7 +1,8 @@
 # Утилиты для работы с pdf-файлами
 import os.path
-from PyPDF2 import PdfFileWriter, PdfFileReader #, PdfReader, PdfWriter
 import io
+from pypdf import PdfReader, PdfWriter
+# from pypdf.generic import Destination, NumberObject
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase import pdfmetrics
@@ -9,18 +10,19 @@ from reportlab.pdfbase.ttfonts import TTFont
 from jsonserv.core.fileutils import get_watermark_file_path
 import logging
 
+import sys
+sys.setrecursionlimit(5000)  # Default is usually 1000
+
 logger = logging.getLogger('basalta')
 
 
 def insert_text_to_pdf(file_name, text, x, y, red=True, new_file_name=''):
     """Вставка текста в pdf-фай с сохранением во временный каталог"""
 
-    def get_width_height():
+    def get_width_height(page):
         """Вычисление ширины и высоты листа"""
-        # mb = page.mediaBox
         mb = page.mediabox
-        # return mb.getWidth(), mb.getHeight(), page.get('/Rotate')
-        return mb.width, mb.height, page.get('/Rotate')
+        return mb.width, mb.height, page.get('/Rotate', 0)
 
     def write_vertical_text(page_width, page_height, rotate_angle):
         packet = io.BytesIO()
@@ -30,56 +32,83 @@ def insert_text_to_pdf(file_name, text, x, y, red=True, new_file_name=''):
         if red:
             can.setFillColorRGB(200, 0, 0)
         can.saveState()
-        logger.info(f'page_width={page_width}, page_height={page_height}, x={x}, y={y}, r={rotate_angle}')
+
         if rotate_angle == 90:  # Если применено вращение страницы (90)
-            # Высота и ширина поменяны местами чтобы учесть дальнейшее вращение
             can.setPageSize((page_width, page_height))
             can.rotate(180)
-            can.drawString(x - round(page_width), y - round(page_height), text)  # без round ошибка
+            can.drawString(x - round(page_width), y - round(page_height), text)
         elif rotate_angle:  # Если применено вращение страницы (предполагается 270)
             can.drawString(x, y, text)
         else:
-            # Высота и ширина поменяны местами чтобы учесть дальнейшее вращение
             can.setPageSize((page_width, page_height))
             can.rotate(90)
-            can.drawString(x, y - round(page_width), text)  # без round ошибка
+            can.drawString(x, y - round(page_width), text)
+
         can.restoreState()
         can.save()
-        # Переходим в начало StringIO буфера
         packet.seek(0)
-        # Генерируем новый pdf
-        # return PdfFileReader(packet)
-        return PdfFileReader(packet)
+        return PdfReader(packet)
     
     logger.info(f'Читаем существующий pdf-файл {file_name}')
-    # existing_pdf = PdfFileReader(open(file_name, "rb"), strict=False)
-    existing_pdf = PdfFileReader(open(file_name, "rb"), strict=False)
-    # output = PdfFileWriter()
-    output = PdfFileWriter()
+    existing_pdf = PdfReader(open(file_name, "rb"), strict=False)
+    output = PdfWriter()
     # logger.info('Перебираем страницы')
-    # for page_num in range(existing_pdf.getNumPages()):
-    for page_num in range(len(existing_pdf.pages)):
-        # logger.info('Вставка на первую страницу')
-        page = existing_pdf.pages[page_num]
+    for page_num, page in enumerate(existing_pdf.pages):
+        # logger.info(f'Страница {page_num}')
+        if page_num > 1000:
+            continue
         if page_num == 0:   # Вставка только на первой странице
+            logger.info('Вставка на первую страницу')
             # Определяем ширину и высоту страницы
-            w, h, r = get_width_height()
+            w, h, r = get_width_height(page)
             # Создаем образ с меткой
             wm = write_vertical_text(w, h, r)
             # Совмещаем страницы
             try:
-                # page.mergePage(wm.getPage(0))
                 page.merge_page(wm.pages[0])
             except Exception as e:
                 logger.error(e)
             # Сжимаем для оптимизации размера
-            try:
-                # page.compressContentStreams()
-                page.compress_content_streams()
-            except Exception as e:
-                logger.error(e)
-        # output.addPage(page)
+            # try:
+            #     page.compress_content_streams()
+            # except Exception as e:
+            #     logger.error(e)
+
         output.add_page(page)
+
+    # Сжатие страниц для оптимизации размера
+    compressed = False  # Для контроля сжатия только первой страницы
+    for page in output.pages:
+        if compressed:  # Значит страница не первая
+            break
+        page.compress_content_streams(level=9)  # Works correctly
+        compressed = True  # Первую страницу обработали
+
+    # Копирование оглавления    
+    if existing_pdf.outline:
+        # Функция для рекурсивного копирования закладок
+        def copy_outline_items(outline_items, parent):
+            parent_loc = None
+            for item in outline_items:
+                if isinstance(item, list):
+                    # Если это список элементов оглавления
+                    copy_outline_items(item, parent_loc)
+                else:
+                    # Это элемент оглавления - создаем его
+                    if hasattr(item, 'page'):
+                        # print(item.page)
+                        # Определяем номер страницы для закладки
+                        page_number = existing_pdf.get_destination_page_number(item)
+                        # Создаем новую закладку
+                        parent_loc = output.add_outline_item(
+                                    title=item.title,
+                                    page_number=page_number,
+                                    parent=parent
+                                )
+        # Получаем корневые закладки
+        outline_root = existing_pdf.outline
+        copy_outline_items(outline_root, None)
+
     # Записываем в новый файл
     if not new_file_name:
         # Имя нового файла не передано в параметрах

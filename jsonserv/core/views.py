@@ -27,7 +27,7 @@ from jsonserv.core.models import (Classification, Entity, EntityType, HistoryLog
                                   FormField, GraphicFile, UserSession, TypePanel, TypeExtraLink, ActionLog,
                                   TypeSetting, Report, UserProfile, UserSettings, check_access, children)
 from jsonserv.core.serializers import (ClassificationTreeSerializer, EntitySerializer, ExtraLinkSerializer,
-                                       HistorySerializerList, UserActionLogSerializer, ActionLogSerializer,
+                                       HistorySerializerList, ActionLogSerializer,
                                        LinkedSerializerList, ReportParamSerializer,
                                        UserGroupListSerializer, UserSessionSerializer)
 
@@ -115,7 +115,7 @@ class ApplicationView(TemplateView):
         # TODO: Сделать нормальную обработку нулевого значения user_session_id
         user_session = UserSession.objects.get(pk=user_session_id)
         # Текущий пользователь может использоваться для получения прав
-        self.user = self.request.user
+        # self.user = self.request.user
         # Логирование действий пользователя
         ActionLog.log_action('C', self.request.path, self.request.session)
         dashboard = UserProfile.get_user_dashboard(self.user)
@@ -227,6 +227,7 @@ class ApplicationView(TemplateView):
 
     def get_context_data(self, **kwargs):
         """Главная функция, формирующая словарь context для заполнения шаблона"""
+        self.user = self.request.user  # Текущий пользователь может использоваться для получения прав
         if not self.params_read(**kwargs):  # Разбор входных параметров
             # Заполнение параметров (в дочерних классах свои варианты)
             self.fill_keys(**kwargs)
@@ -740,9 +741,21 @@ class ActionLogList(ListAPIView):
     name = 'action-log-list'
 
     def get_queryset(self):
-        user_id = self.request.GET.get('user_id', 0)
+        filter_params = dict(session__user_id=self.request.GET.get('user_id', 0))
+        action_type = self.request.GET.get('action_type', '')
+        # Тип действия
+        if action_type:
+            filter_params['action_type'] = action_type
+        # Начальная дата
+        date_from = self.request.GET.get('date_from', '')
+        if date_from:
+            filter_params['action_datetime__gte'] = date_from
+        # Конечная дата
+        date_till = self.request.GET.get('date_till', '')
+        if date_till:
+            filter_params['action_datetime__lte'] = date_till
         # Фильтрация данных о действиях пользователя
-        return ActionLog.objects.filter(session__user_id=user_id)
+        return ActionLog.objects.filter(**filter_params)
 
 
 class UserSessionList(ListAPIView):

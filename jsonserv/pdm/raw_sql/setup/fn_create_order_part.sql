@@ -25,8 +25,8 @@ BEGIN
   END IF;
 
   -- Создаем entity
-  INSERT INTO core_entity(code, auto_code, description, head_key, rating, guid, parent_id, type_key_id, group_id, crtd_sess_id, edt_sess, dlt_sess)
-  SELECT code, auto_code, description, head_key, 0,
+  INSERT INTO core_entity(code, auto_code, description, head_key, sorted_key, rating, guid, parent_id, type_key_id, group_id, crtd_sess_id, edt_sess, dlt_sess)
+  SELECT code, auto_code, description, head_key, sorted_key, 0,
   uuid_in(md5(random()::text || clock_timestamp()::text)::cstring), -- Генерация guid
   parent_id, type_key_id, group_id, _crtd_sess_id, 0, 0
   FROM core_entity WHERE (id = _origin_id);

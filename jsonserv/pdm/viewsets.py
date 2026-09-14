@@ -286,7 +286,8 @@ class PartObjectViewSet(CommonViewSet):
                         # Если доступ на редактирование к состоянию есть
                         s.state_id = request.data['state']  # Копируем состояние
                         s.edt_sess = request.session.get('user_session_id', 1)
-                        s.save()
+                        # Отключаем проверку уникальности обозначений. Так просил СММ (Варджийска)
+                        s.save(skip_check_same_count=True)
 
         if 'design_mater' in request.data and request.data['design_mater']:  # Если передан конструкторский материал
             if not DesignMater.is_exists(self.kwargs['pk'], request.data['design_mater']):

@@ -30,6 +30,7 @@ router_urls = {
     'rest/prodorderlink': viewsets.ProdOrderLinkViewSet,
     'rest/prodorderlinktprow': viewsets.ProdOrderLinkTpRowViewSet,
     'rest/prodorderlinkworker': viewsets.ProdOrderLinkWorkerViewSet,
+    'rest/semisquantity': viewsets.SemisViewSet,
     'rest/shipment': viewsets.ShipmentViewSet,
     'rest/workerreport': viewsets.WorkerReportConsistViewSet,
     'rest/workershift': viewsets.WorkerShiftViewSet
