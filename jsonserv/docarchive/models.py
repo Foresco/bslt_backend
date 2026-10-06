@@ -131,7 +131,7 @@ class FileDocument(HistoryTrackingMixin):
     """Файловый документы. Заголовки файлов, хранящихся в файловых архивах"""
     doc_code = models.CharField(max_length=200, null=False, blank=False, verbose_name='Обозначение документа')
     doc_name = models.CharField(max_length=250, blank=True, null=True, verbose_name="Наименование документа")
-    doc_type = models.ForeignKey(DocumentType, null=True, blank=True, on_delete=models.SET_NULL,
+    doc_type = models.ForeignKey(DocumentType, null=False, blank=False, on_delete=models.SET_DEFAULT, default=1,
                                  verbose_name="Вид файлового документа")
     description = models.TextField(blank=True, null=True, verbose_name='Описание')
     archive = models.ForeignKey(FileArchive, null=False, verbose_name='Архив', on_delete=models.CASCADE)

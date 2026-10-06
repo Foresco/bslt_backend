@@ -25,7 +25,7 @@ class ListPartObjects(models.Manager):
         )
 
 
-class PartType(RightMixin):  # Типы объектов конструкции
+class PartType(RightMixin, JsonExport):  # Типы объектов конструкции
     part_type = models.CharField(max_length=20, null=False, primary_key=True, verbose_name='Имя типа',
                                  help_text='Имя типа(ключ)')
     type_name = models.CharField(
@@ -199,7 +199,7 @@ class Role(List):
                        ('view_role', 'Роль. Просмотр')]
 
 
-class PartObject(Entity, JsonExport):  # Элемент конструкции
+class PartObject(Entity):  # Элемент конструкции
     part_type = models.ForeignKey(
         to='PartType', on_delete=models.CASCADE, verbose_name='Тип')
     title = models.CharField(max_length=250, blank=True,
@@ -413,6 +413,12 @@ class PartObject(Entity, JsonExport):  # Элемент конструкции
             description = f'{description} в заказе {self.prod_order.code}'
         return f'{self.part_type.type_name} {description}'
 
+    def children_for_export_get(self):
+        """Получение списка связанных потомков
+        в виде генератора"""
+        for child_link in PartLink.objects.filter(parent=self).iterator():
+            yield child_link
+
     def update_in_order(self, user_session_id, properties, staff, notices):
         """Обновление копии объекта в заказе на основе свойств исходного объекта"""
         # Определение идентификатора объекта-источника
@@ -509,7 +515,6 @@ class PartObject(Entity, JsonExport):  # Элемент конструкции
                 # Две строки нужны, т.к. модель с наследованием (stackoverflow)
                 src.id = None
                 src._state.adding = True
-
                 src.crtd_sess_id = user_session_id
                 src.save()
                 edt_count += 1

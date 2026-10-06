@@ -9,18 +9,18 @@ class ModelsDispatcher:
     __instance = None  # Ссылка на единственный экземпляр
 
     def __new__(cls):
+        # print('__new__')
         if cls.__instance is None:
             cls.__instance = super(ModelsDispatcher, cls).__new__(cls)
         return cls.__instance
 
     # Список приложений, исключаемых из обработки
     exclude_apps = ('admin', 'auth', 'contenttypes', 'sessions', 'messages', 'staticfiles', 'corsheaders',
-                   'rest_framework', 'django_filters', 'django_extensions', 'basaltalegasy', 'vw')
-    entities_classes = dict()   # Словарь для хранения всех классов моделей
-    # entities_fields = dict()    # Словарь для хранения всех обязательных свойств сущностей
-    required_fields = dict()    # Словарь для хранения обязательных полей сущностей
+                    'rest_framework', 'django_filters', 'django_extensions', 'basaltalegasy', 'vw')
+    entities_classes = dict()    # Словарь для хранения всех классов моделей
+    required_fields = dict()     # Словарь для хранения обязательных полей сущностей
     track_link_classes = list()  # Список моделей, хранящих связи для отслеживания при замене
-    same_link_classes = list()  # Список моделей, хранящих связи для отслеживания при создании подобного
+    same_link_classes = list()   # Список моделей, хранящих связи для отслеживания при создании подобного
 
     def __init__(self):
         # При инициализации класса переносим все модели из приложений в единые массив
@@ -30,6 +30,7 @@ class ModelsDispatcher:
                     continue
                 for model in app.get_models():
                     k = model.__name__.lower()
+                    # print(k)
                     ModelsDispatcher.entities_classes[k] = model
                     # Запись обязательных свойств в список и массив
                     # TODO: сделать точнее и гибче (get_required)

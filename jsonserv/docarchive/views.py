@@ -162,9 +162,9 @@ def get_file(request, **kwargs):
             doc_type = file.file_doc_type
             if file.file_doc_type:
                 # Если право не назначено - доступ разрешен
-                if not check_access(doc_type.value_right, request.session.user, True):
+                if not check_access(doc_type.value_right, request.user, True):
                     # Права на скачивание нет
-                    return HttpResponse('У Вас нет права скачивать файлы данного типа')
+                    return HttpResponse('У Вас нет права скачивать файлы данного типа', status=403)
             if os.path.exists(file.file_path):
                 file_path, file_name, data_format = prepare_file_for_unload(request, file)
                 return http_unload_file(file_path, file_name, data_format)
@@ -185,14 +185,14 @@ class GetDocArchiveFile(View):
     def get(request, **kwargs):
         if not request.user.is_authenticated:
             # Проверка, что пользователь авторизован
-            return HttpResponse('Unauthorized', status=401)
+            return HttpResponse('Unauthorized', status=403)
         if not request.user.has_perm('docarchive.view_digitalfile'):
             # Проверка наличия права Электронный файл. Просмотр
-            return HttpResponse('Недостаточно прав для получения файлов')
+            return HttpResponse('Недостаточно прав для получения файлов', status=403)
         if getattr(request.user, 'userprofile', None):  # Если у пользователя есть профиль
             if request.user.userprofile.check_download_limit():
                 # Проверка достижения лимита на скачивание
-                return HttpResponse('Исчерпан лимит количеств скачивания файлов')
+                return HttpResponse('Исчерпан лимит количеств скачивания файлов', status=403)
         # Вызываем универсальную функцию
         return get_file(request, **kwargs)
 

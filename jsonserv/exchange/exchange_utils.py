@@ -6,7 +6,7 @@ import os.path
 from django.db.models.fields.related import ForeignKey, ManyToManyField  # Класс для определения внешних ключей
 from django.conf import settings  # для обращения к настройкам
 
-from jsonserv.core.models import Entity, UserSession as usr_sess # Для доступа к сессиям
+from jsonserv.core.models import Entity, UserSession as usr_sess  # Для доступа к сессиям
 from jsonserv.exchange.models import ExchangeSession, ExternalID
 from jsonserv.core.models_dispatcher import ModelsDispatcher
 
@@ -19,7 +19,7 @@ class DataImporter:
     """Класс с функционалом импорта из списков словарей со свойствами"""
     # Предназначенные для импорта элементы предварительно загружаются в массив для упорядоченного импорта
     items_to_import = dict()  # Экземпляры для импорта
-    imported_ids = dict()  # Импортированные идентификаторы и сопоставленные им внутренные идентификаторы
+    imported_ids = dict()  # Импортированные идентификаторы и сопоставленные им внутренние идентификаторы
     ModelsDispatcher = ModelsDispatcher()
     exclude_props = ('id', )  # Имена полей, исключаемые из передаваемого на импорт массива
     # Дополнительные поля, их нет в моделях, но их нужно обработать
@@ -73,7 +73,7 @@ class DataImporter:
         """Предварительное наполнение массива элементами для импорта с контролем уникальности"""
         if 'id' in exter:  # Если в массиве есть id
             if not self.is_in_loaded(exter['id']):  # Ранее добавленные пропускаем
-                self.items_to_import[exter['id']] = exter  # В словарь предназаняенных для импорта
+                self.items_to_import[exter['id']] = exter  # В словарь предназначенных для импорта
             return 0
         else:
             logging.error('Объект {} не имеет атрибута id'.format(exter))
@@ -218,9 +218,6 @@ class DataImporter:
         prepared_props = self.prepare_item_dict(target_model, item_dict)
         many_to_many_links = prepared_props.pop('many_to_many_links', '')  # Предварительно вырезаем из словаря
         # Создаем новый объект в базе данных
-        # get_or_create_item ДОЛЖЕН БЫТЬ У КАЖДОЙ МОДЕЛИ!!!
-        # print(target_model_name)
-        # print(prepared_props)
         new_item, created = target_model.get_or_create_item(prepared_props)
         message = 'создан' if created else 'найден'
         logging.info(f'{new_item} {message}')

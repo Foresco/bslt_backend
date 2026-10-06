@@ -2552,7 +2552,7 @@ class ItemsList(list):
 
     @staticmethod
     def to_dict_checked(prop_entity):
-        """Только при наличии ссылки на эксземпляр сущности вызывается ее метод"""
+        """Только при наличии ссылки на экземпляр сущности вызывается ее метод"""
         if prop_entity is not None:
             return prop_entity.to_dict()
         return None

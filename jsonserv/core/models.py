@@ -118,6 +118,8 @@ def add_to_history_new(row):
 
 def check_access(right, user, default=True):  # Возможно, нужно вынести в какой-то отдельный модуль
     """Проверка права доступа к пользователя к праву"""
+    # print(right)
+    # print(user)
     if right:
         # Проверяем права доступа (имя права доступа формируем на основе права)
         return user.has_perm(f'{right.content_type.app_label}.{right.codename}')
@@ -330,7 +332,7 @@ class TypeSetting(RightMixin):  # Настройки типов
 
 
 # Абстрактный класс списков
-class List(models.Model):
+class List(models.Model, JsonExport):
     order_num = models.PositiveIntegerField(null=False, default=1, verbose_name='Порядок в списке',
                                             help_text='Порядок сортировки значения в списке')
     list_value = models.CharField(max_length=100, null=False, blank=True, default='', verbose_name='Значение')
@@ -677,7 +679,7 @@ class MenuItem(models.Model):  # Пункты меню
 
 # Классы для хранения данных
 
-class Essence(models.Model):  # Измеряемые сущности
+class Essence(models.Model, JsonExport):  # Измеряемые сущности
     essence_name = models.CharField(max_length=35, unique=True, null=False, verbose_name='Наименование')
 
     def __str__(self):
@@ -717,7 +719,7 @@ class MeasureSystem(List):  # Системы измерения
         #                ('view_measuresystem', 'Система измерения. Просмотр')]
 
 
-class MeasureUnit(HistoryTrackingMixin, models.Model):  # Единицы измерения
+class MeasureUnit(HistoryTrackingMixin, JsonExport):  # Единицы измерения
     SEPARATORCHOICES = (
         ('', 'Нет'),
         ('*', 'Умножать'),
@@ -807,7 +809,7 @@ class DeletedObjects(models.Manager):
 
 
 # Базовая сущность
-class Entity(HistoryTrackingMixin):
+class Entity(HistoryTrackingMixin, JsonExport):
     type_key = models.ForeignKey(to='EntityType', blank=False, null=False, on_delete=models.CASCADE,
                                  verbose_name='Тип сущности')
     parent = models.ForeignKey(to='Entity', related_name='related_objects', on_delete=models.SET_DEFAULT,
@@ -1077,7 +1079,7 @@ class Link(HistoryTrackingMixin):
         permissions = [('view_link', 'Связи. Просмотр')]
 
 
-class Classification(Entity, JsonExport):  # Классификационная группа
+class Classification(Entity):  # Классификационная группа
     order_num = models.PositiveIntegerField(null=True, blank=True, default=1, verbose_name='Порядок при сортировке',
                                             help_text='Порядок сортировки группы в списке')
     group_code = models.CharField(max_length=15, blank=True, null=True, verbose_name='Код группы')
@@ -1096,7 +1098,7 @@ class Classification(Entity, JsonExport):  # Классификационная 
 
     class BasaltaProps:
         """Подкласс для хранения специфических атрибутов для системы Базальта"""
-        # Перечень экспортируемых полей
+        # Перечень экспортируемых полей для метода to_json
         json_fields = ('id', 'group', 'order_num', 'code')
 
 
@@ -1625,7 +1627,7 @@ class HistoryLog(models.Model):
                        ('view_historylog', 'История изменения. Просмотр')]
 
 
-class Report(models.Model):
+class Report(RightMixin):
     """Отчеты, формируемые системой"""
     report_name = models.CharField(max_length=20, null=False, blank=False, unique=True,
                                    verbose_name='Идентификатор отчета')
