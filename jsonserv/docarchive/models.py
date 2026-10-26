@@ -9,13 +9,14 @@ import logging
 from jsonserv.core.models import (List, StructuredList, Entity, EntityType, Link, CreateTrackingMixin,
                                   HistoryTrackingMixin, Place, RightMixin)
 from jsonserv.pdm.models import ChangeType, Designer, Notice, Rendition, Role, Stage, PartState
+from jsonserv.core.export_tools import JsonExport
 from jsonserv.core.fileutils import copy_file_to_folder, compute_check_sum
 from jsonserv.docarchive.file_prepare import prepare_file_for_store
 
 logger = logging.getLogger('basalta')
 
 
-class FileArchive(RightMixin, models.Model):
+class FileArchive(RightMixin, JsonExport):
     """Информация об архивах документов"""
     archive_name = models.CharField(max_length=25, null=False, blank=False, unique=True,
                                     verbose_name="Наименование архива")
@@ -127,7 +128,7 @@ class DocumentType(RightMixin, StructuredList):
                        ('view_documenttype', 'Тип файлового документа. Просмотр')]
 
 
-class FileDocument(HistoryTrackingMixin):
+class FileDocument(HistoryTrackingMixin, JsonExport):
     """Файловый документы. Заголовки файлов, хранящихся в файловых архивах"""
     doc_code = models.CharField(max_length=200, null=False, blank=False, verbose_name='Обозначение документа')
     doc_name = models.CharField(max_length=250, blank=True, null=True, verbose_name="Наименование документа")
@@ -167,7 +168,7 @@ class FileDocument(HistoryTrackingMixin):
                        ('view_filedocument', 'Файловый документ. Просмотр')]
 
 
-class DocumentVersion(HistoryTrackingMixin):
+class DocumentVersion(HistoryTrackingMixin, JsonExport):
     """Версии файловых документов"""
     document = models.ForeignKey(FileDocument, related_name='document_versions', on_delete=models.CASCADE,
                                  blank=False, null=False, verbose_name='Ссылка на документ')
@@ -225,6 +226,16 @@ class DocumentVersion(HistoryTrackingMixin):
                 v.edt_sess = edt_sess
                 v.save()
 
+    def to_json(self, all_item_ids):
+        """Более сложный вариант, выгружающий еще и файлы"""
+        all_arr = super(DocumentVersion, self).to_json(all_item_ids)
+        
+        # Дополнительно выгружаем информацию о файлах
+        for dig_file in self.digital_files.filter(dlt_sess=0):
+            all_arr.append(dig_file.to_json(all_item_ids))
+
+        return all_arr
+
     class Meta:
         verbose_name = "Версия файлового документа"
         verbose_name_plural = "Версии файловых документов"
@@ -233,7 +244,7 @@ class DocumentVersion(HistoryTrackingMixin):
                        ('view_documentversion', 'Версия файлового документа. Просмотр')]
 
 
-class DigitalFile(HistoryTrackingMixin):
+class DigitalFile(HistoryTrackingMixin, JsonExport):
     """Файлы документов"""
     document_version = models.ForeignKey(DocumentVersion, null=True, verbose_name='Версия документа',
                                          related_name='digital_files', on_delete=models.CASCADE)
@@ -253,6 +264,11 @@ class DigitalFile(HistoryTrackingMixin):
     def file_path(self):
         """Получение пути к файлу в хранилище"""
         return os.path.join(self.folder.folder_path, self.file_name)
+
+    @property
+    def src(self):
+        """Получение относительного пути к файлу в хранилище"""
+        return os.path.join(self.folder.folder_name, self.file_name)
 
     @property
     def file_doc_type(self):
@@ -328,6 +344,22 @@ class DigitalFile(HistoryTrackingMixin):
             logger.info(f'Копирование {src} {file_path} неудачное')
             return None, None
 
+    def to_json(self, all_item_ids):
+        # return None
+        """Для файла особый способ описания"""
+        ref_id = self.ref_get()
+        if ref_id in all_item_ids:
+            # Если объект с таким идентификатором ранее выгружался
+            return None  # Останавливаемся и ничего не выгружаем
+        # Добавляем идентификатор в список экспортированных
+        all_item_ids.append(ref_id)
+        item_data = dict(id=ref_id, model='DigitalFile')  # Данные о файле
+        item_data['document_version'] = self.document_version.ref_get()  # Предполагаем, что сам объект уже выгружен
+        item_data['file_name'] = self.file_name
+        item_data['src'] = self.src
+        item_data['file_path'] = self.file_path  # Для последующего извлечения из архива в пакет
+        return item_data
+
     class Meta:
         verbose_name = "Электронный файл"
         verbose_name_plural = "Электронные файлы"
@@ -364,7 +396,7 @@ class VersionDesignRole(HistoryTrackingMixin):
                        ('view_versiondesignrole', 'Выполненная роль в разработке. Просмотр')]
 
 
-class EntityDocumentVersion(HistoryTrackingMixin):
+class EntityDocumentVersion(HistoryTrackingMixin, JsonExport):
     """Связь объектов и документов"""
     entity = models.ForeignKey(Entity, related_name='object_documents', on_delete=models.CASCADE,
                                blank=False, null=False, verbose_name='Ссылка на владельца документа')
