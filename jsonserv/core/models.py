@@ -1665,6 +1665,7 @@ class ReportParam(models.Model):
         ('CheckBox', 'Да/Нет'),
         ('RadioButton', 'Выбор варианта'),
         ('TextBox', 'Текстовое поле'),
+        ('FileButton', 'Файл'),
     )
     report = models.ForeignKey(Report, null=False, blank=False, on_delete=models.CASCADE, related_name='report_params',
                                verbose_name='Отчет')
