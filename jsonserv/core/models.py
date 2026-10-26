@@ -973,6 +973,12 @@ class Entity(HistoryTrackingMixin, JsonExport):
         # Ссылкой является уникальный идентификатор
         return '/%i/' % self.id
 
+    def docfiles_for_export_get(self):
+        """Получение списка связанных файлов в виде генератора"""
+        doc_versions = self.object_documents.filter(entity=self, old_version=False)  # Только текущие версии
+        for doc_version in doc_versions.iterator():
+            yield doc_version
+
     class Meta:
         ordering = ['code']
         indexes = [

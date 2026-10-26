@@ -413,12 +413,6 @@ class PartObject(Entity):  # Элемент конструкции
             description = f'{description} в заказе {self.prod_order.code}'
         return f'{self.part_type.type_name} {description}'
 
-    def children_for_export_get(self):
-        """Получение списка связанных потомков
-        в виде генератора"""
-        for child_link in PartLink.objects.filter(parent=self).iterator():
-            yield child_link
-
     def update_in_order(self, user_session_id, properties, staff, notices):
         """Обновление копии объекта в заказе на основе свойств исходного объекта"""
         # Определение идентификатора объекта-источника
@@ -546,6 +540,12 @@ class PartObject(Entity):  # Элемент конструкции
                 return key_generator(props.code, props.parent.code)
             else:
                 return key_generator(props.code)
+
+    def children_for_export_get(self):
+        """Получение списка связанных потомков в виде генератора"""
+        parts = PartLink.objects.filter(parent=self)
+        for child_link in parts.iterator():
+            yield child_link
 
     class Meta:
         verbose_name = "Объект конструкции"

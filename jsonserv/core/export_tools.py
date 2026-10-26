@@ -3,6 +3,8 @@ import json
 from django.db import models
 from jsonserv.core.models_dispatcher import ModelsDispatcher
 
+# from jsonserv.docarchive.models import EntityDocumentVersion
+
 
 class JsonExport:
     """Класс с функциональностью экспорта в JSON"""
@@ -30,6 +32,10 @@ class JsonExport:
         """Получение списка связанных потомков"""
         yield from ()  # По умолчанию пустой итератор
 
+    def docfiles_for_export_get(self):
+        """Получение списка связанных файлов в виде генератора"""
+        yield from ()  # По умолчанию пустой итератор
+
     def to_json(self, all_item_ids):
         """Метод выгрузки данных в JSON
         all_item_ids - list()  # Собранный список уникальных идентификаторов объектов"""
@@ -46,13 +52,16 @@ class JsonExport:
         # Перебираем все поля модели
         for field in self._meta.fields:
             field_name = field.name
-            # print(field_name)
             if field_name in JsonExport.exclude_fields:
                 # Поля из списка исключений пропускаем
                 continue
 
-            if field_name == 'code':
-                print(getattr(self, field_name))
+            # if field_name == 'code':
+            #     print(getattr(self, field_name))
+            if field_name == 'guid':
+                # Поле формата UUIDField обрабатываем по другому ввиду ошибки сериализации
+                item_data[field_name] = str(getattr(self, field_name))
+                continue
             if isinstance(field, models.ForeignKey):
                 # Если это ссылка на объект, то записываем ссылку
                 f_obj = getattr(self, field_name)
@@ -74,9 +83,12 @@ class JsonExport:
         # Добавляем название модели
         item_data['model'] = self.__class__.__name__
         all_items.append(item_data)  # Добавляем сам объект в список
-        # Добавление связей с потомками и описаний потомков
-        # У каждого класса должен быть метод, возвращающий связаные с ним экземпляры
+        # Добавление связей с потомками из состава и описаний потомков
         for child_link in self.children_for_export_get():
             # Добавляем связь в массив
             all_items += child_link.to_json(all_item_ids)
+        # Добавление связей с документами
+        for doc_version_link in self.docfiles_for_export_get():
+            # Добавляем связь в массив
+            all_items += doc_version_link.to_json(all_item_ids)
         return all_items
