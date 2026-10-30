@@ -3,10 +3,10 @@ from django.contrib.auth.decorators import login_required
 
 from jsonserv.core.service_views import(LoginView, LogoutView, change_password)
 from jsonserv.core.views import (ClassificationStaff, ClassificationTree, EntityList, SearchView, 
-                                 DashboardView, HistoryList, ReportView,
+                                 DashboardView, HistoryList, ReportProcessingView,
                                  extra_links_get, GraphicUploadView, LinkList, search_list,
                                  ReportParamsList, ActionLogList,
-                                 report_get, caption_get, save_user_settings,
+                                 report_get, caption_get, save_user_settings, processing_do,
                                  UserGroupList, UserSessionList, entity_properties_get, main_menu_get)
 
 from jsonserv.core import viewsets
@@ -24,8 +24,12 @@ urlpatterns = [
     path('arm/<slug:dashboard_name>/<int:id>', login_required(DashboardView.as_view()), name="dashboard_id"),
 
     # Отчеты
-    path('report/<slug:report_name>/', login_required(ReportView.as_view()),  name="report"),
+    path('report/<slug:report_name>/', login_required(ReportProcessingView.as_view()),  name="report"),
     path('report/<slug:report_name>/<slug:mode>/', login_required(report_get), name="get_report"),
+
+    # Обработки
+    path('proceesing/<slug:processing_name>/', login_required(ReportProcessingView.as_view()),  name="processing"),
+    path('processing/<slug:processing_name>/<slug:mode>/', login_required(processing_do), name="do_processing"),
 
     # REST
     path('rest/classificationstaff/', ClassificationStaff.as_view(), name=ClassificationStaff.name),

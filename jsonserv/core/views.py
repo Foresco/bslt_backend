@@ -381,7 +381,7 @@ class DashboardView(ModelApplicationView):
         return err
 
 
-class ReportView(ApplicationView):
+class ReportProcessingView(ApplicationView):
     """Форма приложения, отображающая форму запуска формирования отчета"""
     in_single = False
     report_name = ''  # Наименование отчета
@@ -397,6 +397,7 @@ class ReportView(ApplicationView):
                 self.panels_key = 'report'
                 self.scripts.append('report')
                 self.set_key_value('report_name', report_name)
+                self.set_key_value('report_type', report_obj.report_type)
                 if report_obj.module_url:  # Если указана ссылка на внешний модуль формирования
                     # Передаем ссылку на модуль формирования
                     self.set_key_value('module_url ', report_obj.module_url)
@@ -963,16 +964,15 @@ def main_menu_get(request):
 
     return JSONResponse(result)
 
+def report_and_processing(request, report_name):
+    """Универсальная функция для отчетов и обработок"""
+    report_obj = Report.objects.get(report_name=report_name)  # Отчеты и обработки хранятся в одной модели
 
-@api_view(['GET', ])
-def report_get(request, report_name, mode):
-    report_obj = Report.objects.get(report_name=report_name)
-
-    # Импортируем модуль формирования отчета
+    # Импортируем соотвествующий модуль формирования
     module_path = report_obj.get_module_path()
     report_module = import_module(module_path)
 
-    # Запускаем типовой метод формирования файла отчета
+    # Запускаем типовой метод модуля
     report = report_module.ReportClass(request)
     file_path = report.prepare_report_file()
     file_name = os.path.basename(file_path)
@@ -980,6 +980,18 @@ def report_get(request, report_name, mode):
     if os.path.getsize(file_path) > 10000000:  # Выгружаем другим способом
         return http_unload_big_file(file_path, file_name, content_type)
     return http_unload_file(file_path, file_name, content_type)
+
+
+@api_view(['GET', ])
+def report_get(request, report_name, mode):
+    """Обработка запроса на формирование отчета"""
+    return report_and_processing(request, report_name)
+
+
+@api_view(['POST', ])
+def processing_do(request, report_name, mode):
+    """Отработка запроса на выполнение обработки данных"""
+    return report_and_processing(request, report_name)
 
 
 class ExtraLinkList(ListAPIView):

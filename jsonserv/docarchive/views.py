@@ -137,7 +137,7 @@ class FileUploadPutView(APIView):
         if FileUpload.objects.filter(file_name=file_name).count():
             return Response({"message": 'Такая загрузка уже есть в базе данных'}, status=status.HTTP_400_BAD_REQUEST)
         # Перенос файла во временную директорию
-        trgt = os.path.join(getattr(settings, 'TEMP_DIR', 'temp'), file_name)
+        trgt = os.path.join(getattr(settings, 'TEMP_DIR', 'temp'), file_name) #TODO: Заменить типовой функцией
         if handle_uploaded_file(request.data['file'], trgt):
             crtd_sess_id = request.session.get('user_session_id', 1)
             fp = FileUploadImport(trgt, file_name, stage, prefix, crtd_sess_id)

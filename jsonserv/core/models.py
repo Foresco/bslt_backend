@@ -1635,15 +1635,21 @@ class HistoryLog(models.Model):
 
 class Report(RightMixin):
     """Отчеты, формируемые системой"""
+    REPORTTYPECHOICES = (
+        ('report', 'Отчет'),
+        ('processing', 'Обработка')
+    )
     report_name = models.CharField(max_length=20, null=False, blank=False, unique=True,
                                    verbose_name='Идентификатор отчета')
-    title = models.CharField(max_length=50, null=False, blank=False, verbose_name='Заголовок формы отчета')
+    title = models.CharField(max_length=50, null=False, blank=False, verbose_name='Заголовок формы')
     app = models.CharField(max_length=20, null=True, blank=True, verbose_name='Приложение-владелец')
-    description = models.TextField(blank=True, null=True, verbose_name='Описание отчета')
+    description = models.TextField(blank=True, null=True, verbose_name='Описание отчета/обработки')
     module_url = models.CharField(max_length=150, null=True, blank=True,
                                   verbose_name='Ссылка на внешний модуль генерации')
     file_name = models.CharField(max_length=100, null=True, blank=True, verbose_name='Имя формируемого файла')
     only_format = models.CharField(max_length=4, null=True, blank=True, verbose_name='Единственный формат')
+    report_type = models.CharField(max_length=15, null=False, default='report', choices=REPORTTYPECHOICES,
+                                  verbose_name='Тип отчета')
 
     def get_module_path(self):
         """Получение адреса расположения модуля"""
@@ -1663,7 +1669,7 @@ class Report(RightMixin):
 
 class ReportParam(models.Model):
     """Параметры отчетов"""
-    TYPECHOICES = (
+    PARAMTYPECHOICES = (
         ('Link', 'Ссылка на объект'),
         ('List', 'Список'),
         ('NumberBox', 'Число'),
@@ -1677,7 +1683,7 @@ class ReportParam(models.Model):
                                verbose_name='Отчет')
     param_name = models.CharField(max_length=15, null=False, blank=False, verbose_name='Название параметра')
     caption = models.CharField(max_length=60, null=False, blank=False, verbose_name='Подпись на форме')
-    param_type = models.CharField(max_length=15, null=False, default='TextBox', choices=TYPECHOICES,
+    param_type = models.CharField(max_length=15, null=False, default='TextBox', choices=PARAMTYPECHOICES,
                                   verbose_name='Тип параметра')
     extra_value = models.CharField(max_length=50, null=True, blank=True, verbose_name='Дополнительные параметры')
     values_list = models.TextField(null=True, blank=True, verbose_name='Возможные значения')

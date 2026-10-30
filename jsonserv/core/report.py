@@ -1,3 +1,4 @@
+# Основной класс формирования отчетов
 import xlwt
 from jsonserv.core.dbutils import execute_sql_from_file
 from jsonserv.core.fileutils import get_temp_file_path, prepare_filename
