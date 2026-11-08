@@ -215,8 +215,25 @@
 		"parent": "production"
 	},
 	{
+		"model": "MenuItem",
+		"id": "shipment",
+		"item_name": "shipment",
+		"caption": "Отгрузки",
+		"style": "shipment",
+		"action": "shipment",
+		"order_num": 7,
+		"is_active": "True",
+		"parent": "production",
+		"item_right": "view_shipment"
+	},
+	{
 		"model": "SystemPermission",
 		"id": "view_prodorder",
 		"codename": "view_prodorder"
+	},
+	{
+		"model": "SystemPermission",
+		"id": "view_shipment",
+		"codename": "view_shipment"
 	}
 ]

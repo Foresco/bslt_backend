@@ -255,6 +255,17 @@ class DataImporter:
         with open(file_name, 'w', encoding='utf-8') as json_file:
             json.dump(self.items_to_import, json_file)
 
+    def import_file_content(self, filename):
+        # TODO: Убрать отсюда загрузку содержимого файла
+        with open(filename, encoding='utf-8') as json_data:
+            nodes = json.load(json_data)
+            # Перенос объектов для импорта во внутренний словарь
+            for node in nodes:
+                self.importer.add_to_load(node)
+
+        # Импортируем загруженный массив
+        self.importer.import_loaded()
+
     @staticmethod
     def write_to_log(message_type, message_text):
         """Запись в лог извне"""

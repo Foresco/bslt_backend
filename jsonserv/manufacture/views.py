@@ -1,5 +1,6 @@
 import django_filters  # Специальные фильтры
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter
 from django.db.models import Exists, F, FilteredRelation, Func, Min, OuterRef, Subquery, Q, Window
 from django.db.models.functions import Coalesce
 from rest_framework.generics import ListAPIView
@@ -14,7 +15,8 @@ from jsonserv.manufacture.models import (ProdOrder, ProdOrderLink, ProdOrderLink
 from jsonserv.manufacture.serializers import (ObjectOperationSerializerList, PositionsOperationSerializerList,
                                               ProdOrderContractSerializerList, ProdOrderInWorkSerializerList,
                                               ProdOrderMaterSerializerList, ProdOrderPosOperationSerializerList,
-                                              ProdOrderPosReportSerializerList, WorkerTaskSerializerList,
+                                              ProdOrderPosReportSerializerList, ShipmentSerializerList,
+                                              WorkerTaskSerializerList,
                                               WorkerReportConsistSerializerList)
 
 # Общие элементы всех запросов
@@ -481,7 +483,7 @@ class ProdOrderMaterList(ListAPIView):
     name = 'prod-order-mater-list'
 
     def get_queryset(self):
-        a = ProdOrderLink.objects.values(
+        return ProdOrderLink.objects.values(
             'pk',
             'parent__code',
             'parent__pk',
@@ -506,13 +508,52 @@ class ProdOrderMaterList(ListAPIView):
             'child__code'
         )
         # print(a.query)
-        return a
+        # return a
 
     # Поля поиска
     search_fields = (
         'parent__code',
         'child__code',
         'child__partobject__title'
+    )
+
+
+class ShipmentListFilter(django_filters.FilterSet):
+    """Особые фильтры для списка заказов в работе"""
+    min_date = django_filters.DateFilter(field_name="shipment_date", lookup_expr='gte')
+    max_date = django_filters.DateFilter(field_name="shipment_date", lookup_expr='lte')
+    equal_date = DateEqualFilter(field_name="shipment_date")
+    ordermaker = django_filters.NumberFilter(field_name="prod_order_link__parent__prodorder__order_maker")
+    creator = django_filters.NumberFilter(field_name="crtd_sess__user")
+
+    class Meta:
+        fields = ['ordermaker', 'equal_date', 'min_date', 'max_date', 'creator']
+
+
+class ShipmentList(ListAPIView):
+    """Получение перечня отгрузок"""
+    serializer_class = ShipmentSerializerList
+    name = 'shipment-list'
+    filterset_class = ShipmentListFilter  # Особые настройки фильтрации
+
+    def get_queryset(self):
+        return Shipment.objects.values(
+            'prod_order_link__parent__code',  # Номер заказа
+            'prod_order_link__child__code',  # Позиция заказа
+            'prod_order_link__parent__prodorder__order_maker__code',  # Заказчик
+            'shipment_date',  # Дата
+            'quantity',  # Количество
+            'crtd_sess__user__username'  # Исполнитель
+        ).order_by(
+            'prod_order_link__parent__code',
+            'prod_order_link__child__code',
+            'shipment_date'
+        )
+        # print(a.query)
+        # return a
+    # Поля поиска
+    search_fields = (
+        'prod_order_link__parent__code',
     )
 
 

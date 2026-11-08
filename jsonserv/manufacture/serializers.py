@@ -585,4 +585,12 @@ class SemisSerializerList(serializers.Serializer):
     place = serializers.CharField(source='route_points__place__code')
     quantity = serializers.FloatField(source='route_points__semises__quantity')
     party = serializers.CharField(source='route_points__semises__party')
-    
+
+
+class ShipmentSerializerList(serializers.Serializer):
+    order_code = serializers.CharField(source='prod_order_link__parent__code')  # Номер заказа
+    child_code = serializers.CharField(source='prod_order_link__child__code')  # Позиция заказа
+    order_maker = serializers.CharField(source='prod_order_link__parent__prodorder__order_maker__code')  # Заказчик
+    shipment_date = serializers.DateField(format="%d.%m.%Y")  # Дата
+    quantity = serializers.FloatField()
+    creator = serializers.CharField(source='crtd_sess__user__username')  # Исполнитель

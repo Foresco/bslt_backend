@@ -33,4 +33,13 @@
 		"dashboard": "prodordercontract",
 		"page_header": ""
 	}
+},
+{
+	"model": "core.typesetting",
+	"pk": "18",
+	"fields": {
+		"type_key": "shipment",
+		"dashboard": "prodorderdash",
+		"page_header": "Отгрузки"
+	}
 }]

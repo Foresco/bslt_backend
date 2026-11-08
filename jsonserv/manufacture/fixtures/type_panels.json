@@ -135,6 +135,16 @@
 		"panel_name": "workertasklist"
 	},
 	{
+		"model": "Panel",
+		"id": "shipmentfilters",
+		"panel_name": "shipmentfilters"
+	},
+	{
+		"model": "Panel",
+		"id": "shipmentslist",
+		"panel_name": "shipmentslist"
+	},
+	{
 		"model": "TypePanel",
 		"id": "prodorderclassification",
 		"panel": "classification",

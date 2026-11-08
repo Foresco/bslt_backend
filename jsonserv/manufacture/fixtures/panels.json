@@ -146,6 +146,15 @@
 	},
 	{
 		"model": "Panel",
+		"id": "shipmentfilters",
+		"panel_name": "shipmentfilters",
+		"area": "west",
+		"description": "Фильтры отгрузок продукции",
+		"check_state": "False",
+		"view_right": "view_shipment"
+	},
+	{
+		"model": "Panel",
 		"id": "workershiftlist",
 		"panel_name": "workershiftlist",
 		"area": "center",
@@ -161,6 +170,15 @@
 		"description": "Перечень производственных заданий пользователя",
 		"check_state": "False",
 		"view_right": "view_prodorderlinkworker"
+	},
+	{
+		"model": "Panel",
+		"id": "shipmentslist",
+		"panel_name": "shipmentslist",
+		"area": "center",
+		"description": "Перечень отгрузок",
+		"check_state": "False",
+		"view_right": "view_shipment"
 	},
 	{
 		"model": "SystemPermission",

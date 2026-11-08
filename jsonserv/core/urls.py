@@ -28,8 +28,8 @@ urlpatterns = [
     path('report/<slug:report_name>/<slug:mode>/', login_required(report_get), name="get_report"),
 
     # Обработки
-    path('proceesing/<slug:processing_name>/', login_required(ReportProcessingView.as_view()),  name="processing"),
-    path('processing/<slug:processing_name>/<slug:mode>/', login_required(processing_do), name="do_processing"),
+    # path('proceesing/<slug:processing_name>/', login_required(ReportProcessingView.as_view()),  name="processing"),
+    path('processing/<slug:report_name>/<slug:mode>/', login_required(processing_do), name="do_processing"),
 
     # REST
     path('rest/classificationstaff/', ClassificationStaff.as_view(), name=ClassificationStaff.name),

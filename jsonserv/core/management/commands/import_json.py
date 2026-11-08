@@ -57,12 +57,5 @@ class Command(BaseCommand):
             print('Не найден файл', filename)
             return
 
-        # TODO: Убрать отсюда загрузку содержимого файла
-        with open(filename, encoding='utf-8') as json_data:
-            nodes = json.load(json_data)
-            # Перенос объектов для импорта во внутренний словарь
-            for node in nodes:
-                self.importer.add_to_load(node)
-
-        # Импортируем загруженный массив
-        self.importer.import_loaded()
+        # Загружаем данные из файла
+        self.importer.import_file_content(filename)

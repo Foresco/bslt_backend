@@ -964,11 +964,12 @@ def main_menu_get(request):
 
     return JSONResponse(result)
 
+
 def report_and_processing(request, report_name):
     """Универсальная функция для отчетов и обработок"""
     report_obj = Report.objects.get(report_name=report_name)  # Отчеты и обработки хранятся в одной модели
 
-    # Импортируем соотвествующий модуль формирования
+    # Импортируем соответствующий модуль формирования
     module_path = report_obj.get_module_path()
     report_module = import_module(module_path)
 
