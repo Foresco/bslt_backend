@@ -34,7 +34,7 @@ def handle_uploaded_file(file_obj, file_name):
 
 
 def copy_file_to_folder(src_file_name, dst_file_name):
-    logger.info(f'Начинаем копирование {src_file_name} {dst_file_name}')
+    # logger.info(f'Начинаем копирование {src_file_name} {dst_file_name}')
     try:
         copyfile(src_file_name, dst_file_name)
         return True
