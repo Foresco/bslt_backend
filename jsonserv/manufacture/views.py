@@ -15,7 +15,7 @@ from jsonserv.manufacture.models import (ProdOrder, ProdOrderLink, ProdOrderLink
 from jsonserv.manufacture.serializers import (ObjectOperationSerializerList, PositionsOperationSerializerList,
                                               ProdOrderContractSerializerList, ProdOrderInWorkSerializerList,
                                               ProdOrderMaterSerializerList, ProdOrderPosOperationSerializerList,
-                                              ProdOrderPosReportSerializerList, ShipmentSerializerList,
+                                              ProdOrderPosReportSerializerList, ShipmentsSerializerList,
                                               WorkerTaskSerializerList,
                                               WorkerReportConsistSerializerList)
 
@@ -344,7 +344,7 @@ class ProdOrderInWorkList(ListAPIView):
             # 'parent_link_id__isnull',
             'child__code'
         )
-        print(b.query)
+        # print(b.query)
         return b
 
     # Поля поиска
@@ -532,7 +532,7 @@ class ShipmentListFilter(django_filters.FilterSet):
 
 class ShipmentList(ListAPIView):
     """Получение перечня отгрузок"""
-    serializer_class = ShipmentSerializerList
+    serializer_class = ShipmentsSerializerList
     name = 'shipment-list'
     filterset_class = ShipmentListFilter  # Особые настройки фильтрации
 

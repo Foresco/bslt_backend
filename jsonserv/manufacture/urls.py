@@ -21,7 +21,7 @@ urlpatterns = [
     path('rest/positionsoperationreport/<int:link>/<int:tp_row>', PositionOperationReportList.as_view(),
          name=PositionOperationReportList.name),
     path('rest/prodorderposreport/<int:link>', ProdOrderPosReportList.as_view(), name=ProdOrderPosReportList.name),
-    path('rest/shipment/', ShipmentList.as_view(), name=ShipmentList.name),
+    path('rest/shipmentlist/', ShipmentList.as_view(), name=ShipmentList.name),
     path('rest/workertask/', WorkerTaskList.as_view(), name=WorkerTaskList.name)
 ]
 

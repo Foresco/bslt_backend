@@ -587,7 +587,7 @@ class SemisSerializerList(serializers.Serializer):
     party = serializers.CharField(source='route_points__semises__party')
 
 
-class ShipmentSerializerList(serializers.Serializer):
+class ShipmentsSerializerList(serializers.Serializer):
     order_code = serializers.CharField(source='prod_order_link__parent__code')  # Номер заказа
     child_code = serializers.CharField(source='prod_order_link__child__code')  # Позиция заказа
     order_maker = serializers.CharField(source='prod_order_link__parent__prodorder__order_maker__code')  # Заказчик

@@ -2,8 +2,7 @@
 import json
 from django.db import models
 from jsonserv.core.models_dispatcher import ModelsDispatcher
-
-# from jsonserv.docarchive.models import EntityDocumentVersion
+from django.utils.formats import date_format
 
 
 class JsonExport:
@@ -58,11 +57,17 @@ class JsonExport:
 
             # if field_name == 'code':
             #     print(getattr(self, field_name))
+            print(field_name)
             if field_name == 'guid':
                 # Поле формата UUIDField обрабатываем по другому ввиду ошибки сериализации
                 item_data[field_name] = str(getattr(self, field_name))
                 continue
-            if isinstance(field, models.ForeignKey):
+            elif isinstance(field, models.DateField):
+                # Поле формата DateField обрабатываем по другому ввиду ошибки сериализации
+                value = getattr(self, field_name)
+                item_data[field_name] = date_format(value) if value else ''
+                continue
+            elif isinstance(field, models.ForeignKey):
                 # Если это ссылка на объект, то записываем ссылку
                 f_obj = getattr(self, field_name)
                 if f_obj is not None:
