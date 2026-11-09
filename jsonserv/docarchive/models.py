@@ -309,8 +309,8 @@ class DigitalFile(HistoryTrackingMixin, JsonExport):
 
     @staticmethod
     def get_or_create_item(prop_dict):
-        logger.info('Создание файла на основе словаря')
-        logger.info(prop_dict)
+        # logger.info('Создание файла на основе словаря')
+        # logger.info(prop_dict)
         src = prop_dict.pop('src', '')  # Исходное расположение
         watermark_date = prop_dict.pop('watermark_date', '')  # Дата для метки
         if watermark_date:

@@ -46,6 +46,8 @@ class ReportClass(BaseReportClass):
                         # Устанавливаем сессию для класса импорта
                         self.importer.set_session_id(self.session_id)
                         self.importer.set_session()
+                        # Устанавливаем основной каталог
+                        self.importer.set_src_dir(get_import_file_path(''))
                         # Загружаем данные из основного файла json
                         self.importer.import_file_content(main_file_path)
                     else:

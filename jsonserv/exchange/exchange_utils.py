@@ -47,6 +47,8 @@ class DataImporter:
         log_file_name = os.path.join(log_target_dir, log_file_name)
         # Используется при генерации json-файлов
         self.json_target_dir = getattr(settings, 'TEMP_DIR', 'temp')
+        # Каталог с файлами, если путь относительный
+        self.src_dir = ''
 
         logging.basicConfig(level=logging.INFO,
                             handlers=[logging.FileHandler(log_file_name, 'w', 'utf-8')],
@@ -65,6 +67,9 @@ class DataImporter:
 
     def set_session(self):
         self.session = usr_sess.get_session_by_id(self.session_id)
+
+    def set_src_dir(self, src_dir):
+        self.src_dir = src_dir
 
     def is_in_loaded(self, exter_id):
         return exter_id in self.items_to_import
@@ -177,6 +182,11 @@ class DataImporter:
                         continue  # В словарь значений эти поля не добавляем, они идут отдельным атрибутом
                     else:
                         continue
+                elif prop_name == 'src':
+                    # Это поле с адресом файла оно может быть относительным
+                    if not os.path.isabs(prop_dict[prop_name]):  # Если путь не абсолютный
+                        value = os.path.join(self.src_dir, prop_dict[prop_name])  # Добавлем исходный путь 
+                    value = prop_dict[prop_name]
                 else:
                     value = prop_dict[prop_name]
                 prepared_props[prop_name] = value
@@ -261,10 +271,10 @@ class DataImporter:
             nodes = json.load(json_data)
             # Перенос объектов для импорта во внутренний словарь
             for node in nodes:
-                self.importer.add_to_load(node)
+                self.add_to_load(node)
 
         # Импортируем загруженный массив
-        self.importer.import_loaded()
+        self.import_loaded()
 
     @staticmethod
     def write_to_log(message_type, message_text):
