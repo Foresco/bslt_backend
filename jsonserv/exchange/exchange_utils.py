@@ -164,6 +164,7 @@ class DataImporter:
             if prop_name in self.exclude_props:  # Исключаемые свойства пропускаем
                 continue
             # Если данное свойство передано в массиве
+            # print(prop_name)
             if prop_name in prop_dict:
                 if isinstance(f, ForeignKey):  # Если это поле-ссылка
                     if prop_dict[prop_name]:  # Если свойство заполнено (иначе ничего не делаем)
@@ -182,11 +183,6 @@ class DataImporter:
                         continue  # В словарь значений эти поля не добавляем, они идут отдельным атрибутом
                     else:
                         continue
-                elif prop_name == 'src':
-                    # Это поле с адресом файла оно может быть относительным
-                    if not os.path.isabs(prop_dict[prop_name]):  # Если путь не абсолютный
-                        value = os.path.join(self.src_dir, prop_dict[prop_name])  # Добавлем исходный путь 
-                    value = prop_dict[prop_name]
                 else:
                     value = prop_dict[prop_name]
                 prepared_props[prop_name] = value
@@ -201,6 +197,10 @@ class DataImporter:
         for extra_field in self.extra_fields:
             if extra_field in prop_dict:
                 prepared_props[extra_field] = prop_dict[extra_field]
+        if 'src' in prepared_props:
+            # Это поле с адресом файла оно может быть относительным
+            if not os.path.isabs(prepared_props['src']):  # Если путь не абсолютный
+                prepared_props['src'] = os.path.join(self.src_dir, prop_dict['src'])  # Добавляем исходный путь
         # print(prepared_props)
         return prepared_props
 
@@ -267,6 +267,7 @@ class DataImporter:
 
     def import_file_content(self, filename):
         # TODO: Убрать отсюда загрузку содержимого файла
+        print(filename)
         with open(filename, encoding='utf-8') as json_data:
             nodes = json.load(json_data)
             # Перенос объектов для импорта во внутренний словарь

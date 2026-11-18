@@ -109,7 +109,8 @@ def get_log_file_path(file_name):
 def get_import_file_path(file_name):
     """Формирование полного пути к файлу для импорта"""
     return os.path.join(
-        getattr(settings, 'LOG_DIR', 'log'),
+        getattr(settings, 'TEMP_DIR', 'temp'),
+        'import',
         file_name
     )
 

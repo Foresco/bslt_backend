@@ -147,7 +147,7 @@ class FileDocument(HistoryTrackingMixin, JsonExport):
 
     def get_next_version_num(self):
         """Получение номера версии документа"""
-        logger.info(f'Получение номера версии документа.')
+        logger.info('Получение номера версии документа.')
         vc = self.document_versions.aggregate(
             version_num_max=models.Max('version_num'),
             cnt=models.Count('version_num')
@@ -186,7 +186,7 @@ class DocumentVersion(HistoryTrackingMixin, JsonExport):
                                        on_delete=models.SET_NULL, verbose_name="Стадия")
 
     def __str__(self):
-        return f'Версия {self.version_num} документа {self.document}'
+        return f'Версия {self.version_num} документа {self.document} ({self.pk})'
 
     @staticmethod
     def get_or_create_item(prop_dict):
@@ -229,12 +229,16 @@ class DocumentVersion(HistoryTrackingMixin, JsonExport):
     def to_json(self, all_item_ids):
         """Более сложный вариант, выгружающий еще и файлы"""
         all_arr = super(DocumentVersion, self).to_json(all_item_ids)
-        
-        # Дополнительно выгружаем информацию о файлах
-        for dig_file in self.digital_files.filter(dlt_sess=0):
-            all_arr.append(dig_file.to_json(all_item_ids))
 
-        return all_arr
+        if all_arr:
+            # Дополнительно выгружаем информацию о файлах
+            for dig_file in self.digital_files.filter(dlt_sess=0):
+                all_arr.append(dig_file.to_json(all_item_ids))
+            return all_arr
+        else:
+            # Скорее всего версия уже выгружалась
+            # logger.error(f'Ошибка получения данных {self}')
+            return None
 
     class Meta:
         verbose_name = "Версия файлового документа"

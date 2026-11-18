@@ -9,8 +9,9 @@ class JsonExport:
     """Класс с функциональностью экспорта в JSON"""
     # Поля, исключаемые из экспорта
     exclude_fields = ('id',
-    'crtd_sess', 'edt_sess', 'dlt_sess', 'link_ptr', 'link_class', 'entity_ptr', 'view_right', 'edit_right',
-    'value_right', 'rating')
+                      'crtd_sess', 'edt_sess', 'dlt_sess', 'link_ptr', 'link_class', 'entity_ptr', 'view_right',
+                      'edit_right',
+                      'value_right', 'rating')
 
     def __init__(self):
         # TODO: сделать свойством класса
